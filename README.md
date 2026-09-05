@@ -1,51 +1,64 @@
-# Open Source E-Learning Platform (OSS E-Learning)
+# OpenCampus Mobile 🎓
+
+> **Aplikasi Mobile Pembelajaran Mandiri Terstruktur Berbasis Kurasi Materi Kuliah YouTube**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-
-Platform Learning Management System (LMS) modern, open source, dan modular yang dirancang untuk kemudahan self-hosting, fleksibilitas kurikulum, pembelajaran interaktif, asesmen/kuis, serta sertifikasi otomatis.
-
----
-
-## 🎯 Visi & Tujuan
-- **100% Open Source & Self-Hostable**: Dapat dijalankan di server lokal, VPS murah, maupun cloud provider dengan Docker Compose.
-- **Modern & Developer Friendly**: Menggunakan tech stack modern yang bersih, performant, dan mudah dikustomisasi.
-- **Lengkap & Siap Pakai**: Mendukung video streaming, markdown lesson, kuis otomatis, forum diskusi, dan sertifikat ber-QR code.
+[![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-green.svg)](#)
+[![Status: MVP v0.1](https://img.shields.io/badge/Status-MVP%20v0.1-orange.svg)](PRD.md)
 
 ---
 
-## 🚀 Fitur Utama
+## 📌 Gambaran Proyek
 
-- 👥 **Role-Based Access Control (RBAC)**: Super Admin, Instructor, Student, dan Public Viewer.
-- 📚 **Course & Curriculum Builder**: Struktur hierarki (Course -> Modul -> Bab -> Materi/Lesson).
-- 🎬 **Multi-Format Content**: Video (YouTube, Vimeo, S3/MinIO), Markdown text, slide PDF, dan coding snippet.
-- 📝 **Interactive Quizzes & Assignments**: Pilihan ganda, esai, kuis interaktif dengan penilaian otomatis.
-- 💬 **Discussion & Community**: Forum tanya jawab terintegrasi di setiap materi belajar.
-- 🎓 **Automated Certificate Generation**: Sertifikat kelulusan otomatis dalam format PDF dengan QR Code verifikasi keaslian.
-- 📊 **Analytics Dashboard**: Tracking progress belajar siswa dan statistik penyelesaian untuk instruktur.
+**OpenCampus Mobile** dirancang untuk mengatasi fenomena *curation fatigue* dan distraksi algoritma yang kerap dialami oleh pembelajar mandiri (autodidak). Aplikasi ini mengemas video-video perkuliahan berkualitas dari YouTube ke dalam kurikulum semester yang terstruktur dan terurut (Semester 1–8), dilengkapi dengan pemutar video bebas distraksi dan pelacak progres belajar sederhana.
+
+Dokumen kebutuhan produk lengkap dapat dilihat di 📄 **[PRD.md](PRD.md)**.
 
 ---
 
-## 🛠️ Rekomendasi Tech Stack
+## 🎯 Tujuan & Metrik Validasi MVP
 
-- **Frontend**: Next.js (App Router), Tailwind CSS, shadcn/ui
-- **Backend / API**: Node.js (NestJS / Hono / Express) atau Go / Python FastAPI
-- **Database**: PostgreSQL dengan Prisma ORM / Drizzle ORM
-- **Cache & Message Queue**: Redis, BullMQ
-- **Object Storage**: S3-Compatible (MinIO untuk self-hosted / Cloudflare R2 / AWS S3)
-- **Deployment**: Docker, Docker Compose
+Tujuan utama versi MVP (v0.1) adalah memvalidasi konsistensi belajar mahasiswa/pembelajar mandiri melalui format kurikulum semester terstruktur.
+
+| Metrik | Target | Alasan Pengukuran |
+| :--- | :--- | :--- |
+| **Aktivasi** | ≥ 60% pengguna baru memutar minimal 1 video materi | Memastikan kurasi kurikulum menarik perhatian user. |
+| **Retensi Hari ke-7 (D7)** | ≥ 25% | Mengukur apakah user kembali untuk melanjutkan materi berikutnya. |
+| **Completion Rate** | ≥ 30% menyelesaikan minimal 3 topik di Semester 1 | Validasi apakah struktur kurikulum mengurangi *drop-off* belajar. |
 
 ---
 
-## 🗺️ Roadmap & Project Plan
-Detail fase pengembangan, struktur database, dan arsitektur dapat dilihat di [PLAN.md](PLAN.md).
+## 🚀 Fitur Utama (MVP Scope)
+
+- 📚 **Katalog Jurusan Percontohan**: Pemetaan silabus Semester 1–8 jurusan Teknik Informatika / Ilmu Komputer.
+- 🗂️ **Navigasi Hierarki 3 Level**:
+  1. Halaman Semester (Tab 1–8)
+  2. Halaman Mata Kuliah (Daftar mata kuliah per semester)
+  3. Halaman Silabus Topik (Daftar video pertemuan 1–16)
+- 🎬 **Player Bebas Distraksi**: Pemutar YouTube tersemat (*embedded*) resmi tanpa rekomendasi sampingan, tanpa komentar, dan tanpa shorts.
+- ⏱️ **Progress Tracking Sederhana**: Centang progres otomatis (setelah tonton ≥ 85%) atau manual, disertai persentase progres per semester.
+- 🏷️ **Atribusi Kreator**: Nama channel kreator dan tautan langsung *"Tonton di YouTube"*.
+
+---
+
+## 🏗️ Roadmap Pengembangan
+
+- [x] Perumusan Product Requirement Document ([PRD.md](PRD.md))
+- [ ] Inisialisasi Mobile App Framework (Flutter / React Native)
+- [ ] Implementasi Skema & Data Kurikulum Semester 1–8 (JSON / Local Storage)
+- [ ] Pembuatan UI Navigasi (Semester Tab, Course List, Topic Syllabus)
+- [ ] Integrasi YouTube Embedded Player & Controller
+- [ ] Implementasi Local Progress Tracking & Analytics Events
+- [ ] Penanganan Fallback Video Error & Pelaporan Link
 
 ---
 
 ## 🤝 Kontribusi
-Kami sangat menyambut kontribusi dari komunitas! Silakan baca [CONTRIBUTING.md](CONTRIBUTING.md) untuk panduan memulai.
+
+Kontribusi dari komunitas sangat terbuka! Silakan baca [CONTRIBUTING.md](CONTRIBUTING.md) untuk panduan berpartisipasi.
 
 ---
 
 ## 📄 Lisensi
-Didistribusikan di bawah Lisensi MIT. Lihat [LICENSE](LICENSE) untuk informasi lebih lanjut.
+
+Proyek ini berada di bawah lisensi [MIT License](LICENSE).
