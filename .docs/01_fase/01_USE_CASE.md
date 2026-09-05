@@ -1,6 +1,6 @@
 # Use Case Diagram — OpenCampus Mobile (MVP v0.1)
 
-Dokumen ini memetakan diagram *Use Case* fungsional untuk **OpenCampus Mobile** berdasarkan spesifikasi pada [PRD.md](../fase0/PRD.md).
+Dokumen ini memetakan diagram *Use Case* fungsional untuk **OpenCampus Mobile** berdasarkan spesifikasi pada [PRD.md](../00_fase/01_PRD.md).
 
 ---
 
