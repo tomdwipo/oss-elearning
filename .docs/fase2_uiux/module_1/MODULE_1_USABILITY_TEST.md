@@ -1,6 +1,6 @@
 # Modul 1: Navigasi Kurikulum — Rencana & Protokol Usability Testing (MVP v0.1)
 
-Dokumen ini mendefinisikan rancangan terstruktur **Usability Testing (UT Plan, Protocol, & Evaluation Matrix)** untuk menguji **Modul 1: Navigasi Kurikulum** (UC-01, UC-02, UC-03) pada aplikasi **OpenCampus Mobile** berdasarkan spesifikasi pada [PRD.md](../fase0/PRD.md), [USE_CASE.md](../fase1/USE_CASE.md), [MODULE_1_DESIGN_SYSTEM_TOKENS.md](./MODULE_1_DESIGN_SYSTEM_TOKENS.md), [MODULE_1_HIFI_PROTOTYPE.md](./MODULE_1_HIFI_PROTOTYPE.md), dan prototipe interaktif [`assets/hifi_module_1_prototype.html`](./assets/hifi_module_1_prototype.html).
+Dokumen ini mendefinisikan rancangan terstruktur **Usability Testing (UT Plan, Protocol, & Evaluation Matrix)** untuk menguji **Modul 1: Navigasi Kurikulum** (UC-01, UC-02, UC-03) pada aplikasi **OpenCampus Mobile** berdasarkan spesifikasi pada [PRD.md](../../fase0/PRD.md), [USE_CASE.md](../../fase1/USE_CASE.md), [MODULE_1_DESIGN_SYSTEM_TOKENS.md](./MODULE_1_DESIGN_SYSTEM_TOKENS.md), [MODULE_1_HIFI_PROTOTYPE.md](./MODULE_1_HIFI_PROTOTYPE.md), dan prototipe interaktif [`./hifi_module_1_prototype.html`](./hifi_module_1_prototype.html).
 
 ---
 
@@ -40,7 +40,7 @@ Sesuai dengan metodologi standar **Nielsen Norman Group (NN/g)**, pengujian kual
   * **Concurrent Think-Aloud (CTA):** Partisipan diminta untuk mengutarakan secara verbal apa yang mereka lihat, pikirkan, harapkan, dan rasakan selama berinteraksi dengan layar.
   * **Observasi Tanpa Intervensi:** Moderator tidak memberikan petunjuk jalan keluar atau mengarahkan klik kecuali jika partisipan benar-benar mengalami kebuntuan (*blocking state* > 2 menit).
 * **Instrumen Uji:**
-  * Artefak Prototipe Interaktif: [`assets/hifi_module_1_prototype.html`](./assets/hifi_module_1_prototype.html).
+  * Artefak Prototipe Interaktif: [`./hifi_module_1_prototype.html`](./hifi_module_1_prototype.html).
   * Perangkat Penguji: Browser Google Chrome / Safari dalam mode emulasi layar sentuh ponsel (*device mode* 375 x 812 dp) atau diakses via mobile browser.
   * Lembar Observasi Moderator & Pencatat Waktu (*Stopwatch Time on Task*).
 
@@ -168,7 +168,7 @@ Pengujian ini menggunakan kombinasi metrik kuantitatif dan kualitatif:
 
 ## 7. Rekapitulasi Data & Matriks Hasil Pengujian (Empirical Evidence)
 
-Berikut adalah rekapitulasi data empiris hasil pengujian terhadap **5 partisipan (P1 s.d. P5)** menggunakan prototipe interaktif [`assets/hifi_module_1_prototype.html`](./assets/hifi_module_1_prototype.html):
+Berikut adalah rekapitulasi data empiris hasil pengujian terhadap **5 partisipan (P1 s.d. P5)** menggunakan prototipe interaktif [`./hifi_module_1_prototype.html`](./hifi_module_1_prototype.html):
 
 ### 7.1. Tabel Hasil Kuantitatif per Partisipan
 
@@ -217,6 +217,6 @@ Berdasarkan pengamatan kualitatif selama pengujian, antarmuka Modul 1 memenuhi p
 
 ## 9. Kesimpulan & Status Kesiapan Rilis Desain
 
-Hasil pengujian **Usability Testing** membuktikan bahwa **Modul 1: Navigasi Kurikulum** telah memenuhi seluruh kriteria fungsional ([PRD.md](../fase0/PRD.md)), mencapai **TSR 100%**, dan mendapatkan skor **SUS 88.0 (Grade A)**. 
+Hasil pengujian **Usability Testing** membuktikan bahwa **Modul 1: Navigasi Kurikulum** telah memenuhi seluruh kriteria fungsional ([PRD.md](../../fase0/PRD.md)), mencapai **TSR 100%**, dan mendapatkan skor **SUS 88.0 (Grade A)**. 
 
 Dengan demikian, spesifikasi desain dan prototipe Modul 1 dinyatakan **SIAP & VALID (READY FOR IMPLEMENTATION)** untuk dilanjutkan ke fase pengembangan kode aplikasi mobile (Fase 3 & 4).
