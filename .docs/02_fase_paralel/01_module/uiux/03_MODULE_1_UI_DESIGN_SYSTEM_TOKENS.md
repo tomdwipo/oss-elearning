@@ -18,7 +18,7 @@ Dokumen ini menetapkan spesifikasi standar **Design System & Design Tokens** res
 Spesifikasi token dan komponen diekstraksi langsung dari berkas resmi Figma:
 * **Source Binary Archive:** [`.docs/design_system/assets/Design System _ Ui Kit Free (Community).fig`](../../../design_system/assets/Design%20System%20_%20Ui%20Kit%20Free%20%28Community%29.fig) *(11.815 nodes, 59 canvases, 1.327 master components)*
 * **Complete Token Catalog:** [`.docs/design_system/assets/design_system_uikit_free_complete_tokens.json`](../../../design_system/assets/design_system_uikit_free_complete_tokens.json)
-* **Decoder Pipeline:** [`.agents/skills/fig-decode/`](../../../.agents/skills/fig-decode/)
+* **Decoder Pipeline:** [`.agents/skills/fig-decode/`](../../../../.agents/skills/fig-decode/)
 * **Icon Set:** [`.docs/design_system/assets/icons/uikit/`](../../../design_system/assets/icons/uikit/) (44+ vector icons)
 * **Hero Mascot Asset:** [`.docs/design_system/assets/illustrations/uikit_hero.png`](../../../design_system/assets/illustrations/uikit_hero.png)
 
