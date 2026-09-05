@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>High Fidelity Semester Tabs Mockup</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Urbanist:wght@600;700&display=swap');
+  
+  body {
+    background-color: #E5E7EB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .phone-frame {
+    width: 375px;
+    height: 812px;
+    background-color: #F8F7FF;
+    border-radius: 40px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+    position: relative;
+    border: 8px solid #2B263F;
+  }
+  
+  .status-bar {
+    padding: 14px 24px 8px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 600;
+    color: #0C0A1C;
+  }
+  
+  .header {
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header .title {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #0C0A1C;
+  }
+  
+  .header .badge {
+    background-color: #E8E4FF;
+    color: #6D57FC;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  
+  .progress-card {
+    margin: 0 20px 20px;
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    padding: 16px;
+    box-shadow: 0 4px 12px rgba(109, 87, 252, 0.08);
+    border: 1px solid #DFDAFE;
+  }
+  
+  .progress-card .top-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+  }
+  
+  .progress-card .label {
+    font-family: 'Urbanist', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0C0A1C;
+  }
+  
+  .progress-card .val {
+    font-weight: 600;
+    color: #6D57FC;
+    font-size: 13px;
+  }
+  
+  .progress-bar-track {
+    height: 8px;
+    background-color: #F2F4F6;
+    border-radius: 9999px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  
+  .progress-bar-fill {
+    height: 100%;
+    width: 45%;
+    background-color: #6D57FC;
+    border-radius: 9999px;
+  }
+  
+  .progress-sub {
+    font-size: 11px;
+    color: #4B5563;
+  }
+  
+  .section-label {
+    padding: 0 20px 10px;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #0C0A1C;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .tabs-container {
+    display: flex;
+    gap: 10px;
+    padding: 0 20px 20px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .tabs-container::-webkit-scrollbar { display: none; }
+  
+  .tab-item {
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-family: 'Urbanist', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .tab-item.active {
+    background-color: #6D57FC;
+    color: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(109, 87, 252, 0.3);
+  }
+  
+  .tab-item.inactive {
+    background-color: #FFFFFF;
+    color: #4B5563;
+    border: 1px solid #DFDAFE;
+  }
+  
+  .course-list {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .course-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    padding: 14px;
+    border: 1px solid #DFDAFE;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .course-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #E8E4FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+  
+  .course-info {
+    flex: 1;
+  }
+  
+  .course-info .title {
+    font-family: 'Urbanist', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #0C0A1C;
+    margin-bottom: 4px;
+  }
+  
+  .course-info .meta {
+    font-size: 11px;
+    color: #4B5563;
+    margin-bottom: 6px;
+  }
+  
+  .course-info .mini-track {
+    height: 4px;
+    background: #F2F4F6;
+    border-radius: 9999px;
+    overflow: hidden;
+  }
+  
+  .course-info .mini-fill {
+    height: 100%;
+    width: 25%;
+    background: #6D57FC;
+  }
+</style>
+</head>
+<body>
+
+<div class="phone-frame">
+  <div class="status-bar">
+    <span>09:41</span>
+    <span>5G 85%</span>
+  </div>
+  
+  <div class="header">
+    <div class="title">OpenCampus</div>
+    <div class="badge">Teknik Informatika</div>
+  </div>
+  
+  <div class="progress-card">
+    <div class="top-row">
+      <span class="label">Progres Semester 1</span>
+      <span class="val">45%</span>
+    </div>
+    <div class="progress-bar-track">
+      <div class="progress-bar-fill"></div>
+    </div>
+    <div class="progress-sub">7 dari 16 Topik Selesai</div>
+  </div>
+  
+  <div class="section-label">
+    <span>PILIH SEMESTER</span>
+  </div>
+  
+  <div class="tabs-container">
+    <div class="tab-item active">Semester 1</div>
+    <div class="tab-item inactive">Semester 2</div>
+    <div class="tab-item inactive">Semester 3</div>
+    <div class="tab-item inactive">Semester 4</div>
+    <div class="tab-item inactive">Semester 5</div>
+    <div class="tab-item inactive">Semester 6</div>
+    <div class="tab-item inactive">Semester 7</div>
+    <div class="tab-item inactive">Semester 8</div>
+  </div>
+  
+  <div class="section-label">
+    <span>DAFTAR MATA KULIAH (Sem 1)</span>
+  </div>
+  
+  <div class="course-list">
+    <div class="course-card">
+      <div class="course-icon">💻</div>
+      <div class="course-info">
+        <div class="title">Algoritma & Pemrograman Dasar</div>
+        <div class="meta">16 Pertemuan • Est. ~6 Jam</div>
+        <div class="mini-track"><div class="mini-fill" style="width: 25%;"></div></div>
+      </div>
+    </div>
+    
+    <div class="course-card">
+      <div class="course-icon">📐</div>
+      <div class="course-info">
+        <div class="title">Matematika Diskrit</div>
+        <div class="meta">16 Pertemuan • Est. ~5.5 Jam</div>
+        <div class="mini-track"><div class="mini-fill" style="width: 0%;"></div></div>
+      </div>
+    </div>
+    
+    <div class="course-card">
+      <div class="course-icon">🌐</div>
+      <div class="course-info">
+        <div class="title">Pengantar Teknologi Informasi</div>
+        <div class="meta">16 Pertemuan • Est. ~4 Jam</div>
+        <div class="mini-track"><div class="mini-fill" style="width: 18%;"></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
