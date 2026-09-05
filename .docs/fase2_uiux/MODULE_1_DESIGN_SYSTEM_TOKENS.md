@@ -218,11 +218,16 @@ Komponen dan token di atas dirujuk dan diinspeksi dari aset desain komunitas:
 
 ### 7.1 Key Frames & Node Mapping
 
-| Komponen / Screen | Figma Frame Name | Figma Node GUID | Ukuran Frame |
-| :--- | :--- | :--- | :--- |
-| **Layar Beranda (Category Home)** | `High-Fidelity ( Category Home )` | `229:773` | `375 x 812` |
-| **Layar Kategori (Course List)** | `High-Fidelity ( Category )` | `224:311` | `375 x 812` |
-| **Layar Detail & Silabus** | `High-Fidelity ( Detail )` | `229:1189` | `375 x 812` |
-| **Layar Onboarding** | `High-Fidelity ( Onboarding )` | `224:279` | `375 x 812` |
-| **Styleguide - Colors** | `Color` | `229:52` / `224:172` | - |
-| **Styleguide - Typography** | `Typography` | `229:102` / `224:173` | - |
+| Komponen / Screen | Figma Frame Name | Figma Node GUID | Ukuran Frame | Aset Render Resmi (Export) |
+| :--- | :--- | :--- | :--- | :--- |
+| **Layar Beranda (Category Home)** | `High-Fidelity ( Category Home )` | `229:773` | `375 x 812` | [`figma_category_home_render.png`](./assets/figma_category_home_render.png) |
+| **Layar Kategori (Course List)** | `High-Fidelity ( Category )` | `224:311` | `375 x 812` | [`figma_category_list_render.png`](./assets/figma_category_list_render.png) |
+| **Layar Detail & Silabus** | `High-Fidelity ( Detail )` | `229:1189` | `375 x 812` | [`figma_detail_course_render.png`](./assets/figma_detail_course_render.png) |
+| **Layar Onboarding** | `High-Fidelity ( Onboarding )` | `224:279` | `375 x 812` | [`figma_onboarding_render.png`](./assets/figma_onboarding_render.png) |
+| **Styleguide - Colors** | `Color` | `229:52` / `224:172` | - | Ekstrak Hex 01–05 |
+| **Styleguide - Typography** | `Typography` | `229:102` / `224:173` | - | `Urbanist` + `Inter` |
+
+### 7.2 Link Sumber & File Aset
+* **Figma Cloud URL:** [Figma Community Design](https://www.figma.com/design/3UzTSK8vlS6ICGgi14brey/Mobile-E-Learning-App-Design--Community-)
+* **Local Binary Archive:** [`.docs/fase2_uiux/assets/Mobile E-Learning App Design (Community).fig`](./assets/Mobile%20E-Learning%20App%20Design%20%28Community%29.fig)
+* **Interactive HTML Prototype (Semester Tabs):** [`hifi_semester_tabs_preview.html`](./assets/hifi_semester_tabs_preview.html)
