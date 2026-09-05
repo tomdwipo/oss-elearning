@@ -6,28 +6,45 @@ Dokumen ini mendefinisikan rancangan **User Flow** dan **Wireflow Sederhana** un
 
 ## 1. User Flow (Alur Pengguna)
 
-```mermaid
-flowchart TD
-    Start([Buka Aplikasi]) --> Screen1[Layar 1: Beranda Semester]
-    
-    Screen1 -->|Pilih Tab Sem 1-8| UpdateList[Update Daftar Mata Kuliah]
-    UpdateList --> Screen1
-    
-    Screen1 -->|Tap Kartu Mata Kuliah| Screen2[Layar 2: Silabus Mata Kuliah]
-    
-    Screen2 -->|Tap Checkbox Manual| ToggleCheck[Simpan Status ke Penyimpanan Lokal]
-    ToggleCheck --> Screen2
-    
-    Screen2 -->|Tap Topik Pertemuan| Screen3[Layar 3: Video Player Pembelajaran]
-    
-    Screen3 -->|Putar Video >= 85%| AutoDone[Sistem Otomatis Centang Selesai]
-    AutoDone --> Screen3
-    
-    Screen3 -->|Tap Tombol Laporkan| ModalReport[Modal: Laporkan Link Rusak]
-    ModalReport -->|Kirim Laporan| Screen3
-    
-    Screen3 -->|Tap Tombol Kembali| Screen2
-    Screen2 -->|Tap Tombol Kembali| Screen1
+```text
+  ( Start: Buka Aplikasi )
+              |
+              v
+  [ Layar 1: Beranda Semester ] <---------------------------------------+
+              |                                                         |
+              +---> [ Pilih Tab Semester (1-8) ]                        |
+              |            |                                            |
+              |            v                                            |
+              |     [ Muat Mata Kuliah Sesuai Semester ]                |
+              |            |                                            |
+              |            +--------------------------------------------+
+              |
+              v (Pilih/Tap Kartu Mata Kuliah)
+  [ Layar 2: Silabus Mata Kuliah ] <----------------------------+
+              |                                                 |
+              +---> [ Tap Checkbox Selesai (Manual) ]           |
+              |            |                                    |
+              |            v                                    |
+              |     [ Simpan Status ke Penyimpanan Lokal ]      |
+              |            |                                    |
+              |            +------------------------------------+
+              |
+              | (Kembali ke Beranda)
+              +---------------------------------------------------------> [ Layar 1 ]
+              |
+              v (Pilih/Tap Topik Pertemuan)
+  [ Layar 3: Video Player Pembelajaran ]
+              |
+              +---> [ Putar Video >= 85% ] ---> [ Otomatis Centang Selesai ]
+              |
+              +---> [ Tap "Laporkan Link" ] ---> [ Modal: Laporan Link Rusak ]
+              |                                          |
+              |                                  (Kirim Laporan)
+              |                                          |
+              | <----------------------------------------+
+              |
+              v (Kembali ke Silabus)
+  [ Layar 2: Silabus Mata Kuliah ]
 ```
 
 ---
