@@ -290,9 +290,9 @@ Berdasarkan hasil pengujian langsung pada simulator [module_1_tokens_poc.html](.
 * **Dukungan Ikonografi & Ilustrasi Lengkap:** Dilengkapi dengan 65+ ikon vektor bawaan dan set maskot kartun edukatif (*Cute cookie cartoon characters* - Node `1842:25160`).
 
 ### 8.2. Rangkuman Artefak Terkait
-1. **Dokumen Spesifikasi Desain & Token Resmi:** [MODULE_1_DESIGN_SYSTEM_TOKENS.md](./MODULE_1_DESIGN_SYSTEM_TOKENS.md)
+1. **Dokumen Spesifikasi Desain & Token Resmi:** [03_MODULE_1_UI_DESIGN_SYSTEM_TOKENS.md](./03_MODULE_1_UI_DESIGN_SYSTEM_TOKENS.md)
 2. **Katalog Token & Komponen Lengkap (JSON):** [`../../design_system/assets/design_system_uikit_free_complete_tokens.json`](../../design_system/assets/design_system_uikit_free_complete_tokens.json)
 3. **Koleksi Ikon Vektor SVG Resmi (44+ Icons):** [`../../design_system/assets/icons/uikit/`](../../design_system/assets/icons/uikit/)
 4. **Simulator Interaktif POC:** [`./module_1_tokens_poc.html`](./module_1_tokens_poc.html)
-5. **Prototipe Hi-Fi:** [`./hifi_module_1_prototype.html`](./hifi_module_1_prototype.html)
+5. **Prototipe Hi-Fi & Usability Test:** [04_MODULE_1_HIFI_PROTOTYPE_USABILITY_TEST.md](./04_MODULE_1_HIFI_PROTOTYPE_USABILITY_TEST.md) (Artefak: [`./hifi_module_1_prototype.html`](./hifi_module_1_prototype.html))
 

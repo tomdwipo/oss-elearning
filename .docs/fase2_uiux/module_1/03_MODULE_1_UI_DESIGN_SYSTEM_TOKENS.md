@@ -1,6 +1,6 @@
 # Modul 1: Navigasi Kurikulum — UI Design System & Tokens (Design System & UI Kit Free)
 
-Dokumen ini menetapkan spesifikasi standar **Design System & Design Tokens** resmi untuk **Modul 1: Navigasi Kurikulum** pada aplikasi **OpenCampus Mobile** berdasarkan berkas desain terpilih **Design System & UI Kit Free (Community)** (`Design System _ Ui Kit Free (Community).fig`), [PRD.md](../../fase0/PRD.md), [USE_CASE.md](../../fase1/USE_CASE.md), [MODULE_1_USER_FLOW_WIREFLOW.md](./MODULE_1_USER_FLOW_WIREFLOW.md), [MODULE_1_LOFI_WIREFRAME.md](./MODULE_1_LOFI_WIREFRAME.md), dan evaluasi POC [MODULE_1_DESIGN_TOKENS_POC.md](./MODULE_1_DESIGN_TOKENS_POC.md).
+Dokumen ini menetapkan spesifikasi standar **Design System & Design Tokens** resmi untuk **Modul 1: Navigasi Kurikulum** pada aplikasi **OpenCampus Mobile** berdasarkan berkas desain terpilih **Design System & UI Kit Free (Community)** (`Design System _ Ui Kit Free (Community).fig`), [PRD.md](../../fase0/PRD.md), [USE_CASE.md](../../fase1/USE_CASE.md), [01_MODULE_1_USER_FLOW_WIREFLOW.md](./01_MODULE_1_USER_FLOW_WIREFLOW.md), [02_MODULE_1_LOFI_WIREFRAME.md](./02_MODULE_1_LOFI_WIREFRAME.md), dan evaluasi POC [03b_MODULE_1_DESIGN_TOKENS_POC.md](./03b_MODULE_1_DESIGN_TOKENS_POC.md).
 
 ---
 
