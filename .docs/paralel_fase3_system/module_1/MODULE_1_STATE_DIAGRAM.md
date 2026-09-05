@@ -74,7 +74,7 @@ Dokumen ini mendefinisikan rancangan **State Machine Diagram** untuk **Modul 1: 
 
 ## 3. State Metrics & Target Konversi (Telemetry)
 
-Berdasarkan sasaran pada [PRD.md](../fase0/PRD.md), metrik performansi dan konversi tiap state diatur sebagai berikut:
+Berdasarkan sasaran pada [PRD.md](../../fase0/PRD.md), metrik performansi dan konversi tiap state diatur sebagai berikut:
 
 ```text
 +-----------------------+      SLA: < 300ms      +-----------------------+
