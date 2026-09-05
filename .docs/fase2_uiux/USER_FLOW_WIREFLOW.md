@@ -1,6 +1,6 @@
 # User Flow & Wireflow (Simple) — OpenCampus Mobile (MVP v0.1)
 
-Dokumen ini mendefinisikan rancangan **User Flow** dan **Wireflow Sederhana** untuk **Fase 2: Desain Antarmuka (UI/UX)** pada aplikasi **OpenCampus Mobile** berdasarkan spesifikasi pada [PRD.md](../PRD.md), [USE_CASE.md](../USE_CASE.md), dan [ACTIVITY_DIAGRAM.md](../ACTIVITY_DIAGRAM.md).
+Dokumen ini mendefinisikan rancangan **User Flow** dan **Wireflow Sederhana** untuk **Fase 2: Desain Antarmuka (UI/UX)** pada aplikasi **OpenCampus Mobile** berdasarkan spesifikasi pada [PRD.md](../fase0/PRD.md), [USE_CASE.md](../fase1/USE_CASE.md), dan [ACTIVITY_DIAGRAM.md](../fase1/ACTIVITY_DIAGRAM.md).
 
 ---
 

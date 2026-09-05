@@ -1,6 +1,6 @@
 # Activity Diagram — OpenCampus Mobile (MVP v0.1)
 
-Dokumen ini memetakan alur aktivitas (*Activity Diagram*) fungsional sederhana untuk **OpenCampus Mobile** dalam format diagram ASCII berdasarkan [USE_CASE.md](file:///Users/tommy-amarbank/Documents/oss-elearning/.docs/USE_CASE.md) dan [PRD.md](file:///Users/tommy-amarbank/Documents/oss-elearning/.docs/PRD.md).
+Dokumen ini memetakan alur aktivitas (*Activity Diagram*) fungsional sederhana untuk **OpenCampus Mobile** dalam format diagram ASCII berdasarkan [USE_CASE.md](USE_CASE.md) dan [PRD.md](../fase0/PRD.md).
 
 ---
 
