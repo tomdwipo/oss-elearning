@@ -199,3 +199,22 @@ elevation.hover  : 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 
   }
 }
 ```
+
+---
+
+## 7. Referensi Desain & Mapping Node Figma (Figma Traceability)
+
+Komponen dan token di atas dirujuk dan diinspeksi dari aset desain komunitas:
+* **Source Figma File:** `Mobile E-Learning App Design (Community).fig` (Format v101, 375 x 812 viewport)
+* **Decoder Pipeline:** `.agents/skills/fig-decode/`
+
+### 7.1 Key Frames & Node Mapping
+
+| Komponen / Screen | Figma Frame Name | Figma Node GUID | Ukuran Frame |
+| :--- | :--- | :--- | :--- |
+| **Layar Beranda (Category Home)** | `High-Fidelity ( Category Home )` | `229:773` | `375 x 812` |
+| **Layar Kategori (Course List)** | `High-Fidelity ( Category )` | `224:311` | `375 x 812` |
+| **Layar Detail & Silabus** | `High-Fidelity ( Detail )` | `229:1189` | `375 x 812` |
+| **Layar Onboarding** | `High-Fidelity ( Onboarding )` | `224:279` | `375 x 812` |
+| **Styleguide - Colors** | `Color` | `229:52` / `224:172` | - |
+| **Styleguide - Typography** | `Typography` | `229:102` / `224:173` | - |
