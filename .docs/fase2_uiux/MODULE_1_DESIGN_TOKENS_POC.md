@@ -248,4 +248,35 @@ Ketika berpindah antar sistem desain (atau saat membuka mode **Matrix Side-by-Si
 2. **Interaktivitas Checkbox per Sistem:**
    * Saat mengklik checkbox pada salah satu ponsel, simbol centang yang muncul secara instan adalah centang spesifik sistem desain ponsel tersebut (`Icons/check_small` untuk M3, Octicon `check` untuk Primer, dan `fa-solid:check` untuk UI Kit Free).
 
+---
+
+## 6. Diferensiasi Tipografi Otentik per Sistem Desain
+
+Untuk mempertegas identitas dan karakteristik visual masing-masing sistem desain secara nyata pada prototipe POC:
+
+| Parameter Tipografi | Google Material 3 (`.fig`) | GitHub Primer Web (`.fig`) | UI Kit Free (`.fig`) |
+| :--- | :--- | :--- | :--- |
+| **Keluarga Font Utama** | `Roboto, sans-serif` | `-apple-system, BlinkMacSystemFont, "Segoe UI", "Inter"` | `Poppins, sans-serif` |
+| **Font Pendukung / Monospace** | `Roboto 400` (Plain) | `'JetBrains Mono', ui-monospace, monospace` | `Poppins 400/500` (Geometric body) |
+| **Hirarki Judul & Brand** | Medium `500` (`16px`, tracking `+0.15px`) | Bold Semi `600` (`14px`, tracking `-0.15px`) | Bold `700` (`16.5px`, tracking `-0.3px`) |
+| **Nama Mata Kuliah** | `Roboto 500` (`14px`, `#1D1B20`) | `Segoe UI / Inter 600` (`13.5px`, `#0969DA`) | `Poppins 600` (`14px`, `#1A141F`) |
+| **Token Metadata & SKS** | `Roboto 400` (`12px`, letter-spacing `0.25px`) | **Monospace Badge** (`10.5px`, JetBrains Mono) | `Poppins 400` (`11px`, friendly soft gray) |
+| **Tab Semester** | Chip Pill `12px` (Roboto 500) | UnderlineNav Text `13px` (Bold 600 + bottom line) | Smooth Rounded Pill `12px` (Poppins 600) |
+| **Kesan Visual Keseluruhan**| Netral, tenang, berwibawa, standar Android/Flutter | **Sangat kental Developer/Engineering**, rapi berorientasi kode | **Modern, ramah, dinamis, gaya EdTech Gen-Z** |
+
+---
+
+## 7. Ekstraksi Ilustrasi Hero & Maskot Otentik dari Berkas Figma
+
+Sesuai arahan (*"sekalian ilustration nya masing2 fig juga"*), setiap sistem desain kini memiliki ilustrasi maskot / hero visual otentik yang diekstrak langsung dari berkas biner `.fig`-nya:
+
+| Sistem Desain | Berkas Sumber `.fig` | Node & Aset Figma | Resolusi Asli | Peran Visual pada Kartu Progres |
+| :--- | :--- | :--- | :---: | :--- |
+| **Google Material 3** | `Material 3 Design Kit.fig` | `fe1b75d3...` (`3d_avatar_4`) | `1080 x 1080` (RGBA) | **3D Character Avatar:** Memperkuat personalisasi ramah khas Google Material You |
+| **GitHub Primer** | `Primer Web.fig` | `ed6fba59...` (`octocat-avatar@2x`) | `3696 x 3696` (RGBA) | **GitHub Octocat Mascot:** Mempertegas identitas developer & coding academy |
+| **UI Kit Free** | `Mobile E-Learning.fig` | `c6e16108...` (`Illustration`) | `355 x 302` (RGBA) | **3D Student E-Learning:** Menampilkan mahasiswa belajar dengan laptop & buku |
+
+Berkas gambar asli disimpan di [`assets/illustrations/`](./assets/illustrations/) dan disematkan langsung ke dalam prototipe interaktif [`assets/module_1_tokens_poc.html`](./assets/module_1_tokens_poc.html).
+
+
 
