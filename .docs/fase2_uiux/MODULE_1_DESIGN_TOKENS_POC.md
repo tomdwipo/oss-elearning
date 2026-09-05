@@ -1,21 +1,22 @@
 # Modul 1: Navigasi Kurikulum — Proof of Concept (POC) Design Tokens Evaluation (MVP v0.1)
 
-Dokumen ini mendokumentasikan hasil pengujian dan evaluasi **Proof of Concept (POC)** pergantian *Design Tokens* untuk **Modul 1: Navigasi Kurikulum** aplikasi **OpenCampus Mobile** dengan membandingkan 4 sistem desain terkemuka:
-1. **Google Material 3 (M3)**
-2. **GitHub Primer**
-3. **Flowbite (Tailwind Scale)**
-4. **Aalto University Design System (`brand.aalto.fi/en/ds`)**
+Dokumen ini mendokumentasikan hasil pengujian dan evaluasi **Proof of Concept (POC)** pergantian *Design Tokens* untuk **Modul 1: Navigasi Kurikulum** aplikasi **OpenCampus Mobile** dengan membandingkan 5 sistem desain (termasuk 3 kit resmi Figma `.fig`):
+1. **Google Material 3 (M3)** *(via `Material 3 Design Kit.fig`)*
+2. **GitHub Primer Web** *(via `Primer Web.fig`)*
+3. **Design System & UI Kit Free** *(via `Design System _ Ui Kit Free.fig`)*
+4. **Flowbite (Tailwind Scale)**
+5. **Aalto University Design System (`brand.aalto.fi/en/ds`)**
 
 ---
 
 ## 1. Artefak Eksperimen Interaktif (POC Interactive Simulator)
 
-Untuk melihat, berinteraksi, dan membandingkan secara visual keempat sistem desain pada tampilan mobile nyata (Layar 1 Beranda & Layar 2 Silabus), buka artefak simulasi interaktif berikut:
+Untuk melihat, berinteraksi, dan membandingkan secara visual kelima sistem desain pada tampilan mobile nyata (Layar 1 Beranda & Layar 2 Silabus), buka artefak simulasi interaktif berikut:
 
 * **Berkas Prototipe POC:** [`assets/module_1_tokens_poc.html`](./assets/module_1_tokens_poc.html)
 * **Fitur Utama POC Simulator:**
-  - **Live Theme Switcher:** Berpindah seketika antar M3, Primer, Flowbite, dan Aalto DS.
-  - **Matrix Mode (Side-by-Side):** Menampilkan 4 bingkai ponsel sekaligus secara berdampingan untuk komparasi langsung.
+  - **Live Theme Switcher:** Berpindah seketika antar M3 (.fig), Primer (.fig), UI Kit Free (.fig), Flowbite, dan Aalto DS.
+  - **Matrix Mode (Side-by-Side):** Menampilkan 5 bingkai ponsel sekaligus secara berdampingan untuk komparasi langsung.
   - **Interaktivitas Penuh:** Uji coba klik tab semester, navigasi ke silabus, dan *toggle checkbox* dengan gaya khas masing-masing sistem.
 
 ---
@@ -109,16 +110,43 @@ Untuk melihat, berinteraksi, dan membandingkan secara visual keempat sistem desa
 
 ---
 
-## 3. Matriks Perbandingan Parameter Desain
+### 2.5. Opsi E: Design System & UI Kit Free (Community) (.fig)
+* **Sumber Referensi & Berkas:** [`.docs/fase2_uiux/assets/Design System _ Ui Kit Free (Community).fig`](./assets/Design%20System%20_%20Ui%20Kit%20Free%20%28Community%29.fig) *(Kiwi v101, 11.815 nodes, 59 pages)*
+* **Ekstraksi Token JSON:** [`assets/uikit_free_extracted_tokens.json`](./assets/uikit_free_extracted_tokens.json)
+* **Palet Utama (Hasil Ekstraksi Halaman `Colors`):**
+  | Token UI Kit Free | Nilai Hex | Peran UI / Komponen |
+  | :--- | :--- | :--- |
+  | `Corporate/Primary` | `#9D3FE7` | Warna primer identitas (*Electric Violet*), active checkbox |
+  | `Corporate/PrimaryDark` | `#602093` | Warna ujung gradasi (*Deep Violet*) |
+  | `Corporate/Gradient` | `linear-gradient(159.13deg, #9D3FE7, #602093)` | Tombol utama, active tab pill, fill progress bar |
+  | `Corporate/TextDark` | `#1A141F` | Teks judul utama & nama mata kuliah |
+  | `Corporate/SurfaceLight`| `#F5F3F7` | Latar kanvas aplikasi (*Light Lavender Gray*) |
+  | `Corporate/CardSurface` | `#FFFFFF` | Latar kartu mata kuliah & silabus |
+  | `Corporate/Border` | `#E5E0EB` | Border kartu dan pemisah silabus |
+  | `Grayscale/TextMuted` | `#707075` | Teks metadata (durasi, kreator) |
+  | `Informing/Success` | `#00B998` | Indikator selesai (*Teal Green*), badge sukses |
+  | `Informing/Warning` | `#FF9500` | Indikator materi sedang berjalan (*Amber*) |
+* **Skala Sudut (Shape Radius Scale):**
+  - Small: `4px` (Checkbox, tombol default)
+  - Medium: `8px` (Tab pill, chip filter)
+  - Large: `12px` (Kartu mata kuliah & panel)
+  - Extra Large / Full: `24px` / `1000px` (Round badge, kapsul)
+* **Tipografi:** `Poppins` (Modern geometric sans-serif yang ramah dan dinamis).
+* **Karakter Visual:** Sangat modern, *stylish*, energik, estetika edtech kontemporer yang disukai Gen Z dan pembelajar muda.
+* **Kelebihan untuk OpenCampus:** Tampilan paling memikat secara visual (*eye-catching*), palet gradasi ungu-violet memberikan kesan inovatif dan premium tanpa terlihat kaku.
 
-| Parameter Evaluasi | Google Material 3 | GitHub Primer | Flowbite | Aalto University DS |
-| :--- | :---: | :---: | :---: | :---: |
-| **Karakter & Identitas Visual** | Ramah & Modern (Google) | Developer / Tech Academy | B2C / SaaS Komersial | **Otentik Universitas Eropa** |
-| **Warna Primer Identitas** | `#6750A4` (Ungu M3) | `#0969DA` (Biru GitHub) | `#2563EB` (Biru Tailwind) | **`#FD6360` (Merah Aalto)** |
-| **Radius Kartu & Tombol** | Sangat Membulat (`16px`) | Tajam & Tegas (`6px`) | Sedang (`12px`) | **Geometris Bersih (`8px`)** |
-| **Kesesuaian Mobile Framework** | 🟢 **Bawaan Flutter** | 🟡 Perlu Custom CSS | 🟢 Sangat Baik (NativeWind) | 🟢 Sangat Mudah Dibuat Token |
-| **Pembedaan Warna MK/Fakultas**| Tonal Monokrom | Label Badge Abu-abu | Tag Warna Standar | 🟢 **Palet Sekolah Resmi (`elec`/`sci`)** |
-| **Aksesibilitas Kontras (WCAG)** | 12.5:1 (AAA) | 14.8:1 (AAA) | 13.2:1 (AAA) | **15.1:1 (AAA)** |
+---
+
+## 3. Matriks Perbandingan Parameter Desain (5 Sistem)
+
+| Parameter Evaluasi | Google Material 3 | GitHub Primer | UI Kit Free (.fig) | Flowbite | Aalto University DS |
+| :--- | :---: | :---: | :---: | :---: | :---: |
+| **Karakter & Identitas Visual** | Ramah & Modern (Google) | Developer / Tech Academy | **Modern & Energetic EdTech** | B2C / SaaS Komersial | **Otentik Universitas Eropa** |
+| **Warna Primer Identitas** | `#6750A4` (Ungu M3) | `#0969DA` (Biru GitHub) | **`#9D3FE7` (Violet & Gradient)**| `#2563EB` (Biru Tailwind) | **`#FD6360` (Merah Aalto)** |
+| **Radius Kartu & Tombol** | Sangat Membulat (`12px`/`16px`) | Tajam & Tegas (`6px`) | **Seimbang (`12px`/`8px`/`4px`)** | Sedang (`12px`) | **Geometris Bersih (`8px`)** |
+| **Kesesuaian Mobile Framework** | 🟢 **Bawaan Flutter** | 🟡 Perlu Custom CSS | 🟢 Sangat Mudah Di-token | 🟢 Sangat Baik (NativeWind) | 🟢 Sangat Mudah Dibuat Token |
+| **Pembedaan Warna MK/Fakultas**| Tonal Monokrom | Label Badge Abu-abu | Informing Palette (`#00B998`/`#FF9500`)| Tag Warna Standar | 🟢 **Palet Sekolah Resmi (`elec`/`sci`)** |
+| **Aksesibilitas Kontras (WCAG)** | 12.5:1 (AAA) | 14.8:1 (AAA) | **13.8:1 (AAA)** | 13.2:1 (AAA) | **15.1:1 (AAA)** |
 
 ---
 
@@ -128,10 +156,14 @@ Untuk melihat, berinteraksi, dan membandingkan secara visual keempat sistem desa
    👉 **Pilih Aalto University Design System (`brand.aalto.fi`)**.
    *Alasan:* Aplikasi langsung memiliki identitas unik perguruan tinggi sains & teknologi global, layout geometris yang bersih tanpa distraksi, serta memiliki token warna sekolah (`elec`, `sci`, `chem`) yang sangat pas dipetakan ke mata kuliah Teknik Informatika.
 
-2. **Jika Ingin Kemudahan Maksimal saat Menulis Kode Mobile:**
+2. **Jika Ingin Nuansa "Modern EdTech / Creative App" yang Paling Menarik Secara Visual:**
+   👉 **Pilih Design System & UI Kit Free (`#9D3FE7` & `Poppins`)**.
+   *Alasan:* Tipografi Poppins dan aksen gradasi ungu-violet memberikan energi segar, modern, dan sangat bersahabat bagi mahasiswa generasi baru.
+
+3. **Jika Ingin Kemudahan Maksimal saat Menulis Kode Mobile Native:**
    👉 **Pilih Google Material 3 (M3)**.
    *Alasan:* Implementasi di Flutter 3.x tidak memerlukan styling tambahan karena seluruh widget mobile bawaan sudah mengadopsi M3 tokens.
 
-3. **Jika Ingin Nuansa "Sekolah Coding / Hacker":**
+4. **Jika Ingin Nuansa "Sekolah Coding / Developer":**
    👉 **Pilih GitHub Primer**.
-   *Alasan:* Mahasiswa informatika langsung merasa berada di rumah sendiri.
+   *Alasan:* Mahasiswa informatika langsung merasa berada di ekosistem open-source dan coding yang familiar.

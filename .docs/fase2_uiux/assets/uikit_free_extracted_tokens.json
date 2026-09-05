@@ -1,0 +1,82 @@
+{
+  "source": "Design System _ Ui Kit Free (Community).fig",
+  "figmaFormatVersion": 101,
+  "totalNodes": 11815,
+  "totalPages": 59,
+  "fontFamily": "Poppins",
+  "colors": {
+    "corporate": {
+      "primary": "#9D3FE7",
+      "primaryDark": "#602093",
+      "primaryGradient": "linear-gradient(159.13deg, #9D3FE7 -24.13%, #602093 132.21%)",
+      "accentMuted": "#4B3A5A",
+      "textDark": "#1A141F",
+      "surfaceLight": "#F5F3F7",
+      "borderLight": "#E5E0EB",
+      "borderCard": "#D9D1E0",
+      "textMuted": "#ABA7AF"
+    },
+    "grayscale": {
+      "black": "#1A141F",
+      "gray700": "#333333",
+      "gray500": "#707075",
+      "gray400": "#A7A8AB",
+      "gray300": "#C1C6CD",
+      "gray200": "#E5E5EB",
+      "white": "#FFFFFF"
+    },
+    "informing": {
+      "success": "#00B998",
+      "warning": "#FF9500",
+      "danger": "#D51A52",
+      "link": "#0F0BAB"
+    }
+  },
+  "shapeRadius": {
+    "xs": 3,
+    "sm": 4,
+    "md": 8,
+    "lg": 12,
+    "xl": 24,
+    "full": 1000
+  },
+  "componentSpecs": {
+    "card": {
+      "corner_radius_px": 12,
+      "bg": "#FFFFFF",
+      "border": "1px solid #E5E0EB",
+      "shadow": "0 4px 16px rgba(157, 63, 231, 0.08), 0 2px 6px rgba(26, 20, 31, 0.05)"
+    },
+    "tabs": {
+      "horizontal": {
+        "active_indicator_height_px": 3,
+        "active_indicator_radius_px": 500,
+        "active_color": "#9D3FE7",
+        "active_text_color": "#1A141F",
+        "inactive_text_color": "#707075"
+      },
+      "pill": {
+        "corner_radius_px": 8,
+        "active_bg": "linear-gradient(159.13deg, #9D3FE7 -24.13%, #602093 132.21%)",
+        "active_text": "#FFFFFF",
+        "inactive_bg": "#F5F3F7",
+        "inactive_text": "#707075"
+      }
+    },
+    "checkbox": {
+      "size_px": 18,
+      "corner_radius_px": 4,
+      "selected_bg": "#9D3FE7",
+      "selected_checkmark": "#FFFFFF",
+      "unselected_border": "1.5px solid #C1C6CD"
+    },
+    "progress_bar": {
+      "size_s_height_px": 4,
+      "size_m_height_px": 8,
+      "corner_radius_px": 1000,
+      "track_bg": "#E5E5EB",
+      "fill_gradient": "linear-gradient(159.13deg, #9D3FE7 0%, #602093 100%)",
+      "completed_color": "#00B998"
+    }
+  }
+}
