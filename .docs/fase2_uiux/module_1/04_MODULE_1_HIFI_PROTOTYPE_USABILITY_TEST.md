@@ -425,6 +425,8 @@ Berdasarkan pengamatan kualitatif selama pengujian, antarmuka Modul 1 memenuhi p
 
 ## 16. Kesimpulan & Status Kesiapan Rilis Desain
 
-Hasil pengujian **Usability Testing** membuktikan bahwa **Modul 1: Navigasi Kurikulum** telah memenuhi seluruh kriteria fungsional ([PRD.md](../../fase0/PRD.md)), mencapai **TSR 100%**, dan mendapatkan skor **SUS 88.0 (Grade A)**. 
+Hasil pengujian **Usability Testing** membuktikan bahwa **Modul 1: Navigasi Kurikulum** telah memenuhi seluruh kriteria fungsional ([PRD.md](../../fase0/PRD.md)), mencapai **TSR 100%**, dan mendapatkan skor **SUS 88.0 (Grade A)**.
 
-Dengan demikian, spesifikasi desain dan prototipe Modul 1 dinyatakan **SIAP & VALID (READY FOR IMPLEMENTATION)** untuk dilanjutkan ke fase pengembangan kode aplikasi mobile (Fase 3 & 4).
+Dengan demikian, spesifikasi desain dan prototipe Modul 1 pada **Fase 2: Desain Antarmuka (UI/UX)** dinyatakan **SIAP & VALID (READY FOR IMPLEMENTATION)**, yang berjalan secara paralel bersama **Fase 3: Perancangan Sistem**, untuk selanjutnya menjadi acuan teknis pada **Fase 4: Implementasi Kode Aplikasi Mobile**.
+
+
