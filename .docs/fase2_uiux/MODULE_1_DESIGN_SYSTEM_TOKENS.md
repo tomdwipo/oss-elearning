@@ -17,19 +17,23 @@ Dokumen ini menetapkan spesifikasi standar **Design System & Design Tokens** unt
 
 ### 2.1 Palet Utama (Light & Dark Theme)
 
+Berdasarkan Styleguide resmi Figma (`Color` `229:52`):
+
 | Token Name | Hex (Light) | Hex (Dark) | Deskripsi & Penggunaan |
 | :--- | :--- | :--- | :--- |
-| `color.brand.primary` | `#1A56DB` | `#3F83F8` | Warna utama identitas OpenCampus (Header, Tab Aktif, Tombol Primer). |
-| `color.brand.primary-hover` | `#1E429F` | `#1C64F2` | State saat elemen primer ditekan / di-*hover*. |
-| `color.brand.primary-surface`| `#EBF5FF` | `#1E293B` | Latar belakang komponen terpilih (*Pill Tab*, Highlight Card). |
-| `color.bg.base` | `#F9FAFB` | `#0F172A` | Warna kanvas latar belakang seluruh layar (*Scaffold Background*). |
-| `color.bg.surface` | `#FFFFFF` | `#1E293B` | Warna kartu mata kuliah, kartu ringkasan progres, dan modal. |
-| `color.bg.surface-subtle` | `#F3F4F6` | `#334155` | Latar belakang track progress bar, badge non-aktif. |
-| `color.text.primary` | `#111827` | `#F8FAFC` | Warna teks judul, nama mata kuliah, topik silabus (High Contrast). |
-| `color.text.secondary` | `#4B5563` | `#94A3B8` | Warna teks metadata (durasi, nama kreator, jumlah pertemuan). |
-| `color.text.tertiary` | `#9CA3AF` | `#64748B` | Warna teks placeholder, status bar, caption pelengkap. |
-| `color.border.default` | `#E5E7EB` | `#334155` | Garis batas kartu, pemisah item silabus (*Divider*). |
-| `color.border.focused` | `#1A56DB` | `#3F83F8` | Garis batas elemen saat mendapatkan fokus navigasi. |
+| `color.brand.primary` | `#6D57FC` | `#B0A4FD` | Warna utama identitas OpenCampus (Variable 01 - Header, Tab Aktif, Tombol Primer). |
+| `color.brand.primary-hover` | `#5040B8` | `#6D57FC` | State saat elemen primer ditekan / di-*hover*. |
+| `color.brand.primary-deep` | `#261E58` | `#130F26` | Warna aksen gelap (Variable 02 - Banner background, Dark Header). |
+| `color.brand.primary-surface`| `#E8E4FF` | `#1E2028` | Latar belakang komponen terpilih (Variable 04 - *Pill Tab*, Highlight Card). |
+| `color.brand.accent` | `#B0A4FD` | `#5040B8` | Warna aksen sekunder / pastel (Variable 05 - Badge, Border highlight). |
+| `color.bg.base` | `#F8F7FF` | `#0C0A1C` | Warna kanvas latar belakang seluruh layar (*Scaffold Background*). |
+| `color.bg.surface` | `#FFFFFF` | `#1F2028` | Warna kartu mata kuliah, kartu ringkasan progres, dan modal. |
+| `color.bg.surface-subtle` | `#F2F4F6` | `#292526` | Latar belakang track progress bar, badge non-aktif. |
+| `color.text.primary` | `#0C0A1C` | `#F8F7FF` | Warna teks judul, nama mata kuliah, topik silabus (Variable 03 - High Contrast). |
+| `color.text.secondary` | `#4B5563` | `#B0A4FD` | Warna teks metadata (durasi, nama kreator, jumlah pertemuan). |
+| `color.text.tertiary` | `#9CA3AF` | `#767677` | Warna teks placeholder, status bar, caption pelengkap. |
+| `color.border.default` | `#DFDAFE` | `#261E58` | Garis batas kartu, pemisah item silabus (*Divider*). |
+| `color.border.focused` | `#6D57FC` | `#B0A4FD` | Garis batas elemen saat mendapatkan fokus navigasi. |
 
 ### 2.2 Token Status & Semantik (Semantic Tokens)
 
@@ -37,24 +41,25 @@ Dokumen ini menetapkan spesifikasi standar **Design System & Design Tokens** unt
 | :--- | :--- | :--- | :--- |
 | `color.success.base` | `#0E9F6E` | `#31C48D` | Centang topik selesai, progress bar 100%. |
 | `color.success.surface` | `#DEF7EC` | `#064E3B` | Latar belakang indikator status selesai / badge kelulusan topik. |
-| `color.warning.base` | `#F59E0B` | `#FBBF24` | Indikator progres berjalan, peringatan non-kritis. |
-| `color.error.base` | `#E02424` | `#F98080` | Indikator video rusak, status gagal muat. |
+| `color.warning.base` | `#FF9500` | `#FFA502` | Indikator progres berjalan, bookmark badge. |
+| `color.error.base` | `#FF4423` | `#FF6348` | Indikator video rusak, status gagal muat. |
 
 ---
 
 ## 3. Token Tipografi (Typography Tokens)
 
-* **Font Family Utama:** `Inter`, `-apple-system`, `BlinkMacSystemFont`, `Roboto`, `sans-serif`
-* **Font Family Monospace / Kode (Jika Diperlukan):** `JetBrains Mono`, `Fira Code`, `monospace`
+* **Font Family Utama (Body & UI):** `Inter`, `-apple-system`, `BlinkMacSystemFont`, `sans-serif`
+* **Font Family Display & Heading:** `Urbanist`, `Inter`, `sans-serif`
+* **Font Family Monospace / Kode:** `JetBrains Mono`, `Fira Code`, `monospace`
 
-| Token Name | Font Size | Line Height | Weight | Penggunaan |
-| :--- | :--- | :--- | :--- | :--- |
-| `font.heading.xl` | `24px (1.5rem)` | `32px` | `700 (Bold)` | Judul Utama Halaman Beranda & Silabus MK. |
-| `font.heading.lg` | `18px (1.125rem)`| `26px` | `600 (SemiBold)`| Judul Mata Kuliah pada Card, Judul Section. |
-| `font.heading.md` | `16px (1.0rem)` | `24px` | `600 (SemiBold)`| Judul Topik Pertemuan Silabus. |
-| `font.body.md` | `14px (0.875rem)`| `20px` | `400 (Regular)` | Ringkasan progres, deskripsi teks umum. |
-| `font.body.sm` | `12px (0.75rem)` | `16px` | `400 (Regular)` | Metadata durasi video, nama channel kreator. |
-| `font.label.sm` | `12px (0.75rem)` | `16px` | `600 (SemiBold)`| Label Tab Semester, Badge Jurusan, Tag Progres. |
+| Token Name | Font Family | Font Size | Line Height | Weight | Penggunaan |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| `font.heading.xl` | `Urbanist` | `24px (1.5rem)` | `32px` | `700 (Bold)` | Judul Utama Halaman Beranda & Silabus MK. |
+| `font.heading.lg` | `Urbanist` | `18px (1.125rem)`| `26px` | `600 (SemiBold)`| Judul Mata Kuliah pada Card, Judul Section. |
+| `font.heading.md` | `Inter` | `16px (1.0rem)` | `24px` | `600 (SemiBold)`| Judul Topik Pertemuan Silabus. |
+| `font.body.md` | `Inter` | `14px (0.875rem)`| `20px` | `400 (Regular)` | Ringkasan progres, deskripsi teks umum. |
+| `font.body.sm` | `Inter` | `12px (0.75rem)` | `16px` | `400 (Regular)` | Metadata durasi video, nama channel kreator. |
+| `font.label.sm` | `Inter` | `12px (0.75rem)` | `16px` | `600 (SemiBold)`| Label Tab Semester, Badge Jurusan, Tag Progres. |
 
 ---
 
@@ -104,7 +109,7 @@ elevation.hover  : 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 
 ```text
 [ Inactive ]              [ Active / Selected ]
 +------------------+      +------------------+
-|     Sem 2        |      |     Sem 1*       |  <-- Primary Blue Background
+|     Sem 2        |      |     Sem 1*       |  <-- Primary Violet Background (#6D57FC)
 +------------------+      +------------------+
 ```
 
@@ -159,21 +164,23 @@ elevation.hover  : 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 
 {
   "color": {
     "brand": {
-      "primary": { "value": "#1A56DB", "type": "color" },
-      "primary_surface": { "value": "#EBF5FF", "type": "color" }
+      "primary": { "value": "#6D57FC", "type": "color" },
+      "primary_deep": { "value": "#261E58", "type": "color" },
+      "primary_surface": { "value": "#E8E4FF", "type": "color" },
+      "accent": { "value": "#B0A4FD", "type": "color" }
     },
     "bg": {
-      "base": { "value": "#F9FAFB", "type": "color" },
+      "base": { "value": "#F8F7FF", "type": "color" },
       "surface": { "value": "#FFFFFF", "type": "color" }
     },
     "text": {
-      "primary": { "value": "#111827", "type": "color" },
+      "primary": { "value": "#0C0A1C", "type": "color" },
       "secondary": { "value": "#4B5563", "type": "color" }
     },
     "semantic": {
       "success": { "value": "#0E9F6E", "type": "color" },
-      "warning": { "value": "#F59E0B", "type": "color" },
-      "error": { "value": "#E02424", "type": "color" }
+      "warning": { "value": "#FF9500", "type": "color" },
+      "error": { "value": "#FF4423", "type": "color" }
     }
   },
   "spacing": {
@@ -190,7 +197,8 @@ elevation.hover  : 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 
     "full": { "value": "9999px", "type": "borderRadius" }
   },
   "typography": {
-    "fontFamily": { "value": "Inter, sans-serif", "type": "fontFamily" },
+    "fontFamilyHeading": { "value": "Urbanist, sans-serif", "type": "fontFamily" },
+    "fontFamilyBody": { "value": "Inter, sans-serif", "type": "fontFamily" },
     "heading_xl": { "fontSize": "24px", "lineHeight": "32px", "fontWeight": "700" },
     "heading_lg": { "fontSize": "18px", "lineHeight": "26px", "fontWeight": "600" },
     "heading_md": { "fontSize": "16px", "lineHeight": "24px", "fontWeight": "600" },
