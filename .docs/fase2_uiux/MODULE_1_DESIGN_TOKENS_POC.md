@@ -277,6 +277,21 @@ Sesuai arahan (*"sekalian ilustration nya masing2 fig juga"*), setiap sistem des
 | **UI Kit Free** | `Mobile E-Learning.fig` | `c6e16108...` (`Illustration`) | `355 x 302` (RGBA) | **3D Student E-Learning:** Menampilkan mahasiswa belajar dengan laptop & buku |
 
 Berkas gambar asli disimpan di [`assets/illustrations/`](./assets/illustrations/) dan disematkan langsung ke dalam prototipe interaktif [`assets/module_1_tokens_poc.html`](./assets/module_1_tokens_poc.html).
+---
 
+## 8. Keputusan Final & Adopsi Resmi: Design System & UI Kit Free (Community)
 
+Berdasarkan hasil pengujian langsung pada simulator [module_1_tokens_poc.html](./assets/module_1_tokens_poc.html) dan evaluasi komprehensif terhadap ketiga berkas resmi Figma, **Design System & UI Kit Free (Community)** secara resmi dipilih dan diadopsi sebagai fondasi desain untuk seluruh modul aplikasi **OpenCampus Mobile**.
 
+### 8.1. Data & Bukti Empiris Pemilihan
+* **Kelengkapan Komponen Tertinggi:** Memiliki **1.327 master components** dan **59 canvases** yang mencakup seluruh kebutuhan navigasi kurikulum, silabus, accordion pertemuan, form input, data display, dan feedback.
+* **Karakter Visual EdTech Modern:** Perpaduan warna *Corporate Violet* (`#9D3FE7`) dengan *Approval Teal* (`#00B998`) menciptakan impresi yang segar, memotivasi, dan tidak monoton bagi mahasiswa.
+* **Tipografi Bersih & Mudah Dibaca (`Poppins`):** Memiliki hirarki font yang sangat jelas antara Display H1, H2, H3, H4, hingga Caption dan Micro tag.
+* **Dukungan Ikonografi & Ilustrasi Lengkap:** Dilengkapi dengan 65+ ikon vektor bawaan dan set maskot kartun edukatif (*Cute cookie cartoon characters* - Node `1842:25160`).
+
+### 8.2. Rangkuman Artefak Terkait
+1. **Dokumen Spesifikasi Desain & Token Resmi:** [MODULE_1_DESIGN_SYSTEM_TOKENS.md](./MODULE_1_DESIGN_SYSTEM_TOKENS.md)
+2. **Katalog Token & Komponen Lengkap (JSON):** [`design_system_uikit_free_complete_tokens.json`](./assets/design_system_uikit_free_complete_tokens.json)
+3. **Koleksi Ikon Vektor SVG Resmi (44+ Icons):** [`assets/icons/uikit/`](./assets/icons/uikit/)
+4. **Simulator Interaktif POC:** [`assets/module_1_tokens_poc.html`](./assets/module_1_tokens_poc.html)
+5. **Prototipe Hi-Fi:** [`assets/hifi_module_1_prototype.html`](./assets/hifi_module_1_prototype.html)

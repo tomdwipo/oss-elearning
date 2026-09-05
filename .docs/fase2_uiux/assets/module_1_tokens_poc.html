@@ -1081,14 +1081,14 @@
     <div class="poc-controls">
       <!-- Theme Selection -->
       <div class="theme-selector-tabs">
-        <button class="btn-ds-tab active" onclick="switchTheme('theme-m3', this)">
-          <span class="theme-dot" style="background: #D0BCFF;"></span> Google Material 3 (.fig)
+        <button class="btn-ds-tab active" onclick="switchTheme('theme-uikitfree', this)" style="border-color: #9D3FE7; font-weight: 700;">
+          <span class="theme-dot" style="background: #9D3FE7;"></span> UI Kit Free (.fig) <span style="background: #9D3FE7; color: #FFF; padding: 2px 6px; border-radius: 99px; font-size: 10px; margin-left: 4px;">OFFICIAL</span>
         </button>
         <button class="btn-ds-tab" onclick="switchTheme('theme-primer', this)">
           <span class="theme-dot" style="background: #58A6FF;"></span> GitHub Primer (.fig)
         </button>
-        <button class="btn-ds-tab" onclick="switchTheme('theme-uikitfree', this)">
-          <span class="theme-dot" style="background: #C084FC;"></span> UI Kit Free (.fig)
+        <button class="btn-ds-tab" onclick="switchTheme('theme-m3', this)">
+          <span class="theme-dot" style="background: #D0BCFF;"></span> Google Material 3 (.fig)
         </button>
       </div>
 
@@ -1105,11 +1105,11 @@
 
   <!-- Live Meta Ribbon -->
   <div class="poc-meta-ribbon" id="pocMetaRibbon">
-    <span class="meta-tag"><strong>Sistem Aktif:</strong> <span id="metaDsName">Google Material 3 (via Material 3 Design Kit.fig)</span></span>
-    <span class="meta-tag"><strong>Primary Accent:</strong> <span class="color-swatch" id="metaPrimarySwatch" style="background: #6750A4;"></span> <span id="metaPrimaryHex">#6750A4 (M3 Baseline Purple v106)</span></span>
-    <span class="meta-tag"><strong>Typography:</strong> <span id="metaFont">Roboto (M3 Baseline Typescale)</span></span>
-    <span class="meta-tag"><strong>Border Radius:</strong> <span id="metaRadius">12px (Card) / 8px (Chip) / 2px (Checkbox) / 1000px (Full)</span></span>
-    <span class="meta-tag"><strong>Data Source:</strong> <span id="metaDomain">Material 3 Design Kit (Community).fig (87.523 nodes, 318 vars)</span></span>
+    <span class="meta-tag"><strong>Sistem Aktif:</strong> <span id="metaDsName">Design System & UI Kit Free (Official .fig Source)</span></span>
+    <span class="meta-tag"><strong>Primary Accent:</strong> <span class="color-swatch" id="metaPrimarySwatch" style="background: #9D3FE7;"></span> <span id="metaPrimaryHex">#9D3FE7 (Corporate/Purple Gradient)</span></span>
+    <span class="meta-tag"><strong>Typography:</strong> <span id="metaFont">Poppins 400 / 500 / 600 / 700</span></span>
+    <span class="meta-tag"><strong>Border Radius:</strong> <span id="metaRadius">8px (Card) / 4px (Checkbox) / 9999px (Pill)</span></span>
+    <span class="meta-tag"><strong>Data Source:</strong> <span id="metaDomain">Design System _ Ui Kit Free (Community).fig (11.815 nodes, 59 canvases, 1.327 components)</span></span>
   </div>
 
   <!-- Main Comparison Stage -->
@@ -1201,7 +1201,7 @@
     }
 };
 
-    let currentTheme = 'theme-m3';
+    let currentTheme = 'theme-uikitfree';
     let currentScreen = 'viewHome';
     let isMatrixMode = false;
 
