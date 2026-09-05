@@ -167,3 +167,39 @@ Untuk melihat, berinteraksi, dan membandingkan secara visual ketiga sistem desai
 3. **Opsi 3: GitHub Primer Web (`#0969DA` & `Inter`)**
    👉 **Paling Kuat Nuansa "Sekolah Coding / Developer"**
    *Alasan:* Mengadopsi bahasa visual GitHub yang sangat akrab bagi mahasiswa Teknik Informatika, dengan tab *UnderlineNav* dan border halus 1px yang bersih berorientasi teks.
+
+---
+
+## 5. Ekstraksi Ikon Vektor Asli dari Berkas Figma (.fig)
+
+Sebagai tindak lanjut dari arahan pengguna (*"icon2 nya pake yang dari fig juga"*), seluruh emoji teks dan glyph sementara (seperti 🎓, 💻, 📐, 🌐, ›, ‹ Back, ✓, ⏱, 👤, ▶, 🏠, 🔍, 🔋) pada prototipe POC telah digantikan secara menyeluruh (**100%**) dengan ikon vektor SVG yang diekstrak langsung dari berkas biner `.fig`.
+
+### 5.1. Metodologi Ekstraksi Biner Geometry Blob
+Pada spesifikasi skema Kiwi biner Figma (v100+), kontur vektor disimpan dalam blob biner yang direferensikan oleh `nc.fillGeometry[n].commandsBlob`. Ekstraksi dilakukan secara terprogram dengan mengurai *stream byte opcode*:
+* **Opcode 0 (`Z`):** *Close path*
+* **Opcode 1 (`M x y`):** *MoveTo* (2 float 32-bit LE, 8 bytes)
+* **Opcode 2 (`L x y`):** *LineTo* (2 float 32-bit LE, 8 bytes)
+* **Opcode 3 (`Q x1 y1 x y`):** *Quadratic Bezier* (4 float 32-bit LE, 16 bytes)
+* **Opcode 4 (`C x1 y1 x2 y2 x y`):** *Cubic Bezier* (6 float 32-bit LE, 24 bytes)
+
+### 5.2. Katalog 12 Ikon Vektor Figma Terverifikasi (`.docs/fase2_uiux/assets/icons/`)
+Seluruh berkas SVG mandiri telah divalidasi dan disimpan di repositori:
+
+| Nama Berkas SVG | Sumber Berkas `.fig` | Node GUID Figma & Komponen Sumber | ViewBox | Peran pada Modul 1 |
+| :--- | :--- | :--- | :---: | :--- |
+| [`home.svg`](./assets/icons/home.svg) | `Mobile E-Learning App Design.fig` | Node `229:682` (`Iconly/Broken/Home`) | `0 0 24 24` | Bottom Navigation: Tab Beranda |
+| [`search.svg`](./assets/icons/search.svg) | `Mobile E-Learning App Design.fig` | Node `229:684` (`Iconly/Broken/Search`) | `0 0 24 24` | Bottom Navigation: Tab Pencarian Silabus |
+| [`profile.svg`](./assets/icons/profile.svg) | `Mobile E-Learning App Design.fig` | Node `229:690` (`Iconly/Broken/Profile`) | `0 0 24 24` | Bottom Navigation: Tab Profil Mahasiswa |
+| [`arrow_left.svg`](./assets/icons/arrow_left.svg) | `Mobile E-Learning App Design.fig` | Node `229:691` (`Iconly/Broken/Arrow - Left`) | `0 0 24 24` | App Bar Header: Tombol Kembali (*Back*) |
+| [`arrow_right.svg`](./assets/icons/arrow_right.svg) | `Mobile E-Learning App Design.fig` | Node `223:116` (`Iconly/Broken/Arrow - Right 2`) | `0 0 24 24` | Indikator Navigasi Kartu Mata Kuliah |
+| [`time_circle.svg`](./assets/icons/time_circle.svg) | `Mobile E-Learning App Design.fig` | Node `229:1381` (`Iconly/Broken/Time Circle`) | `0 0 14 14` | Metadata Silabus: Durasi & Jam Belajar |
+| [`play.svg`](./assets/icons/play.svg) | `Mobile E-Learning App Design.fig` | Node `229:797` (`Play Icon / Path`) | `0 0 12 14` | Tombol Aksi: Mulai Belajar / Lanjutkan Materi |
+| [`code.svg`](./assets/icons/code.svg) | `Primer Web.fig` | Node `31742:155953` (`Icon VECTOR`, Octicon `< / >`) | `0 0 16 16` | Ikon Kartu: Pemrograman Web & Mobile |
+| [`graph.svg`](./assets/icons/graph.svg) | `Primer Web.fig` | Node `32850:111195` (`Icon VECTOR`, Octicon graph/math) | `0 0 16 16` | Ikon Kartu: Struktur Data & Matematika Diskrit |
+| [`globe.svg`](./assets/icons/globe.svg) | `Primer Web.fig` | Node `21062:78765` (`Icon VECTOR`, Octicon globe) | `0 0 16 16` | Ikon Kartu: Jaringan Komputer & Cloud |
+| [`book.svg`](./assets/icons/book.svg) | `Primer Web.fig` | Node `12515:40782` (`Icon VECTOR`, Octicon book) | `0 0 16 16` | Brand Logo: OpenCampus Academic Identity |
+| [`check.svg`](./assets/icons/check.svg) | `Material 3 Design Kit.fig` | Node `51861:5433` (`Icons/check_small`) | `0 0 12 10` | Checkbox Interaktif: Penanda Pertemuan Selesai |
+
+### 5.3. Pewarnaan Dinamis Berbasis Design Tokens
+Semua ikon SVG diatur menggunakan atribut `fill="currentColor"` atau `stroke="currentColor"`. Hal ini memungkinkan setiap ikon secara instan mewarisi token warna dinamis sistem desain yang aktif (misal: `#6750A4` pada M3, `#0969DA` pada Primer, atau `#9D3FE7` pada UI Kit Free) tanpa perlu menduplikasi berkas gambar.
+
