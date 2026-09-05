@@ -9,62 +9,56 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      /* GITHUB PRIMER DESIGN TOKENS (LIGHT THEME) */
-      --primer-canvas-default: #FFFFFF;
-      --primer-canvas-subtle: #F5F3F7;
-      --primer-canvas-inset: #FFFFFF;
-      --primer-fg-default: #1A141F;
-      --primer-fg-muted: #4B3A5A;
-      --primer-fg-subtle: #8C959F;
-      --primer-fg-on-emphasis: #FFFFFF;
+      /* DESIGN SYSTEM & UI KIT FREE (COMMUNITY) OFFICIAL TOKENS */
+      --uikit-primary: #9D3FE7;
+      --uikit-primary-dark: #602093;
+      --uikit-primary-gradient: linear-gradient(135deg, #9D3FE7 0%, #602093 100%);
+      --uikit-accent-blue: #00ACE5;
 
-      /* Primer Brand & Accent */
-      --primer-accent-fg: #9D3FE7;
-      --primer-accent-emphasis: #9D3FE7;
-      --primer-accent-muted: #F5F3F7;
-      --primer-accent-subtle: #F0F8FF;
+      /* Semantic Feedback Tokens */
+      --uikit-success: #00B998;
+      --uikit-warning: #FF9500;
+      --uikit-error: #D51A52;
 
-      /* Primer Borders */
-      --primer-border-default: #ABA7AF;
-      --primer-border-muted: #D9D1E0;
-      --primer-border-subtle: rgba(31, 35, 40, 0.15);
+      /* Grayscale & Surface Tokens */
+      --uikit-canvas: #F5F3F7;
+      --uikit-surface: #FFFFFF;
+      --uikit-text-primary: #1A141F;
+      --uikit-text-muted: #4B3A5A;
+      --uikit-text-subtle: #707075;
+      --uikit-border: #E5E0EB;
+      --uikit-border-dark: #ABA7AF;
+      --uikit-track: #D9D1E0;
 
-      /* Primer Success & Progress */
-      --primer-success-fg: #00B998;
-      --primer-success-emphasis: #00B998;
-      --primer-success-muted: #DAFBE1;
+      /* Radius Tokens */
+      --uikit-radius-xs: 2px;
+      --uikit-radius-s: 4px;
+      --uikit-radius-default: 8px;
+      --uikit-radius-m: 12px;
+      --uikit-radius-pill: 9999px;
 
-      /* Primer Dimensions & Radius */
-      --primer-radius-sm: 4px;
-      --primer-radius-default: 8px;
-      --primer-radius-md: 8px;
-      --primer-radius-full: 9999px;
+      /* Elevation Tokens */
+      --uikit-shadow-card: 0 4px 16px rgba(157, 63, 231, 0.08);
+      --uikit-shadow-card-hover: 0 8px 24px rgba(157, 63, 231, 0.14);
+      --uikit-shadow-floating: 0 4px 12px rgba(157, 63, 231, 0.25);
+      --uikit-shadow-modal: 0 16px 36px rgba(26, 20, 31, 0.16);
 
-      /* Shadows */
-      --primer-shadow-card: 0 4px 16px rgba(157, 63, 231, 0.08);
-      --primer-shadow-hover: 0 8px 24px rgba(157, 63, 231, 0.14);
-
-      --primer-font: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      --primer-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, "JetBrains Mono", monospace;
+      --uikit-font: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --uikit-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
     }
 
     [data-theme="dark"] {
-      /* GITHUB PRIMER DARK THEME TOKENS */
-      --primer-canvas-default: #0D1117;
-      --primer-canvas-subtle: #161B22;
-      --primer-canvas-inset: #010409;
-      --primer-fg-default: #E6EDF3;
-      --primer-fg-muted: #848D97;
-      --primer-fg-subtle: #6E7681;
-      --primer-accent-fg: #2F81F7;
-      --primer-accent-emphasis: #1F6FEB;
-      --primer-accent-muted: rgba(56, 139, 253, 0.15);
-      --primer-border-default: #30363D;
-      --primer-border-muted: #21262D;
-      --primer-success-fg: #3FB950;
-      --primer-success-emphasis: #238636;
-      --primer-success-muted: rgba(46, 160, 67, 0.15);
-      --primer-shadow-card: 0 1px 3px rgba(0, 0, 0, 0.3);
+      /* UI KIT FREE DARK THEME TOKENS */
+      --uikit-canvas: #120E18;
+      --uikit-surface: #1E1728;
+      --uikit-text-primary: #F5F3F7;
+      --uikit-text-muted: #ABA7AF;
+      --uikit-text-subtle: #8C8793;
+      --uikit-border: #322642;
+      --uikit-border-dark: #4A3961;
+      --uikit-track: #2B213A;
+      --uikit-shadow-card: 0 4px 20px rgba(0, 0, 0, 0.4);
+      --uikit-shadow-card-hover: 0 8px 24px rgba(157, 63, 231, 0.25);
     }
 
     * {
@@ -75,19 +69,19 @@
     }
 
     body {
-      background-color: #010409;
-      color: #E6EDF3;
-      font-family: var(--primer-font);
+      background-color: #0D0A14;
+      color: #E6E1EC;
+      font-family: var(--uikit-font);
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       overflow-x: hidden;
     }
 
-    /* Top Workspace Header (GitHub Nav Style) */
+    /* Top Workspace Header */
     .app-meta-header {
-      background: #161B22;
-      border-bottom: 1px solid #30363D;
+      background: #191224;
+      border-bottom: 1px solid #2B213A;
       padding: 12px 24px;
       display: flex;
       justify-content: space-between;
@@ -99,14 +93,15 @@
       align-items: center;
       gap: 12px;
     }
-    .badge-primer-pill {
-      background: #0969DA;
+    .badge-uikit-pill {
+      background: var(--uikit-primary-gradient);
       color: #FFFFFF;
-      padding: 3px 10px;
-      border-radius: var(--primer-radius-full);
+      padding: 4px 12px;
+      border-radius: var(--uikit-radius-pill);
       font-weight: 700;
       font-size: 11px;
       letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(157, 63, 231, 0.35);
     }
     .app-meta-title {
       font-weight: 700;
@@ -122,20 +117,21 @@
       gap: 10px;
     }
     .btn-header {
-      background: #21262D;
-      color: #C9D1D9;
-      border: 1px solid #30363D;
-      padding: 6px 12px;
-      border-radius: var(--primer-radius-default);
+      background: #271E36;
+      color: #D1C9DE;
+      border: 1px solid #3F3057;
+      padding: 6px 14px;
+      border-radius: var(--uikit-radius-default);
       cursor: pointer;
       font-size: 12px;
       font-weight: 600;
+      font-family: var(--uikit-font);
       transition: all 0.2s;
     }
     .btn-header:hover {
-      background: #30363D;
+      background: #382A4F;
       color: #FFFFFF;
-      border-color: #8B949E;
+      border-color: var(--uikit-primary);
     }
 
     /* Main Workspace Container */
@@ -163,17 +159,17 @@
     .phone-frame {
       width: 375px;
       height: 812px;
-      background: var(--primer-canvas-subtle);
+      background: var(--uikit-canvas);
       border-radius: 44px;
-      border: 10px solid #1F242C;
-      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.1);
+      border: 10px solid #231C30;
+      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(157, 63, 231, 0.2);
       position: relative;
       overflow: hidden;
       display: flex;
       flex-direction: column;
       user-select: none;
       transition: background 0.25s ease;
-      color: var(--primer-fg-default);
+      color: var(--uikit-text-primary);
     }
 
     /* Notch & Sensor */
@@ -184,7 +180,7 @@
       transform: translateX(-50%);
       width: 150px;
       height: 26px;
-      background: #1F242C;
+      background: #231C30;
       border-bottom-left-radius: 16px;
       border-bottom-right-radius: 16px;
       z-index: 100;
@@ -195,7 +191,7 @@
     .phone-speaker {
       width: 46px;
       height: 4px;
-      background: #0D1117;
+      background: #0D0A14;
       border-radius: 4px;
     }
 
@@ -207,7 +203,7 @@
       align-items: center;
       font-size: 13px;
       font-weight: 600;
-      color: var(--primer-fg-default);
+      color: var(--uikit-text-primary);
       z-index: 90;
       flex-shrink: 0;
     }
@@ -226,7 +222,7 @@
       transform: translateX(-50%);
       width: 134px;
       height: 4px;
-      background: var(--primer-fg-default);
+      background: var(--uikit-text-primary);
       opacity: 0.25;
       border-radius: 10px;
       z-index: 100;
@@ -249,8 +245,8 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      background: var(--primer-canvas-subtle);
-      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
+      background: var(--uikit-canvas);
+      transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s ease;
       opacity: 0;
       pointer-events: none;
       transform: translateX(100%);
@@ -277,266 +273,279 @@
     .screen-scroll-area::-webkit-scrollbar { display: none; }
 
     /* ========================================================
-       SCREEN 1: BERANDA SEMESTER (GITHUB PRIMER STYLE)
+       SCREEN 1: BERANDA SEMESTER (UI KIT FREE STYLE)
        ======================================================== */
-    .primer-header-bar {
-      padding: 14px 16px 10px;
+    .uikit-header-bar {
+      padding: 14px 16px 12px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: var(--primer-canvas-default);
-      border-bottom: 1px solid var(--primer-border-default);
+      background: var(--uikit-surface);
+      border-bottom: 1px solid var(--uikit-border);
     }
-    .primer-brand {
-      font-size: 16px;
+    .uikit-brand {
+      font-size: 16.5px;
       font-weight: 800;
-      color: var(--primer-fg-default);
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .primer-badge-jurusan {
-      background: var(--primer-accent-muted);
-      color: var(--primer-accent-fg);
-      font-size: 11px;
-      font-weight: 600;
-      padding: 3px 8px;
-      border-radius: var(--primer-radius-full);
-      border: 1px solid rgba(9, 105, 218, 0.2);
-    }
-
-    /* Search Box (Primer FormControls) */
-    .primer-search-wrap {
-      padding: 12px 16px;
-    }
-    .primer-search-box {
-      background: var(--primer-canvas-default);
-      border: 1px solid var(--primer-border-default);
-      border-radius: var(--primer-radius-default);
-      padding: 8px 12px;
+      color: var(--uikit-primary);
       display: flex;
       align-items: center;
       gap: 8px;
-      box-shadow: inset 0 1px 0 rgba(208, 215, 222, 0.2);
     }
-    .primer-search-box input {
+    .uikit-badge-jurusan {
+      background: #F5F3F7;
+      color: var(--uikit-primary);
+      font-size: 11px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: var(--uikit-radius-pill);
+      border: 1px solid var(--uikit-border);
+    }
+
+    /* Search Box (Input Canvas) */
+    .uikit-search-wrap {
+      padding: 12px 16px 8px;
+    }
+    .uikit-search-box {
+      background: var(--uikit-surface);
+      border: 1px solid var(--uikit-border);
+      border-radius: var(--uikit-radius-default);
+      padding: 9px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 2px 8px rgba(157, 63, 231, 0.04);
+      transition: all 0.2s;
+    }
+    .uikit-search-box:focus-within {
+      border-color: var(--uikit-primary);
+      box-shadow: 0 0 0 3px rgba(157, 63, 231, 0.15);
+    }
+    .uikit-search-box input {
       border: none;
       background: transparent;
       outline: none;
-      font-family: var(--primer-font);
+      font-family: var(--uikit-font);
       font-size: 13px;
-      color: var(--primer-fg-default);
+      color: var(--uikit-text-primary);
       width: 100%;
     }
-    .primer-search-box input::placeholder {
-      color: var(--primer-fg-subtle);
+    .uikit-search-box input::placeholder {
+      color: var(--uikit-text-subtle);
     }
 
-    /* Primer Progress Card */
-    .primer-progress-card {
-      margin: 0 16px 16px;
-      background: var(--primer-canvas-default);
-      border: 1px solid var(--primer-border-default);
-      border-radius: var(--primer-radius-default);
+    /* Hero Progress Summary Card (Progress Canvas & Mascot) */
+    .uikit-progress-card {
+      margin: 8px 16px 14px;
+      background: var(--uikit-surface);
+      border: 1px solid var(--uikit-border);
+      border-radius: var(--uikit-radius-m);
       padding: 14px 16px;
-      box-shadow: var(--primer-shadow-card);
+      box-shadow: var(--uikit-shadow-card);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: relative;
+      overflow: hidden;
     }
-    .primer-card-head {
+    .uikit-card-content {
+      flex: 1;
+      min-width: 0;
+    }
+    .uikit-card-head {
       display: flex;
       justify-content: space-between;
       align-items: baseline;
       margin-bottom: 8px;
     }
-    .primer-card-title {
+    .uikit-card-title {
       font-size: 14px;
       font-weight: 700;
-      color: var(--primer-fg-default);
+      color: var(--uikit-text-primary);
     }
-    .primer-card-percent {
-      font-family: var(--primer-font-mono);
-      font-size: 13px;
-      font-weight: 700;
-      color: var(--primer-accent-fg);
+    .uikit-card-percent {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--uikit-primary);
     }
-
-    /* GitHub Primer ProgressBar Component (GUID 16443:62464) */
-    .primer-progress-track {
+    .uikit-progress-track {
       height: 8px;
-      background: var(--primer-border-muted);
-      border-radius: var(--primer-radius-full);
+      background: var(--uikit-track);
+      border-radius: var(--uikit-radius-pill);
       overflow: hidden;
       margin-bottom: 8px;
     }
-    .primer-progress-fill {
+    .uikit-progress-fill {
       height: 100%;
-      background: var(--primer-accent-emphasis);
-      border-radius: var(--primer-radius-full);
+      background: var(--uikit-primary-gradient);
+      border-radius: var(--uikit-radius-pill);
       width: 0%;
-      transition: width 0.35s ease;
+      transition: width 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
-    .primer-progress-fill.completed {
-      background: var(--primer-success-emphasis);
+    .uikit-progress-fill.completed {
+      background: var(--uikit-success);
     }
-    .primer-card-sub {
+    .uikit-card-sub {
       font-size: 11px;
-      color: var(--primer-fg-muted);
+      color: var(--uikit-text-muted);
       display: flex;
       justify-content: space-between;
     }
+    .uikit-hero-mascot {
+      width: 68px;
+      height: 68px;
+      object-fit: contain;
+      flex-shrink: 0;
+      border-radius: 10px;
+    }
 
-    /* Section Label & CounterLabel */
-    .primer-section-head {
+    /* Section Head & Counter Badge (Canvas Badge) */
+    .uikit-section-head {
       padding: 0 16px 8px;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
-    .primer-section-title {
+    .uikit-section-title {
       font-size: 12px;
       font-weight: 700;
-      color: var(--primer-fg-muted);
+      color: var(--uikit-text-muted);
       text-transform: uppercase;
-      letter-spacing: 0.4px;
+      letter-spacing: 0.5px;
     }
-    /* Primer CounterLabel (GUID 18959:64970) */
-    .primer-counter-label {
-      background: var(--primer-canvas-default);
-      color: var(--primer-fg-muted);
-      border: 1px solid var(--primer-border-default);
+    .uikit-counter-label {
+      background: #F5F3F7;
+      color: var(--uikit-primary);
+      border: 1px solid var(--uikit-border);
       font-size: 11px;
-      font-weight: 600;
-      padding: 1px 8px;
-      border-radius: var(--primer-radius-full);
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: var(--uikit-radius-pill);
     }
 
-    /* Primer UnderlineNav Tabs (GUID 18843:67449) */
-    .primer-underline-nav {
+    /* Pill Tabs Semester 1-8 (Canvas Tabs) */
+    .uikit-pill-tabs {
       display: flex;
-      gap: 16px;
-      padding: 0 16px;
-      border-bottom: 1px solid var(--primer-border-default);
-      background: var(--primer-canvas-default);
+      gap: 8px;
+      padding: 0 16px 14px;
       overflow-x: auto;
       scrollbar-width: none;
-      margin-bottom: 16px;
     }
-    .primer-underline-nav::-webkit-scrollbar { display: none; }
+    .uikit-pill-tabs::-webkit-scrollbar { display: none; }
 
-    .primer-nav-item {
-      padding: 10px 4px 12px;
-      font-size: 13px;
+    .uikit-tab-pill {
+      padding: 8px 16px;
+      font-size: 12.5px;
       font-weight: 600;
-      color: var(--primer-fg-muted);
+      color: var(--uikit-text-muted);
+      background: var(--uikit-surface);
+      border: 1px solid var(--uikit-border);
+      border-radius: var(--uikit-radius-pill);
       white-space: nowrap;
       cursor: pointer;
-      position: relative;
       display: flex;
       align-items: center;
       gap: 6px;
-      transition: color 0.15s;
+      transition: all 0.2s ease;
     }
-    .primer-nav-item:hover {
-      color: var(--primer-fg-default);
+    .uikit-tab-pill:hover {
+      border-color: var(--uikit-primary);
+      color: var(--uikit-primary);
+      transform: translateY(-1px);
     }
-    .primer-nav-item.active {
-      color: var(--primer-fg-default);
+    .uikit-tab-pill.active {
+      background: var(--uikit-primary-gradient);
+      color: #FFFFFF;
+      border-color: transparent;
       font-weight: 700;
-    }
-    .primer-nav-item.active::after {
-      content: '';
-      position: absolute;
-      bottom: -1px;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: #FD8C73; /* Iconic GitHub active tab underline orange or Primer accent */
-      background: var(--primer-accent-fg);
-      border-radius: 2px;
+      box-shadow: var(--uikit-shadow-floating);
     }
 
-    /* Course Cards (Primer ActionList & Box Style) */
-    .primer-course-list {
+    /* Course Cards (Canvas Table / Data Display) */
+    .uikit-course-list {
       padding: 0 16px;
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
-    .primer-course-card {
-      background: var(--primer-canvas-default);
-      border: 1px solid var(--primer-border-default);
-      border-radius: var(--primer-radius-default);
+    .uikit-course-card {
+      background: var(--uikit-surface);
+      border: 1px solid var(--uikit-border);
+      border-radius: var(--uikit-radius-default);
       padding: 12px 14px;
       display: flex;
       align-items: center;
       gap: 12px;
       cursor: pointer;
-      box-shadow: var(--primer-shadow-card);
-      transition: all 0.15s ease;
+      box-shadow: var(--uikit-shadow-card);
+      transition: all 0.2s ease;
     }
-    .primer-course-card:hover {
-      border-color: var(--primer-accent-emphasis);
-      box-shadow: var(--primer-shadow-hover);
-      transform: translateY(-1px);
+    .uikit-course-card:hover {
+      border-color: var(--uikit-primary);
+      box-shadow: var(--uikit-shadow-card-hover);
+      transform: translateY(-1.5px);
     }
-    .primer-course-card:active {
-      background: var(--primer-canvas-subtle);
+    .uikit-course-card:active {
+      background: #FAF8FC;
     }
-    .primer-course-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: var(--primer-radius-default);
-      background: var(--primer-accent-muted);
-      color: var(--primer-accent-fg);
+    .uikit-course-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--uikit-radius-default);
+      background: #F5F3F7;
+      color: var(--uikit-primary);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 18px;
       flex-shrink: 0;
-      border: 1px solid rgba(9, 105, 218, 0.15);
+      border: 1px solid var(--uikit-border);
     }
-    .primer-course-body {
+    .uikit-course-body {
       flex: 1;
       min-width: 0;
     }
-    .primer-course-name {
-      font-size: 14px;
+    .uikit-course-name {
+      font-size: 13.5px;
       font-weight: 600;
-      color: var(--primer-accent-fg);
+      color: var(--uikit-text-primary);
       margin-bottom: 3px;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
     }
-    .primer-course-meta {
-      font-size: 11.5px;
-      color: var(--primer-fg-muted);
+    .uikit-course-meta {
+      font-size: 11px;
+      color: var(--uikit-text-muted);
       margin-bottom: 6px;
     }
-    .primer-mini-track {
+    .uikit-mini-track {
       height: 4px;
-      background: var(--primer-border-muted);
-      border-radius: var(--primer-radius-full);
+      background: var(--uikit-track);
+      border-radius: var(--uikit-radius-pill);
       overflow: hidden;
     }
-    .primer-mini-fill {
+    .uikit-mini-fill {
       height: 100%;
-      background: var(--primer-accent-fg);
+      background: var(--uikit-primary);
+      border-radius: var(--uikit-radius-pill);
     }
-    .primer-chevron {
-      color: var(--primer-fg-subtle);
-      font-size: 14px;
-      font-weight: bold;
+    .uikit-mini-fill.done {
+      background: var(--uikit-success);
+    }
+    .uikit-chevron {
+      color: var(--uikit-text-subtle);
+      display: flex;
+      align-items: center;
     }
 
-    /* Bottom Nav */
-    .primer-bottom-bar {
+    /* Bottom Navigation Bar (Canvas Navigation bar) */
+    .uikit-bottom-bar {
       position: absolute;
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 56px;
-      background: var(--primer-canvas-default);
-      border-top: 1px solid var(--primer-border-default);
+      height: 58px;
+      background: var(--uikit-surface);
+      border-top: 1px solid var(--uikit-border);
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -548,22 +557,24 @@
       flex-direction: column;
       align-items: center;
       gap: 3px;
-      font-size: 10px;
+      font-size: 10.5px;
       font-weight: 600;
-      color: var(--primer-fg-muted);
+      color: var(--uikit-text-muted);
       cursor: pointer;
+      transition: color 0.15s;
     }
     .nav-tab-item.active {
-      color: var(--primer-accent-fg);
+      color: var(--uikit-primary);
+      font-weight: 700;
     }
 
     /* ========================================================
-       SCREEN 2: SILABUS MATA KULIAH (PRIMER STYLE)
+       SCREEN 2: SILABUS MATA KULIAH (UI KIT FREE STYLE)
        ======================================================== */
-    .primer-top-appbar {
+    .uikit-top-appbar {
       padding: 10px 16px;
-      background: var(--primer-canvas-default);
-      border-bottom: 1px solid var(--primer-border-default);
+      background: var(--uikit-surface);
+      border-bottom: 1px solid var(--uikit-border);
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -571,26 +582,29 @@
       top: 0;
       z-index: 50;
     }
-    .primer-btn-back {
-      background: var(--primer-canvas-subtle);
-      border: 1px solid var(--primer-border-default);
-      border-radius: var(--primer-radius-default);
+    .uikit-btn-back {
+      background: #F5F3F7;
+      border: 1px solid var(--uikit-border);
+      border-radius: var(--uikit-radius-default);
       padding: 5px 10px;
       font-size: 12px;
       font-weight: 600;
-      color: var(--primer-fg-default);
+      color: var(--uikit-text-primary);
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 4px;
+      gap: 6px;
+      font-family: var(--uikit-font);
+      transition: all 0.15s;
     }
-    .primer-btn-back:hover {
-      background: var(--primer-border-muted);
+    .uikit-btn-back:hover {
+      background: #EAE6EF;
+      color: var(--uikit-primary);
     }
-    .primer-top-title {
-      font-size: 14px;
+    .uikit-top-title {
+      font-size: 13.5px;
       font-weight: 700;
-      color: var(--primer-fg-default);
+      color: var(--uikit-text-primary);
       flex: 1;
       text-align: center;
       padding: 0 8px;
@@ -599,43 +613,73 @@
       text-overflow: ellipsis;
     }
 
-    /* Syllabus Summary Box */
-    .primer-hero-box {
-      margin: 14px 16px;
-      background: var(--primer-canvas-default);
-      border: 1px solid var(--primer-border-default);
-      border-radius: var(--primer-radius-default);
+    /* Syllabus Hero Card */
+    .uikit-hero-box {
+      margin: 12px 16px 14px;
+      background: var(--uikit-surface);
+      border: 1px solid var(--uikit-border);
+      border-radius: var(--uikit-radius-m);
       padding: 14px 16px;
-      box-shadow: var(--primer-shadow-card);
+      box-shadow: var(--uikit-shadow-card);
     }
-    .primer-hero-top {
+    .uikit-hero-top {
       display: flex;
       align-items: flex-start;
       gap: 12px;
       margin-bottom: 10px;
     }
-    .primer-hero-title {
-      font-size: 15px;
+    .uikit-hero-title {
+      font-size: 14.5px;
       font-weight: 700;
-      color: var(--primer-fg-default);
-      margin-bottom: 2px;
+      color: var(--uikit-text-primary);
+      margin-bottom: 3px;
     }
-    .primer-hero-sub {
-      font-size: 12px;
-      color: var(--primer-fg-muted);
+    .uikit-hero-sub {
+      font-size: 11.5px;
+      color: var(--uikit-text-muted);
+      display: flex;
+      align-items: center;
+      gap: 4px;
     }
 
-    /* Primer ActionList Syllabus Topics (GUID 6:25028) */
-    .primer-topic-list {
+    /* Filter Chips Bar */
+    .uikit-filter-chips {
+      padding: 0 16px 12px;
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .uikit-filter-chips::-webkit-scrollbar { display: none; }
+    .uikit-chip {
+      padding: 6px 12px;
+      border-radius: var(--uikit-radius-pill);
+      border: 1px solid var(--uikit-border);
+      background: var(--uikit-surface);
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--uikit-text-muted);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+    .uikit-chip.active {
+      background: var(--uikit-primary-gradient);
+      color: #FFFFFF;
+      border-color: transparent;
+    }
+
+    /* Collapse / Accordion Topic Items (Canvas Collapse) */
+    .uikit-topic-list {
       padding: 0 16px 20px;
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 8px;
     }
-    .primer-topic-item {
-      background: var(--primer-canvas-default);
-      border: 1px solid var(--primer-border-default);
-      border-radius: var(--primer-radius-default);
+    .uikit-topic-item {
+      background: var(--uikit-surface);
+      border: 1px solid var(--uikit-border);
+      border-radius: var(--uikit-radius-default);
       padding: 10px 12px;
       display: flex;
       align-items: center;
@@ -643,73 +687,146 @@
       cursor: pointer;
       transition: all 0.15s;
     }
-    .primer-topic-item:hover {
-      border-color: var(--primer-accent-emphasis);
-      background: var(--primer-canvas-subtle);
+    .uikit-topic-item:hover {
+      border-color: var(--uikit-primary);
+      background: #FAF8FC;
     }
-    .primer-topic-item.completed-row {
-      background: var(--primer-success-muted);
-      border-color: rgba(26, 127, 55, 0.3);
+    .uikit-topic-item.completed-row {
+      background: #F0FDF8;
+      border-color: rgba(0, 185, 152, 0.3);
     }
 
-    /* Primer Checkbox Component (GUID 15341:46321) */
-    .primer-checkbox-box {
-      width: 18px;
-      height: 18px;
-      border-radius: var(--primer-radius-sm);
-      border: 1.5px solid var(--primer-border-default);
-      background: var(--primer-canvas-default);
+    /* Checkbox Component (Canvas Checkbox & Node 1579:1333) */
+    .uikit-checkbox-box {
+      width: 20px;
+      height: 20px;
+      border-radius: var(--uikit-radius-s);
+      border: 2px solid var(--uikit-border-dark);
+      background: var(--uikit-surface);
       display: flex;
       align-items: center;
       justify-content: center;
       cursor: pointer;
       flex-shrink: 0;
       color: #FFFFFF;
-      font-size: 11px;
-      font-weight: 800;
       transition: all 0.15s;
     }
-    .primer-checkbox-box:hover {
-      border-color: var(--primer-accent-fg);
+    .uikit-checkbox-box:hover {
+      border-color: var(--uikit-primary);
     }
-    .primer-checkbox-box.checked {
-      background: var(--primer-success-emphasis);
-      border-color: var(--primer-success-emphasis);
+    .uikit-checkbox-box.checked {
+      background: var(--uikit-success);
+      border-color: var(--uikit-success);
+      transform: scale(1.06);
     }
 
-    .primer-topic-body {
+    .uikit-topic-body {
       flex: 1;
       min-width: 0;
     }
-    .primer-topic-name {
+    .uikit-topic-name {
       font-size: 13px;
       font-weight: 600;
-      color: var(--primer-fg-default);
-      margin-bottom: 2px;
+      color: var(--uikit-text-primary);
+      margin-bottom: 3px;
       line-height: 1.3;
     }
-    .primer-topic-item.completed-row .primer-topic-name {
+    .uikit-topic-item.completed-row .uikit-topic-name {
       text-decoration: line-through;
-      color: var(--primer-fg-muted);
+      color: var(--uikit-text-muted);
     }
-    .primer-topic-meta {
+    .uikit-topic-meta {
       font-size: 11px;
-      color: var(--primer-fg-muted);
+      color: var(--uikit-text-muted);
       display: flex;
+      align-items: center;
       gap: 10px;
     }
-    .primer-btn-play {
-      color: var(--primer-accent-fg);
-      font-size: 12px;
-      font-weight: bold;
+    .uikit-topic-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .uikit-btn-play {
+      color: var(--uikit-primary);
+      display: flex;
+      align-items: center;
+      padding: 4px;
+    }
+
+    /* Bottom Sheet Modal for Video Player (Modul 2 Handoff) */
+    .modal-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(26, 20, 31, 0.65);
+      backdrop-filter: blur(3px);
+      z-index: 150;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .bottom-sheet {
+      background: var(--uikit-surface);
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transform: translateY(100%);
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .modal-overlay.active .bottom-sheet {
+      transform: translateY(0);
+    }
+    .sheet-handle {
+      width: 40px;
+      height: 4px;
+      background: var(--uikit-border-dark);
+      border-radius: 4px;
+      align-self: center;
+      margin-bottom: 6px;
+    }
+    .video-mockup-frame {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #1A141F;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #FFFFFF;
+      gap: 8px;
+    }
+    .btn-sim-watch {
+      background: var(--uikit-primary-gradient);
+      color: #FFFFFF;
+      border: none;
+      border-radius: var(--uikit-radius-default);
+      padding: 10px 14px;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+      font-family: var(--uikit-font);
     }
 
     /* Companion Usability Testing Panel */
     .ut-companion-panel {
       flex: 1;
       max-width: 580px;
-      background: #161B22;
-      border: 1px solid #30363D;
+      background: #191224;
+      border: 1px solid #2B213A;
       border-radius: 12px;
       padding: 24px;
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
@@ -726,18 +843,18 @@
       gap: 10px;
     }
     .badge-test {
-      background: #238636;
+      background: var(--uikit-success);
       color: #FFFFFF;
       font-size: 10px;
       font-weight: 800;
       padding: 2px 8px;
-      border-radius: var(--primer-radius-full);
+      border-radius: var(--uikit-radius-pill);
       text-transform: uppercase;
     }
     .task-selector-box {
-      background: #0D1117;
-      border: 1px solid #30363D;
-      border-radius: var(--primer-radius-default);
+      background: #0E0A16;
+      border: 1px solid #2B213A;
+      border-radius: var(--uikit-radius-default);
       padding: 14px;
     }
     .tasks-grid {
@@ -747,49 +864,52 @@
       margin-bottom: 12px;
     }
     .btn-task {
-      background: #21262D;
-      border: 1px solid #30363D;
-      border-radius: var(--primer-radius-default);
-      color: #C9D1D9;
+      background: #231B30;
+      border: 1px solid #36294C;
+      border-radius: var(--uikit-radius-default);
+      color: #D1C9DE;
       padding: 8px 10px;
       font-size: 11.5px;
       font-weight: 600;
+      font-family: var(--uikit-font);
       cursor: pointer;
       text-align: left;
+      transition: all 0.2s;
     }
     .btn-task.active {
-      background: #0969DA;
-      border-color: #0969DA;
+      background: var(--uikit-primary-gradient);
+      border-color: transparent;
       color: #FFFFFF;
+      box-shadow: 0 2px 8px rgba(157, 63, 231, 0.3);
     }
     .task-briefing-card {
-      background: #161B22;
-      border-left: 3px solid #0969DA;
+      background: #191224;
+      border-left: 3px solid var(--uikit-primary);
       padding: 10px 12px;
       border-radius: 4px;
       font-size: 12.5px;
-      color: #E6EDF3;
+      color: #E6E1EC;
       line-height: 1.5;
     }
     .stopwatch-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background: #0D1117;
-      border: 1px solid #30363D;
-      border-radius: var(--primer-radius-default);
+      background: #0E0A16;
+      border: 1px solid #2B213A;
+      border-radius: var(--uikit-radius-default);
       padding: 12px 16px;
     }
     .stopwatch-time {
-      font-family: var(--primer-font-mono);
+      font-family: var(--uikit-font-mono);
       font-size: 24px;
       font-weight: 700;
-      color: #3FB950;
+      color: var(--uikit-success);
     }
     .telemetry-box {
-      background: #0D1117;
-      border: 1px solid #30363D;
-      border-radius: var(--primer-radius-default);
+      background: #0E0A16;
+      border: 1px solid #2B213A;
+      border-radius: var(--uikit-radius-default);
       padding: 12px;
       display: flex;
       flex-direction: column;
@@ -802,15 +922,15 @@
       align-items: center;
       margin-bottom: 8px;
       padding-bottom: 6px;
-      border-bottom: 1px solid #21262D;
-      font-family: var(--primer-font-mono);
+      border-bottom: 1px solid #231B30;
+      font-family: var(--uikit-font-mono);
       font-size: 11px;
-      color: #58A6FF;
+      color: #A36BFF;
     }
     .telemetry-logs-scroll {
-      font-family: var(--primer-font-mono);
+      font-family: var(--uikit-font-mono);
       font-size: 11px;
-      color: #8B949E;
+      color: #8C8793;
       overflow-y: auto;
       max-height: 160px;
       display: flex;
@@ -824,11 +944,11 @@
   <!-- Top App Header -->
   <header class="app-meta-header">
     <div class="app-meta-left">
-      <span class="badge-primer-pill">GitHub Primer Web v106</span>
+      <span class="badge-uikit-pill">Design System & UI Kit Free</span>
       <h1 class="app-meta-title">OpenCampus Mobile — Modul 1: Navigasi Kurikulum</h1>
     </div>
     <div class="app-meta-right">
-      <button class="btn-header" onclick="toggleTheme()">🌓 Ganti Tema Primer (Light/Dark)</button>
+      <button class="btn-header" onclick="toggleTheme()">🌓 Ganti Tema (Light/Dark)</button>
       <button class="btn-header" onclick="resetData()">🔄 Reset Data</button>
     </div>
   </header>
@@ -853,112 +973,142 @@
 
         <div class="screens-viewport">
 
-          <!-- SCREEN 1: BERANDA SEMESTER (PRIMER) -->
+          <!-- SCREEN 1: BERANDA SEMESTER (UI KIT FREE) -->
           <div class="screen active" id="screenHome">
-            <div class="primer-header-bar">
-              <div class="primer-brand">
-                <span>🎓</span> OpenCampus
+            <div class="uikit-header-bar">
+              <div class="uikit-brand">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g transform="translate(0.00, 1.00)"><path d="M 0.00 0.75 C 0.00 0.34 0.34 0.00 0.75 0.00 L 5.00 0.00 C 6.23 0.00 7.32 0.59 8.00 1.50 C 8.69 0.59 9.78 0.00 11.01 0.00 L 15.25 0.00 C 15.66 0.00 16.00 0.34 16.00 0.75 L 16.00 11.25 C 16.00 11.66 15.66 12.00 15.25 12.00 L 10.74 12.00 C 10.15 12.00 9.57 12.24 9.15 12.66 L 8.53 13.28 C 8.24 13.57 7.76 13.57 7.47 13.28 L 6.85 12.66 C 6.43 12.24 5.85 12.00 5.26 12.00 L 0.75 12.00 C 0.34 12.00 0.00 11.66 0.00 11.25 L 0.00 0.75 Z M 8.76 3.75 C 8.76 2.51 9.76 1.50 11.01 1.50 L 14.50 1.50 L 14.50 10.50 L 10.74 10.50 C 10.03 10.50 9.34 10.70 8.75 11.07 L 8.76 3.75 Z M 7.25 11.07 L 7.26 6.00 L 7.25 3.75 C 7.25 2.51 6.24 1.50 5.00 1.50 L 1.50 1.50 L 1.50 10.50 L 5.26 10.50 C 5.97 10.50 6.66 10.70 7.25 11.07 Z" fill="currentColor"/></g></svg>
+                <span>OpenCampus</span>
               </div>
-              <div class="primer-badge-jurusan">Teknik Informatika</div>
+              <div class="uikit-badge-jurusan">Teknik Informatika (IF)</div>
             </div>
 
             <div class="screen-scroll-area">
               <!-- Search Box -->
-              <div class="primer-search-wrap">
-                <div class="primer-search-box">
-                  <span>🔍</span>
+              <div class="uikit-search-wrap">
+                <div class="uikit-search-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="color: var(--uikit-text-subtle);"><g transform="translate(4.00, 4.00)"><path d="M 6.84 13.68 C 8.36 13.68 9.83 13.18 11.03 12.24 L 14.79 16.00 L 16.00 14.79 L 12.24 11.03 C 13.18 9.84 13.68 8.36 13.68 6.84 C 13.68 3.07 10.62 0.00 6.84 0.00 C 3.07 0.00 0.00 3.07 0.00 6.84 C 0.00 10.61 3.07 13.68 6.84 13.68 Z M 6.84 1.71 C 9.67 1.71 11.97 4.01 11.97 6.84 C 11.97 9.67 9.67 11.97 6.84 11.97 C 4.01 11.97 1.71 9.67 1.71 6.84 C 1.71 4.01 4.01 1.71 6.84 1.71 Z" fill="currentColor"/></g><g transform="translate(8.43, 7.45)"><path d="M 3.62 2.18 C 3.95 2.50 4.13 2.93 4.13 3.39 L 5.84 3.39 C 5.84 2.94 5.75 2.49 5.58 2.08 C 5.41 1.66 5.15 1.29 4.83 0.97 C 3.54 -0.32 1.29 -0.32 0.00 0.97 L 1.21 2.18 C 1.86 1.53 2.98 1.53 3.62 2.18 Z" fill="currentColor"/></g></svg>
                   <input type="text" placeholder="Cari mata kuliah atau topik..." oninput="filterCourses(this.value)">
                 </div>
               </div>
 
-              <!-- Overall Semester Progress Card (Primer Box & ProgressBar) -->
-              <div class="primer-progress-card">
-                <div class="primer-card-head">
-                  <span class="primer-card-title" id="homeProgressTitle">Progres Semester 1</span>
-                  <span class="primer-card-percent" id="homeProgressPercent">25%</span>
+              <!-- Overall Semester Progress Card with Authentic Mascot -->
+              <div class="uikit-progress-card">
+                <div class="uikit-card-content">
+                  <div class="uikit-card-head">
+                    <span class="uikit-card-title" id="homeProgressTitle">Progres Semester 1</span>
+                    <span class="uikit-card-percent" id="homeProgressPercent">25%</span>
+                  </div>
+                  <div class="uikit-progress-track">
+                    <div class="uikit-progress-fill" id="homeProgressBar" style="width: 25%;"></div>
+                  </div>
+                  <div class="uikit-card-sub">
+                    <span id="homeProgressCount">4 dari 16 Topik Selesai</span>
+                    <span style="color: var(--uikit-success); font-weight: 700;">● Berjalan</span>
+                  </div>
                 </div>
-                <div class="primer-progress-track">
-                  <div class="primer-progress-fill" id="homeProgressBar" style="width: 25%;"></div>
-                </div>
-                <div class="primer-card-sub">
-                  <span id="homeProgressCount">4 dari 16 Topik Selesai</span>
-                  <span style="color: var(--primer-success-fg); font-weight: 600;">● Berjalan</span>
-                </div>
+                <img src="./illustrations/uikit_hero.png" alt="Cookie Mascot" class="uikit-hero-mascot" onerror="this.style.display='none'">
               </div>
 
-              <!-- UnderlineNav Semester Tabs (GUID 18843:67449) -->
-              <div class="primer-section-head">
-                <span class="primer-section-title">Pilih Semester</span>
-                <span class="primer-counter-label">8 Semester</span>
+              <!-- Pill Tabs Semester (Canvas Tabs) -->
+              <div class="uikit-section-head">
+                <span class="uikit-section-title">Pilih Semester</span>
+                <span class="uikit-counter-label">8 Semester</span>
               </div>
-              <div class="primer-underline-nav" id="semesterTabsTrack">
+              <div class="uikit-pill-tabs" id="semesterTabsTrack">
                 <!-- Dynamically rendered via JS -->
               </div>
 
               <!-- Course Cards List -->
-              <div class="primer-section-head">
-                <span class="primer-section-title" id="courseSectionTitle">Mata Kuliah Semester 1</span>
-                <span class="primer-counter-label" id="courseCountBadge">4 Mata Kuliah</span>
+              <div class="uikit-section-head">
+                <span class="uikit-section-title" id="courseSectionTitle">Mata Kuliah Semester 1</span>
+                <span class="uikit-counter-label" id="courseCountBadge">4 Mata Kuliah</span>
               </div>
-              <div class="primer-course-list" id="courseCardList">
+              <div class="uikit-course-list" id="courseCardList">
                 <!-- Course cards injected dynamically -->
               </div>
             </div>
 
-            <!-- Bottom Nav -->
-            <nav class="primer-bottom-bar">
+            <!-- Bottom Navigation Bar (Canvas Navigation bar) -->
+            <nav class="uikit-bottom-bar">
               <div class="nav-tab-item active">
-                <span>🏠</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M20.1522 7.59129C20.8642 8.16394 21.2822 9.02545 21.2913 9.93912L21.2826 17.913C21.2826 20.0789 19.5268 21.8348 17.3609 21.8348H15.6217C14.5734 21.8348 13.7222 20.9875 13.7174 19.9391V16.3391C13.7174 16.0606 13.4916 15.8348 13.213 15.8348H10.6043C10.4691 15.8347 10.3394 15.8891 10.2446 15.9855C10.1498 16.082 10.0977 16.2126 10.1 16.3478V17.7217C10.1 18.1539 9.74961 18.5043 9.31739 18.5043C8.88517 18.5043 8.53478 18.1539 8.53478 17.7217V16.3478C8.53478 15.7966 8.75374 15.268 9.14349 14.8783C9.53324 14.4885 10.0619 14.2696 10.613 14.2696H13.2217C14.3661 14.2743 15.2913 15.2034 15.2913 16.3478V19.9391C15.2913 20.1216 15.4392 20.2696 15.6217 20.2696H17.4043C18.701 20.2696 19.7522 19.2184 19.7522 17.9217V9.95651C19.7458 9.51525 19.5415 9.10021 19.1957 8.82607L13.187 4.03477C12.4293 3.41097 11.336 3.41097 10.5783 4.03477L8.64783 5.47825C8.29004 5.73518 7.79172 5.65342 7.53478 5.29564C7.27785 4.93785 7.35961 4.43953 7.71739 4.18259L9.62174 2.79999C10.9421 1.73863 12.8231 1.73863 14.1435 2.79999L20.1522 7.59129ZM6.42174 20.2609H10.4217V20.2782C10.854 20.2782 11.2043 20.6286 11.2043 21.0609C11.2043 21.4931 10.854 21.8435 10.4217 21.8435H6.42174C4.25781 21.8387 2.50478 20.0857 2.5 17.9217V9.95651C2.51384 9.03608 2.94588 8.172 3.67391 7.60868L4.39565 7.06955C4.73552 6.90933 5.14129 7.01326 5.36229 7.31714C5.58329 7.62101 5.55714 8.03906 5.3 8.31303L4.59565 8.83477C4.26191 9.11204 4.06776 9.52262 4.06522 9.95651V17.913C4.07474 19.2091 5.12562 20.2561 6.42174 20.2609Z" fill="currentColor"/></svg>
                 <span>Beranda</span>
               </div>
               <div class="nav-tab-item">
-                <span>🔍</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><g transform="translate(4.00, 4.00)"><path d="M 6.84 13.68 C 8.36 13.68 9.83 13.18 11.03 12.24 L 14.79 16.00 L 16.00 14.79 L 12.24 11.03 C 13.18 9.84 13.68 8.36 13.68 6.84 C 13.68 3.07 10.62 0.00 6.84 0.00 C 3.07 0.00 0.00 3.07 0.00 6.84 C 0.00 10.61 3.07 13.68 6.84 13.68 Z M 6.84 1.71 C 9.67 1.71 11.97 4.01 11.97 6.84 C 11.97 9.67 9.67 11.97 6.84 11.97 C 4.01 11.97 1.71 9.67 1.71 6.84 C 1.71 4.01 4.01 1.71 6.84 1.71 Z" fill="currentColor"/></g></svg>
                 <span>Cari</span>
               </div>
               <div class="nav-tab-item">
-                <span>👤</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><g transform="translate(4.00, 4.00)"><path d="M 8.00 8.00 C 10.21 8.00 12.00 6.21 12.00 4.00 C 12.00 1.79 10.21 0.00 8.00 0.00 C 5.79 0.00 4.00 1.79 4.00 4.00 C 4.00 6.21 5.79 8.00 8.00 8.00 Z M 8.00 10.00 C 5.33 10.00 0.00 11.34 0.00 14.00 L 0.00 16.00 L 16.00 16.00 L 16.00 14.00 C 16.00 11.34 10.67 10.00 8.00 10.00 Z" fill="currentColor"/></g></svg>
                 <span>Profil</span>
               </div>
             </nav>
           </div>
 
-          <!-- SCREEN 2: SILABUS MATA KULIAH (PRIMER) -->
+          <!-- SCREEN 2: SILABUS MATA KULIAH (UI KIT FREE) -->
           <div class="screen" id="screenSyllabus">
-            <div class="primer-top-appbar">
-              <button class="primer-btn-back" onclick="navigateToHome()">
-                <span>‹</span> Back
+            <div class="uikit-top-appbar">
+              <button class="uikit-btn-back" onclick="navigateToHome()">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M20.2844 12.824C20.6877 12.7728 21 12.4233 21 12.0002C21 11.5418 20.6335 11.1698 20.1818 11.1698L5.79927 11.1698L10.9953 5.91866L11.0688 5.83385C11.3138 5.50912 11.2895 5.04236 10.9975 4.74399C10.6789 4.4196 10.1607 4.41849 9.84109 4.74177L3.24109 11.4123L3.16831 11.4958C3.05758 11.6419 3 11.8203 3 12.0002C3 12.1076 3.02073 12.215 3.06218 12.3168C3.18873 12.6279 3.48655 12.8305 3.81818 12.8305H20.1818L20.2844 12.824ZM10.9976 19.256C11.3161 18.9305 11.3161 18.4046 10.9954 18.0813L7.35502 14.4023L7.27097 14.328C6.94949 14.0804 6.49065 14.1062 6.19865 14.4045C6.03938 14.5673 5.95975 14.7787 5.95975 14.9902C5.95975 15.2039 6.03938 15.4165 6.20084 15.5792L9.84011 19.2582L9.92417 19.3323C10.2458 19.5791 10.7056 19.5534 10.9976 19.256Z" fill="currentColor"/></svg>
+                <span>Back</span>
               </button>
-              <div class="primer-top-title" id="syllabusTopTitle">Algoritma & Pemrograman Dasar</div>
-              <span class="primer-counter-label">16 Topik</span>
+              <div class="uikit-top-title" id="syllabusTopTitle">Algoritma & Pemrograman Dasar</div>
+              <span class="uikit-counter-label">16 Topik</span>
             </div>
 
             <div class="screen-scroll-area">
               <!-- Syllabus Summary Header Card -->
-              <div class="primer-hero-box">
-                <div class="primer-hero-top">
-                  <div class="primer-course-icon" id="syllabusHeroIcon">💻</div>
+              <div class="uikit-hero-box">
+                <div class="uikit-hero-top">
+                  <div class="uikit-course-icon" id="syllabusHeroIcon">
+                    <svg width="20" height="20" viewBox="0 0 16 16" fill="none"><g transform="translate(0.25, 3.00)"><path d="M 4.47 0.22 C 4.76 -0.07 5.24 -0.07 5.53 0.22 C 5.82 0.51 5.82 0.99 5.53 1.28 L 1.81 5.00 L 5.53 8.72 C 5.82 9.01 5.82 9.49 5.53 9.78 C 5.24 10.07 4.76 10.07 4.47 9.78 L 0.22 5.53 C -0.07 5.24 -0.07 4.76 0.22 4.47 L 4.47 0.22 Z M 11.03 0.22 C 10.74 -0.07 10.26 -0.07 9.97 0.22 C 9.68 0.51 9.68 0.99 9.97 1.28 L 13.69 5.00 L 9.97 8.72 C 9.68 9.01 9.68 9.49 9.97 9.78 C 10.26 10.07 10.74 10.07 11.03 9.78 L 15.28 5.53 C 15.57 5.24 15.57 4.76 15.28 4.47 L 11.03 0.22 Z" fill="currentColor"/></g></svg>
+                  </div>
                   <div>
-                    <h3 class="primer-hero-title" id="syllabusHeroTitle">Algoritma & Pemrograman Dasar</h3>
-                    <p class="primer-hero-sub" id="syllabusHeroMeta">16 Pertemuan • Total ~6.5 Jam</p>
+                    <h3 class="uikit-hero-title" id="syllabusHeroTitle">Algoritma & Pemrograman Dasar</h3>
+                    <p class="uikit-hero-sub" id="syllabusHeroMeta">
+                      <svg width="13" height="13" viewBox="0 0 14 14" fill="none"><g transform="translate(1.17, 1.17)"><path d="M 5.83 0.00 C 2.62 0.00 0.00 2.62 0.00 5.83 C 0.00 9.05 2.62 11.67 5.83 11.67 C 9.05 11.67 11.67 9.05 11.67 5.83 C 11.67 2.62 9.05 0.00 5.83 0.00 Z M 5.83 10.50 C 3.26 10.50 1.17 8.41 1.17 5.83 C 1.17 3.26 3.26 1.17 5.83 1.17 C 8.41 1.17 10.50 3.26 10.50 5.83 C 10.50 8.41 8.41 10.50 5.83 10.50 Z" fill="currentColor"/></g><g transform="translate(6.42, 4.08)"><path d="M 1.17 0.00 L 0.00 0.00 L 0.00 3.16 L 1.92 5.08 L 2.75 4.25 L 1.17 2.68 L 1.17 0.00 Z" fill="currentColor"/></g></svg>
+                      <span>16 Pertemuan • Total ~6.5 Jam</span>
+                    </p>
                   </div>
                 </div>
-                <div class="primer-progress-track">
-                  <div class="primer-progress-fill" id="syllabusProgressBar" style="width: 25%;"></div>
+                <div class="uikit-progress-track">
+                  <div class="uikit-progress-fill" id="syllabusProgressBar" style="width: 25%;"></div>
                 </div>
-                <div class="primer-card-sub">
+                <div class="uikit-card-sub">
                   <span id="syllabusProgressCount">4 dari 16 Topik Selesai</span>
-                  <span style="color: var(--primer-success-fg); font-weight: 600;" id="syllabusBadge">● Sedang Dipelajari</span>
+                  <span style="color: var(--uikit-success); font-weight: 700;" id="syllabusBadge">● Sedang Dipelajari</span>
                 </div>
               </div>
 
-              <div class="primer-section-head">
-                <span class="primer-section-title">Silabus Pertemuan 1 - 16</span>
+              <!-- Filter Chips (Canvas Tag / Badge) -->
+              <div class="uikit-filter-chips">
+                <button class="uikit-chip active" onclick="filterSyllabus('all', this)">Semua (16)</button>
+                <button class="uikit-chip" onclick="filterSyllabus('uncompleted', this)">Belum Selesai</button>
+                <button class="uikit-chip" onclick="filterSyllabus('completed', this)">Sudah Selesai</button>
               </div>
 
-              <!-- ActionList 16 Meetings List (GUID 6:25028) -->
-              <div class="primer-topic-list" id="topicSyllabusList">
-                <!-- Injected via JS -->
+              <!-- Topics List (Canvas Collapse) -->
+              <div class="uikit-topic-list" id="topicSyllabusList">
+                <!-- Topics rendered dynamically -->
               </div>
+            </div>
+          </div>
+
+          <!-- BOTTOM SHEET MODAL (MODUL 2 HANDOFF) -->
+          <div class="modal-overlay" id="videoModalOverlay" onclick="closeVideoModal()">
+            <div class="bottom-sheet" onclick="event.stopPropagation()">
+              <div class="sheet-handle"></div>
+              <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h4 style="font-size: 14px; font-weight: 700; color: var(--uikit-text-primary);" id="modalVideoTitle">01. Konsep Dasar Logika & Flowchart</h4>
+                <button style="background: none; border: none; font-size: 16px; cursor: pointer; color: var(--uikit-text-muted);" onclick="closeVideoModal()">✕</button>
+              </div>
+              <div class="video-mockup-frame">
+                <svg width="42" height="42" viewBox="0 0 12 14" fill="none" style="color: var(--uikit-primary);"><path d="M11.4865 8.1886C11.4358 8.2562 11.1993 8.5432 11.0135 8.7289L10.9122 8.8302C9.4932 10.3666 5.9628 12.6797 4.1723 13.4226C4.1723 13.4395 3.1081 13.8784 2.6014 13.8953H2.5338C1.7568 13.8953 1.0304 13.4563 0.6588 12.7472C0.4561 12.3589 0.2703 11.2277 0.2534 11.2108C0.1014 10.1978 0 8.6462 0 6.9392C0 5.1495 0.1014 3.5287 0.2872 2.5326C0.2872 2.5157 0.473 1.604 0.5912 1.3C0.777 0.8611 1.1149 0.4896 1.5372 0.2533C1.875 0.0844 2.2297 0 2.6014 0C2.9899 0.0169 3.7162 0.2718 4.0034 0.3883C5.8953 1.1312 9.5101 3.5625 10.8953 5.0482C11.1318 5.2846 11.3851 5.5716 11.4527 5.6392C11.7399 6.0106 11.8919 6.4665 11.8919 6.9578C11.8919 7.3951 11.7568 7.8341 11.4865 8.1886Z" fill="currentColor"/></svg>
+                <span style="font-size: 12px; font-weight: 600;">YouTube Player (Bebas Distraksi)</span>
+                <span style="font-size: 10px; opacity: 0.7;" id="modalChannelName">Web Programming UNPAS</span>
+              </div>
+              <button class="btn-sim-watch" onclick="simulateWatchCompleted()">⚡ Simulasi Tonton 85% (Otomatis Centang)</button>
             </div>
           </div>
 
@@ -968,34 +1118,39 @@
       </div>
     </div>
 
-    <!-- RIGHT: Usability Testing Console -->
+    <!-- RIGHT: Usability Testing Companion Panel -->
     <aside class="ut-companion-panel">
       <div class="panel-header-title">
-        <span>🧪 Primer UT Console & Telemetry</span>
-        <span class="badge-test">Primer Design Tokens</span>
+        <span>🧪 Usability Testing Sandbox</span>
+        <span class="badge-test">Active Protocol</span>
       </div>
 
+      <!-- Task Selector -->
       <div class="task-selector-box">
-        <div style="font-size: 11px; text-transform: uppercase; color: #58A6FF; font-weight: 700; margin-bottom: 8px;">Pilih Skenario Tugas:</div>
+        <div style="font-size: 11px; font-weight: 700; color: #D1C9DE; margin-bottom: 8px; text-transform: uppercase;">
+          Pilih Skenario Tugas (Modul 1):
+        </div>
         <div class="tasks-grid">
-          <button class="btn-task active" onclick="selectTask(1, this)">Task 1: Ganti Semester</button>
-          <button class="btn-task" onclick="selectTask(2, this)">Task 2: Buka Silabus MK</button>
+          <button class="btn-task active" onclick="selectTask(1, this)">Task 1: Pindah Semester</button>
+          <button class="btn-task" onclick="selectTask(2, this)">Task 2: Buka Silabus</button>
           <button class="btn-task" onclick="selectTask(3, this)">Task 3: Centang Progres</button>
-          <button class="btn-task" onclick="selectTask(4, this)">Task 4: Tonton Topik</button>
+          <button class="btn-task" onclick="selectTask(4, this)">Task 4: Tonton Materi</button>
         </div>
         <div class="task-briefing-card" id="taskBriefingCard">
-          <strong>Task 1:</strong> Anda adalah mahasiswa baru Teknik Informatika. Coba jelajahi mata kuliah di <strong>Semester 2</strong> menggunakan tab navigasi Primer UnderlineNav.
+          <strong>Task 1 (Navigasi Semester):</strong> Anda adalah mahasiswa baru Teknik Informatika. Coba jelajahi mata kuliah di <strong>Semester 2</strong> menggunakan baris <strong>Pill Tabs</strong> UI Kit Free.
         </div>
       </div>
 
+      <!-- Stopwatch -->
       <div class="stopwatch-row">
         <div>
-          <div style="font-size: 11px; color: #8B949E; text-transform: uppercase;">Time on Task (ToT)</div>
+          <div style="font-size: 11px; color: #8C8793;">Time on Task (ToT)</div>
           <div class="stopwatch-time" id="stopwatchDisplay">00:00.0</div>
         </div>
-        <button class="btn-header" style="background:#238636; color:#fff;" onclick="toggleTimer()" id="btnTimer">Mulai Timer</button>
+        <button class="btn-header" id="btnTimer" style="background: var(--uikit-success); color: #FFF; border: none;" onclick="toggleTimer()">Mulai Timer</button>
       </div>
 
+      <!-- Live Telemetry Stream -->
       <div class="telemetry-box">
         <div class="telemetry-head">
           <span>Telemetry Stream (Trace ID & Client Events)</span>
@@ -1008,13 +1163,24 @@
   </main>
 
   <script>
+    const SVG_ICONS = {
+      course1: `<svg width="20" height="20" viewBox="0 0 16 16" fill="none"><g transform="translate(0.25, 3.00)"><path d="M 4.47 0.22 C 4.76 -0.07 5.24 -0.07 5.53 0.22 C 5.82 0.51 5.82 0.99 5.53 1.28 L 1.81 5.00 L 5.53 8.72 C 5.82 9.01 5.82 9.49 5.53 9.78 C 5.24 10.07 4.76 10.07 4.47 9.78 L 0.22 5.53 C -0.07 5.24 -0.07 4.76 0.22 4.47 L 4.47 0.22 Z M 11.03 0.22 C 10.74 -0.07 10.26 -0.07 9.97 0.22 C 9.68 0.51 9.68 0.99 9.97 1.28 L 13.69 5.00 L 9.97 8.72 C 9.68 9.01 9.68 9.49 9.97 9.78 C 10.26 10.07 10.74 10.07 11.03 9.78 L 15.28 5.53 C 15.57 5.24 15.57 4.76 15.28 4.47 L 11.03 0.22 Z" fill="currentColor"/></g></svg>`,
+      course2: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><g transform="translate(2.00, 4.00)"><path d="M 0.00 16.00 L 20.00 16.00 L 20.00 12.00 L 0.00 12.00 L 0.00 16.00 Z M 2.00 13.00 L 4.00 13.00 L 4.00 15.00 L 2.00 15.00 L 2.00 13.00 Z M 0.00 0.00 L 0.00 4.00 L 20.00 4.00 L 20.00 0.00 L 0.00 0.00 Z M 4.00 3.00 L 2.00 3.00 L 2.00 1.00 L 4.00 1.00 L 4.00 3.00 Z M 0.00 10.00 L 20.00 10.00 L 20.00 6.00 L 0.00 6.00 L 0.00 10.00 Z M 2.00 7.00 L 4.00 7.00 L 4.00 9.00 L 2.00 9.00 L 2.00 7.00 Z" fill="currentColor"/></g></svg>`,
+      course3: `<svg width="20" height="20" viewBox="0 0 24 24" fill="none"><g transform="translate(3.00, 3.00)"><path d="M 0.00 8.00 L 8.00 8.00 L 8.00 0.00 L 0.00 0.00 L 0.00 8.00 Z M 0.00 18.00 L 8.00 18.00 L 8.00 10.00 L 0.00 10.00 L 0.00 18.00 Z M 10.00 18.00 L 18.00 18.00 L 18.00 10.00 L 10.00 10.00 L 10.00 18.00 Z M 10.00 0.00 L 10.00 8.00 L 18.00 8.00 L 18.00 0.00" fill="currentColor"/></g></svg>`,
+      forward: `<svg width="14" height="14" viewBox="0 0 16 16" fill="none"><g transform="translate(3.94, 1.47)"><path d="M 0.22 10.85 C 0.50 11.14 0.96 11.14 1.25 10.85 L 6.15 5.94 C 6.21 5.89 6.25 5.83 6.28 5.76 C 6.31 5.68 6.32 5.61 6.32 5.53 C 6.32 5.46 6.31 5.38 6.28 5.31 C 6.25 5.24 6.21 5.18 6.15 5.12 L 1.24 0.21 C 0.96 -0.07 0.50 -0.07 0.22 0.21 C 0.15 0.28 0.09 0.36 0.06 0.45 C 0.02 0.54 0.00 0.63 0.00 0.73 C 0.00 0.82 0.02 0.92 0.06 1.01 C 0.09 1.09 0.15 1.17 0.22 1.24 L 4.50 5.53 L 0.21 9.82 C -0.07 10.10 -0.07 10.56 0.22 10.85 L 0.22 10.85 Z" fill="currentColor"/></g></svg>`,
+      check: `<svg width="12" height="12" viewBox="0 0 20 20" fill="none"><g transform="translate(2.00, 4.00)"><path d="M 5.43 11.76 L 0.23 6.53 C -0.08 6.22 -0.08 5.71 0.23 5.40 L 1.37 4.26 C 1.68 3.94 2.18 3.94 2.50 4.26 L 6.00 7.78 L 13.50 0.24 C 13.82 -0.08 14.32 -0.08 14.63 0.24 L 15.77 1.37 C 16.08 1.69 16.08 2.20 15.77 2.51 L 6.57 11.76 C 6.25 12.08 5.75 12.08 5.43 11.76 L 5.43 11.76 Z" fill="currentColor"/></g></svg>`,
+      time: `<svg width="12" height="12" viewBox="0 0 14 14" fill="none"><g transform="translate(1.17, 1.17)"><path d="M 5.83 0.00 C 2.62 0.00 0.00 2.62 0.00 5.83 C 0.00 9.05 2.62 11.67 5.83 11.67 C 9.05 11.67 11.67 9.05 11.67 5.83 C 11.67 2.62 9.05 0.00 5.83 0.00 Z M 5.83 10.50 C 3.26 10.50 1.17 8.41 1.17 5.83 C 1.17 3.26 3.26 1.17 5.83 1.17 C 8.41 1.17 10.50 3.26 10.50 5.83 C 10.50 8.41 8.41 10.50 5.83 10.50 Z" fill="currentColor"/></g><g transform="translate(6.42, 4.08)"><path d="M 1.17 0.00 L 0.00 0.00 L 0.00 3.16 L 1.92 5.08 L 2.75 4.25 L 1.17 2.68 L 1.17 0.00 Z" fill="currentColor"/></g></svg>`,
+      profile: `<svg width="12" height="12" viewBox="0 0 24 24" fill="none"><g transform="translate(4.00, 4.00)"><path d="M 8.00 8.00 C 10.21 8.00 12.00 6.21 12.00 4.00 C 12.00 1.79 10.21 0.00 8.00 0.00 C 5.79 0.00 4.00 1.79 4.00 4.00 C 4.00 6.21 5.79 8.00 8.00 8.00 Z M 8.00 10.00 C 5.33 10.00 0.00 11.34 0.00 14.00 L 0.00 16.00 L 16.00 16.00 L 16.00 14.00 C 16.00 11.34 10.67 10.00 8.00 10.00 Z" fill="currentColor"/></g></svg>`,
+      play: `<svg width="14" height="14" viewBox="0 0 12 14" fill="none"><path d="M11.4865 8.1886C11.4358 8.2562 11.1993 8.5432 11.0135 8.7289L10.9122 8.8302C9.4932 10.3666 5.9628 12.6797 4.1723 13.4226C4.1723 13.4395 3.1081 13.8784 2.6014 13.8953H2.5338C1.7568 13.8953 1.0304 13.4563 0.6588 12.7472C0.4561 12.3589 0.2703 11.2277 0.2534 11.2108C0.1014 10.1978 0 8.6462 0 6.9392C0 5.1495 0.1014 3.5287 0.2872 2.5326C0.2872 2.5157 0.473 1.604 0.5912 1.3C0.777 0.8611 1.1149 0.4896 1.5372 0.2533C1.875 0.0844 2.2297 0 2.6014 0C2.9899 0.0169 3.7162 0.2718 4.0034 0.3883C5.8953 1.1312 9.5101 3.5625 10.8953 5.0482C11.1318 5.2846 11.3851 5.5716 11.4527 5.6392C11.7399 6.0106 11.8919 6.4665 11.8919 6.9578C11.8919 7.3951 11.7568 7.8341 11.4865 8.1886Z" fill="currentColor"/></svg>`
+    };
+
     const CURRICULUM_DATA = {
       1: {
         courses: [
           {
             id: "cs101",
             title: "Algoritma & Pemrograman Dasar",
-            icon: "💻",
+            iconType: "course1",
             meetingsCount: 16,
             estHours: "6.5 Jam",
             topics: [
@@ -1036,37 +1202,39 @@
               { id: "t101_16", no: 16, title: "Proyek Akhir: Mini Aplikasi CLI", duration: "45m", channel: "Programmer Zaman Now" }
             ]
           },
-          { id: "cs102", title: "Matematika Diskrit", icon: "📐", meetingsCount: 16, estHours: "5.5 Jam", topics: [] },
-          { id: "cs103", title: "Pengantar Teknologi Informasi", icon: "🌐", meetingsCount: 16, estHours: "4.0 Jam", topics: [] },
-          { id: "cs104", title: "Organisasi & Arsitektur Komputer", icon: "⚙️", meetingsCount: 16, estHours: "5.0 Jam", topics: [] }
+          { id: "cs102", title: "Matematika Diskrit", iconType: "course2", meetingsCount: 16, estHours: "5.5 Jam", topics: [] },
+          { id: "cs103", title: "Pengantar Teknologi Informasi", iconType: "course3", meetingsCount: 16, estHours: "4.0 Jam", topics: [] },
+          { id: "cs104", title: "Organisasi & Arsitektur Komputer", iconType: "course1", meetingsCount: 16, estHours: "5.0 Jam", topics: [] }
         ]
       },
       2: {
         courses: [
-          { id: "cs201", title: "Struktur Data & Algoritma Lanjut", icon: "🌲", meetingsCount: 16, estHours: "7.0 Jam", topics: [] },
-          { id: "cs202", title: "Pemrograman Berorientasi Objek (OOP)", icon: "☕", meetingsCount: 16, estHours: "6.5 Jam", topics: [] },
-          { id: "cs203", title: "Basis Data & Desain Relasional", icon: "🗄️", meetingsCount: 16, estHours: "6.0 Jam", topics: [] },
-          { id: "cs204", title: "Kalkulus & Aljabar Linier", icon: "📊", meetingsCount: 16, estHours: "5.5 Jam", topics: [] }
+          { id: "cs201", title: "Struktur Data & Algoritma Lanjut", iconType: "course2", meetingsCount: 16, estHours: "7.0 Jam", topics: [] },
+          { id: "cs202", title: "Pemrograman Berorientasi Objek (OOP)", iconType: "course1", meetingsCount: 16, estHours: "6.5 Jam", topics: [] },
+          { id: "cs203", title: "Basis Data & Desain Relasional", iconType: "course2", meetingsCount: 16, estHours: "6.0 Jam", topics: [] },
+          { id: "cs204", title: "Kalkulus & Aljabar Linier", iconType: "course3", meetingsCount: 16, estHours: "5.5 Jam", topics: [] }
         ]
       },
-      3: { courses: [{ id: "cs301", title: "Sistem Operasi", icon: "🐧", meetingsCount: 16, estHours: "6 Jam", topics: [] }] },
-      4: { courses: [{ id: "cs401", title: "Desain & Analisis Algoritma", icon: "⚡", meetingsCount: 16, estHours: "6 Jam", topics: [] }] },
-      5: { courses: [{ id: "cs501", title: "Kecerdasan Buatan (AI)", icon: "🤖", meetingsCount: 16, estHours: "7 Jam", topics: [] }] },
-      6: { courses: [{ id: "cs601", title: "Keamanan Siber", icon: "🔒", meetingsCount: 16, estHours: "6 Jam", topics: [] }] },
-      7: { courses: [{ id: "cs701", title: "Kerja Praktik", icon: "💼", meetingsCount: 16, estHours: "8 Jam", topics: [] }] },
-      8: { courses: [{ id: "cs801", title: "Tugas Akhir", icon: "🎓", meetingsCount: 16, estHours: "10 Jam", topics: [] }] }
+      3: { courses: [{ id: "cs301", title: "Sistem Operasi", iconType: "course1", meetingsCount: 16, estHours: "6 Jam", topics: [] }] },
+      4: { courses: [{ id: "cs401", title: "Desain & Analisis Algoritma", iconType: "course2", meetingsCount: 16, estHours: "6 Jam", topics: [] }] },
+      5: { courses: [{ id: "cs501", title: "Kecerdasan Buatan (AI)", iconType: "course3", meetingsCount: 16, estHours: "7 Jam", topics: [] }] },
+      6: { courses: [{ id: "cs601", title: "Keamanan Siber", iconType: "course1", meetingsCount: 16, estHours: "6 Jam", topics: [] }] },
+      7: { courses: [{ id: "cs701", title: "Kerja Praktik", iconType: "course2", meetingsCount: 16, estHours: "8 Jam", topics: [] }] },
+      8: { courses: [{ id: "cs801", title: "Tugas Akhir", iconType: "course3", meetingsCount: 16, estHours: "10 Jam", topics: [] }] }
     };
 
     let activeSemester = 1;
     let activeCourseId = "cs101";
     let completedTopics = new Set(["t101_01", "t101_02", "t101_03", "t101_04"]);
+    let currentSyllabusFilter = 'all';
+    let selectedTopicForModal = null;
 
     function logTelemetry(evt, payload) {
       const traceId = `trc_${evt}_${Date.now()}`;
       const consoleBox = document.getElementById("telemetryLogs");
       if (!consoleBox) return;
       const div = document.createElement("div");
-      div.innerHTML = `<span style="color:#58A6FF">${evt}</span> <span style="color:#79C0FF">${traceId}</span><br><span style="color:#E6EDF3">${JSON.stringify(payload)}</span>`;
+      div.innerHTML = `<span style="color:#A36BFF">${evt}</span> <span style="color:#D1C9DE">${traceId}</span><br><span style="color:#F5F3F7">${JSON.stringify(payload)}</span>`;
       consoleBox.insertBefore(div, consoleBox.firstChild);
     }
 
@@ -1078,8 +1246,8 @@
       const track = document.getElementById("semesterTabsTrack");
       track.innerHTML = "";
       for (let s = 1; s <= 8; s++) {
-        const item = document.createElement("div");
-        item.className = `primer-nav-item ${s === activeSemester ? 'active' : ''}`;
+        const item = document.createElement("button");
+        item.className = `uikit-tab-pill ${s === activeSemester ? 'active' : ''}`;
         item.innerHTML = `<span>Semester ${s}</span>`;
         item.onclick = () => selectSemester(s);
         track.appendChild(item);
@@ -1090,7 +1258,7 @@
       activeSemester = s;
       renderTabs();
       renderCourses();
-      logTelemetry("semester_switched", { selected_semester: s });
+      logTelemetry("semester_switched", { selected_semester: s, style: "UI Kit Free Pill Tabs" });
     }
 
     function renderCourses(search = "") {
@@ -1118,17 +1286,17 @@
 
         const pct = Math.round((done / total) * 100);
         const card = document.createElement("div");
-        card.className = "primer-course-card";
+        card.className = "uikit-course-card";
         card.onclick = () => openSyllabus(c.id);
         card.innerHTML = `
-          <div class="primer-course-icon">${c.icon}</div>
-          <div class="primer-course-body">
-            <div class="primer-course-name">${c.title}</div>
-            <div class="primer-course-meta">${c.meetingsCount} Pertemuan • Est. ${c.estHours}</div>
-            <div class="primer-mini-track"><div class="primer-mini-fill" style="width: ${pct}%;"></div></div>
+          <div class="uikit-course-icon">${SVG_ICONS[c.iconType] || SVG_ICONS.course1}</div>
+          <div class="uikit-course-body">
+            <div class="uikit-course-name">${c.title}</div>
+            <div class="uikit-course-meta">${c.meetingsCount} Pertemuan • Est. ${c.estHours}</div>
+            <div class="uikit-mini-track"><div class="uikit-mini-fill ${pct === 100 ? 'done' : ''}" style="width: ${pct}%;"></div></div>
           </div>
-          <span class="primer-counter-label">${pct}%</span>
-          <div class="primer-chevron">›</div>
+          <span class="uikit-counter-label">${pct}%</span>
+          <div class="uikit-chevron">${SVG_ICONS.forward}</div>
         `;
         listEl.appendChild(card);
       });
@@ -1150,8 +1318,11 @@
 
       document.getElementById("syllabusTopTitle").innerText = course.title;
       document.getElementById("syllabusHeroTitle").innerText = course.title;
-      document.getElementById("syllabusHeroIcon").innerText = course.icon;
-      document.getElementById("syllabusHeroMeta").innerText = `${course.meetingsCount} Pertemuan • Total ~${course.estHours}`;
+      document.getElementById("syllabusHeroIcon").innerHTML = SVG_ICONS[course.iconType] || SVG_ICONS.course1;
+      document.getElementById("syllabusHeroMeta").innerHTML = `
+        ${SVG_ICONS.time}
+        <span>${course.meetingsCount} Pertemuan • Total ~${course.estHours}</span>
+      `;
 
       renderSyllabusList();
 
@@ -1189,28 +1360,36 @@
         const isDone = completedTopics.has(topic.id);
         if (isDone) count++;
 
+        if (currentSyllabusFilter === 'completed' && !isDone) return;
+        if (currentSyllabusFilter === 'uncompleted' && isDone) return;
+
         const row = document.createElement("div");
-        row.className = `primer-topic-item ${isDone ? 'completed-row' : ''}`;
+        row.className = `uikit-topic-item ${isDone ? 'completed-row' : ''}`;
+        row.onclick = () => openVideoModal(topic);
 
         row.innerHTML = `
-          <div class="primer-checkbox-box ${isDone ? 'checked' : ''}" onclick="toggleTopic(event, '${topic.id}')">
-            ${isDone ? '✓' : ''}
+          <div class="uikit-checkbox-box ${isDone ? 'checked' : ''}" onclick="toggleTopic(event, '${topic.id}')">
+            ${isDone ? SVG_ICONS.check : ''}
           </div>
-          <div class="primer-topic-body">
-            <div class="primer-topic-name">${String(topic.no).padStart(2, '0')}. ${topic.title}</div>
-            <div class="primer-topic-meta">
-              <span>⏱ ${topic.duration}</span>
-              <span>👤 ${topic.channel}</span>
+          <div class="uikit-topic-body">
+            <div class="uikit-topic-name">${String(topic.no).padStart(2, '0')}. ${topic.title}</div>
+            <div class="uikit-topic-meta">
+              <span class="uikit-topic-meta-item">${SVG_ICONS.time} ${topic.duration}</span>
+              <span class="uikit-topic-meta-item">${SVG_ICONS.profile} ${topic.channel}</span>
             </div>
           </div>
-          <div class="primer-btn-play">▶</div>
+          <div class="uikit-btn-play">${SVG_ICONS.play}</div>
         `;
         listEl.appendChild(row);
       });
 
       const total = course.meetingsCount || 16;
       const pct = Math.round((count / total) * 100);
-      document.getElementById("syllabusProgressBar").style.width = `${pct}%`;
+      const fill = document.getElementById("syllabusProgressBar");
+      fill.style.width = `${pct}%`;
+      if (pct === 100) fill.classList.add("completed");
+      else fill.classList.remove("completed");
+
       document.getElementById("syllabusProgressCount").innerText = `${count} dari ${total} Topik Selesai`;
       document.getElementById("syllabusBadge").innerText = pct === 100 ? "● Tuntas 100%" : "● Sedang Dipelajari";
     }
@@ -1221,7 +1400,36 @@
       else completedTopics.add(topicId);
 
       renderSyllabusList();
-      logTelemetry("topic_toggled", { topic_id: topicId, is_done: completedTopics.has(topicId) });
+      logTelemetry("topic_toggled", { topic_id: topicId, is_done: completedTopics.has(topicId), component: "UI Kit Free Checkbox" });
+    }
+
+    function filterSyllabus(mode, btn) {
+      currentSyllabusFilter = mode;
+      document.querySelectorAll(".uikit-chip").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      renderSyllabusList();
+      logTelemetry("syllabus_filtered", { filter_mode: mode });
+    }
+
+    function openVideoModal(topic) {
+      selectedTopicForModal = topic;
+      document.getElementById("modalVideoTitle").innerText = `${String(topic.no).padStart(2, '0')}. ${topic.title}`;
+      document.getElementById("modalChannelName").innerText = topic.channel;
+      document.getElementById("videoModalOverlay").classList.add("active");
+      logTelemetry("video_modal_opened", { topic_id: topic.id, title: topic.title });
+    }
+
+    function closeVideoModal() {
+      document.getElementById("videoModalOverlay").classList.remove("active");
+      selectedTopicForModal = null;
+    }
+
+    function simulateWatchCompleted() {
+      if (!selectedTopicForModal) return;
+      completedTopics.add(selectedTopicForModal.id);
+      renderSyllabusList();
+      closeVideoModal();
+      logTelemetry("video_completed_85_percent", { topic_id: selectedTopicForModal.id, auto_checked: true });
     }
 
     function toggleTheme() {
@@ -1235,14 +1443,14 @@
       completedTopics = new Set(["t101_01", "t101_02", "t101_03", "t101_04"]);
       renderCourses();
       renderSyllabusList();
-      logTelemetry("data_reset", {});
+      logTelemetry("data_reset", { default_completed: 4 });
     }
 
     function filterCourses(val) {
       renderCourses(val);
     }
 
-    /* Timer */
+    /* Usability Testing Timer */
     let timerOn = false;
     let timerStart = 0;
     let timerInt = null;
@@ -1259,20 +1467,20 @@
           document.getElementById("stopwatchDisplay").innerText = `${m}:${s}.0`;
         }, 200);
         btn.innerText = "Jeda";
-        btn.style.background = "#D29922";
+        btn.style.background = "var(--uikit-warning)";
       } else {
         timerOn = false;
         clearInterval(timerInt);
         btn.innerText = "Mulai Timer";
-        btn.style.background = "#238636";
+        btn.style.background = "var(--uikit-success)";
       }
     }
 
     const TASKS = {
-      1: "<strong>Task 1 (Navigasi Semester):</strong> Anda adalah mahasiswa baru Teknik Informatika. Coba jelajahi mata kuliah di <strong>Semester 2</strong> menggunakan tab navigasi Primer UnderlineNav.",
+      1: "<strong>Task 1 (Navigasi Semester):</strong> Anda adalah mahasiswa baru Teknik Informatika. Coba jelajahi mata kuliah di <strong>Semester 2</strong> menggunakan baris <strong>Pill Tabs</strong> UI Kit Free.",
       2: "<strong>Task 2 (Buka Silabus):</strong> Buka silabus lengkap mata kuliah <strong>Algoritma & Pemrograman Dasar</strong> untuk meninjau 16 pertemuan.",
-      3: "<strong>Task 3 (Centang Progres Manual):</strong> Tandai materi <strong>Pertemuan 05 (Fungsi & Modularitas)</strong> sebagai sudah selesai via Checkbox Primer.",
-      4: "<strong>Task 4 (Tonton Topik):</strong> Tekan baris Pertemuan 01 untuk memulai video."
+      3: "<strong>Task 3 (Centang Progres Manual):</strong> Tandai materi <strong>Pertemuan 05 (Fungsi & Modularitas)</strong> sebagai sudah selesai via Checkbox UI Kit Free.",
+      4: "<strong>Task 4 (Tonton Topik):</strong> Tekan baris Pertemuan 01 untuk membuka video pembelajaran bebas distraksi."
     };
 
     function selectTask(id, btn) {
@@ -1285,7 +1493,13 @@
     window.addEventListener("DOMContentLoaded", () => {
       renderTabs();
       renderCourses();
-      logTelemetry("app_opened", { framework: "GitHub Primer Web", nodes: 57436, variables: 2009 });
+      logTelemetry("app_opened", {
+        design_system: "Design System & UI Kit Free (Community)",
+        figma_file: "Design System _ Ui Kit Free (Community).fig",
+        components_inventory: 1327,
+        canvases: 59,
+        nodes: 11815
+      });
     });
   </script>
 </body>
