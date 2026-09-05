@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OpenCampus Mobile — POC Design Tokens Comparison (M3 vs Primer vs Flowbite vs Aalto)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: #0E0C17;
+      color: #E2E0EE;
+      font-family: 'Inter', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      overflow-x: auto;
+    }
+
+    /* Top Sticky Control Bar */
+    .poc-header {
+      background: #17142A;
+      border-bottom: 1px solid #292446;
+      padding: 16px 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      position: sticky;
+      top: 0;
+      z-index: 200;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .poc-title-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .poc-badge {
+      background: #FD6360;
+      color: #FFFFFF;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.5px;
+    }
+
+    .poc-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .poc-controls {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .theme-selector-tabs {
+      display: flex;
+      background: #231E3D;
+      border: 1px solid #362E5C;
+      border-radius: 12px;
+      padding: 4px;
+      gap: 4px;
+    }
+
+    .btn-ds-tab {
+      background: transparent;
+      border: none;
+      color: #A39DBE;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-ds-tab:hover {
+      color: #FFFFFF;
+      background: rgba(255,255,255,0.06);
+    }
+
+    .btn-ds-tab.active {
+      background: #6D57FC;
+      color: #FFFFFF;
+      box-shadow: 0 2px 8px rgba(109, 87, 252, 0.4);
+    }
+
+    .btn-view-mode {
+      background: #231E3D;
+      border: 1px solid #362E5C;
+      color: #FFFFFF;
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn-view-mode:hover {
+      border-color: #6D57FC;
+    }
+
+    /* DS Spec Meta Ribbon */
+    .poc-meta-ribbon {
+      background: #1B1733;
+      border-bottom: 1px solid #292446;
+      padding: 10px 24px;
+      font-size: 12px;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      color: #B5B0D1;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .meta-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .color-swatch {
+      width: 14px;
+      height: 14px;
+      border-radius: 4px;
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.3);
+    }
+
+    /* Workspace Content */
+    .poc-workspace {
+      flex: 1;
+      padding: 28px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 32px;
+    }
+
+    /* ========================================================
+       DESIGN SYSTEM THEME STYLES (THE CORE POC ENGINES)
+       ======================================================== */
+
+    /* 1. GOOGLE MATERIAL 3 (M3) THEME */
+    .theme-m3 {
+      --ds-primary: #6750A4;
+      --ds-on-primary: #FFFFFF;
+      --ds-primary-container: #EADDFF;
+      --ds-on-primary-container: #21005D;
+      --ds-secondary-container: #E8DEF8;
+      --ds-surface: #FEF7FF;
+      --ds-surface-container: #F3EDF7;
+      --ds-surface-container-high: #ECE6F0;
+      --ds-text-title: #1D1B20;
+      --ds-text-body: #49454F;
+      --ds-outline: #79747E;
+      --ds-outline-variant: #CAC4D0;
+      --ds-radius-card: 16px;
+      --ds-radius-pill: 28px;
+      --ds-radius-chip: 8px;
+      --ds-font-family: 'Roboto', 'Inter', sans-serif;
+      --ds-success: #1E88E5;
+      --ds-success-surface: #E3F2FD;
+      --ds-elevation-card: 0 1px 3px 1px rgba(0, 0, 0, 0.15), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    /* 2. GITHUB PRIMER THEME */
+    .theme-primer {
+      --ds-primary: #0969DA;
+      --ds-on-primary: #FFFFFF;
+      --ds-primary-container: #DDF4FF;
+      --ds-on-primary-container: #0550AE;
+      --ds-secondary-container: #F6F8FA;
+      --ds-surface: #FFFFFF;
+      --ds-surface-container: #F6F8FA;
+      --ds-surface-container-high: #EAEEF2;
+      --ds-text-title: #1F2328;
+      --ds-text-body: #656D76;
+      --ds-outline: #D0D7DE;
+      --ds-outline-variant: #D8DEE4;
+      --ds-radius-card: 6px;
+      --ds-radius-pill: 100px;
+      --ds-radius-chip: 6px;
+      --ds-font-family: -apple-system, 'Inter', sans-serif;
+      --ds-success: #1A7F37;
+      --ds-success-surface: #DAFBE1;
+      --ds-elevation-card: 0 1px 3px rgba(31, 35, 40, 0.12), 0 1px 2px rgba(31, 35, 40, 0.08);
+    }
+
+    /* 3. FLOWBITE (TAILWIND) THEME */
+    .theme-flowbite {
+      --ds-primary: #2563EB; /* blue-600 */
+      --ds-on-primary: #FFFFFF;
+      --ds-primary-container: #EFF6FF; /* blue-50 */
+      --ds-on-primary-container: #1E40AF; /* blue-800 */
+      --ds-secondary-container: #F3F4F6; /* gray-100 */
+      --ds-surface: #FFFFFF;
+      --ds-surface-container: #F9FAFB; /* gray-50 */
+      --ds-surface-container-high: #F3F4F6;
+      --ds-text-title: #111827; /* gray-900 */
+      --ds-text-body: #4B5563; /* gray-600 */
+      --ds-outline: #E5E7EB; /* gray-200 */
+      --ds-outline-variant: #D1D5DB; /* gray-300 */
+      --ds-radius-card: 12px;
+      --ds-radius-pill: 9999px;
+      --ds-radius-chip: 8px;
+      --ds-font-family: 'Inter', sans-serif;
+      --ds-success: #059669; /* emerald-600 */
+      --ds-success-surface: #D1FAE5; /* emerald-100 */
+      --ds-elevation-card: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    }
+
+    /* 4. AALTO UNIVERSITY DESIGN SYSTEM (brand.aalto.fi) THEME */
+    .theme-aalto {
+      --ds-primary: #FD6360; /* Aalto Red 1 */
+      --ds-on-primary: #FFFFFF;
+      --ds-primary-container: #FEE7E6;
+      --ds-on-primary-container: #501F1E; /* Aalto Red 2 */
+      --ds-secondary-container: #FAFAFA; /* neutral-2 */
+      --ds-surface: #FFFFFF; /* neutral-1 */
+      --ds-surface-container: #F2F2F2; /* neutral-3 */
+      --ds-surface-container-high: #E0E0E0; /* neutral-4 */
+      --ds-text-title: #151515; /* neutral-8 (Aalto Black) */
+      --ds-text-body: #505050; /* neutral-5 */
+      --ds-outline: #E0E0E0; /* neutral-4 */
+      --ds-outline-variant: #CCCCCC;
+      --ds-radius-card: 8px; /* Clean Scandinavian geometric architecture */
+      --ds-radius-pill: 4px;
+      --ds-radius-chip: 4px;
+      --ds-font-family: 'Inter', sans-serif;
+      --ds-success: #5DD089; /* Aalto School of Chem / Green */
+      --ds-success-surface: #E8F8EE;
+      --ds-accent-blue: #46A5FF; /* Aalto Blue */
+      --ds-accent-elec: #A987FF; /* School of Elec */
+      --ds-accent-sci: #FF8D4F; /* School of Science */
+      --ds-elevation-card: 0 2px 4px rgba(0,0,0,0.06);
+    }
+
+    /* Phone Device Mockup Container */
+    .poc-device-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .device-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #FFFFFF;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .device-badge-source {
+      font-size: 10px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+      background: #252044;
+      color: #B5B0D1;
+      border: 1px solid #3C346B;
+    }
+
+    .phone-mockup {
+      width: 360px;
+      height: 740px;
+      background: var(--ds-surface-container);
+      border-radius: 40px;
+      border: 8px solid #221E38;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.5);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      font-family: var(--ds-font-family);
+      color: var(--ds-text-title);
+      user-select: none;
+      transition: all 0.25s ease;
+    }
+
+    /* Device Top Notch */
+    .device-notch {
+      width: 140px;
+      height: 22px;
+      background: #221E38;
+      border-bottom-left-radius: 14px;
+      border-bottom-right-radius: 14px;
+      margin: 0 auto;
+      z-index: 90;
+      position: relative;
+    }
+
+    .device-status {
+      padding: 8px 20px 4px;
+      display: flex;
+      justify-content: space-between;
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--ds-text-title);
+      opacity: 0.8;
+    }
+
+    /* Device Screen Content Area */
+    .screen-content {
+      flex: 1;
+      overflow-y: auto;
+      padding-bottom: 60px;
+      scrollbar-width: none;
+    }
+    .screen-content::-webkit-scrollbar { display: none; }
+
+    /* Screen Views */
+    .view-container {
+      display: none;
+      padding: 16px;
+    }
+    .view-container.active-view {
+      display: block;
+    }
+
+    /* ========================================================
+       GENERIC MAPPED COMPONENTS USING DESIGN SYSTEM TOKENS
+       ======================================================== */
+
+    /* 1. Header Bar */
+    .comp-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+    }
+
+    .comp-brand {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--ds-primary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .comp-badge-dept {
+      background: var(--ds-primary-container);
+      color: var(--ds-on-primary-container);
+      font-size: 11px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: var(--ds-radius-pill);
+      border: 1px solid var(--ds-outline-variant);
+    }
+
+    /* 2. Global Semester Progress Card */
+    .comp-progress-card {
+      background: var(--ds-surface);
+      border: 1px solid var(--ds-outline);
+      border-radius: var(--ds-radius-card);
+      padding: 14px 16px;
+      margin-bottom: 16px;
+      box-shadow: var(--ds-elevation-card);
+    }
+
+    .progress-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .progress-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ds-text-title);
+    }
+
+    .progress-val {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--ds-primary);
+    }
+
+    .comp-progress-track {
+      height: 6px;
+      background: var(--ds-surface-container-high);
+      border-radius: 9999px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+
+    .comp-progress-fill {
+      height: 100%;
+      background: var(--ds-primary);
+      border-radius: 9999px;
+      width: 25%;
+      transition: width 0.3s;
+    }
+
+    .progress-subtext {
+      font-size: 11px;
+      color: var(--ds-text-body);
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* 3. Horizontal Semester Tabs */
+    .comp-section-title {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      font-weight: 800;
+      color: var(--ds-text-body);
+      margin-bottom: 8px;
+    }
+
+    .comp-semester-tabs {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      margin-bottom: 16px;
+      padding-bottom: 4px;
+      scrollbar-width: none;
+    }
+    .comp-semester-tabs::-webkit-scrollbar { display: none; }
+
+    .comp-tab-pill {
+      background: var(--ds-surface);
+      border: 1px solid var(--ds-outline);
+      color: var(--ds-text-body);
+      padding: 8px 14px;
+      border-radius: var(--ds-radius-chip);
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .comp-tab-pill.active {
+      background: var(--ds-primary);
+      color: var(--ds-on-primary);
+      border-color: var(--ds-primary);
+    }
+
+    /* 4. Course Cards */
+    .comp-course-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .comp-course-card {
+      background: var(--ds-surface);
+      border: 1px solid var(--ds-outline);
+      border-radius: var(--ds-radius-card);
+      padding: 12px 14px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      box-shadow: var(--ds-elevation-card);
+      transition: all 0.15s;
+    }
+
+    .comp-course-card:hover {
+      transform: translateY(-1px);
+    }
+
+    .comp-course-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--ds-radius-chip);
+      background: var(--ds-primary-container);
+      color: var(--ds-on-primary-container);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .comp-course-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .course-card-name {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--ds-text-title);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 2px;
+    }
+
+    .course-card-meta {
+      font-size: 11px;
+      color: var(--ds-text-body);
+      margin-bottom: 6px;
+    }
+
+    .mini-track-bar {
+      height: 4px;
+      background: var(--ds-surface-container-high);
+      border-radius: 9999px;
+      overflow: hidden;
+    }
+    .mini-fill-bar {
+      height: 100%;
+      background: var(--ds-primary);
+      width: 25%;
+    }
+
+    /* ========================================================
+       SCREEN 2: SYLLABUS DETAIL SPECIFIC
+       ======================================================== */
+    .comp-top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 0 14px;
+      border-bottom: 1px solid var(--ds-outline);
+      margin-bottom: 12px;
+    }
+
+    .comp-back-btn {
+      background: var(--ds-surface);
+      border: 1px solid var(--ds-outline);
+      border-radius: var(--ds-radius-chip);
+      width: 32px;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--ds-text-title);
+    }
+
+    .comp-syllabus-title {
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--ds-text-title);
+      text-align: center;
+      flex: 1;
+      padding: 0 8px;
+    }
+
+    /* Syllabus Topic Row */
+    .comp-topic-row {
+      background: var(--ds-surface);
+      border: 1px solid var(--ds-outline);
+      border-radius: var(--ds-radius-chip);
+      padding: 10px 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+      transition: all 0.15s;
+    }
+
+    .comp-topic-row.checked-topic {
+      background: var(--ds-success-surface);
+      border-color: var(--ds-success);
+    }
+
+    /* Dynamic Checkbox */
+    .comp-checkbox {
+      width: 20px;
+      height: 20px;
+      border-radius: var(--ds-radius-chip);
+      border: 2px solid var(--ds-outline-variant);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      font-size: 11px;
+      color: #FFFFFF;
+      font-weight: 800;
+      background: transparent;
+      transition: all 0.15s;
+    }
+
+    .comp-checkbox.checked {
+      background: var(--ds-success);
+      border-color: var(--ds-success);
+    }
+
+    .topic-text-body {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .topic-name {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--ds-text-title);
+      margin-bottom: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .comp-topic-row.checked-topic .topic-name {
+      text-decoration: line-through;
+      color: var(--ds-text-body);
+    }
+
+    .topic-meta {
+      font-size: 10.5px;
+      color: var(--ds-text-body);
+    }
+
+    .comp-btn-play {
+      color: var(--ds-primary);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    /* Bottom Nav */
+    .comp-bottom-bar {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 52px;
+      background: var(--ds-surface);
+      border-top: 1px solid var(--ds-outline);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--ds-text-body);
+    }
+
+    .comp-bottom-bar .active-nav {
+      color: var(--ds-primary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sticky POC Header -->
+  <header class="poc-header">
+    <div class="poc-title-group">
+      <span class="poc-badge">POC EXPERIMENT</span>
+      <h1 class="poc-title">Module 1 Design Tokens POC: 4 Design Systems Head-to-Head</h1>
+    </div>
+
+    <div class="poc-controls">
+      <!-- Theme Selection -->
+      <div class="theme-selector-tabs">
+        <button class="btn-ds-tab" onclick="switchTheme('theme-m3', this)">
+          <span>🟣</span> Google Material 3
+        </button>
+        <button class="btn-ds-tab" onclick="switchTheme('theme-primer', this)">
+          <span>🐙</span> GitHub Primer
+        </button>
+        <button class="btn-ds-tab" onclick="switchTheme('theme-flowbite', this)">
+          <span>🌊</span> Flowbite (Tailwind)
+        </button>
+        <button class="btn-ds-tab active" onclick="switchTheme('theme-aalto', this)">
+          <span>🔴</span> Aalto University DS
+        </button>
+      </div>
+
+      <!-- Screen Switcher -->
+      <div class="theme-selector-tabs">
+        <button class="btn-ds-tab active" id="btnScreen1" onclick="switchScreen('viewHome')">Layar 1: Beranda</button>
+        <button class="btn-ds-tab" id="btnScreen2" onclick="switchScreen('viewSyllabus')">Layar 2: Silabus</button>
+      </div>
+
+      <!-- View Layout Mode -->
+      <button class="btn-view-mode" id="btnToggleMode" onclick="toggleMatrixMode()">Tampilkan 4 Mockup Sekaligus (Matrix)</button>
+    </div>
+  </header>
+
+  <!-- Live Meta Ribbon -->
+  <div class="poc-meta-ribbon" id="pocMetaRibbon">
+    <span class="meta-tag"><strong>Sistem Aktif:</strong> <span id="metaDsName">Aalto University Design System</span></span>
+    <span class="meta-tag"><strong>Primary Accent:</strong> <span class="color-swatch" id="metaPrimarySwatch" style="background: #FD6360;"></span> <span id="metaPrimaryHex">#FD6360 (Aalto Red)</span></span>
+    <span class="meta-tag"><strong>Typography:</strong> <span id="metaFont">Inter (Scandinavian Clean)</span></span>
+    <span class="meta-tag"><strong>Border Radius:</strong> <span id="metaRadius">8px (Card) / 4px (Chips)</span></span>
+    <span class="meta-tag"><strong>Target Domain:</strong> <span id="metaDomain">University & Academic DNA</span></span>
+  </div>
+
+  <!-- Main Comparison Stage -->
+  <main class="poc-workspace" id="pocWorkspace">
+
+    <!-- DEVICE CONTAINER 1 (MAIN ACTIVE PHONE OR 1 OF 4 IN MATRIX) -->
+    <div class="poc-device-card theme-aalto" id="deviceCard1">
+      <div class="device-label">
+        <span id="deviceTitle1">Aalto University Design System</span>
+        <span class="device-badge-source">brand.aalto.fi/en/ds</span>
+      </div>
+
+      <div class="phone-mockup">
+        <div class="device-notch"></div>
+        <div class="device-status">
+          <span>09:41</span>
+          <span>5G 🔋 100%</span>
+        </div>
+
+        <div class="screen-content">
+
+          <!-- VIEW 1: BERANDA SEMESTER -->
+          <div class="view-container active-view" id="viewHome1">
+            <div class="comp-header">
+              <div class="comp-brand">🎓 OpenCampus</div>
+              <div class="comp-badge-dept">Teknik Informatika</div>
+            </div>
+
+            <!-- Global Semester Progress Card -->
+            <div class="comp-progress-card">
+              <div class="progress-card-top">
+                <span class="progress-title">Progres Semester 1</span>
+                <span class="progress-val">25%</span>
+              </div>
+              <div class="comp-progress-track">
+                <div class="comp-progress-fill" style="width: 25%;"></div>
+              </div>
+              <div class="progress-subtext">
+                <span>4 dari 16 Topik Selesai</span>
+                <span style="font-weight: 700; color: var(--ds-primary);">● Berjalan</span>
+              </div>
+            </div>
+
+            <!-- Semester Tabs -->
+            <div class="comp-section-title">Pilih Semester</div>
+            <div class="comp-semester-tabs">
+              <div class="comp-tab-pill active">Semester 1</div>
+              <div class="comp-tab-pill">Semester 2</div>
+              <div class="comp-tab-pill">Semester 3</div>
+              <div class="comp-tab-pill">Semester 4</div>
+            </div>
+
+            <!-- Course Cards -->
+            <div class="comp-section-title">Daftar Mata Kuliah (Sem 1)</div>
+            <div class="comp-course-list">
+              <div class="comp-course-card" onclick="switchScreen('viewSyllabus')">
+                <div class="comp-course-icon">💻</div>
+                <div class="comp-course-body">
+                  <div class="course-card-name">Algoritma & Pemrograman Dasar</div>
+                  <div class="course-card-meta">16 Pertemuan • Est. ~6.5 Jam</div>
+                  <div class="mini-track-bar"><div class="mini-fill-bar" style="width: 25%;"></div></div>
+                </div>
+                <div style="font-size: 14px; color: var(--ds-primary); font-weight: bold;">›</div>
+              </div>
+
+              <div class="comp-course-card">
+                <div class="comp-course-icon">📐</div>
+                <div class="comp-course-body">
+                  <div class="course-card-name">Matematika Diskrit</div>
+                  <div class="course-card-meta">16 Pertemuan • Est. ~5.5 Jam</div>
+                  <div class="mini-track-bar"><div class="mini-fill-bar" style="width: 0%;"></div></div>
+                </div>
+                <div style="font-size: 14px; color: var(--ds-primary); font-weight: bold;">›</div>
+              </div>
+
+              <div class="comp-course-card">
+                <div class="comp-course-icon">🌐</div>
+                <div class="comp-course-body">
+                  <div class="course-card-name">Pengantar Teknologi Informasi</div>
+                  <div class="course-card-meta">16 Pertemuan • Est. ~4.0 Jam</div>
+                  <div class="mini-track-bar"><div class="mini-fill-bar" style="width: 18%;"></div></div>
+                </div>
+                <div style="font-size: 14px; color: var(--ds-primary); font-weight: bold;">›</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- VIEW 2: SILABUS MATA KULIAH -->
+          <div class="view-container" id="viewSyllabus1">
+            <div class="comp-top-bar">
+              <div class="comp-back-btn" onclick="switchScreen('viewHome')">‹</div>
+              <div class="comp-syllabus-title">Algoritma & Pemrograman</div>
+              <div style="width: 32px;"></div>
+            </div>
+
+            <!-- Course Header Summary -->
+            <div class="comp-progress-card">
+              <div class="progress-card-top">
+                <span class="progress-title">Progres Silabus MK</span>
+                <span class="progress-val">25% (4 / 16 Selesai)</span>
+              </div>
+              <div class="comp-progress-track">
+                <div class="comp-progress-fill" style="width: 25%;"></div>
+              </div>
+              <div class="progress-subtext">
+                <span>16 Pertemuan • Total ~6.5 Jam</span>
+                <span style="font-weight: 700; color: var(--ds-success);">● Sedang Dipelajari</span>
+              </div>
+            </div>
+
+            <div class="comp-section-title">Daftar Pertemuan Silabus</div>
+
+            <!-- 5 Example Topic Rows -->
+            <div class="comp-topic-row checked-topic">
+              <div class="comp-checkbox checked" onclick="toggleCheckbox(this)">✓</div>
+              <div class="topic-text-body">
+                <div class="topic-name">01. Konsep Dasar Logika & Flowchart</div>
+                <div class="topic-meta">⏱ 18 Menit • 👤 Web Programming UNPAS</div>
+              </div>
+              <div class="comp-btn-play">▶</div>
+            </div>
+
+            <div class="comp-topic-row checked-topic">
+              <div class="comp-checkbox checked" onclick="toggleCheckbox(this)">✓</div>
+              <div class="topic-text-body">
+                <div class="topic-name">02. Variabel, Tipe Data & I/O</div>
+                <div class="topic-meta">⏱ 25 Menit • 👤 Web Programming UNPAS</div>
+              </div>
+              <div class="comp-btn-play">▶</div>
+            </div>
+
+            <div class="comp-topic-row">
+              <div class="comp-checkbox" onclick="toggleCheckbox(this)"></div>
+              <div class="topic-text-body">
+                <div class="topic-name">03. Percabangan: If, Else, Nested If</div>
+                <div class="topic-meta">⏱ 30 Menit • 👤 Kelas Terbuka</div>
+              </div>
+              <div class="comp-btn-play">▶</div>
+            </div>
+
+            <div class="comp-topic-row">
+              <div class="comp-checkbox" onclick="toggleCheckbox(this)"></div>
+              <div class="topic-text-body">
+                <div class="topic-name">04. Perulangan: For, While, Do-While</div>
+                <div class="topic-meta">⏱ 22 Menit • 👤 Kelas Terbuka</div>
+              </div>
+              <div class="comp-btn-play">▶</div>
+            </div>
+
+            <div class="comp-topic-row">
+              <div class="comp-checkbox" onclick="toggleCheckbox(this)"></div>
+              <div class="topic-text-body">
+                <div class="topic-name">05. Fungsi & Modularitas Kode</div>
+                <div class="topic-meta">⏱ 28 Menit • 👤 Kelas Terbuka</div>
+              </div>
+              <div class="comp-btn-play">▶</div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom Navigation Bar -->
+        <div class="comp-bottom-bar">
+          <span class="active-nav">🏠 Beranda</span>
+          <span>🔍 Cari</span>
+          <span>👤 Profil</span>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    const THEMES_METADATA = {
+      'theme-m3': {
+        name: 'Google Material 3 (M3)',
+        primaryHex: '#6750A4',
+        primaryDesc: '#6750A4 (Baseline M3 Purple)',
+        font: 'Roboto / Inter (Tonal Hierarchy)',
+        radius: '16px (Cards) / 28px (Pills)',
+        domain: 'Native Mobile Framework (Flutter & Android)',
+        source: 'm3.material.io / Figma M3 Kit'
+      },
+      'theme-primer': {
+        name: 'GitHub Primer Design System',
+        primaryHex: '#0969DA',
+        primaryDesc: '#0969DA (Primer Blue)',
+        font: '-apple-system / Inter (Developer Standard)',
+        radius: '6px (Crisp Rounded Cards & Badges)',
+        domain: 'Software Engineering & Tech Academy',
+        source: 'primer.style / @primer/primitives'
+      },
+      'theme-flowbite': {
+        name: 'Flowbite (Tailwind Scale)',
+        primaryHex: '#2563EB',
+        primaryDesc: '#2563EB (Tailwind Blue-600)',
+        font: 'Inter (Clean SaaS & Web)',
+        radius: '12px (Rounded-xl) / 9999px (Pill)',
+        domain: 'Utility-first Mobile / NativeWind',
+        source: 'flowbite.com / Tailwind UI'
+      },
+      'theme-aalto': {
+        name: 'Aalto University Design System',
+        primaryHex: '#FD6360',
+        primaryDesc: '#FD6360 (Aalto Red 1)',
+        font: 'Inter (Scandinavian Academic)',
+        radius: '8px (Geometric Cards) / 4px (Chips)',
+        domain: 'Authentic University & Higher Ed DNA',
+        source: 'brand.aalto.fi/en/ds (CSS Extraction)'
+      }
+    };
+
+    let currentTheme = 'theme-aalto';
+    let currentScreen = 'viewHome';
+    let isMatrixMode = false;
+
+    function switchTheme(themeClass, btn) {
+      currentTheme = themeClass;
+      document.querySelectorAll('.btn-ds-tab').forEach(b => {
+        if (b.innerText.includes('Google') || b.innerText.includes('GitHub') || b.innerText.includes('Flowbite') || b.innerText.includes('Aalto')) {
+          b.classList.remove('active');
+        }
+      });
+      if (btn) btn.classList.add('active');
+
+      const meta = THEMES_METADATA[themeClass];
+      document.getElementById('metaDsName').innerText = meta.name;
+      document.getElementById('metaPrimarySwatch').style.background = meta.primaryHex;
+      document.getElementById('metaPrimaryHex').innerText = meta.primaryDesc;
+      document.getElementById('metaFont').innerText = meta.font;
+      document.getElementById('metaRadius').innerText = meta.radius;
+      document.getElementById('metaDomain').innerText = meta.domain;
+
+      if (!isMatrixMode) {
+        const dev1 = document.getElementById('deviceCard1');
+        dev1.className = `poc-device-card ${themeClass}`;
+        document.getElementById('deviceTitle1').innerText = meta.name;
+      }
+    }
+
+    function switchScreen(screenId) {
+      currentScreen = screenId;
+      document.getElementById('btnScreen1').classList.toggle('active', screenId === 'viewHome');
+      document.getElementById('btnScreen2').classList.toggle('active', screenId === 'viewSyllabus');
+
+      const containers = document.querySelectorAll('.view-container');
+      containers.forEach(c => {
+        if (c.id.startsWith(screenId)) {
+          c.classList.add('active-view');
+        } else {
+          c.classList.remove('active-view');
+        }
+      });
+    }
+
+    function toggleCheckbox(el) {
+      const parentRow = el.closest('.comp-topic-row');
+      const isChecked = el.classList.contains('checked');
+      if (isChecked) {
+        el.classList.remove('checked');
+        el.innerText = '';
+        parentRow.classList.remove('checked-topic');
+      } else {
+        el.classList.add('checked');
+        el.innerText = '✓';
+        parentRow.classList.add('checked-topic');
+      }
+    }
+
+    function toggleMatrixMode() {
+      isMatrixMode = !isMatrixMode;
+      const workspace = document.getElementById('pocWorkspace');
+      const toggleBtn = document.getElementById('btnToggleMode');
+
+      if (isMatrixMode) {
+        toggleBtn.innerText = "Mode 1 Ponsel Fokus";
+        workspace.innerHTML = "";
+
+        const themes = ['theme-m3', 'theme-primer', 'theme-flowbite', 'theme-aalto'];
+        themes.forEach((th, idx) => {
+          const meta = THEMES_METADATA[th];
+          const card = document.createElement('div');
+          card.className = `poc-device-card ${th}`;
+          card.innerHTML = `
+            <div class="device-label">
+              <span>${meta.name}</span>
+              <span class="device-badge-source">${meta.source.split(' ')[0]}</span>
+            </div>
+            <div class="phone-mockup" style="transform: scale(0.95); transform-origin: top center;">
+              <div class="device-notch"></div>
+              <div class="device-status"><span>09:41</span><span>5G 🔋 100%</span></div>
+              <div class="screen-content">
+                <div class="view-container ${currentScreen === 'viewHome' ? 'active-view' : ''}" id="viewHome_${idx}">
+                  <div class="comp-header">
+                    <div class="comp-brand">🎓 OpenCampus</div>
+                    <div class="comp-badge-dept">Teknik Informatika</div>
+                  </div>
+                  <div class="comp-progress-card">
+                    <div class="progress-card-top">
+                      <span class="progress-title">Progres Semester 1</span>
+                      <span class="progress-val">25%</span>
+                    </div>
+                    <div class="comp-progress-track"><div class="comp-progress-fill" style="width: 25%;"></div></div>
+                    <div class="progress-subtext"><span>4 dari 16 Topik</span><span style="font-weight:700; color:var(--ds-primary);">● Berjalan</span></div>
+                  </div>
+                  <div class="comp-section-title">Pilih Semester</div>
+                  <div class="comp-semester-tabs">
+                    <div class="comp-tab-pill active">Semester 1</div>
+                    <div class="comp-tab-pill">Semester 2</div>
+                    <div class="comp-tab-pill">Semester 3</div>
+                  </div>
+                  <div class="comp-section-title">Mata Kuliah (Sem 1)</div>
+                  <div class="comp-course-list">
+                    <div class="comp-course-card">
+                      <div class="comp-course-icon">💻</div>
+                      <div class="comp-course-body">
+                        <div class="course-card-name">Algoritma & Pemrograman</div>
+                        <div class="course-card-meta">16 Pertemuan • ~6.5 Jam</div>
+                        <div class="mini-track-bar"><div class="mini-fill-bar" style="width:25%;"></div></div>
+                      </div>
+                    </div>
+                    <div class="comp-course-card">
+                      <div class="comp-course-icon">📐</div>
+                      <div class="comp-course-body">
+                        <div class="course-card-name">Matematika Diskrit</div>
+                        <div class="course-card-meta">16 Pertemuan • ~5.5 Jam</div>
+                        <div class="mini-track-bar"><div class="mini-fill-bar" style="width:0%;"></div></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="view-container ${currentScreen === 'viewSyllabus' ? 'active-view' : ''}" id="viewSyllabus_${idx}">
+                  <div class="comp-top-bar">
+                    <div class="comp-back-btn">‹</div>
+                    <div class="comp-syllabus-title">Algoritma & Pemrograman</div>
+                    <div style="width:32px;"></div>
+                  </div>
+                  <div class="comp-progress-card">
+                    <div class="progress-card-top">
+                      <span class="progress-title">Progres Silabus MK</span>
+                      <span class="progress-val">25%</span>
+                    </div>
+                    <div class="comp-progress-track"><div class="comp-progress-fill" style="width:25%;"></div></div>
+                    <div class="progress-subtext"><span>16 Pertemuan</span><span style="font-weight:700; color:var(--ds-success);">● Sedang Dipelajari</span></div>
+                  </div>
+                  <div class="comp-section-title">Pertemuan Silabus</div>
+                  <div class="comp-topic-row checked-topic">
+                    <div class="comp-checkbox checked">✓</div>
+                    <div class="topic-text-body"><div class="topic-name">01. Konsep Logika & Flowchart</div><div class="topic-meta">⏱ 18m • UNPAS</div></div>
+                  </div>
+                  <div class="comp-topic-row">
+                    <div class="comp-checkbox"></div>
+                    <div class="topic-text-body"><div class="topic-name">03. Percabangan: If-Else</div><div class="topic-meta">⏱ 30m • Kelas Terbuka</div></div>
+                  </div>
+                </div>
+              </div>
+              <div class="comp-bottom-bar"><span class="active-nav">🏠 Beranda</span><span>🔍 Cari</span><span>👤 Profil</span></div>
+            </div>
+          `;
+          workspace.appendChild(card);
+        });
+      } else {
+        toggleBtn.innerText = "Tampilkan 4 Mockup Sekaligus (Matrix)";
+        location.reload();
+      }
+    }
+  </script>
+</body>
+</html>
