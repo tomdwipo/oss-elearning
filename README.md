@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-green.svg)](#)
-[![Status: MVP v0.1](https://img.shields.io/badge/Status-MVP%20v0.1-orange.svg)](PRD.md)
+[![Status: MVP v0.1](https://img.shields.io/badge/Status-MVP%20v0.1-orange.svg)](.docs/PRD.md)
 
 ---
 
@@ -12,7 +12,7 @@
 
 **OpenCampus Mobile** dirancang untuk mengatasi fenomena *curation fatigue* dan distraksi algoritma yang kerap dialami oleh pembelajar mandiri (autodidak). Aplikasi ini mengemas video-video perkuliahan berkualitas dari YouTube ke dalam kurikulum semester yang terstruktur dan terurut (Semester 1–8), dilengkapi dengan pemutar video bebas distraksi dan pelacak progres belajar sederhana.
 
-Dokumen kebutuhan produk lengkap dapat dilihat di 📄 **[PRD.md](PRD.md)**.
+Dokumen kebutuhan produk lengkap dapat dilihat di 📄 **[.docs/PRD.md](.docs/PRD.md)**.
 
 ---
 
@@ -43,7 +43,7 @@ Tujuan utama versi MVP (v0.1) adalah memvalidasi konsistensi belajar mahasiswa/p
 
 ## 🏗️ Roadmap Pengembangan
 
-- [x] Perumusan Product Requirement Document ([PRD.md](PRD.md))
+- [x] Perumusan Product Requirement Document ([.docs/PRD.md](.docs/PRD.md))
 - [ ] Inisialisasi Mobile App Framework (Flutter / React Native)
 - [ ] Implementasi Skema & Data Kurikulum Semester 1–8 (JSON / Local Storage)
 - [ ] Pembuatan UI Navigasi (Semester Tab, Course List, Topic Syllabus)
