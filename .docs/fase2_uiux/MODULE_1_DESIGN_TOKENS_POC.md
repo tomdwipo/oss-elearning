@@ -23,17 +23,40 @@ Untuk melihat, berinteraksi, dan membandingkan secara visual keempat sistem desa
 ## 2. Karakteristik & Pemetaan Token Tiap Sistem Desain
 
 ### 2.1. Opsi A: Google Material 3 (M3)
-* **Sumber Referensi:** [Figma Community M3 Kit](https://www.figma.com/community/file/1035203688168086460) / [m3.material.io](https://m3.material.io/)
-* **Palet Utama:**
-  - `primary`: `#6750A4` (M3 Baseline Purple)
-  - `primaryContainer`: `#EADDFF`
-  - `onPrimaryContainer`: `#21005D`
-  - `surfaceContainer`: `#F3EDF7`
-  - `outline`: `#79747E`
-* **Tipografi:** `Roboto` / `Inter` (Sistem hirarki Display, Headline, Title, Body, Label).
-* **Border Radius:** Kartu `16px`, Tab Pill `28px`, Chip `8px`.
-* **Karakter Visual:** Modern, *tonal color roles*, elevasi berbasis warna (*tonal elevation*), sudut membulat lebar khas Android modern.
-* **Kelebihan untuk OpenCampus:** Komponen langsung tersedia secara *native* di Flutter (`useMaterial3: true`) dan React Native Paper.
+* **Sumber Referensi & Berkas:** [`.docs/fase2_uiux/assets/Material 3 Design Kit (Community).fig`](./assets/Material%203%20Design%20Kit%20%28Community%29.fig) *(Kiwi v106, 87.523 nodes, 34 pages, 318 Figma Variables)* / [m3.material.io](https://m3.material.io/)
+* **Ekstraksi Token JSON:** [`assets/m3_extracted_tokens.json`](./assets/m3_extracted_tokens.json)
+* **Palet Utama (Hasil Ekstraksi `Schemes/*` Variable Modes):**
+  | Token Semantik M3 | Hex (Light Mode) | Hex (Dark Mode) | Peran UI / Komponen |
+  | :--- | :--- | :--- | :--- |
+  | `Schemes/Primary` | `#6750A4` | `#D0BCFF` | Warna primer identitas, checkmark tercentang, active tab |
+  | `Schemes/On Primary` | `#FFFFFF` | `#381E72` | Teks/ikon di atas warna primer |
+  | `Schemes/Primary Container` | `#EADDFF` | `#4F378B` | Badge jurusan, highlight kontainer |
+  | `Schemes/On Primary Container` | `#4F378A` | `#EADDFF` | Teks di dalam badge kontainer |
+  | `Schemes/Secondary Container` | `#E8DEF8` | `#4A4458` | Latar chip semester yang sedang aktif |
+  | `Schemes/On Secondary Container` | `#4A4459` | `#E8DEF8` | Teks chip semester aktif |
+  | `Schemes/Surface` | `#FEF7FF` | `#141218` | Latar dasar kanvas & app bar |
+  | `Schemes/Surface Container Low` | `#F7F2FA` | `#1D1B20` | Latar kartu mata kuliah (Elevated card) |
+  | `Schemes/Surface Container` | `#F3EDF7` | `#211F26` | Latar belakang perangkat / scaffold |
+  | `Schemes/Surface Container Highest`| `#E6E0E9` | `#36343B` | Track progress bar, filled cards |
+  | `Schemes/On Surface` | `#1D1B20` | `#E6E0E9` | Teks judul utama & nama mata kuliah |
+  | `Schemes/On Surface Variant` | `#49454F` | `#CAC4D0` | Teks metadata (durasi, jumlah pertemuan) |
+  | `Schemes/Outline` | `#79747E` | `#938F99` | Border chip semester yang belum aktif |
+  | `Schemes/Outline Variant` | `#CAC4D0` | `#49454F` | Border pemisah silabus (*divider*) |
+* **Skala Sudut (Shape Tokens dari `Corner/*` Variables):**
+  - `Corner/None`: `0px`
+  - `Corner/Extra-small`: `4px` (Checkbox inner: `2px`)
+  - `Corner/Small`: `8px` (Filter chips semester)
+  - `Corner/Medium`: `12px` (Kartu mata kuliah Elevated/Outlined)
+  - `Corner/Large`: `16px` (Bottom sheet, Modal dialog)
+  - `Corner/Full`: `1000px` (Round pills, tombol, FAB)
+* **Spesifikasi Komponen Hasil Ekstraksi:**
+  - **Cards (`Style=Elevated` / `Style=Outlined`):** Border radius `12px`, background `#F7F2FA`, elevasi level 1 (`box-shadow: 0px 1px 3px 1px rgba(0,0,0,0.15), 0px 1px 2px 0px rgba(0,0,0,0.30)`).
+  - **Filter Chips (Semester Tabs):** Tinggi `32px`, corner radius `8px`, border `1px solid #79747E` (unselected), background `#E8DEF8` (selected).
+  - **Checkbox (`Type=Checkbox`):** Touch target `48x48 dp`, box container `18x18 dp`, corner radius `2px`, checked `#6750A4` dengan ikon centang putih `#FFFFFF`.
+  - **Linear Progress Indicator:** Tinggi `4px`, corner radius `2px`, track `#E6E0E9`, fill `#6750A4`.
+* **Tipografi:** `Roboto` (Baseline Typescale brand & plain dari token `Static/Font/Brand`).
+* **Karakter Visual:** Tonal color roles, elevasi dinamis, sudut rounded konsisten `12px/8px`, sangat modern.
+* **Kelebihan untuk OpenCampus:** Komponen langsung 100% kompatibel secara *native* di Flutter (`ThemeData(useMaterial3: true)`) dan Android Jetpack Compose (`MaterialTheme`).
 
 ---
 
