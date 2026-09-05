@@ -231,3 +231,16 @@ Komponen dan token di atas dirujuk dan diinspeksi dari aset desain komunitas:
 * **Figma Cloud URL:** [Figma Community Design](https://www.figma.com/design/3UzTSK8vlS6ICGgi14brey/Mobile-E-Learning-App-Design--Community-)
 * **Local Binary Archive:** [`.docs/fase2_uiux/assets/Mobile E-Learning App Design (Community).fig`](./assets/Mobile%20E-Learning%20App%20Design%20%28Community%29.fig)
 * **Interactive HTML Prototype (Semester Tabs):** [`hifi_semester_tabs_preview.html`](./assets/hifi_semester_tabs_preview.html)
+* **Component & Icon Catalog:** [`assets/icons/figma_component_catalog.json`](./assets/icons/figma_component_catalog.json)
+
+### 7.3 Aset Ikon Vektor & Komponen Reusable yang Diadopsi
+
+| Elemen Wireframe Modul 1 | File Aset Vektor SVG | Komponen Figma Asal | Penggunaan di Aplikasi |
+| :--- | :--- | :--- | :--- |
+| **Tombol Back (`< Back`)** | [`arrow_left.svg`](./assets/icons/arrow_left.svg) | `Iconly/Broken/Arrow - Left` (`229:691`) | Navigasi kembali di Top Bar Silabus & Video |
+| **Indikator Aksi Masuk (`[>]`)** | [`arrow_right.svg`](./assets/icons/arrow_right.svg) | `Iconly/Broken/Arrow - Right` (`229:1152`) | Indikator aksi buka silabus & play topik |
+| **Indikator Durasi Materi (`⏱`)** | [`time_circle.svg`](./assets/icons/time_circle.svg) | `Iconly/Regular/Broken/Time Circle` (`229:1381`) | Metadata durasi estimasi video di list silabus |
+| **Atribusi Kreator (`👤`)** | [`profile.svg`](./assets/icons/profile.svg) | `Iconly/Regular/Broken/Profile` (`229:690`) | Metadata kanal pembuat video materi |
+| **Navigasi Beranda (`Home`)** | [`home.svg`](./assets/icons/home.svg) | `Iconly/Regular/Broken/Home` (`229:682`) | Ikon menu Beranda |
+| **Pencarian Materi (`Search`)** | [`search.svg`](./assets/icons/search.svg) | `Iconly/Regular/Broken/Search` (`229:684`) | Fitur pencarian mata kuliah / silabus |
+| **Baris Topik Silabus** | Spec JSON: `CourseEpisodeRow` | `Course Episode (229:1212)` | Item baris 16 pertemuan lengkap dengan mini progress line |

@@ -1,0 +1,247 @@
+{
+  "icons": [
+    {
+      "name": "Iconly/Broken/Arrow - Right 2",
+      "key": "Arrow - Right",
+      "nodeId": "223:117",
+      "size": {
+        "x": 24,
+        "y": 24
+      }
+    },
+    {
+      "name": "Iconly/Broken/Arrow - Left",
+      "key": "Arrow - Left",
+      "nodeId": "229:1366",
+      "size": {
+        "x": 24,
+        "y": 24
+      }
+    },
+    {
+      "name": "iPhone=Home Indicator",
+      "key": "Home",
+      "nodeId": "229:186",
+      "size": {
+        "x": 375,
+        "y": 34
+      }
+    },
+    {
+      "name": "Type=Regular, State=Broken, Library=Arrow - Right 2",
+      "key": "Arrow - Right",
+      "nodeId": "223:116",
+      "size": {
+        "x": 24,
+        "y": 24
+      }
+    },
+    {
+      "name": "Type=Regular, State=Broken, Library=Arrow - Left",
+      "key": "Arrow - Left",
+      "nodeId": "229:691",
+      "size": {
+        "x": 24,
+        "y": 24
+      }
+    },
+    {
+      "name": "Type=Regular, State=Broken, Library=Search",
+      "key": "Search",
+      "nodeId": "229:684",
+      "size": {
+        "x": 24,
+        "y": 24
+      }
+    },
+    {
+      "name": "Type=Regular, State=Broken, Library=Home",
+      "key": "Home",
+      "nodeId": "229:682",
+      "size": {
+        "x": 24,
+        "y": 24
+      }
+    },
+    {
+      "name": "Type=Regular, State=Broken, Library=Profile",
+      "key": "Profile",
+      "nodeId": "229:690",
+      "size": {
+        "x": 24,
+        "y": 24
+      }
+    },
+    {
+      "name": "Iconly/Broken/Arrow - Right",
+      "key": "Arrow - Right",
+      "nodeId": "229:1152",
+      "size": {
+        "x": 24,
+        "y": 24
+      }
+    },
+    {
+      "name": "Iconly/Regular/Broken/Time Circle",
+      "key": "Time Circle",
+      "nodeId": "229:1381",
+      "size": {
+        "x": 14,
+        "y": 14
+      }
+    },
+    {
+      "name": "Type=Regular, State=Broken, Library=Arrow - Right",
+      "key": "Arrow - Right",
+      "nodeId": "229:679",
+      "size": {
+        "x": 24,
+        "y": 24
+      }
+    },
+    {
+      "name": "Type=Regular, State=Broken, Library=Bookmark",
+      "key": "Bookmark",
+      "nodeId": "229:680",
+      "size": {
+        "x": 24,
+        "y": 24
+      }
+    },
+    {
+      "name": "Type=Regular, State=Broken, Library=Category",
+      "key": "Category",
+      "nodeId": "229:686",
+      "size": {
+        "x": 24,
+        "y": 24
+      }
+    },
+    {
+      "name": "Type=Regular, State=Broken, Library=Play",
+      "key": "Play",
+      "nodeId": "229:688",
+      "size": {
+        "x": 24,
+        "y": 24
+      }
+    },
+    {
+      "name": "Type=Regular, State=Broken, Library=Lock",
+      "key": "Lock",
+      "nodeId": "229:689",
+      "size": {
+        "x": 24,
+        "y": 24
+      }
+    },
+    {
+      "name": "Type=Regular, State=Broken, Library=Time Circle",
+      "key": "Time Circle",
+      "nodeId": "229:692",
+      "size": {
+        "x": 24,
+        "y": 24
+      }
+    },
+    {
+      "name": "Iconly/Regular/Broken/Bookmark",
+      "key": "Bookmark",
+      "nodeId": "229:1373",
+      "size": {
+        "x": 24,
+        "y": 24
+      }
+    },
+    {
+      "name": "Iconly/Regular/Broken/Lock",
+      "key": "Lock",
+      "nodeId": "229:1466",
+      "size": {
+        "x": 24,
+        "y": 24
+      }
+    }
+  ],
+  "components": [
+    {
+      "name": "CourseEpisodeRow",
+      "sourceNode": "229:1213",
+      "dimensions": {
+        "width": 327,
+        "height": 100
+      },
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 16,
+      "elements": {
+        "thumbnailContainer": {
+          "width": 84,
+          "height": 84,
+          "borderRadius": 12,
+          "color": "#5352ED"
+        },
+        "durationBar": {
+          "width": 203,
+          "height": 5,
+          "borderRadius": 9999,
+          "color": "#6D57FC"
+        },
+        "titleStyle": {
+          "font": "Urbanist",
+          "weight": 700,
+          "size": 15,
+          "color": "#0C0A1C"
+        },
+        "timeMetaStyle": {
+          "font": "Inter",
+          "weight": 500,
+          "size": 12,
+          "color": "#4B5563"
+        }
+      }
+    },
+    {
+      "name": "CourseGridCard",
+      "sourceNode": "224:326",
+      "dimensions": {
+        "width": 156,
+        "height": 180
+      },
+      "backgroundColor": "#FFFFFF",
+      "borderRadius": 16,
+      "border": "1px solid #DFDAFE",
+      "shadow": "0 4px 12px rgba(109, 87, 252, 0.06)",
+      "elements": {
+        "iconBox": {
+          "width": 64,
+          "height": 64,
+          "borderRadius": 14,
+          "color": "#E8E4FF"
+        },
+        "courseBadge": {
+          "font": "Inter",
+          "weight": 500,
+          "size": 12,
+          "color": "#6D57FC"
+        }
+      }
+    },
+    {
+      "name": "TopAppBarWithBack",
+      "sourceNode": "229:1196",
+      "dimensions": {
+        "width": 327,
+        "height": 44
+      },
+      "elements": {
+        "backIcon": "Iconly/Broken/Arrow - Left",
+        "titleStyle": {
+          "font": "Urbanist",
+          "weight": 700,
+          "size": 18,
+          "color": "#0C0A1C"
+        }
+      }
+    }
+  ]
+}
