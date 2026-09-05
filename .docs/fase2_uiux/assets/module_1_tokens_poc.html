@@ -6,7 +6,7 @@
   <title>OpenCampus Mobile — POC Design Tokens Comparison (M3 .fig & Primer .fig Edition)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     * {
       box-sizing: border-box;
@@ -343,6 +343,89 @@
       --ds-accent-elec: #A987FF;
       --ds-accent-sci: #FF8D4F;
       --ds-elevation-card: 0 2px 4px rgba(0,0,0,0.06);
+    }
+
+    /* 5. DESIGN SYSTEM & UI KIT FREE (.FIG) THEME */
+    .theme-uikitfree {
+      --ds-primary: #9D3FE7;
+      --ds-on-primary: #FFFFFF;
+      --ds-primary-container: #F5E8FF;
+      --ds-on-primary-container: #602093;
+      --ds-secondary-container: #F5F3F7;
+      --ds-surface: #FFFFFF;
+      --ds-surface-container-low: #FFFFFF;
+      --ds-surface-container: #F5F3F7;
+      --ds-surface-container-high: #E5E0EB;
+      --ds-surface-container-highest: #D9D1E0;
+      --ds-text-title: #1A141F;
+      --ds-text-body: #707075;
+      --ds-outline: #E5E0EB;
+      --ds-outline-variant: #D9D1E0;
+      --ds-radius-card: 12px;
+      --ds-radius-pill: 1000px;
+      --ds-radius-chip: 8px;
+      --ds-font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --ds-success: #00B998;
+      --ds-success-surface: #E0F7F3;
+      --ds-elevation-card: 0 4px 16px rgba(157, 63, 231, 0.08), 0 2px 6px rgba(26, 20, 31, 0.05);
+    }
+
+    /* UI Kit Free Specific Component Rules (from .fig extraction) */
+    .theme-uikitfree .comp-badge-dept {
+      background: #F5E8FF;
+      color: #9D3FE7;
+      border: 1px solid #E5E0EB;
+      font-weight: 600;
+    }
+    .theme-uikitfree .comp-progress-card {
+      background: #FFFFFF;
+      border: 1px solid #E5E0EB;
+      box-shadow: var(--ds-elevation-card);
+      border-radius: 12px;
+    }
+    .theme-uikitfree .comp-progress-track {
+      height: 6px;
+      background: #E5E5EB;
+      border-radius: 1000px;
+    }
+    .theme-uikitfree .comp-progress-fill {
+      background: linear-gradient(159.13deg, #9D3FE7 0%, #602093 100%);
+      border-radius: 1000px;
+    }
+    .theme-uikitfree .comp-tab-pill {
+      border-radius: 8px;
+      background: #F5F3F7;
+      color: #707075;
+      border: 1px solid transparent;
+      font-weight: 500;
+    }
+    .theme-uikitfree .comp-tab-pill.active {
+      background: linear-gradient(159.13deg, #9D3FE7 -24.13%, #602093 132.21%);
+      color: #FFFFFF;
+      box-shadow: 0 4px 12px rgba(157, 63, 231, 0.35);
+      border: 1px solid transparent;
+      font-weight: 600;
+    }
+    .theme-uikitfree .comp-course-card {
+      background: #FFFFFF;
+      border: 1px solid #E5E0EB;
+      box-shadow: var(--ds-elevation-card);
+      border-radius: 12px;
+    }
+    .theme-uikitfree .comp-checkbox {
+      border-radius: 4px;
+      border: 1.5px solid #C1C6CD;
+      background: #FFFFFF;
+    }
+    .theme-uikitfree .comp-checkbox.checked {
+      background: #9D3FE7;
+      border-color: #9D3FE7;
+      color: #FFFFFF;
+    }
+    .theme-uikitfree .comp-topic-item {
+      background: #FFFFFF;
+      border: 1px solid #E5E0EB;
+      border-radius: 12px;
     }
 
     /* Phone Device Mockup Container */
@@ -709,8 +792,8 @@
   <!-- Sticky POC Header -->
   <header class="poc-header">
     <div class="poc-title-group">
-      <span class="poc-badge">M3 .FIG & PRIMER .FIG INTEGRATED</span>
-      <h1 class="poc-title">POC Design Tokens: Google Material 3 (.fig) vs GitHub Primer (.fig)</h1>
+      <span class="poc-badge" style="background:#9D3FE7; color:#FFF;">3 FIGMA KITS INTEGRATED</span>
+      <h1 class="poc-title">POC Design Tokens: M3 (.fig) vs Primer (.fig) vs UI Kit Free (.fig)</h1>
     </div>
 
     <div class="poc-controls">
@@ -721,6 +804,9 @@
         </button>
         <button class="btn-ds-tab" onclick="switchTheme('theme-primer', this)">
           <span>🐙</span> GitHub Primer (.fig)
+        </button>
+        <button class="btn-ds-tab" onclick="switchTheme('theme-uikitfree', this)">
+          <span>⚡</span> UI Kit Free (.fig)
         </button>
         <button class="btn-ds-tab" onclick="switchTheme('theme-flowbite', this)">
           <span>🌊</span> Flowbite (Tailwind)
@@ -737,7 +823,7 @@
       </div>
 
       <!-- View Layout Mode -->
-      <button class="btn-view-mode" id="btnToggleMode" onclick="toggleMatrixMode()">Tampilkan 4 Mockup Sekaligus (Matrix)</button>
+      <button class="btn-view-mode" id="btnToggleMode" onclick="toggleMatrixMode()">Tampilkan 5 Mockup Sekaligus (Matrix)</button>
     </div>
   </header>
 
@@ -940,6 +1026,15 @@
         domain: 'Software Engineering & Tech Academy',
         source: 'Primer Web (Community).fig (57.436 nodes, 2.009 vars)'
       },
+      'theme-uikitfree': {
+        name: 'UI Kit Free (via UI Kit Free.fig)',
+        primaryHex: '#9D3FE7',
+        primaryDesc: '#9D3FE7 (Electric Violet & Gradient)',
+        font: 'Poppins (Modern Rounded Sans)',
+        radius: '12px (Card) / 8px (Chip) / 4px (Checkbox)',
+        domain: 'Modern EdTech & Creative App',
+        source: 'Design System _ Ui Kit Free (Community).fig (11.815 nodes, 59 pages)'
+      },
       'theme-flowbite': {
         name: 'Flowbite (Tailwind Scale)',
         primaryHex: '#2563EB',
@@ -967,7 +1062,7 @@
     function switchTheme(themeClass, btn) {
       currentTheme = themeClass;
       document.querySelectorAll('.btn-ds-tab').forEach(b => {
-        if (b.innerText.includes('Google') || b.innerText.includes('GitHub') || b.innerText.includes('Flowbite') || b.innerText.includes('Aalto')) {
+        if (b.innerText.includes('Google') || b.innerText.includes('GitHub') || b.innerText.includes('UI Kit') || b.innerText.includes('Flowbite') || b.innerText.includes('Aalto')) {
           b.classList.remove('active');
         }
       });
@@ -1026,15 +1121,18 @@
         toggleBtn.innerText = "Mode 1 Ponsel Fokus";
         workspace.innerHTML = "";
 
-        const themes = ['theme-m3', 'theme-primer', 'theme-flowbite', 'theme-aalto'];
+        const themes = ['theme-m3', 'theme-primer', 'theme-uikitfree', 'theme-flowbite', 'theme-aalto'];
         themes.forEach((th, idx) => {
           const meta = THEMES_METADATA[th];
           const card = document.createElement('div');
           card.className = `poc-device-card ${th}`;
+          const badgeSource = th === 'theme-m3' ? 'Material3.fig' :
+                             (th === 'theme-primer' ? 'Primer.fig' :
+                             (th === 'theme-uikitfree' ? 'UIKitFree.fig' : meta.source.split(' ')[0]));
           card.innerHTML = `
             <div class="device-label">
               <span>${meta.name.split('(')[0]}</span>
-              <span class="device-badge-source">${th === 'theme-m3' ? 'Material3.fig' : (th === 'theme-primer' ? 'Primer.fig' : meta.source.split(' ')[0])}</span>
+              <span class="device-badge-source">${badgeSource}</span>
             </div>
             <div class="phone-mockup" style="transform: scale(0.95); transform-origin: top center;">
               <div class="device-notch"></div>
@@ -1103,7 +1201,7 @@
           workspace.appendChild(card);
         });
       } else {
-        toggleBtn.innerText = "Tampilkan 4 Mockup Sekaligus (Matrix)";
+        toggleBtn.innerText = "Tampilkan 5 Mockup Sekaligus (Matrix)";
         location.reload();
       }
     }
