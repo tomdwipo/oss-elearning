@@ -1,6 +1,6 @@
 # Modul 2: Video Player & Pelacakan Progres — User Flow & Wireflow (MVP v0.1)
 
-Dokumen ini mendefinisikan rancangan **User Flow** dan **Wireflow Sederhana** untuk **Modul 2: Video Player Bebas Distraksi & Pelacakan Progres** (UC-04, UC-05, UC-06, UC-07, UC-08, UC-09, UC-10) pada aplikasi **OpenCampus Mobile** berdasarkan spesifikasi pada [PRD.md](../fase0/PRD.md), [USE_CASE.md](../fase1/USE_CASE.md), dan [ACTIVITY_DIAGRAM.md](../fase1/ACTIVITY_DIAGRAM.md).
+Dokumen ini mendefinisikan rancangan **User Flow** dan **Wireflow Sederhana** untuk **Modul 2: Video Player Bebas Distraksi & Pelacakan Progres** (UC-04, UC-05, UC-06, UC-07, UC-08, UC-09, UC-10) pada aplikasi **OpenCampus Mobile** berdasarkan spesifikasi pada [PRD.md](../../fase0/PRD.md), [USE_CASE.md](../../fase1/USE_CASE.md), dan [ACTIVITY_DIAGRAM.md](../../fase1/ACTIVITY_DIAGRAM.md).
 
 ---
 
@@ -105,7 +105,7 @@ Dokumen ini mendefinisikan rancangan **User Flow** dan **Wireflow Sederhana** un
 
 ## 3. Rincian Komponen & Interaksi Layar
 
-### **Layar Pemutar Video Pembelajaran ([UC-04](../fase1/USE_CASE.md), [UC-05](../fase1/USE_CASE.md), [UC-06](../fase1/USE_CASE.md), [UC-07](../fase1/USE_CASE.md), [UC-08](../fase1/USE_CASE.md))**
+### **Layar Pemutar Video Pembelajaran ([UC-04](../../fase1/USE_CASE.md), [UC-05](../../fase1/USE_CASE.md), [UC-06](../../fase1/USE_CASE.md), [UC-07](../../fase1/USE_CASE.md), [UC-08](../../fase1/USE_CASE.md))**
 * **Tujuan:** Ruang belajar fokus tanpa rekomendasi video luar, distraksi komentar, atau feeds lain.
 * **Elemen UI & Fitur:**
   * **Tombol Kembali (`< Back`):** Kembali ke halaman silabus mata kuliah.
@@ -119,7 +119,7 @@ Dokumen ini mendefinisikan rancangan **User Flow** dan **Wireflow Sederhana** un
   * **Tautan Atribusi Eksternal (`Tonton di YouTube`):** Membuka aplikasi YouTube / browser eksternal untuk kepatuhan lisensi YouTube TOS.
   * **Tombol Laporkan Link Rusak:** Membuka modal pelaporan jika video bermasalah.
 
-### **Modal Laporkan Link Rusak ([UC-10](../fase1/USE_CASE.md))**
+### **Modal Laporkan Link Rusak ([UC-10](../../fase1/USE_CASE.md))**
 * **Tujuan:** Memberikan mekanisme bagi pembelajar untuk melaporkan video yang private, dihapus, atau rusak agar tim kurator dapat memperbarui data URL tanpa rilis ulang aplikasi.
 * **Elemen UI:**
   * Pilihan kategori kerusakan (*Checkbox/Radio button*).
