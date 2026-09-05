@@ -6,6 +6,8 @@ Dokumen ini mendefinisikan rancangan **User Flow** dan **Wireflow Sederhana** un
 
 ## 1. User Flow (Alur Pengguna)
 
+### 1.1 Alur Navigasi Keseluruhan (High-Level)
+
 ```text
   ( Start: Buka Aplikasi )
               |
@@ -45,6 +47,64 @@ Dokumen ini mendefinisikan rancangan **User Flow** dan **Wireflow Sederhana** un
               |
               v (Kembali ke Silabus)
   [ Layar 2: Silabus Mata Kuliah ]
+```
+
+### 1.2 Alur Detail Modul 2: Video Player & Pelacakan Progres (UC-04, UC-05, UC-07, UC-08, UC-09)
+
+```text
+                   ( Start: Masuk Layar Pemutar Video )
+                                    |
+                                    v
+                 [ Sistem Inisialisasi YouTube Player Iframe ]
+                                    |
+                    +---------------+---------------+
+                    |                               |
+                    v (Sukses)                      v (Video Error/Private)
+        [ Tampilkan Video & Kontrol ]    [ Tampilkan Pesan Error & Tombol Laporkan ]
+                    |                               |
+                    |                               v (Tap Laporkan)
+                    |                    [ Buka Modal Pelaporan Link ]
+                    |                               |
+                    |                               v
+                    |                    [ Kirim Laporan ke Sistem ]
+                    |
+                    v
+          [ Pengguna Memutar Video ] <---------------------------------------+
+                    |                                                        |
+         +----------+--------------------+-------------------+               |
+         |                               |                   |               |
+         v                               v                   v               |
+  [ Kontrol Playback ]           [ Buka Tautan Asli ] [ Toggle Checkbox ]    |
+  - Play / Pause                 - Buka App YouTube    - Centang Manual      |
+  - Slider Durasi (Scrubbing)    - Atribusi Kreator    - Hapus Centang       |
+  - Speed (0.75x s/d 2.0x)               |                   |               |
+  - Fullscreen Mode                      v                   v               |
+         |                       [ Tetap Terbuka ]   [ Simpan ke Storage ]   |
+         |                                                   |               |
+         +-------------------------------+-------------------+               |
+                                         |                                   |
+                                         v                                   |
+                          < Apakah Durasi Tontonan >= 85%? >                 |
+                                   /           \                             |
+                           [ Ya ]                [ Tidak ]                   |
+                             |                      |                        |
+                             v                      v                        |
+                     [ Sistem Tandai        [ Masih Menonton? ]              |
+                      Selesai Otomatis ]          /       \                  |
+                             |               [ Ya ]       [ Keluar ]         |
+                             |                 |              |              |
+                             |                 +--------------+              |
+                             v                                |              |
+            [ Simpan Status Centang ke Local Storage ]        |              |
+                             |                                |              |
+                             v                                |              |
+             [ Update Persentase Progres Belajar ]            |              |
+                             |                                |              |
+                             v                                v              |
+            [ Pengguna Tekan Tombol Kembali / Selesai Belajar ]              |
+                             |                                               |
+                             v                                               |
+              ( End: Kembali ke Layar Silabus )                              |
 ```
 
 ---
