@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OpenCampus Mobile — POC Design Tokens Comparison (Primer Web .fig Edition)</title>
+  <title>OpenCampus Mobile — POC Design Tokens Comparison (M3 .fig & Primer .fig Edition)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -48,7 +48,7 @@
     }
 
     .poc-badge {
-      background: #0969DA;
+      background: #6750A4;
       color: #FFFFFF;
       font-size: 11px;
       font-weight: 800;
@@ -100,9 +100,9 @@
     }
 
     .btn-ds-tab.active {
-      background: #0969DA;
+      background: #6750A4;
       color: #FFFFFF;
-      box-shadow: 0 2px 8px rgba(9, 105, 218, 0.5);
+      box-shadow: 0 2px 8px rgba(103, 80, 164, 0.5);
     }
 
     .btn-view-mode {
@@ -118,7 +118,7 @@
     }
 
     .btn-view-mode:hover {
-      border-color: #0969DA;
+      border-color: #6750A4;
     }
 
     /* DS Spec Meta Ribbon */
@@ -163,28 +163,83 @@
        DESIGN SYSTEM THEME ENGINES
        ======================================================== */
 
-    /* 1. GOOGLE MATERIAL 3 (M3) THEME */
+    /* 1. GOOGLE MATERIAL 3 (M3) THEME (POWERED BY MATERIAL 3 DESIGN KIT .FIG v106) */
     .theme-m3 {
-      --ds-primary: #6750A4;
-      --ds-on-primary: #FFFFFF;
-      --ds-primary-container: #EADDFF;
-      --ds-on-primary-container: #21005D;
-      --ds-secondary-container: #E8DEF8;
-      --ds-surface: #FEF7FF;
-      --ds-surface-container: #F3EDF7;
-      --ds-surface-container-high: #ECE6F0;
-      --ds-text-title: #1D1B20;
-      --ds-text-body: #49454F;
-      --ds-outline: #79747E;
-      --ds-outline-variant: #CAC4D0;
-      --ds-radius-card: 16px;
-      --ds-radius-pill: 28px;
-      --ds-radius-chip: 8px;
-      --ds-font-family: 'Roboto', 'Inter', sans-serif;
-      --ds-success: #1E88E5;
-      --ds-success-surface: #E3F2FD;
-      --ds-elevation-card: 0 1px 3px 1px rgba(0, 0, 0, 0.15), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+      --ds-primary: #6750A4; /* Schemes/Primary */
+      --ds-on-primary: #FFFFFF; /* Schemes/On Primary */
+      --ds-primary-container: #EADDFF; /* Schemes/Primary Container */
+      --ds-on-primary-container: #4F378A; /* Schemes/On Primary Container */
+      --ds-secondary: #625B71; /* Schemes/Secondary */
+      --ds-secondary-container: #E8DEF8; /* Schemes/Secondary Container */
+      --ds-on-secondary-container: #4A4459; /* Schemes/On Secondary Container */
+      --ds-surface: #FEF7FF; /* Schemes/Surface */
+      --ds-surface-container-low: #F7F2FA; /* Schemes/Surface Container Low */
+      --ds-surface-container: #F3EDF7; /* Schemes/Surface Container */
+      --ds-surface-container-high: #ECE6F0; /* Schemes/Surface Container High */
+      --ds-surface-container-highest: #E6E0E9; /* Schemes/Surface Container Highest */
+      --ds-text-title: #1D1B20; /* Schemes/On Surface */
+      --ds-text-body: #49454F; /* Schemes/On Surface Variant */
+      --ds-outline: #79747E; /* Schemes/Outline */
+      --ds-outline-variant: #CAC4D0; /* Schemes/Outline Variant */
+      --ds-radius-card: 12px; /* Corner/Medium */
+      --ds-radius-pill: 1000px; /* Corner/Full */
+      --ds-radius-chip: 8px; /* Corner/Small */
+      --ds-font-family: 'Roboto', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --ds-success: #386A20; /* M3 Green */
+      --ds-success-surface: #E8F5E9;
+      --ds-elevation-card: 0px 1px 3px 1px rgba(0, 0, 0, 0.15), 0px 1px 2px 0px rgba(0, 0, 0, 0.30);
     }
+
+    /* M3 Specific Component Rules (from Material 3 Design Kit .fig) */
+    .theme-m3 .comp-progress-card {
+      background: var(--ds-surface-container-low);
+      border: none;
+      box-shadow: var(--ds-elevation-card);
+      border-radius: var(--ds-radius-card);
+    }
+    .theme-m3 .comp-course-card {
+      background: var(--ds-surface-container-low);
+      border: none;
+      box-shadow: var(--ds-elevation-card);
+      border-radius: var(--ds-radius-card);
+    }
+    .theme-m3 .comp-progress-track {
+      height: 4px;
+      background: var(--ds-surface-container-highest);
+      border-radius: 2px;
+    }
+    .theme-m3 .comp-progress-fill {
+      border-radius: 2px;
+    }
+    .theme-m3 .comp-tab-pill {
+      border-radius: var(--ds-radius-chip); /* 8px Filter Chip */
+      border: 1px solid var(--ds-outline);
+      background: transparent;
+      color: var(--ds-text-body);
+      font-size: 12px;
+      font-weight: 500;
+      padding: 6px 14px;
+    }
+    .theme-m3 .comp-tab-pill.active {
+      background: var(--ds-secondary-container);
+      color: var(--ds-on-secondary-container);
+      border: 1px solid transparent;
+      font-weight: 600;
+    }
+    .theme-m3 .comp-checkbox {
+      border-radius: 2px; /* Corner/Extra-small */
+      border: 2px solid var(--ds-text-body);
+    }
+    .theme-m3 .comp-checkbox.checked {
+      background: var(--ds-primary);
+      border-color: var(--ds-primary);
+    }
+    .theme-m3 .comp-topic-item {
+      background: var(--ds-surface-container-low);
+      border: 1px solid var(--ds-outline-variant);
+      border-radius: var(--ds-radius-card);
+    }
+
 
     /* 2. GITHUB PRIMER THEME (POWERED BY PRIMER WEB .FIG v106) */
     .theme-primer {
@@ -654,18 +709,18 @@
   <!-- Sticky POC Header -->
   <header class="poc-header">
     <div class="poc-title-group">
-      <span class="poc-badge">PRIMER .FIG INTEGRATED</span>
-      <h1 class="poc-title">POC Design Tokens: GitHub Primer Web (via .fig) vs Others</h1>
+      <span class="poc-badge">M3 .FIG & PRIMER .FIG INTEGRATED</span>
+      <h1 class="poc-title">POC Design Tokens: Google Material 3 (.fig) vs GitHub Primer (.fig)</h1>
     </div>
 
     <div class="poc-controls">
       <!-- Theme Selection -->
       <div class="theme-selector-tabs">
-        <button class="btn-ds-tab active" onclick="switchTheme('theme-primer', this)">
-          <span>🐙</span> GitHub Primer (.fig)
+        <button class="btn-ds-tab active" onclick="switchTheme('theme-m3', this)">
+          <span>🟣</span> Google Material 3 (.fig)
         </button>
-        <button class="btn-ds-tab" onclick="switchTheme('theme-m3', this)">
-          <span>🟣</span> Google Material 3
+        <button class="btn-ds-tab" onclick="switchTheme('theme-primer', this)">
+          <span>🐙</span> GitHub Primer (.fig)
         </button>
         <button class="btn-ds-tab" onclick="switchTheme('theme-flowbite', this)">
           <span>🌊</span> Flowbite (Tailwind)
@@ -688,21 +743,21 @@
 
   <!-- Live Meta Ribbon -->
   <div class="poc-meta-ribbon" id="pocMetaRibbon">
-    <span class="meta-tag"><strong>Sistem Aktif:</strong> <span id="metaDsName">GitHub Primer Web (via Primer Web.fig)</span></span>
-    <span class="meta-tag"><strong>Primary Accent:</strong> <span class="color-swatch" id="metaPrimarySwatch" style="background: #0969DA;"></span> <span id="metaPrimaryHex">#0969DA (Primer Blue v106)</span></span>
-    <span class="meta-tag"><strong>Typography:</strong> <span id="metaFont">-apple-system / Inter (GitHub Standard)</span></span>
-    <span class="meta-tag"><strong>Border Radius:</strong> <span id="metaRadius">6px (Card) / 3px (Checkbox) / 100px (Pill)</span></span>
-    <span class="meta-tag"><strong>Data Source:</strong> <span id="metaDomain">Primer Web (Community).fig (57.436 nodes, 2.009 vars)</span></span>
+    <span class="meta-tag"><strong>Sistem Aktif:</strong> <span id="metaDsName">Google Material 3 (via Material 3 Design Kit.fig)</span></span>
+    <span class="meta-tag"><strong>Primary Accent:</strong> <span class="color-swatch" id="metaPrimarySwatch" style="background: #6750A4;"></span> <span id="metaPrimaryHex">#6750A4 (M3 Baseline Purple v106)</span></span>
+    <span class="meta-tag"><strong>Typography:</strong> <span id="metaFont">Roboto (M3 Baseline Typescale)</span></span>
+    <span class="meta-tag"><strong>Border Radius:</strong> <span id="metaRadius">12px (Card) / 8px (Chip) / 2px (Checkbox) / 1000px (Full)</span></span>
+    <span class="meta-tag"><strong>Data Source:</strong> <span id="metaDomain">Material 3 Design Kit (Community).fig (87.523 nodes, 318 vars)</span></span>
   </div>
 
   <!-- Main Comparison Stage -->
   <main class="poc-workspace" id="pocWorkspace">
 
     <!-- DEVICE CONTAINER 1 (MAIN ACTIVE PHONE OR 1 OF 4 IN MATRIX) -->
-    <div class="poc-device-card theme-primer" id="deviceCard1">
+    <div class="poc-device-card theme-m3" id="deviceCard1">
       <div class="device-label">
-        <span id="deviceTitle1">GitHub Primer Web</span>
-        <span class="device-badge-source">Primer Web (Community).fig</span>
+        <span id="deviceTitle1">Google Material 3</span>
+        <span class="device-badge-source">Material 3 Design Kit (Community).fig</span>
       </div>
 
       <div class="phone-mockup">
@@ -867,6 +922,15 @@
 
   <script>
     const THEMES_METADATA = {
+      'theme-m3': {
+        name: 'Google Material 3 (via Material 3 Design Kit.fig)',
+        primaryHex: '#6750A4',
+        primaryDesc: '#6750A4 (M3 Baseline Purple v106)',
+        font: 'Roboto (M3 Baseline Typescale)',
+        radius: '12px (Card) / 8px (Chip) / 2px (Checkbox) / 1000px (Full)',
+        domain: 'Native Mobile Framework (Flutter & Android)',
+        source: 'Material 3 Design Kit (Community).fig (87.523 nodes, 318 vars)'
+      },
       'theme-primer': {
         name: 'GitHub Primer Web (via Primer Web.fig)',
         primaryHex: '#0969DA',
@@ -875,15 +939,6 @@
         radius: '6px (Card) / 3px (Checkbox) / 100px (Pill)',
         domain: 'Software Engineering & Tech Academy',
         source: 'Primer Web (Community).fig (57.436 nodes, 2.009 vars)'
-      },
-      'theme-m3': {
-        name: 'Google Material 3 (M3)',
-        primaryHex: '#6750A4',
-        primaryDesc: '#6750A4 (Baseline M3 Purple)',
-        font: 'Roboto / Inter (Tonal Hierarchy)',
-        radius: '16px (Cards) / 28px (Pills)',
-        domain: 'Native Mobile Framework (Flutter & Android)',
-        source: 'm3.material.io / Figma M3 Kit'
       },
       'theme-flowbite': {
         name: 'Flowbite (Tailwind Scale)',
@@ -905,7 +960,7 @@
       }
     };
 
-    let currentTheme = 'theme-primer';
+    let currentTheme = 'theme-m3';
     let currentScreen = 'viewHome';
     let isMatrixMode = false;
 
@@ -971,7 +1026,7 @@
         toggleBtn.innerText = "Mode 1 Ponsel Fokus";
         workspace.innerHTML = "";
 
-        const themes = ['theme-primer', 'theme-m3', 'theme-flowbite', 'theme-aalto'];
+        const themes = ['theme-m3', 'theme-primer', 'theme-flowbite', 'theme-aalto'];
         themes.forEach((th, idx) => {
           const meta = THEMES_METADATA[th];
           const card = document.createElement('div');
@@ -979,7 +1034,7 @@
           card.innerHTML = `
             <div class="device-label">
               <span>${meta.name.split('(')[0]}</span>
-              <span class="device-badge-source">${th === 'theme-primer' ? 'Primer.fig' : meta.source.split(' ')[0]}</span>
+              <span class="device-badge-source">${th === 'theme-m3' ? 'Material3.fig' : (th === 'theme-primer' ? 'Primer.fig' : meta.source.split(' ')[0])}</span>
             </div>
             <div class="phone-mockup" style="transform: scale(0.95); transform-origin: top center;">
               <div class="device-notch"></div>
