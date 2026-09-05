@@ -296,56 +296,7 @@
       border-radius: 3px;
     }
 
-    /* 3. FLOWBITE (TAILWIND) THEME */
-    .theme-flowbite {
-      --ds-primary: #2563EB;
-      --ds-on-primary: #FFFFFF;
-      --ds-primary-container: #EFF6FF;
-      --ds-on-primary-container: #1E40AF;
-      --ds-secondary-container: #F3F4F6;
-      --ds-surface: #FFFFFF;
-      --ds-surface-container: #F9FAFB;
-      --ds-surface-container-high: #F3F4F6;
-      --ds-text-title: #111827;
-      --ds-text-body: #4B5563;
-      --ds-outline: #E5E7EB;
-      --ds-outline-variant: #D1D5DB;
-      --ds-radius-card: 12px;
-      --ds-radius-pill: 9999px;
-      --ds-radius-chip: 8px;
-      --ds-font-family: 'Inter', sans-serif;
-      --ds-success: #059669;
-      --ds-success-surface: #D1FAE5;
-      --ds-elevation-card: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
-    }
-
-    /* 4. AALTO UNIVERSITY DESIGN SYSTEM (brand.aalto.fi) THEME */
-    .theme-aalto {
-      --ds-primary: #FD6360;
-      --ds-on-primary: #FFFFFF;
-      --ds-primary-container: #FEE7E6;
-      --ds-on-primary-container: #501F1E;
-      --ds-secondary-container: #FAFAFA;
-      --ds-surface: #FFFFFF;
-      --ds-surface-container: #F2F2F2;
-      --ds-surface-container-high: #E0E0E0;
-      --ds-text-title: #151515;
-      --ds-text-body: #505050;
-      --ds-outline: #E0E0E0;
-      --ds-outline-variant: #CCCCCC;
-      --ds-radius-card: 8px;
-      --ds-radius-pill: 4px;
-      --ds-radius-chip: 4px;
-      --ds-font-family: 'Inter', sans-serif;
-      --ds-success: #5DD089;
-      --ds-success-surface: #E8F8EE;
-      --ds-accent-blue: #46A5FF;
-      --ds-accent-elec: #A987FF;
-      --ds-accent-sci: #FF8D4F;
-      --ds-elevation-card: 0 2px 4px rgba(0,0,0,0.06);
-    }
-
-    /* 5. DESIGN SYSTEM & UI KIT FREE (.FIG) THEME */
+    /* 3. DESIGN SYSTEM & UI KIT FREE (.FIG) THEME */
     .theme-uikitfree {
       --ds-primary: #9D3FE7;
       --ds-on-primary: #FFFFFF;
@@ -808,12 +759,6 @@
         <button class="btn-ds-tab" onclick="switchTheme('theme-uikitfree', this)">
           <span>⚡</span> UI Kit Free (.fig)
         </button>
-        <button class="btn-ds-tab" onclick="switchTheme('theme-flowbite', this)">
-          <span>🌊</span> Flowbite (Tailwind)
-        </button>
-        <button class="btn-ds-tab" onclick="switchTheme('theme-aalto', this)">
-          <span>🔴</span> Aalto University DS
-        </button>
       </div>
 
       <!-- Screen Switcher -->
@@ -823,7 +768,7 @@
       </div>
 
       <!-- View Layout Mode -->
-      <button class="btn-view-mode" id="btnToggleMode" onclick="toggleMatrixMode()">Tampilkan 5 Mockup Sekaligus (Matrix)</button>
+      <button class="btn-view-mode" id="btnToggleMode" onclick="toggleMatrixMode()">Tampilkan 3 Mockup Sekaligus (Matrix)</button>
     </div>
   </header>
 
@@ -1033,25 +978,6 @@
         font: 'Poppins (Modern Rounded Sans)',
         radius: '12px (Card) / 8px (Chip) / 4px (Checkbox)',
         domain: 'Modern EdTech & Creative App',
-        source: 'Design System _ Ui Kit Free (Community).fig (11.815 nodes, 59 pages)'
-      },
-      'theme-flowbite': {
-        name: 'Flowbite (Tailwind Scale)',
-        primaryHex: '#2563EB',
-        primaryDesc: '#2563EB (Tailwind Blue-600)',
-        font: 'Inter (Clean SaaS & Web)',
-        radius: '12px (Rounded-xl) / 9999px (Pill)',
-        domain: 'Utility-first Mobile / NativeWind',
-        source: 'flowbite.com / Tailwind UI'
-      },
-      'theme-aalto': {
-        name: 'Aalto University Design System',
-        primaryHex: '#FD6360',
-        primaryDesc: '#FD6360 (Aalto Red 1)',
-        font: 'Inter (Scandinavian Academic)',
-        radius: '8px (Geometric Cards) / 4px (Chips)',
-        domain: 'Authentic University & Higher Ed DNA',
-        source: 'brand.aalto.fi/en/ds (CSS Extraction)'
       }
     };
 
@@ -1062,7 +988,7 @@
     function switchTheme(themeClass, btn) {
       currentTheme = themeClass;
       document.querySelectorAll('.btn-ds-tab').forEach(b => {
-        if (b.innerText.includes('Google') || b.innerText.includes('GitHub') || b.innerText.includes('UI Kit') || b.innerText.includes('Flowbite') || b.innerText.includes('Aalto')) {
+        if (b.innerText.includes('Google') || b.innerText.includes('GitHub') || b.innerText.includes('UI Kit')) {
           b.classList.remove('active');
         }
       });
@@ -1121,14 +1047,13 @@
         toggleBtn.innerText = "Mode 1 Ponsel Fokus";
         workspace.innerHTML = "";
 
-        const themes = ['theme-m3', 'theme-primer', 'theme-uikitfree', 'theme-flowbite', 'theme-aalto'];
+        const themes = ['theme-m3', 'theme-primer', 'theme-uikitfree'];
         themes.forEach((th, idx) => {
           const meta = THEMES_METADATA[th];
           const card = document.createElement('div');
           card.className = `poc-device-card ${th}`;
           const badgeSource = th === 'theme-m3' ? 'Material3.fig' :
-                             (th === 'theme-primer' ? 'Primer.fig' :
-                             (th === 'theme-uikitfree' ? 'UIKitFree.fig' : meta.source.split(' ')[0]));
+                             (th === 'theme-primer' ? 'Primer.fig' : 'UIKitFree.fig');
           card.innerHTML = `
             <div class="device-label">
               <span>${meta.name.split('(')[0]}</span>
@@ -1201,7 +1126,7 @@
           workspace.appendChild(card);
         });
       } else {
-        toggleBtn.innerText = "Tampilkan 5 Mockup Sekaligus (Matrix)";
+        toggleBtn.innerText = "Tampilkan 3 Mockup Sekaligus (Matrix)";
         location.reload();
       }
     }
