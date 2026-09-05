@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>OpenCampus Mobile — POC Design Tokens Comparison (M3 vs Primer vs Flowbite vs Aalto)</title>
+  <title>OpenCampus Mobile — POC Design Tokens Comparison (Primer Web .fig Edition)</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -48,7 +48,7 @@
     }
 
     .poc-badge {
-      background: #FD6360;
+      background: #0969DA;
       color: #FFFFFF;
       font-size: 11px;
       font-weight: 800;
@@ -100,9 +100,9 @@
     }
 
     .btn-ds-tab.active {
-      background: #6D57FC;
+      background: #0969DA;
       color: #FFFFFF;
-      box-shadow: 0 2px 8px rgba(109, 87, 252, 0.4);
+      box-shadow: 0 2px 8px rgba(9, 105, 218, 0.5);
     }
 
     .btn-view-mode {
@@ -118,7 +118,7 @@
     }
 
     .btn-view-mode:hover {
-      border-color: #6D57FC;
+      border-color: #0969DA;
     }
 
     /* DS Spec Meta Ribbon */
@@ -160,7 +160,7 @@
     }
 
     /* ========================================================
-       DESIGN SYSTEM THEME STYLES (THE CORE POC ENGINES)
+       DESIGN SYSTEM THEME ENGINES
        ======================================================== */
 
     /* 1. GOOGLE MATERIAL 3 (M3) THEME */
@@ -186,75 +186,107 @@
       --ds-elevation-card: 0 1px 3px 1px rgba(0, 0, 0, 0.15), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
     }
 
-    /* 2. GITHUB PRIMER THEME */
+    /* 2. GITHUB PRIMER THEME (POWERED BY PRIMER WEB .FIG v106) */
     .theme-primer {
-      --ds-primary: #0969DA;
+      --ds-primary: #0969DA; /* bgColor/accent-emphasis */
       --ds-on-primary: #FFFFFF;
-      --ds-primary-container: #DDF4FF;
+      --ds-primary-container: #DDF4FF; /* bgColor/accent-muted */
       --ds-on-primary-container: #0550AE;
-      --ds-secondary-container: #F6F8FA;
-      --ds-surface: #FFFFFF;
-      --ds-surface-container: #F6F8FA;
+      --ds-secondary-container: #F6F8FA; /* bgColor/muted */
+      --ds-surface: #FFFFFF; /* bgColor/default */
+      --ds-surface-container: #F6F8FA; /* bgColor/inset */
       --ds-surface-container-high: #EAEEF2;
-      --ds-text-title: #1F2328;
-      --ds-text-body: #656D76;
-      --ds-outline: #D0D7DE;
-      --ds-outline-variant: #D8DEE4;
-      --ds-radius-card: 6px;
-      --ds-radius-pill: 100px;
+      --ds-text-title: #1F2328; /* fgColor/default */
+      --ds-text-body: #656D76; /* fgColor/muted */
+      --ds-outline: #D0D7DE; /* borderColor/default */
+      --ds-outline-variant: #D8DEE4; /* borderColor/muted */
+      --ds-radius-card: 6px; /* borderRadius/default */
+      --ds-radius-pill: 100px; /* borderRadius/full */
       --ds-radius-chip: 6px;
-      --ds-font-family: -apple-system, 'Inter', sans-serif;
-      --ds-success: #1A7F37;
-      --ds-success-surface: #DAFBE1;
+      --ds-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", "Inter", sans-serif;
+      --ds-success: #1A7F37; /* success/fg */
+      --ds-success-surface: #DAFBE1; /* success/muted */
       --ds-elevation-card: 0 1px 3px rgba(31, 35, 40, 0.12), 0 1px 2px rgba(31, 35, 40, 0.08);
+    }
+
+    /* Primer UnderlineNav Tab Custom Styling */
+    .theme-primer .comp-semester-tabs {
+      border-bottom: 1px solid var(--ds-outline);
+      gap: 16px;
+      padding-bottom: 0;
+    }
+    .theme-primer .comp-tab-pill {
+      border: none;
+      background: transparent;
+      border-radius: 0;
+      padding: 8px 4px 10px;
+      position: relative;
+    }
+    .theme-primer .comp-tab-pill.active {
+      background: transparent;
+      color: var(--ds-text-title);
+      font-weight: 700;
+    }
+    .theme-primer .comp-tab-pill.active::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--ds-primary);
+      border-radius: 2px;
+    }
+    .theme-primer .comp-checkbox {
+      border-radius: 3px;
     }
 
     /* 3. FLOWBITE (TAILWIND) THEME */
     .theme-flowbite {
-      --ds-primary: #2563EB; /* blue-600 */
+      --ds-primary: #2563EB;
       --ds-on-primary: #FFFFFF;
-      --ds-primary-container: #EFF6FF; /* blue-50 */
-      --ds-on-primary-container: #1E40AF; /* blue-800 */
-      --ds-secondary-container: #F3F4F6; /* gray-100 */
+      --ds-primary-container: #EFF6FF;
+      --ds-on-primary-container: #1E40AF;
+      --ds-secondary-container: #F3F4F6;
       --ds-surface: #FFFFFF;
-      --ds-surface-container: #F9FAFB; /* gray-50 */
+      --ds-surface-container: #F9FAFB;
       --ds-surface-container-high: #F3F4F6;
-      --ds-text-title: #111827; /* gray-900 */
-      --ds-text-body: #4B5563; /* gray-600 */
-      --ds-outline: #E5E7EB; /* gray-200 */
-      --ds-outline-variant: #D1D5DB; /* gray-300 */
+      --ds-text-title: #111827;
+      --ds-text-body: #4B5563;
+      --ds-outline: #E5E7EB;
+      --ds-outline-variant: #D1D5DB;
       --ds-radius-card: 12px;
       --ds-radius-pill: 9999px;
       --ds-radius-chip: 8px;
       --ds-font-family: 'Inter', sans-serif;
-      --ds-success: #059669; /* emerald-600 */
-      --ds-success-surface: #D1FAE5; /* emerald-100 */
+      --ds-success: #059669;
+      --ds-success-surface: #D1FAE5;
       --ds-elevation-card: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
     }
 
     /* 4. AALTO UNIVERSITY DESIGN SYSTEM (brand.aalto.fi) THEME */
     .theme-aalto {
-      --ds-primary: #FD6360; /* Aalto Red 1 */
+      --ds-primary: #FD6360;
       --ds-on-primary: #FFFFFF;
       --ds-primary-container: #FEE7E6;
-      --ds-on-primary-container: #501F1E; /* Aalto Red 2 */
-      --ds-secondary-container: #FAFAFA; /* neutral-2 */
-      --ds-surface: #FFFFFF; /* neutral-1 */
-      --ds-surface-container: #F2F2F2; /* neutral-3 */
-      --ds-surface-container-high: #E0E0E0; /* neutral-4 */
-      --ds-text-title: #151515; /* neutral-8 (Aalto Black) */
-      --ds-text-body: #505050; /* neutral-5 */
-      --ds-outline: #E0E0E0; /* neutral-4 */
+      --ds-on-primary-container: #501F1E;
+      --ds-secondary-container: #FAFAFA;
+      --ds-surface: #FFFFFF;
+      --ds-surface-container: #F2F2F2;
+      --ds-surface-container-high: #E0E0E0;
+      --ds-text-title: #151515;
+      --ds-text-body: #505050;
+      --ds-outline: #E0E0E0;
       --ds-outline-variant: #CCCCCC;
-      --ds-radius-card: 8px; /* Clean Scandinavian geometric architecture */
+      --ds-radius-card: 8px;
       --ds-radius-pill: 4px;
       --ds-radius-chip: 4px;
       --ds-font-family: 'Inter', sans-serif;
-      --ds-success: #5DD089; /* Aalto School of Chem / Green */
+      --ds-success: #5DD089;
       --ds-success-surface: #E8F8EE;
-      --ds-accent-blue: #46A5FF; /* Aalto Blue */
-      --ds-accent-elec: #A987FF; /* School of Elec */
-      --ds-accent-sci: #FF8D4F; /* School of Science */
+      --ds-accent-blue: #46A5FF;
+      --ds-accent-elec: #A987FF;
+      --ds-accent-sci: #FF8D4F;
       --ds-elevation-card: 0 2px 4px rgba(0,0,0,0.06);
     }
 
@@ -302,7 +334,6 @@
       transition: all 0.25s ease;
     }
 
-    /* Device Top Notch */
     .device-notch {
       width: 140px;
       height: 22px;
@@ -324,7 +355,6 @@
       opacity: 0.8;
     }
 
-    /* Device Screen Content Area */
     .screen-content {
       flex: 1;
       overflow-y: auto;
@@ -333,7 +363,6 @@
     }
     .screen-content::-webkit-scrollbar { display: none; }
 
-    /* Screen Views */
     .view-container {
       display: none;
       padding: 16px;
@@ -342,27 +371,21 @@
       display: block;
     }
 
-    /* ========================================================
-       GENERIC MAPPED COMPONENTS USING DESIGN SYSTEM TOKENS
-       ======================================================== */
-
-    /* 1. Header Bar */
+    /* Common Mapped Components */
     .comp-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 16px;
     }
-
     .comp-brand {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 800;
-      color: var(--ds-primary);
+      color: var(--ds-text-title);
       display: flex;
       align-items: center;
       gap: 6px;
     }
-
     .comp-badge-dept {
       background: var(--ds-primary-container);
       color: var(--ds-on-primary-container);
@@ -373,7 +396,6 @@
       border: 1px solid var(--ds-outline-variant);
     }
 
-    /* 2. Global Semester Progress Card */
     .comp-progress-card {
       background: var(--ds-surface);
       border: 1px solid var(--ds-outline);
@@ -382,26 +404,22 @@
       margin-bottom: 16px;
       box-shadow: var(--ds-elevation-card);
     }
-
     .progress-card-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 8px;
     }
-
     .progress-title {
       font-size: 13px;
       font-weight: 700;
       color: var(--ds-text-title);
     }
-
     .progress-val {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 800;
       color: var(--ds-primary);
     }
-
     .comp-progress-track {
       height: 6px;
       background: var(--ds-surface-container-high);
@@ -409,7 +427,6 @@
       overflow: hidden;
       margin-bottom: 8px;
     }
-
     .comp-progress-fill {
       height: 100%;
       background: var(--ds-primary);
@@ -417,7 +434,6 @@
       width: 25%;
       transition: width 0.3s;
     }
-
     .progress-subtext {
       font-size: 11px;
       color: var(--ds-text-body);
@@ -425,7 +441,6 @@
       justify-content: space-between;
     }
 
-    /* 3. Horizontal Semester Tabs */
     .comp-section-title {
       font-size: 11px;
       text-transform: uppercase;
@@ -457,20 +472,17 @@
       cursor: pointer;
       transition: all 0.15s ease;
     }
-
     .comp-tab-pill.active {
       background: var(--ds-primary);
       color: var(--ds-on-primary);
       border-color: var(--ds-primary);
     }
 
-    /* 4. Course Cards */
     .comp-course-list {
       display: flex;
       flex-direction: column;
       gap: 10px;
     }
-
     .comp-course-card {
       background: var(--ds-surface);
       border: 1px solid var(--ds-outline);
@@ -483,14 +495,12 @@
       box-shadow: var(--ds-elevation-card);
       transition: all 0.15s;
     }
-
     .comp-course-card:hover {
       transform: translateY(-1px);
     }
-
     .comp-course-icon {
-      width: 40px;
-      height: 40px;
+      width: 38px;
+      height: 38px;
       border-radius: var(--ds-radius-chip);
       background: var(--ds-primary-container);
       color: var(--ds-on-primary-container);
@@ -500,28 +510,24 @@
       font-size: 18px;
       flex-shrink: 0;
     }
-
     .comp-course-body {
       flex: 1;
       min-width: 0;
     }
-
     .course-card-name {
       font-size: 13.5px;
       font-weight: 700;
-      color: var(--ds-text-title);
+      color: var(--ds-primary);
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       margin-bottom: 2px;
     }
-
     .course-card-meta {
       font-size: 11px;
       color: var(--ds-text-body);
       margin-bottom: 6px;
     }
-
     .mini-track-bar {
       height: 4px;
       background: var(--ds-surface-container-high);
@@ -534,43 +540,33 @@
       width: 25%;
     }
 
-    /* ========================================================
-       SCREEN 2: SYLLABUS DETAIL SPECIFIC
-       ======================================================== */
+    /* Screen 2 Components */
     .comp-top-bar {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 10px 0 14px;
+      padding: 8px 0 12px;
       border-bottom: 1px solid var(--ds-outline);
       margin-bottom: 12px;
     }
-
     .comp-back-btn {
       background: var(--ds-surface);
       border: 1px solid var(--ds-outline);
       border-radius: var(--ds-radius-chip);
-      width: 32px;
-      height: 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
+      padding: 4px 10px;
+      font-size: 12px;
       font-weight: 700;
-      font-size: 14px;
+      cursor: pointer;
       color: var(--ds-text-title);
     }
-
     .comp-syllabus-title {
-      font-size: 14px;
-      font-weight: 800;
+      font-size: 13.5px;
+      font-weight: 700;
       color: var(--ds-text-title);
       text-align: center;
       flex: 1;
       padding: 0 8px;
     }
-
-    /* Syllabus Topic Row */
     .comp-topic-row {
       background: var(--ds-surface);
       border: 1px solid var(--ds-outline);
@@ -581,17 +577,15 @@
       gap: 10px;
       margin-bottom: 8px;
       transition: all 0.15s;
+      cursor: pointer;
     }
-
     .comp-topic-row.checked-topic {
       background: var(--ds-success-surface);
       border-color: var(--ds-success);
     }
-
-    /* Dynamic Checkbox */
     .comp-checkbox {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       border-radius: var(--ds-radius-chip);
       border: 2px solid var(--ds-outline-variant);
       display: flex;
@@ -605,17 +599,14 @@
       background: transparent;
       transition: all 0.15s;
     }
-
     .comp-checkbox.checked {
       background: var(--ds-success);
       border-color: var(--ds-success);
     }
-
     .topic-text-body {
       flex: 1;
       min-width: 0;
     }
-
     .topic-name {
       font-size: 12.5px;
       font-weight: 600;
@@ -625,24 +616,19 @@
       overflow: hidden;
       text-overflow: ellipsis;
     }
-
     .comp-topic-row.checked-topic .topic-name {
       text-decoration: line-through;
       color: var(--ds-text-body);
     }
-
     .topic-meta {
       font-size: 10.5px;
       color: var(--ds-text-body);
     }
-
     .comp-btn-play {
       color: var(--ds-primary);
-      font-size: 13px;
+      font-size: 12px;
       font-weight: 800;
     }
-
-    /* Bottom Nav */
     .comp-bottom-bar {
       position: absolute;
       bottom: 0;
@@ -658,7 +644,6 @@
       font-weight: 700;
       color: var(--ds-text-body);
     }
-
     .comp-bottom-bar .active-nav {
       color: var(--ds-primary);
     }
@@ -669,23 +654,23 @@
   <!-- Sticky POC Header -->
   <header class="poc-header">
     <div class="poc-title-group">
-      <span class="poc-badge">POC EXPERIMENT</span>
-      <h1 class="poc-title">Module 1 Design Tokens POC: 4 Design Systems Head-to-Head</h1>
+      <span class="poc-badge">PRIMER .FIG INTEGRATED</span>
+      <h1 class="poc-title">POC Design Tokens: GitHub Primer Web (via .fig) vs Others</h1>
     </div>
 
     <div class="poc-controls">
       <!-- Theme Selection -->
       <div class="theme-selector-tabs">
+        <button class="btn-ds-tab active" onclick="switchTheme('theme-primer', this)">
+          <span>🐙</span> GitHub Primer (.fig)
+        </button>
         <button class="btn-ds-tab" onclick="switchTheme('theme-m3', this)">
           <span>🟣</span> Google Material 3
-        </button>
-        <button class="btn-ds-tab" onclick="switchTheme('theme-primer', this)">
-          <span>🐙</span> GitHub Primer
         </button>
         <button class="btn-ds-tab" onclick="switchTheme('theme-flowbite', this)">
           <span>🌊</span> Flowbite (Tailwind)
         </button>
-        <button class="btn-ds-tab active" onclick="switchTheme('theme-aalto', this)">
+        <button class="btn-ds-tab" onclick="switchTheme('theme-aalto', this)">
           <span>🔴</span> Aalto University DS
         </button>
       </div>
@@ -703,21 +688,21 @@
 
   <!-- Live Meta Ribbon -->
   <div class="poc-meta-ribbon" id="pocMetaRibbon">
-    <span class="meta-tag"><strong>Sistem Aktif:</strong> <span id="metaDsName">Aalto University Design System</span></span>
-    <span class="meta-tag"><strong>Primary Accent:</strong> <span class="color-swatch" id="metaPrimarySwatch" style="background: #FD6360;"></span> <span id="metaPrimaryHex">#FD6360 (Aalto Red)</span></span>
-    <span class="meta-tag"><strong>Typography:</strong> <span id="metaFont">Inter (Scandinavian Clean)</span></span>
-    <span class="meta-tag"><strong>Border Radius:</strong> <span id="metaRadius">8px (Card) / 4px (Chips)</span></span>
-    <span class="meta-tag"><strong>Target Domain:</strong> <span id="metaDomain">University & Academic DNA</span></span>
+    <span class="meta-tag"><strong>Sistem Aktif:</strong> <span id="metaDsName">GitHub Primer Web (via Primer Web.fig)</span></span>
+    <span class="meta-tag"><strong>Primary Accent:</strong> <span class="color-swatch" id="metaPrimarySwatch" style="background: #0969DA;"></span> <span id="metaPrimaryHex">#0969DA (Primer Blue v106)</span></span>
+    <span class="meta-tag"><strong>Typography:</strong> <span id="metaFont">-apple-system / Inter (GitHub Standard)</span></span>
+    <span class="meta-tag"><strong>Border Radius:</strong> <span id="metaRadius">6px (Card) / 3px (Checkbox) / 100px (Pill)</span></span>
+    <span class="meta-tag"><strong>Data Source:</strong> <span id="metaDomain">Primer Web (Community).fig (57.436 nodes, 2.009 vars)</span></span>
   </div>
 
   <!-- Main Comparison Stage -->
   <main class="poc-workspace" id="pocWorkspace">
 
     <!-- DEVICE CONTAINER 1 (MAIN ACTIVE PHONE OR 1 OF 4 IN MATRIX) -->
-    <div class="poc-device-card theme-aalto" id="deviceCard1">
+    <div class="poc-device-card theme-primer" id="deviceCard1">
       <div class="device-label">
-        <span id="deviceTitle1">Aalto University Design System</span>
-        <span class="device-badge-source">brand.aalto.fi/en/ds</span>
+        <span id="deviceTitle1">GitHub Primer Web</span>
+        <span class="device-badge-source">Primer Web (Community).fig</span>
       </div>
 
       <div class="phone-mockup">
@@ -747,11 +732,11 @@
               </div>
               <div class="progress-subtext">
                 <span>4 dari 16 Topik Selesai</span>
-                <span style="font-weight: 700; color: var(--ds-primary);">● Berjalan</span>
+                <span style="font-weight: 700; color: var(--ds-success);">● Berjalan</span>
               </div>
             </div>
 
-            <!-- Semester Tabs -->
+            <!-- Semester Tabs (Primer UnderlineNav Style) -->
             <div class="comp-section-title">Pilih Semester</div>
             <div class="comp-semester-tabs">
               <div class="comp-tab-pill active">Semester 1</div>
@@ -798,7 +783,7 @@
           <!-- VIEW 2: SILABUS MATA KULIAH -->
           <div class="view-container" id="viewSyllabus1">
             <div class="comp-top-bar">
-              <div class="comp-back-btn" onclick="switchScreen('viewHome')">‹</div>
+              <div class="comp-back-btn" onclick="switchScreen('viewHome')">‹ Back</div>
               <div class="comp-syllabus-title">Algoritma & Pemrograman</div>
               <div style="width: 32px;"></div>
             </div>
@@ -882,6 +867,15 @@
 
   <script>
     const THEMES_METADATA = {
+      'theme-primer': {
+        name: 'GitHub Primer Web (via Primer Web.fig)',
+        primaryHex: '#0969DA',
+        primaryDesc: '#0969DA (Primer Blue v106)',
+        font: '-apple-system / Inter (GitHub Standard)',
+        radius: '6px (Card) / 3px (Checkbox) / 100px (Pill)',
+        domain: 'Software Engineering & Tech Academy',
+        source: 'Primer Web (Community).fig (57.436 nodes, 2.009 vars)'
+      },
       'theme-m3': {
         name: 'Google Material 3 (M3)',
         primaryHex: '#6750A4',
@@ -890,15 +884,6 @@
         radius: '16px (Cards) / 28px (Pills)',
         domain: 'Native Mobile Framework (Flutter & Android)',
         source: 'm3.material.io / Figma M3 Kit'
-      },
-      'theme-primer': {
-        name: 'GitHub Primer Design System',
-        primaryHex: '#0969DA',
-        primaryDesc: '#0969DA (Primer Blue)',
-        font: '-apple-system / Inter (Developer Standard)',
-        radius: '6px (Crisp Rounded Cards & Badges)',
-        domain: 'Software Engineering & Tech Academy',
-        source: 'primer.style / @primer/primitives'
       },
       'theme-flowbite': {
         name: 'Flowbite (Tailwind Scale)',
@@ -920,7 +905,7 @@
       }
     };
 
-    let currentTheme = 'theme-aalto';
+    let currentTheme = 'theme-primer';
     let currentScreen = 'viewHome';
     let isMatrixMode = false;
 
@@ -986,15 +971,15 @@
         toggleBtn.innerText = "Mode 1 Ponsel Fokus";
         workspace.innerHTML = "";
 
-        const themes = ['theme-m3', 'theme-primer', 'theme-flowbite', 'theme-aalto'];
+        const themes = ['theme-primer', 'theme-m3', 'theme-flowbite', 'theme-aalto'];
         themes.forEach((th, idx) => {
           const meta = THEMES_METADATA[th];
           const card = document.createElement('div');
           card.className = `poc-device-card ${th}`;
           card.innerHTML = `
             <div class="device-label">
-              <span>${meta.name}</span>
-              <span class="device-badge-source">${meta.source.split(' ')[0]}</span>
+              <span>${meta.name.split('(')[0]}</span>
+              <span class="device-badge-source">${th === 'theme-primer' ? 'Primer.fig' : meta.source.split(' ')[0]}</span>
             </div>
             <div class="phone-mockup" style="transform: scale(0.95); transform-origin: top center;">
               <div class="device-notch"></div>
@@ -1029,20 +1014,12 @@
                         <div class="mini-track-bar"><div class="mini-fill-bar" style="width:25%;"></div></div>
                       </div>
                     </div>
-                    <div class="comp-course-card">
-                      <div class="comp-course-icon">📐</div>
-                      <div class="comp-course-body">
-                        <div class="course-card-name">Matematika Diskrit</div>
-                        <div class="course-card-meta">16 Pertemuan • ~5.5 Jam</div>
-                        <div class="mini-track-bar"><div class="mini-fill-bar" style="width:0%;"></div></div>
-                      </div>
-                    </div>
                   </div>
                 </div>
 
                 <div class="view-container ${currentScreen === 'viewSyllabus' ? 'active-view' : ''}" id="viewSyllabus_${idx}">
                   <div class="comp-top-bar">
-                    <div class="comp-back-btn">‹</div>
+                    <div class="comp-back-btn">‹ Back</div>
                     <div class="comp-syllabus-title">Algoritma & Pemrograman</div>
                     <div style="width:32px;"></div>
                   </div>
