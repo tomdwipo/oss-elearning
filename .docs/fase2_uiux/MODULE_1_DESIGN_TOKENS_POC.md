@@ -170,36 +170,82 @@ Untuk melihat, berinteraksi, dan membandingkan secara visual ketiga sistem desai
 
 ---
 
-## 5. Ekstraksi Ikon Vektor Asli dari Berkas Figma (.fig)
+## 5. Ekstraksi Ikon Vektor Asli dari Berkas Figma Masing-Masing (.fig)
 
-Sebagai tindak lanjut dari arahan pengguna (*"icon2 nya pake yang dari fig juga"*), seluruh emoji teks dan glyph sementara (seperti 🎓, 💻, 📐, 🌐, ›, ‹ Back, ✓, ⏱, 👤, ▶, 🏠, 🔍, 🔋) pada prototipe POC telah digantikan secara menyeluruh (**100%**) dengan ikon vektor SVG yang diekstrak langsung dari berkas biner `.fig`.
+Sesuai konfirmasi arahan pengguna (*"setiap poc pake icon masing2 design systemnya? -> ya"*), prototipe POC telah ditingkatkan sehingga **setiap sistem desain menggunakan set ikon SVG asli dari berkas biner `.fig`-nya masing-masing**, bukan berbagi set gabungan (*shared*).
 
 ### 5.1. Metodologi Ekstraksi Biner Geometry Blob
-Pada spesifikasi skema Kiwi biner Figma (v100+), kontur vektor disimpan dalam blob biner yang direferensikan oleh `nc.fillGeometry[n].commandsBlob`. Ekstraksi dilakukan secara terprogram dengan mengurai *stream byte opcode*:
+Pada skema biner Kiwi Figma (v100+), kontur vektor disimpan dalam blob biner `commandsBlob` di dalam struktur `fillGeometry`. Aliran byte diurai langsung menjadi perintah SVG (*path data*):
 * **Opcode 0 (`Z`):** *Close path*
-* **Opcode 1 (`M x y`):** *MoveTo* (2 float 32-bit LE, 8 bytes)
-* **Opcode 2 (`L x y`):** *LineTo* (2 float 32-bit LE, 8 bytes)
-* **Opcode 3 (`Q x1 y1 x y`):** *Quadratic Bezier* (4 float 32-bit LE, 16 bytes)
-* **Opcode 4 (`C x1 y1 x2 y2 x y`):** *Cubic Bezier* (6 float 32-bit LE, 24 bytes)
+* **Opcode 1 (`M x y`):** *MoveTo* (2 float 32-bit LE)
+* **Opcode 2 (`L x y`):** *LineTo* (2 float 32-bit LE)
+* **Opcode 3 (`Q x1 y1 x y`):** *Quadratic Bezier* (4 float 32-bit LE)
+* **Opcode 4 (`C x1 y1 x2 y2 x y`):** *Cubic Bezier* (6 float 32-bit LE)
 
-### 5.2. Katalog 12 Ikon Vektor Figma Terverifikasi (`.docs/fase2_uiux/assets/icons/`)
-Seluruh berkas SVG mandiri telah divalidasi dan disimpan di repositori:
+---
 
-| Nama Berkas SVG | Sumber Berkas `.fig` | Node GUID Figma & Komponen Sumber | ViewBox | Peran pada Modul 1 |
-| :--- | :--- | :--- | :---: | :--- |
-| [`home.svg`](./assets/icons/home.svg) | `Mobile E-Learning App Design.fig` | Node `229:682` (`Iconly/Broken/Home`) | `0 0 24 24` | Bottom Navigation: Tab Beranda |
-| [`search.svg`](./assets/icons/search.svg) | `Mobile E-Learning App Design.fig` | Node `229:684` (`Iconly/Broken/Search`) | `0 0 24 24` | Bottom Navigation: Tab Pencarian Silabus |
-| [`profile.svg`](./assets/icons/profile.svg) | `Mobile E-Learning App Design.fig` | Node `229:690` (`Iconly/Broken/Profile`) | `0 0 24 24` | Bottom Navigation: Tab Profil Mahasiswa |
-| [`arrow_left.svg`](./assets/icons/arrow_left.svg) | `Mobile E-Learning App Design.fig` | Node `229:691` (`Iconly/Broken/Arrow - Left`) | `0 0 24 24` | App Bar Header: Tombol Kembali (*Back*) |
-| [`arrow_right.svg`](./assets/icons/arrow_right.svg) | `Mobile E-Learning App Design.fig` | Node `223:116` (`Iconly/Broken/Arrow - Right 2`) | `0 0 24 24` | Indikator Navigasi Kartu Mata Kuliah |
-| [`time_circle.svg`](./assets/icons/time_circle.svg) | `Mobile E-Learning App Design.fig` | Node `229:1381` (`Iconly/Broken/Time Circle`) | `0 0 14 14` | Metadata Silabus: Durasi & Jam Belajar |
-| [`play.svg`](./assets/icons/play.svg) | `Mobile E-Learning App Design.fig` | Node `229:797` (`Play Icon / Path`) | `0 0 12 14` | Tombol Aksi: Mulai Belajar / Lanjutkan Materi |
-| [`code.svg`](./assets/icons/code.svg) | `Primer Web.fig` | Node `31742:155953` (`Icon VECTOR`, Octicon `< / >`) | `0 0 16 16` | Ikon Kartu: Pemrograman Web & Mobile |
-| [`graph.svg`](./assets/icons/graph.svg) | `Primer Web.fig` | Node `32850:111195` (`Icon VECTOR`, Octicon graph/math) | `0 0 16 16` | Ikon Kartu: Struktur Data & Matematika Diskrit |
-| [`globe.svg`](./assets/icons/globe.svg) | `Primer Web.fig` | Node `21062:78765` (`Icon VECTOR`, Octicon globe) | `0 0 16 16` | Ikon Kartu: Jaringan Komputer & Cloud |
-| [`book.svg`](./assets/icons/book.svg) | `Primer Web.fig` | Node `12515:40782` (`Icon VECTOR`, Octicon book) | `0 0 16 16` | Brand Logo: OpenCampus Academic Identity |
-| [`check.svg`](./assets/icons/check.svg) | `Material 3 Design Kit.fig` | Node `51861:5433` (`Icons/check_small`) | `0 0 12 10` | Checkbox Interaktif: Penanda Pertemuan Selesai |
+### 5.2. Katalog Ikon Khusus per Sistem Desain (`.docs/fase2_uiux/assets/icons/`)
 
-### 5.3. Pewarnaan Dinamis Berbasis Design Tokens
-Semua ikon SVG diatur menggunakan atribut `fill="currentColor"` atau `stroke="currentColor"`. Hal ini memungkinkan setiap ikon secara instan mewarisi token warna dinamis sistem desain yang aktif (misal: `#6750A4` pada M3, `#0969DA` pada Primer, atau `#9D3FE7` pada UI Kit Free) tanpa perlu menduplikasi berkas gambar.
+#### A. Google Material 3 (`assets/icons/m3/` — Material Symbols Resmi)
+Diekstrak dari berkas [`Material 3 Design Kit (Community).fig`](./assets/Material%203%20Design%20Kit%20%28Community%29.fig) (Session `54616`, canvas 24x24 dp):
+| Peran UI | Nama Berkas SVG | Node GUID & Nama Komponen Sumber | Karakter Visual M3 |
+| :--- | :--- | :--- | :--- |
+| **Brand Logo** | [`brand.svg`](./assets/icons/m3/brand.svg) | `54616:25456` (`bookmark`) | Rounded Academic Bookmark |
+| **Tab Beranda** | [`home.svg`](./assets/icons/m3/home.svg) | `54616:25412` (`stars`) | M3 Active Navigation Indicator Star |
+| **Tab Cari** | [`search.svg`](./assets/icons/m3/search.svg) | `54616:25440` (`search`) | Material Rounded 45° Search Lens |
+| **Tab Profil** | [`profile.svg`](./assets/icons/m3/profile.svg) | `54616:25462` (`person`) | Smooth Pill Head & Shoulder Avatar |
+| **Header Kembali**| [`back.svg`](./assets/icons/m3/back.svg) | `54616:25400` (`arrow_back`) | Standard Google 24px Left Arrow |
+| **Panah Kartu** | [`forward.svg`](./assets/icons/m3/forward.svg) | `54616:25402` (`arrow_forward`) | Standard Google 24px Right Arrow |
+| **Durasi Jam** | [`time.svg`](./assets/icons/m3/time.svg) | `54616:25518` (`schedule`) | 90° Rounded Angle Clock Face |
+| **Aksi Belajar** | [`play.svg`](./assets/icons/m3/play.svg) | `54616:25418` (`play_arrow`) | Rounded Equilateral Play Triangle |
+| **Checkbox** | [`check.svg`](./assets/icons/m3/check.svg) | `54616:25514` (`check_small`) | Compact Rounded Material Checkmark |
+| **MK 1 (Coding)**| [`course1.svg`](./assets/icons/m3/course1.svg)| `54616:25506` (`keyboard`) | Material Developer Hardware Keyboard |
+| **MK 2 (Struktur)**| [`course2.svg`](./assets/icons/m3/course2.svg)| `54616:25482` (`folder`) | Material Data/Directory Folder |
+| **MK 3 (Jaringan)**| [`course3.svg`](./assets/icons/m3/course3.svg)| `54616:25528` (`language`) | Material Global Latitude Sphere |
+
+#### B. GitHub Primer (`assets/icons/primer/` — GitHub Octicons Resmi)
+Diekstrak dari berkas [`Primer Web (Community).fig`](./assets/Primer%20Web%20%28Community%29.fig) (Koleksi Octicons, canvas 16x16 px):
+| Peran UI | Nama Berkas SVG | Node GUID & Nama Komponen Sumber | Karakter Visual Primer |
+| :--- | :--- | :--- | :--- |
+| **Brand Logo** | [`brand.svg`](./assets/icons/primer/brand.svg) | `12515:40782` (`book`) | Octicon Open Academic Book |
+| **Tab Beranda** | [`home.svg`](./assets/icons/primer/home.svg) | `31891:4107` (`home`) | Octicon Roof, Chimney & Door |
+| **Tab Cari** | [`search.svg`](./assets/icons/primer/search.svg) | `12515:40638` (`search`) | Sharp Precision Octicon Search |
+| **Tab Profil** | [`profile.svg`](./assets/icons/primer/profile.svg) | `23829:87997` (`person`) | Classic GitHub Developer Avatar |
+| **Header Kembali**| [`back.svg`](./assets/icons/primer/back.svg) | `26704:84176` (`arrow-left`) | Crisp 16px Navigation Arrow |
+| **Panah Kartu** | [`forward.svg`](./assets/icons/primer/forward.svg) | `31853:5246` (`chevron-right`) | Thin 1px Angled Chevron |
+| **Durasi Jam** | [`time.svg`](./assets/icons/primer/time.svg) | `12515:40646` (`clock`) | Precision 12:00 / 3:00 Clock |
+| **Aksi Belajar** | [`play.svg`](./assets/icons/primer/play.svg) | `23829:88007` (`play`) | Sharp Geometric Octicon Play |
+| **Checkbox** | [`check.svg`](./assets/icons/primer/check.svg) | `13057:43840` (`check`) | Crisp Angled Octicon Checkmark |
+| **MK 1 (Coding)**| [`course1.svg`](./assets/icons/primer/course1.svg)| `23829:88029` (`code`) | Octicon Code Syntax Brackets `< / >` |
+| **MK 2 (Struktur)**| [`course2.svg`](./assets/icons/primer/course2.svg)| `26704:84264` (`graph`) | Octicon Data Graph & Metrics |
+| **MK 3 (Jaringan)**| [`course3.svg`](./assets/icons/primer/course3.svg)| `21062:78765` (`globe`) | Octicon Connected World Network |
+
+#### C. Design System & UI Kit Free (`assets/icons/uikit/` — Modern EdTech & Iconly)
+Diekstrak dari berkas [`Design System _ Ui Kit Free (Community).fig`](./assets/Design%20System%20_%20Ui%20Kit%20Free%20%28Community%29.fig) & [`Mobile E-Learning.fig`](./assets/Mobile%20E-Learning%20App%20Design%20%28Community%29.fig):
+| Peran UI | Nama Berkas SVG | Node GUID & Nama Komponen Sumber | Karakter Visual UI Kit |
+| :--- | :--- | :--- | :--- |
+| **Brand Logo** | [`brand.svg`](./assets/icons/uikit/brand.svg) | `12515:40782` (`book`) | Academic Book Identity |
+| **Tab Beranda** | [`home.svg`](./assets/icons/uikit/home.svg) | `229:683` (`Iconly Home`) | Contemporary Broken Line Home |
+| **Tab Cari** | [`search.svg`](./assets/icons/uikit/search.svg) | `511:119,120` (`UI Kit Search`) | Dual-path Modern Search Lens |
+| **Tab Profil** | [`profile.svg`](./assets/icons/uikit/profile.svg) | `122:24` (`UI Kit Person`) | Modern Geometric User Profile |
+| **Header Kembali**| [`back.svg`](./assets/icons/uikit/back.svg) | `229:692` (`Iconly Arrow Left`) | Stylized Curve Back Arrow |
+| **Panah Kartu** | [`forward.svg`](./assets/icons/uikit/forward.svg) | `629:6304` (`arrow-forward`) | Contemporary Thick Arrow |
+| **Durasi Jam** | [`time.svg`](./assets/icons/uikit/time.svg) | `1690:7625,7626` (`bx-time-five`)| Dual-contour Modern Time Clock |
+| **Aksi Belajar** | [`play.svg`](./assets/icons/uikit/play.svg) | `229:797` (`Play Icon`) | Rounded Dynamic EdTech Play |
+| **Checkbox** | [`check.svg`](./assets/icons/uikit/check.svg) | `1579:1328` (`fa-solid:check`) | Bold Solid Checkmark |
+| **MK 1 (Coding)**| [`course1.svg`](./assets/icons/uikit/course1.svg)| `23829:88029` (`code`) | Code Syntax Symbol |
+| **MK 2 (Struktur)**| [`course2.svg`](./assets/icons/uikit/course2.svg)| `248:24` (`storage`) | Database & Storage Servers |
+| **MK 3 (Jaringan)**| [`course3.svg`](./assets/icons/uikit/course3.svg)| `1669:6540` (`mdi:view-grid`) | Grid Architecture & Modules |
+
+---
+
+### 5.3. Efek Visual pada Prototipe Interaktif
+Ketika berpindah antar sistem desain (atau saat membuka mode **Matrix Side-by-Side**):
+1. **Bentuk Ikon Berubah Menyeluruh:**
+   * Di **Material 3**, seluruh ikon berkarakter bulat lembut (*smooth rounded*) dengan grid 24x24 khas Android & Flutter.
+   * Di **GitHub Primer**, seluruh ikon berubah menjadi Octicons 16x16 tajam dan presisi tinggi khas ekosistem GitHub/developer.
+   * Di **UI Kit Free**, ikon bernuansa EdTech modern dengan kombinasi *dual-contour* dan *broken-line*.
+2. **Interaktivitas Checkbox per Sistem:**
+   * Saat mengklik checkbox pada salah satu ponsel, simbol centang yang muncul secara instan adalah centang spesifik sistem desain ponsel tersebut (`Icons/check_small` untuk M3, Octicon `check` untuk Primer, dan `fa-solid:check` untuk UI Kit Free).
+
 
