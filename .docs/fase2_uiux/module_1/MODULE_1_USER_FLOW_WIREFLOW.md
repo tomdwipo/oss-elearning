@@ -1,6 +1,6 @@
 # Modul 1: Navigasi Kurikulum — User Flow & Wireflow (MVP v0.1)
 
-Dokumen ini mendefinisikan rancangan **User Flow** dan **Wireflow Sederhana** untuk **Modul 1: Navigasi Kurikulum** (UC-01, UC-02, UC-03) pada aplikasi **OpenCampus Mobile** berdasarkan spesifikasi pada [PRD.md](../fase0/PRD.md), [USE_CASE.md](../fase1/USE_CASE.md), dan [ACTIVITY_DIAGRAM.md](../fase1/ACTIVITY_DIAGRAM.md).
+Dokumen ini mendefinisikan rancangan **User Flow** dan **Wireflow Sederhana** untuk **Modul 1: Navigasi Kurikulum** (UC-01, UC-02, UC-03) pada aplikasi **OpenCampus Mobile** berdasarkan spesifikasi pada [PRD.md](../../fase0/PRD.md), [USE_CASE.md](../../fase1/USE_CASE.md), dan [ACTIVITY_DIAGRAM.md](../../fase1/ACTIVITY_DIAGRAM.md).
 
 ---
 
@@ -65,7 +65,7 @@ Dokumen ini mendefinisikan rancangan **User Flow** dan **Wireflow Sederhana** un
 
 ## 3. Rincian Komponen & Interaksi Layar
 
-### **Layar 1 — Beranda Semester ([UC-01](../fase1/USE_CASE.md), [UC-09](../fase1/USE_CASE.md))**
+### **Layar 1 — Beranda Semester ([UC-01](../../fase1/USE_CASE.md), [UC-09](../../fase1/USE_CASE.md))**
 * **Tujuan:** Memberikan ringkasan progres belajar semester aktif dan pintu masuk navigasi kurikulum per semester.
 * **Elemen UI:**
   * Header judul aplikasi & nama jurusan percontohan (*Teknik Informatika*).
@@ -73,7 +73,7 @@ Dokumen ini mendefinisikan rancangan **User Flow** dan **Wireflow Sederhana** un
   * *Semester Tabs (1–8)*: berpindah semester dengan satu sentuhan.
   * *Course Cards*: daftar kartu mata kuliah pada semester yang dipilih (memuat judul, total pertemuan, dan progres penyelesaian mata kuliah).
 
-### **Layar 2 — Silabus Mata Kuliah ([UC-02](../fase1/USE_CASE.md), [UC-03](../fase1/USE_CASE.md))**
+### **Layar 2 — Silabus Mata Kuliah ([UC-02](../../fase1/USE_CASE.md), [UC-03](../../fase1/USE_CASE.md))**
 * **Tujuan:** Menampilkan daftar urutan 16 topik pertemuan terstruktur dari mata kuliah yang dipilih.
 * **Elemen UI:**
   * Tombol navigasi kembali (`< Back`).

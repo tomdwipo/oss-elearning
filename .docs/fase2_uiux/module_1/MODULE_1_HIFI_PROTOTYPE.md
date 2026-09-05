@@ -1,6 +1,6 @@
 # Modul 1: Navigasi Kurikulum — High-Fidelity (Hi-Fi) Prototype Specification (Design System & UI Kit Free)
 
-Dokumen ini mendefinisikan spesifikasi standar teknis, arsitektur layar, panduan interaksi, dan matriks *state* untuk **High-Fidelity (Hi-Fi) Prototype** pada **Modul 1: Navigasi Kurikulum** (UC-01, UC-02, UC-03) aplikasi **OpenCampus Mobile** berdasarkan spesifikasi pada [PRD.md](../fase0/PRD.md), [USE_CASE.md](../fase1/USE_CASE.md), [DESIGN_SYSTEM_UIKIT_FREE_COMPONENTS.md](./DESIGN_SYSTEM_UIKIT_FREE_COMPONENTS.md), [MODULE_1_DESIGN_SYSTEM_TOKENS.md](./MODULE_1_DESIGN_SYSTEM_TOKENS.md), [MODULE_1_USER_FLOW_WIREFLOW.md](./MODULE_1_USER_FLOW_WIREFLOW.md), dan [MODULE_1_LOFI_WIREFRAME.md](./MODULE_1_LOFI_WIREFRAME.md).
+Dokumen ini mendefinisikan spesifikasi standar teknis, arsitektur layar, panduan interaksi, dan matriks *state* untuk **High-Fidelity (Hi-Fi) Prototype** pada **Modul 1: Navigasi Kurikulum** (UC-01, UC-02, UC-03) aplikasi **OpenCampus Mobile** berdasarkan spesifikasi pada [PRD.md](../../fase0/PRD.md), [USE_CASE.md](../../fase1/USE_CASE.md), [DESIGN_SYSTEM_UIKIT_FREE_COMPONENTS.md](../../design_system/DESIGN_SYSTEM_UIKIT_FREE_COMPONENTS.md), [MODULE_1_DESIGN_SYSTEM_TOKENS.md](./MODULE_1_DESIGN_SYSTEM_TOKENS.md), [MODULE_1_USER_FLOW_WIREFLOW.md](./MODULE_1_USER_FLOW_WIREFLOW.md), dan [MODULE_1_LOFI_WIREFRAME.md](./MODULE_1_LOFI_WIREFRAME.md).
 
 ---
 
@@ -8,7 +8,7 @@ Dokumen ini mendefinisikan spesifikasi standar teknis, arsitektur layar, panduan
 
 Tujuan utama pembuatan **Hi-Fi Prototype** pada fase ini adalah:
 1. **Validasi Interaksi & Alur Navigasi:** Membuktikan secara interaktif bahwa pembelajar dapat dengan mudah berpindah antar Semester 1–8 (FR-1.1), memilih mata kuliah (FR-1.2), dan menelusuri 16 pertemuan silabus (FR-1.3).
-2. **Kesesuaian Standar Desain (Design Tokens Fidelity):** Mengimplementasikan warna resmi `Corporate/Purple` (`#9D3FE7`), `Corporate/DarkPurple` (`#602093`), gradasi primer `linear-gradient(135deg, #9D3FE7 0%, #602093 100%)`, dan status sukses `Informing/Approval` (`#00B998`), tipografi geometris `Poppins`, skala radius ergonomis (`4px`, `8px`, `12px`, `9999px`), serta elevasi bayangan ungu lembut `0 4px 16px rgba(157, 63, 231, 0.08)` langsung dari berkas resmi Figma [`Design System _ Ui Kit Free (Community).fig`](./assets/Design%20System%20_%20Ui%20Kit%20Free%20%28Community%29.fig).
+2. **Kesesuaian Standar Desain (Design Tokens Fidelity):** Mengimplementasikan warna resmi `Corporate/Purple` (`#9D3FE7`), `Corporate/DarkPurple` (`#602093`), gradasi primer `linear-gradient(135deg, #9D3FE7 0%, #602093 100%)`, dan status sukses `Informing/Approval` (`#00B998`), tipografi geometris `Poppins`, skala radius ergonomis (`4px`, `8px`, `12px`, `9999px`), serta elevasi bayangan ungu lembut `0 4px 16px rgba(157, 63, 231, 0.08)` langsung dari berkas resmi Figma [`Design System _ Ui Kit Free (Community).fig`](../../design_system/assets/Design%20System%20_%20Ui%20Kit%20Free%20%28Community%29.fig).
 3. **Uji Coba Fungsionalitas Mandiri (Self-Contained Sandbox):** Menyediakan lingkungan simulasi interaktif lengkap dengan penyimpanan lokal (*LocalStorage*), perubahan tema (*Light/Dark*), dan konsol telemetri *real-time* untuk kebutuhan **Usability Testing (UT)**.
 
 ---
@@ -17,7 +17,7 @@ Tujuan utama pembuatan **Hi-Fi Prototype** pada fase ini adalah:
 
 Prototipe interaktif dikembangkan dalam bentuk aplikasi web berbasis mobile responsif (standar viewport **375 x 812 dp**) dan dapat langsung dijalankan pada peramban modern:
 
-* **Tautan Berkas Prototipe:** [`assets/hifi_module_1_prototype.html`](./assets/hifi_module_1_prototype.html)
+* **Tautan Berkas Prototipe:** [`./hifi_module_1_prototype.html`](./hifi_module_1_prototype.html)
 * **Spesifikasi Viewport:** 375 x 812 dp (Rasio aspek 9:19.5, iPhone 14 / Android Modern).
 * **Fitur Prototipe:**
   - Simulasi bingkai ponsel fisik lengkap dengan *dynamic notch*, *status bar*, dan *home indicator*.
@@ -171,37 +171,38 @@ Untuk menghasilkan pengalaman pengguna yang mulus (*native-like feel*), prototip
 
 ## 6. Penelusuran Aset & Mapping Node Figma (Traceability)
 
-Seluruh komponen prototipe dipetakan langsung ke master components pada berkas resmi Figma [`Design System _ Ui Kit Free (Community).fig`](./assets/Design%20System%20_%20Ui%20Kit%20Free%20%28Community%29.fig) sebagaimana dikatalogkan di [DESIGN_SYSTEM_UIKIT_FREE_COMPONENTS.md](./DESIGN_SYSTEM_UIKIT_FREE_COMPONENTS.md):
+Seluruh komponen prototipe dipetakan langsung ke master components pada berkas resmi Figma [`Design System _ Ui Kit Free (Community).fig`](../../design_system/assets/Design%20System%20_%20Ui%20Kit%20Free%20%28Community%29.fig) sebagaimana dikatalogkan di [DESIGN_SYSTEM_UIKIT_FREE_COMPONENTS.md](../../design_system/DESIGN_SYSTEM_UIKIT_FREE_COMPONENTS.md):
 
 | Komponen Prototipe | Canvas Asal Figma | Master Component Sumber | File Aset Vektor / Render |
 | :--- | :--- | :--- | :--- |
 | **Top App Bar** | `Header` | `Header` (71 components, Node `6:50` dkk.) | Stylized Navigation Header |
 | **Pill Tabs Semester 1–8** | `Tabs` | `Tabs` (Pill / Capsule variant) | Implementasi CSS Capsule 9999px |
 | **Hero Progress Banner** | `Progress` / `Layout` | `Summary Card` + `Progress` | Latar putih dengan elevasi violet |
-| **Maskot Edukatif Cookie** | `Cookies` | `Cookies` (Node `1842:25160`) | [`assets/illustrations/uikit_hero.png`](./assets/illustrations/uikit_hero.png) |
+| **Maskot Edukatif Cookie** | `Cookies` | `Cookies` (Node `1842:25160`) | [`../../design_system/assets/illustrations/uikit_hero.png`](../../design_system/assets/illustrations/uikit_hero.png) |
 | **Kartu Mata Kuliah** | `Table` / `Layout` | `Card Container` (Border Radius 8px) | Card dengan bayangan `0 4px 16px rgba(157, 63, 231, 0.08)` |
 | **Badge SKS & Jurusan** | `Badge` | `Badge` (56 components) | Pill Capsule Badge |
 | **Linear Progress Bar** | `Progress` | `Linear Progress` (21 components) | Track `#D9D1E0`, Fill `#00B998` |
-| **Checkbox Selesai** | `Checkbox` | `Checkbox` (10 components) | [`assets/icons/uikit/check.svg`](./assets/icons/uikit/check.svg) (Node `1579:1333`) |
+| **Checkbox Selesai** | `Checkbox` | `Checkbox` (10 components) | [`../../design_system/assets/icons/uikit/check.svg`](../../design_system/assets/icons/uikit/check.svg) (Node `1579:1333`) |
 | **Baris Topik Silabus** | `Collapse` | `Accordion` / `Collapse` (6 components) | Expandable Topic Row dengan border `#E5E0EB` |
-| **Search Bar Input** | `Input` / `Search` | `Input` (Search variant, Node `1582:1601`) | Input field dengan [`assets/icons/uikit/search.svg`](./assets/icons/uikit/search.svg) |
+| **Search Bar Input** | `Input` / `Search` | `Input` (Search variant, Node `1582:1601`) | Input field dengan [`../../design_system/assets/icons/uikit/search.svg`](../../design_system/assets/icons/uikit/search.svg) |
 | **Bottom Navigation Bar** | `Navigation bar` | `Navigation bar` (71 components) | 3/5 Tab Mobile Navigation Bar |
-| **Ikon Brand Logo** | `Icons` | `12515:40782` (`book`) | [`assets/icons/uikit/brand.svg`](./assets/icons/uikit/brand.svg) |
-| **Ikon Beranda (Home)** | `Icons` | `229:683` (`Iconly Home`) | [`assets/icons/uikit/home.svg`](./assets/icons/uikit/home.svg) |
-| **Ikon Pencarian (Search)** | `Icons` | `511:119,120` (`UI Kit Search`) | [`assets/icons/uikit/search.svg`](./assets/icons/uikit/search.svg) |
-| **Ikon Profil (User)** | `Icons` | `122:24` (`UI Kit Person`) | [`assets/icons/uikit/profile.svg`](./assets/icons/uikit/profile.svg) |
-| **Ikon Navigasi Kembali** | `Icons` | `229:692` (`Iconly Arrow Left`) | [`assets/icons/uikit/back.svg`](./assets/icons/uikit/back.svg) |
-| **Ikon Panah Forward** | `Icons` | `629:6304` (`arrow-forward`) | [`assets/icons/uikit/forward.svg`](./assets/icons/uikit/forward.svg) |
-| **Ikon Durasi / Jam** | `Icons` | `1690:7625,7626` (`bx-time-five`) | [`assets/icons/uikit/time.svg`](./assets/icons/uikit/time.svg) |
-| **Ikon Putar Video (Play)** | `Icons` | `229:797` (`Play Icon`) | [`assets/icons/uikit/play.svg`](./assets/icons/uikit/play.svg) |
-| **Ikon Mata Kuliah (Code)** | `Icons` | `23829:88029` (`code`) | [`assets/icons/uikit/course1.svg`](./assets/icons/uikit/course1.svg) |
-| **Ikon Mata Kuliah (Data)** | `Icons` | `248:24` (`storage`) | [`assets/icons/uikit/course2.svg`](./assets/icons/uikit/course2.svg) |
-| **Ikon Mata Kuliah (Grid)** | `Icons` | `1669:6540` (`mdi:view-grid`) | [`assets/icons/uikit/course3.svg`](./assets/icons/uikit/course3.svg) |
+| **Ikon Brand Logo** | `Icons` | `12515:40782` (`book`) | [`../../design_system/assets/icons/uikit/brand.svg`](../../design_system/assets/icons/uikit/brand.svg) |
+| **Ikon Beranda (Home)** | `Icons` | `229:683` (`Iconly Home`) | [`../../design_system/assets/icons/uikit/home.svg`](../../design_system/assets/icons/uikit/home.svg) |
+| **Ikon Pencarian (Search)** | `Icons` | `511:119,120` (`UI Kit Search`) | [`../../design_system/assets/icons/uikit/search.svg`](../../design_system/assets/icons/uikit/search.svg) |
+| **Ikon Profil (User)** | `Icons` | `122:24` (`UI Kit Person`) | [`../../design_system/assets/icons/uikit/profile.svg`](../../design_system/assets/icons/uikit/profile.svg) |
+| **Ikon Navigasi Kembali** | `Icons` | `229:692` (`Iconly Arrow Left`) | [`../../design_system/assets/icons/uikit/back.svg`](../../design_system/assets/icons/uikit/back.svg) |
+| **Ikon Panah Forward** | `Icons` | `629:6304` (`arrow-forward`) | [`../../design_system/assets/icons/uikit/forward.svg`](../../design_system/assets/icons/uikit/forward.svg) |
+| **Ikon Durasi / Jam** | `Icons` | `1690:7625,7626` (`bx-time-five`) | [`../../design_system/assets/icons/uikit/time.svg`](../../design_system/assets/icons/uikit/time.svg) |
+| **Ikon Putar Video (Play)** | `Icons` | `229:797` (`Play Icon`) | [`../../design_system/assets/icons/uikit/play.svg`](../../design_system/assets/icons/uikit/play.svg) |
+| **Ikon Mata Kuliah (Code)** | `Icons` | `23829:88029` (`code`) | [`../../design_system/assets/icons/uikit/course1.svg`](../../design_system/assets/icons/uikit/course1.svg) |
+| **Ikon Mata Kuliah (Data)** | `Icons` | `248:24` (`storage`) | [`../../design_system/assets/icons/uikit/course2.svg`](../../design_system/assets/icons/uikit/course2.svg) |
+| **Ikon Mata Kuliah (Grid)** | `Icons` | `1669:6540` (`mdi:view-grid`) | [`../../design_system/assets/icons/uikit/course3.svg`](../../design_system/assets/icons/uikit/course3.svg) |
 
 ---
 
 ## 7. Panduan Menjalankan & Menguji Prototipe
 
-1. Buka berkas [`assets/hifi_module_1_prototype.html`](./assets/hifi_module_1_prototype.html) langsung di peramban web (Google Chrome, Safari, Firefox, atau Edge).
+1. Buka berkas [`./hifi_module_1_prototype.html`](./hifi_module_1_prototype.html) langsung di peramban web (Google Chrome, Safari, Firefox, atau Edge).
 2. Di sebelah kiri, gunakan layar ponsel interaktif untuk bernavigasi selayaknya menggunakan aplikasi *native*.
 3. Di sebelah kanan, gunakan **Usability Testing Console** untuk mengaktifkan skenario pengujian, menjalankan stopwatch perhitungan waktu tugas (*Time on Task*), mencatat status keberhasilan, dan mengamati emisi event telemetri W3C *Trace ID* secara seketika.
+

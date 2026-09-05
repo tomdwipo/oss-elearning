@@ -1,6 +1,6 @@
 # Modul 1: Navigasi Kurikulum — UI Design System & Tokens (Design System & UI Kit Free)
 
-Dokumen ini menetapkan spesifikasi standar **Design System & Design Tokens** resmi untuk **Modul 1: Navigasi Kurikulum** pada aplikasi **OpenCampus Mobile** berdasarkan berkas desain terpilih **Design System & UI Kit Free (Community)** (`Design System _ Ui Kit Free (Community).fig`), [PRD.md](../fase0/PRD.md), [USE_CASE.md](../fase1/USE_CASE.md), [MODULE_1_USER_FLOW_WIREFLOW.md](./MODULE_1_USER_FLOW_WIREFLOW.md), [MODULE_1_LOFI_WIREFRAME.md](./MODULE_1_LOFI_WIREFRAME.md), dan evaluasi POC [MODULE_1_DESIGN_TOKENS_POC.md](./MODULE_1_DESIGN_TOKENS_POC.md).
+Dokumen ini menetapkan spesifikasi standar **Design System & Design Tokens** resmi untuk **Modul 1: Navigasi Kurikulum** pada aplikasi **OpenCampus Mobile** berdasarkan berkas desain terpilih **Design System & UI Kit Free (Community)** (`Design System _ Ui Kit Free (Community).fig`), [PRD.md](../../fase0/PRD.md), [USE_CASE.md](../../fase1/USE_CASE.md), [MODULE_1_USER_FLOW_WIREFLOW.md](./MODULE_1_USER_FLOW_WIREFLOW.md), [MODULE_1_LOFI_WIREFRAME.md](./MODULE_1_LOFI_WIREFRAME.md), dan evaluasi POC [MODULE_1_DESIGN_TOKENS_POC.md](./MODULE_1_DESIGN_TOKENS_POC.md).
 
 ---
 
@@ -16,11 +16,11 @@ Dokumen ini menetapkan spesifikasi standar **Design System & Design Tokens** res
 ## 2. Sumber Resmi & Penelusuran Figma (Traceability)
 
 Spesifikasi token dan komponen diekstraksi langsung dari berkas resmi Figma:
-* **Source Binary Archive:** [`.docs/fase2_uiux/assets/Design System _ Ui Kit Free (Community).fig`](./assets/Design%20System%20_%20Ui%20Kit%20Free%20%28Community%29.fig) *(11.815 nodes, 59 canvases, 1.327 master components)*
-* **Complete Token Catalog:** [`.docs/fase2_uiux/assets/design_system_uikit_free_complete_tokens.json`](./assets/design_system_uikit_free_complete_tokens.json)
-* **Decoder Pipeline:** [`.agents/skills/fig-decode/`](../../.agents/skills/fig-decode/)
-* **Icon Set:** [`.docs/fase2_uiux/assets/icons/uikit/`](./assets/icons/uikit/) (44+ vector icons)
-* **Hero Mascot Asset:** [`.docs/fase2_uiux/assets/illustrations/uikit_hero.png`](./assets/illustrations/uikit_hero.png)
+* **Source Binary Archive:** [`.docs/design_system/assets/Design System _ Ui Kit Free (Community).fig`](../../design_system/assets/Design%20System%20_%20Ui%20Kit%20Free%20%28Community%29.fig) *(11.815 nodes, 59 canvases, 1.327 master components)*
+* **Complete Token Catalog:** [`.docs/design_system/assets/design_system_uikit_free_complete_tokens.json`](../../design_system/assets/design_system_uikit_free_complete_tokens.json)
+* **Decoder Pipeline:** [`.agents/skills/fig-decode/`](../../../.agents/skills/fig-decode/)
+* **Icon Set:** [`.docs/design_system/assets/icons/uikit/`](../../design_system/assets/icons/uikit/) (44+ vector icons)
+* **Hero Mascot Asset:** [`.docs/design_system/assets/illustrations/uikit_hero.png`](../../design_system/assets/illustrations/uikit_hero.png)
 
 ---
 
