@@ -1,6 +1,6 @@
 # Modul 1: Navigasi Kurikulum — Wireframe (Lo-Fi) (MVP v0.1)
 
-Dokumen ini mendefinisikan rancangan **Wireframe Tingkat Rendah (Low-Fidelity / Lo-Fi)** untuk **Modul 1: Navigasi Kurikulum** (UC-01, UC-02, UC-03) pada aplikasi **OpenCampus Mobile** berdasarkan spesifikasi pada [PRD.md](../../fase0/PRD.md), [USE_CASE.md](../../fase1/USE_CASE.md), dan [MODULE_1_USER_FLOW_WIREFLOW.md](./MODULE_1_USER_FLOW_WIREFLOW.md).
+Dokumen ini mendefinisikan rancangan **Wireframe Tingkat Rendah (Low-Fidelity / Lo-Fi)** untuk **Modul 1: Navigasi Kurikulum** (UC-01, UC-02, UC-03) pada aplikasi **OpenCampus Mobile** berdasarkan spesifikasi pada [PRD.md](../../fase0/PRD.md), [USE_CASE.md](../../fase1/USE_CASE.md), dan [01_MODULE_1_USER_FLOW_WIREFLOW.md](./01_MODULE_1_USER_FLOW_WIREFLOW.md).
 
 ---
 
