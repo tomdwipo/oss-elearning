@@ -48,4 +48,15 @@ Thumbs.db
 # Agents configuration
 .agents/*
 !.agents/workflows/
+!.agents/skills/
+
+# Gradle & Android
+.gradle/
+build/
+composeApp/build/
+local.properties
+.kotlin/
+*.hprof
+*.log
+
 
