@@ -22,20 +22,21 @@
 
 ## Ringkasan Rencana Task (Summary Matrix)
 
-| Task ID | Judul Task | Source Set / Layer | Bobot / Est. | Milestone | Dependensi |
-|---|---|---|---|---|---|
-| **TASK-00** | Inisialisasi scaffolding project Kotlin Multiplatform & Compose Multiplatform | Root / `composeApp` | Medium (3 SP) | MVP v0.1 | - |
-| **TASK-01** | Data models `@Serializable`, static JSON kurikulum, dan local progress storage | `commonMain` (Data/Domain) | Medium (3 SP) | MVP v0.1 | TASK-00 |
-| **TASK-02** | SemesterHomeScreen dengan horizontal pill tabs dan daftar kartu MK | `commonMain` (CMP UI) | Medium (3 SP) | MVP v0.1 | TASK-01 |
-| **TASK-03** | HeroProgressCard dengan maskot Cookies dan progress bar dinamis | `commonMain` (CMP UI) | Low (2 SP) | MVP v0.1 | TASK-01 |
-| **TASK-04** | CourseSyllabusScreen dengan daftar 16 topik silabus dan checkbox manual | `commonMain` (CMP UI) | Medium (3 SP) | MVP v0.1 | TASK-01 |
-| **TASK-05** | Unit tests di `commonTest`, negative control (Gate 3b), dan CMP preview validation | `commonTest` (Testing) | Medium (3 SP) | MVP v0.1 | TASK-01..04 |
+| Task ID | Issue GitHub | Judul Task | Source Set / Layer | Bobot / Est. | Milestone | Dependensi |
+|---|---|---|---|---|---|---|
+| **TASK-00** | [#1](https://github.com/tomdwipo/oss-elearning/issues/1) | Inisialisasi scaffolding project Kotlin Multiplatform & Compose Multiplatform | Root / `composeApp` | Medium (3 SP) | MVP v0.1 | - |
+| **TASK-01** | [#2](https://github.com/tomdwipo/oss-elearning/issues/2) | Data models `@Serializable`, static JSON kurikulum, dan local progress storage | `commonMain` (Data/Domain) | Medium (3 SP) | MVP v0.1 | [#1](https://github.com/tomdwipo/oss-elearning/issues/1) |
+| **TASK-02** | [#3](https://github.com/tomdwipo/oss-elearning/issues/3) | SemesterHomeScreen dengan horizontal pill tabs dan daftar kartu MK | `commonMain` (CMP UI) | Medium (3 SP) | MVP v0.1 | [#2](https://github.com/tomdwipo/oss-elearning/issues/2) |
+| **TASK-03** | [#4](https://github.com/tomdwipo/oss-elearning/issues/4) | HeroProgressCard dengan maskot Cookies dan progress bar dinamis | `commonMain` (CMP UI) | Low (2 SP) | MVP v0.1 | [#2](https://github.com/tomdwipo/oss-elearning/issues/2) |
+| **TASK-04** | [#5](https://github.com/tomdwipo/oss-elearning/issues/5) | CourseSyllabusScreen dengan daftar 16 topik silabus dan checkbox manual | `commonMain` (CMP UI) | Medium (3 SP) | MVP v0.1 | [#2](https://github.com/tomdwipo/oss-elearning/issues/2) |
+| **TASK-05** | [#6](https://github.com/tomdwipo/oss-elearning/issues/6) | Unit tests di `commonTest`, negative control (Gate 3b), dan CMP preview validation | `commonTest` (Testing) | Medium (3 SP) | MVP v0.1 | [#1](https://github.com/tomdwipo/oss-elearning/issues/1)..[#5](https://github.com/tomdwipo/oss-elearning/issues/5) |
+
 
 ---
 
 ## Rincian Task & 4-Pillar Acceptance Criteria
 
-### TASK-00: Inisialisasi scaffolding project Kotlin Multiplatform & Compose Multiplatform
+### TASK-00: Inisialisasi scaffolding project Kotlin Multiplatform & Compose Multiplatform — [#1](https://github.com/tomdwipo/oss-elearning/issues/1)
 - **Layer:** Build Configuration & Infrastructure
 - **Problem Statement:** Repositori belum memiliki konfigurasi build Gradle, version catalog, dan project module untuk menjalankan aplikasi berbasis Kotlin Multiplatform (KMP) dan Compose Multiplatform (CMP) untuk target Android dan iOS.
 - **Technical Context:**
@@ -54,7 +55,7 @@
 
 ---
 
-### TASK-01: Data models `@Serializable`, static JSON kurikulum, dan local progress storage
+### TASK-01: Data models `@Serializable`, static JSON kurikulum, dan local progress storage — [#2](https://github.com/tomdwipo/oss-elearning/issues/2)
 - **Layer:** Data & Domain Layer (`commonMain`)
 - **Problem Statement:** Diperlukan representasi model data strongly-typed dalam Kotlin untuk kurikulum Semester 1–8 Teknik Informatika beserta mekanisme pembacaan JSON statis dan penyimpanan status progress di `commonMain`.
 - **Technical Context:**
@@ -75,7 +76,7 @@
 
 ---
 
-### TASK-02: SemesterHomeScreen dengan horizontal pill tabs dan daftar kartu MK
+### TASK-02: SemesterHomeScreen dengan horizontal pill tabs dan daftar kartu MK — [#3](https://github.com/tomdwipo/oss-elearning/issues/3)
 - **Layer:** Presentation Layer (`commonMain`)
 - **Problem Statement:** Pengguna membutuhkan antarmuka visual responsif berbasis Compose Multiplatform untuk memilih tab Semester 1–8 dan melihat daftar kartu mata kuliah.
 - **Technical Context:**
@@ -101,7 +102,7 @@
 
 ---
 
-### TASK-03: HeroProgressCard dengan maskot Cookies dan progress bar dinamis
+### TASK-03: HeroProgressCard dengan maskot Cookies dan progress bar dinamis — [#4](https://github.com/tomdwipo/oss-elearning/issues/4)
 - **Layer:** Presentation Layer (`commonMain`)
 - **Problem Statement:** Perlu komponen hero banner ringkasan progres di beranda semester untuk memotivasi pembelajar dan meminimalkan drop-off D1.
 - **Technical Context:**
@@ -122,7 +123,7 @@
 
 ---
 
-### TASK-04: CourseSyllabusScreen dengan daftar 16 topik silabus dan checkbox manual
+### TASK-04: CourseSyllabusScreen dengan daftar 16 topik silabus dan checkbox manual — [#5](https://github.com/tomdwipo/oss-elearning/issues/5)
 - **Layer:** Presentation Layer (`commonMain`)
 - **Problem Statement:** Pengguna memerlukan tampilan silabus 16 pertemuan terstruktur per mata kuliah dengan atribusi kanal YouTube dan penanda checklist di Compose Multiplatform.
 - **Technical Context:**
@@ -146,7 +147,7 @@
 
 ---
 
-### TASK-05: Unit tests di `commonTest`, negative control (Gate 3b), dan CMP preview validation
+### TASK-05: Unit tests di `commonTest`, negative control (Gate 3b), dan CMP preview validation — [#6](https://github.com/tomdwipo/oss-elearning/issues/6)
 - **Layer:** Quality & Testing Layer (`commonTest`)
 - **Problem Statement:** Menjamin logika bisnis kurikulum, kalkulasi progres, dan rendering UI di KMP/CMP terverifikasi secara otomatis bebas regresi.
 - **Technical Context:**
