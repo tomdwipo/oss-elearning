@@ -42,7 +42,7 @@ fun SemesterHomeScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val courses = viewModel.getFilteredCourses()
-    val semesterProgress = viewModel.getSemesterProgress(uiState.selectedSemester)
+    val semesterProgress = viewModel.getSemesterProgress(uiState.selectedSemester, uiState.completedTopicIds)
 
     Scaffold(
         modifier = modifier.fillMaxSize(),
@@ -193,7 +193,7 @@ fun SemesterHomeScreen(
 
             // Courses List
             items(courses, key = { it.id }) { course ->
-                val courseProgress = viewModel.getCourseProgress(course.id)
+                val courseProgress = viewModel.getCourseProgress(course.id, uiState.completedTopicIds)
                 CourseCard(
                     course = course,
                     progress = courseProgress,
