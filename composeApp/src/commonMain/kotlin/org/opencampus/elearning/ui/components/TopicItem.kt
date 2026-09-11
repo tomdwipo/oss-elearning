@@ -71,7 +71,7 @@ fun TopicItem(
                 contentAlignment = Alignment.Center
             ) {
                 Text(
-                    text = String.format("%02d", topic.no),
+                    text = topic.no.toString().padStart(2, '0'),
                     fontSize = 13.sp,
                     fontWeight = FontWeight.Bold,
                     color = if (isCompleted) OpenCampusColors.InformingApproval else OpenCampusColors.GrayscaleBlack
