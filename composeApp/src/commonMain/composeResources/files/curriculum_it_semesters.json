@@ -1,0 +1,4163 @@
+{
+  "major": "Teknik Informatika",
+  "semesters": [
+    {
+      "semesterNumber": 1,
+      "title": "Semester 1",
+      "courses": [
+        {
+          "id": "cs101",
+          "title": "Algoritma & Pemrograman Dasar",
+          "iconType": "course1",
+          "meetingsCount": 16,
+          "estHours": "6.5 Jam",
+          "topics": [
+            {
+              "id": "t101_01",
+              "no": 1,
+              "title": "Konsep Dasar Logika & Flowchart",
+              "duration": "18m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "t101_01_v"
+            },
+            {
+              "id": "t101_02",
+              "no": 2,
+              "title": "Variabel, Tipe Data & Input Output",
+              "duration": "25m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "t101_02_v"
+            },
+            {
+              "id": "t101_03",
+              "no": 3,
+              "title": "Percabangan: If, Else If, Nested If",
+              "duration": "30m",
+              "channel": "Kelas Terbuka",
+              "videoId": "t101_03_v"
+            },
+            {
+              "id": "t101_04",
+              "no": 4,
+              "title": "Perulangan: For, While, Do-While",
+              "duration": "22m",
+              "channel": "Kelas Terbuka",
+              "videoId": "t101_04_v"
+            },
+            {
+              "id": "t101_05",
+              "no": 5,
+              "title": "Fungsi & Modularitas Kode",
+              "duration": "28m",
+              "channel": "Kelas Terbuka",
+              "videoId": "t101_05_v"
+            },
+            {
+              "id": "t101_06",
+              "no": 6,
+              "title": "Rekursi & Call Stack Visualizer",
+              "duration": "35m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "t101_06_v"
+            },
+            {
+              "id": "t101_07",
+              "no": 7,
+              "title": "Array 1 Dimensi & Manipulasi Indeks",
+              "duration": "24m",
+              "channel": "Kelas Terbuka",
+              "videoId": "t101_07_v"
+            },
+            {
+              "id": "t101_08",
+              "no": 8,
+              "title": "Review & Latihan Ujian Tengah Semester",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "t101_08_v"
+            },
+            {
+              "id": "t101_09",
+              "no": 9,
+              "title": "String Manipulasi & Tokenizing",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "t101_09_v"
+            },
+            {
+              "id": "t101_10",
+              "no": 10,
+              "title": "Dasar Alokasi Memori & Pointer",
+              "duration": "32m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "t101_10_v"
+            },
+            {
+              "id": "t101_11",
+              "no": 11,
+              "title": "Struct & Record Data Bentukan",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "t101_11_v"
+            },
+            {
+              "id": "t101_12",
+              "no": 12,
+              "title": "Algoritma Searching: Linear & Binary",
+              "duration": "25m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "t101_12_v"
+            },
+            {
+              "id": "t101_13",
+              "no": 13,
+              "title": "Algoritma Sorting: Bubble & Selection",
+              "duration": "35m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "t101_13_v"
+            },
+            {
+              "id": "t101_14",
+              "no": 14,
+              "title": "Analisis Kompleksitas Dasar (Big O)",
+              "duration": "28m",
+              "channel": "Kelas Terbuka",
+              "videoId": "t101_14_v"
+            },
+            {
+              "id": "t101_15",
+              "no": 15,
+              "title": "File Handling: Baca Tulis File .txt",
+              "duration": "30m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "t101_15_v"
+            },
+            {
+              "id": "t101_16",
+              "no": 16,
+              "title": "Proyek Akhir: Mini Aplikasi CLI",
+              "duration": "45m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "t101_16_v"
+            }
+          ]
+        },
+        {
+          "id": "cs102",
+          "title": "Matematika Diskrit",
+          "iconType": "course2",
+          "meetingsCount": 16,
+          "estHours": "5.5 Jam",
+          "topics": [
+            {
+              "id": "t_cs102_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Matematika Diskrit",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs102_01"
+            },
+            {
+              "id": "t_cs102_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Matematika Diskrit",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs102_02"
+            },
+            {
+              "id": "t_cs102_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Matematika Diskrit",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs102_03"
+            },
+            {
+              "id": "t_cs102_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Matematika Diskrit",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs102_04"
+            },
+            {
+              "id": "t_cs102_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Matematika Diskrit",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs102_05"
+            },
+            {
+              "id": "t_cs102_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Matematika Diskrit",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs102_06"
+            },
+            {
+              "id": "t_cs102_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Matematika Diskrit",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs102_07"
+            },
+            {
+              "id": "t_cs102_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Matematika Diskrit",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs102_08"
+            },
+            {
+              "id": "t_cs102_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Matematika Diskrit",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs102_09"
+            },
+            {
+              "id": "t_cs102_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Matematika Diskrit",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs102_10"
+            },
+            {
+              "id": "t_cs102_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Matematika Diskrit",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs102_11"
+            },
+            {
+              "id": "t_cs102_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Matematika Diskrit",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs102_12"
+            },
+            {
+              "id": "t_cs102_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Matematika Diskrit",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs102_13"
+            },
+            {
+              "id": "t_cs102_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Matematika Diskrit",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs102_14"
+            },
+            {
+              "id": "t_cs102_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Matematika Diskrit",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs102_15"
+            },
+            {
+              "id": "t_cs102_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Matematika Diskrit",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs102_16"
+            }
+          ]
+        },
+        {
+          "id": "cs103",
+          "title": "Pengantar Teknologi Informasi",
+          "iconType": "course3",
+          "meetingsCount": 16,
+          "estHours": "4.0 Jam",
+          "topics": [
+            {
+              "id": "t_cs103_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Pengantar Teknologi Informasi",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs103_01"
+            },
+            {
+              "id": "t_cs103_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Pengantar Teknologi Informasi",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs103_02"
+            },
+            {
+              "id": "t_cs103_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Pengantar Teknologi Informasi",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs103_03"
+            },
+            {
+              "id": "t_cs103_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Pengantar Teknologi Informasi",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs103_04"
+            },
+            {
+              "id": "t_cs103_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Pengantar Teknologi Informasi",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs103_05"
+            },
+            {
+              "id": "t_cs103_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Pengantar Teknologi Informasi",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs103_06"
+            },
+            {
+              "id": "t_cs103_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Pengantar Teknologi Informasi",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs103_07"
+            },
+            {
+              "id": "t_cs103_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Pengantar Teknologi Informasi",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs103_08"
+            },
+            {
+              "id": "t_cs103_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Pengantar Teknologi Informasi",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs103_09"
+            },
+            {
+              "id": "t_cs103_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Pengantar Teknologi Informasi",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs103_10"
+            },
+            {
+              "id": "t_cs103_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Pengantar Teknologi Informasi",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs103_11"
+            },
+            {
+              "id": "t_cs103_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Pengantar Teknologi Informasi",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs103_12"
+            },
+            {
+              "id": "t_cs103_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Pengantar Teknologi Informasi",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs103_13"
+            },
+            {
+              "id": "t_cs103_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Pengantar Teknologi Informasi",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs103_14"
+            },
+            {
+              "id": "t_cs103_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Pengantar Teknologi Informasi",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs103_15"
+            },
+            {
+              "id": "t_cs103_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Pengantar Teknologi Informasi",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs103_16"
+            }
+          ]
+        },
+        {
+          "id": "cs104",
+          "title": "Organisasi & Arsitektur Komputer",
+          "iconType": "course1",
+          "meetingsCount": 16,
+          "estHours": "5.0 Jam",
+          "topics": [
+            {
+              "id": "t_cs104_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Organisasi & Arsitektur Komputer",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs104_01"
+            },
+            {
+              "id": "t_cs104_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Organisasi & Arsitektur Komputer",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs104_02"
+            },
+            {
+              "id": "t_cs104_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Organisasi & Arsitektur Komputer",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs104_03"
+            },
+            {
+              "id": "t_cs104_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Organisasi & Arsitektur Komputer",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs104_04"
+            },
+            {
+              "id": "t_cs104_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Organisasi & Arsitektur Komputer",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs104_05"
+            },
+            {
+              "id": "t_cs104_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Organisasi & Arsitektur Komputer",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs104_06"
+            },
+            {
+              "id": "t_cs104_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Organisasi & Arsitektur Komputer",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs104_07"
+            },
+            {
+              "id": "t_cs104_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Organisasi & Arsitektur Komputer",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs104_08"
+            },
+            {
+              "id": "t_cs104_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Organisasi & Arsitektur Komputer",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs104_09"
+            },
+            {
+              "id": "t_cs104_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Organisasi & Arsitektur Komputer",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs104_10"
+            },
+            {
+              "id": "t_cs104_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Organisasi & Arsitektur Komputer",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs104_11"
+            },
+            {
+              "id": "t_cs104_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Organisasi & Arsitektur Komputer",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs104_12"
+            },
+            {
+              "id": "t_cs104_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Organisasi & Arsitektur Komputer",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs104_13"
+            },
+            {
+              "id": "t_cs104_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Organisasi & Arsitektur Komputer",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs104_14"
+            },
+            {
+              "id": "t_cs104_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Organisasi & Arsitektur Komputer",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs104_15"
+            },
+            {
+              "id": "t_cs104_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Organisasi & Arsitektur Komputer",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs104_16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "semesterNumber": 2,
+      "title": "Semester 2",
+      "courses": [
+        {
+          "id": "cs201",
+          "title": "Struktur Data & Algoritma Lanjut",
+          "iconType": "course2",
+          "meetingsCount": 16,
+          "estHours": "7.0 Jam",
+          "topics": [
+            {
+              "id": "t_cs201_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Struktur Data & Algoritma Lanjut",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs201_01"
+            },
+            {
+              "id": "t_cs201_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Struktur Data & Algoritma Lanjut",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs201_02"
+            },
+            {
+              "id": "t_cs201_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Struktur Data & Algoritma Lanjut",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs201_03"
+            },
+            {
+              "id": "t_cs201_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Struktur Data & Algoritma Lanjut",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs201_04"
+            },
+            {
+              "id": "t_cs201_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Struktur Data & Algoritma Lanjut",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs201_05"
+            },
+            {
+              "id": "t_cs201_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Struktur Data & Algoritma Lanjut",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs201_06"
+            },
+            {
+              "id": "t_cs201_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Struktur Data & Algoritma Lanjut",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs201_07"
+            },
+            {
+              "id": "t_cs201_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Struktur Data & Algoritma Lanjut",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs201_08"
+            },
+            {
+              "id": "t_cs201_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Struktur Data & Algoritma Lanjut",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs201_09"
+            },
+            {
+              "id": "t_cs201_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Struktur Data & Algoritma Lanjut",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs201_10"
+            },
+            {
+              "id": "t_cs201_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Struktur Data & Algoritma Lanjut",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs201_11"
+            },
+            {
+              "id": "t_cs201_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Struktur Data & Algoritma Lanjut",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs201_12"
+            },
+            {
+              "id": "t_cs201_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Struktur Data & Algoritma Lanjut",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs201_13"
+            },
+            {
+              "id": "t_cs201_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Struktur Data & Algoritma Lanjut",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs201_14"
+            },
+            {
+              "id": "t_cs201_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Struktur Data & Algoritma Lanjut",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs201_15"
+            },
+            {
+              "id": "t_cs201_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Struktur Data & Algoritma Lanjut",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs201_16"
+            }
+          ]
+        },
+        {
+          "id": "cs202",
+          "title": "Pemrograman Berorientasi Objek (OOP)",
+          "iconType": "course1",
+          "meetingsCount": 16,
+          "estHours": "6.5 Jam",
+          "topics": [
+            {
+              "id": "t_cs202_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Pemrograman Berorientasi Objek (OOP)",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs202_01"
+            },
+            {
+              "id": "t_cs202_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Pemrograman Berorientasi Objek (OOP)",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs202_02"
+            },
+            {
+              "id": "t_cs202_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Pemrograman Berorientasi Objek (OOP)",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs202_03"
+            },
+            {
+              "id": "t_cs202_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Pemrograman Berorientasi Objek (OOP)",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs202_04"
+            },
+            {
+              "id": "t_cs202_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Pemrograman Berorientasi Objek (OOP)",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs202_05"
+            },
+            {
+              "id": "t_cs202_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Pemrograman Berorientasi Objek (OOP)",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs202_06"
+            },
+            {
+              "id": "t_cs202_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Pemrograman Berorientasi Objek (OOP)",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs202_07"
+            },
+            {
+              "id": "t_cs202_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Pemrograman Berorientasi Objek (OOP)",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs202_08"
+            },
+            {
+              "id": "t_cs202_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Pemrograman Berorientasi Objek (OOP)",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs202_09"
+            },
+            {
+              "id": "t_cs202_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Pemrograman Berorientasi Objek (OOP)",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs202_10"
+            },
+            {
+              "id": "t_cs202_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Pemrograman Berorientasi Objek (OOP)",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs202_11"
+            },
+            {
+              "id": "t_cs202_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Pemrograman Berorientasi Objek (OOP)",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs202_12"
+            },
+            {
+              "id": "t_cs202_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Pemrograman Berorientasi Objek (OOP)",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs202_13"
+            },
+            {
+              "id": "t_cs202_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Pemrograman Berorientasi Objek (OOP)",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs202_14"
+            },
+            {
+              "id": "t_cs202_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Pemrograman Berorientasi Objek (OOP)",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs202_15"
+            },
+            {
+              "id": "t_cs202_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Pemrograman Berorientasi Objek (OOP)",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs202_16"
+            }
+          ]
+        },
+        {
+          "id": "cs203",
+          "title": "Basis Data & Desain Relasional",
+          "iconType": "course2",
+          "meetingsCount": 16,
+          "estHours": "6.0 Jam",
+          "topics": [
+            {
+              "id": "t_cs203_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Basis Data & Desain Relasional",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs203_01"
+            },
+            {
+              "id": "t_cs203_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Basis Data & Desain Relasional",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs203_02"
+            },
+            {
+              "id": "t_cs203_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Basis Data & Desain Relasional",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs203_03"
+            },
+            {
+              "id": "t_cs203_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Basis Data & Desain Relasional",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs203_04"
+            },
+            {
+              "id": "t_cs203_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Basis Data & Desain Relasional",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs203_05"
+            },
+            {
+              "id": "t_cs203_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Basis Data & Desain Relasional",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs203_06"
+            },
+            {
+              "id": "t_cs203_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Basis Data & Desain Relasional",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs203_07"
+            },
+            {
+              "id": "t_cs203_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Basis Data & Desain Relasional",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs203_08"
+            },
+            {
+              "id": "t_cs203_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Basis Data & Desain Relasional",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs203_09"
+            },
+            {
+              "id": "t_cs203_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Basis Data & Desain Relasional",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs203_10"
+            },
+            {
+              "id": "t_cs203_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Basis Data & Desain Relasional",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs203_11"
+            },
+            {
+              "id": "t_cs203_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Basis Data & Desain Relasional",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs203_12"
+            },
+            {
+              "id": "t_cs203_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Basis Data & Desain Relasional",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs203_13"
+            },
+            {
+              "id": "t_cs203_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Basis Data & Desain Relasional",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs203_14"
+            },
+            {
+              "id": "t_cs203_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Basis Data & Desain Relasional",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs203_15"
+            },
+            {
+              "id": "t_cs203_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Basis Data & Desain Relasional",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs203_16"
+            }
+          ]
+        },
+        {
+          "id": "cs204",
+          "title": "Kalkulus & Aljabar Linier",
+          "iconType": "course3",
+          "meetingsCount": 16,
+          "estHours": "5.5 Jam",
+          "topics": [
+            {
+              "id": "t_cs204_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Kalkulus & Aljabar Linier",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs204_01"
+            },
+            {
+              "id": "t_cs204_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Kalkulus & Aljabar Linier",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs204_02"
+            },
+            {
+              "id": "t_cs204_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Kalkulus & Aljabar Linier",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs204_03"
+            },
+            {
+              "id": "t_cs204_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Kalkulus & Aljabar Linier",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs204_04"
+            },
+            {
+              "id": "t_cs204_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Kalkulus & Aljabar Linier",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs204_05"
+            },
+            {
+              "id": "t_cs204_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Kalkulus & Aljabar Linier",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs204_06"
+            },
+            {
+              "id": "t_cs204_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Kalkulus & Aljabar Linier",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs204_07"
+            },
+            {
+              "id": "t_cs204_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Kalkulus & Aljabar Linier",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs204_08"
+            },
+            {
+              "id": "t_cs204_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Kalkulus & Aljabar Linier",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs204_09"
+            },
+            {
+              "id": "t_cs204_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Kalkulus & Aljabar Linier",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs204_10"
+            },
+            {
+              "id": "t_cs204_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Kalkulus & Aljabar Linier",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs204_11"
+            },
+            {
+              "id": "t_cs204_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Kalkulus & Aljabar Linier",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs204_12"
+            },
+            {
+              "id": "t_cs204_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Kalkulus & Aljabar Linier",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs204_13"
+            },
+            {
+              "id": "t_cs204_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Kalkulus & Aljabar Linier",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs204_14"
+            },
+            {
+              "id": "t_cs204_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Kalkulus & Aljabar Linier",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs204_15"
+            },
+            {
+              "id": "t_cs204_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Kalkulus & Aljabar Linier",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs204_16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "semesterNumber": 3,
+      "title": "Semester 3",
+      "courses": [
+        {
+          "id": "cs301",
+          "title": "Sistem Operasi",
+          "iconType": "course1",
+          "meetingsCount": 16,
+          "estHours": "6.0 Jam",
+          "topics": [
+            {
+              "id": "t_cs301_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Sistem Operasi",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs301_01"
+            },
+            {
+              "id": "t_cs301_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Sistem Operasi",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs301_02"
+            },
+            {
+              "id": "t_cs301_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Sistem Operasi",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs301_03"
+            },
+            {
+              "id": "t_cs301_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Sistem Operasi",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs301_04"
+            },
+            {
+              "id": "t_cs301_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Sistem Operasi",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs301_05"
+            },
+            {
+              "id": "t_cs301_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Sistem Operasi",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs301_06"
+            },
+            {
+              "id": "t_cs301_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Sistem Operasi",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs301_07"
+            },
+            {
+              "id": "t_cs301_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Sistem Operasi",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs301_08"
+            },
+            {
+              "id": "t_cs301_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Sistem Operasi",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs301_09"
+            },
+            {
+              "id": "t_cs301_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Sistem Operasi",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs301_10"
+            },
+            {
+              "id": "t_cs301_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Sistem Operasi",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs301_11"
+            },
+            {
+              "id": "t_cs301_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Sistem Operasi",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs301_12"
+            },
+            {
+              "id": "t_cs301_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Sistem Operasi",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs301_13"
+            },
+            {
+              "id": "t_cs301_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Sistem Operasi",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs301_14"
+            },
+            {
+              "id": "t_cs301_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Sistem Operasi",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs301_15"
+            },
+            {
+              "id": "t_cs301_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Sistem Operasi",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs301_16"
+            }
+          ]
+        },
+        {
+          "id": "cs302",
+          "title": "Jaringan Komputer & Komunikasi Data",
+          "iconType": "course2",
+          "meetingsCount": 16,
+          "estHours": "6.5 Jam",
+          "topics": [
+            {
+              "id": "t_cs302_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Jaringan Komputer & Komunikasi Data",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs302_01"
+            },
+            {
+              "id": "t_cs302_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Jaringan Komputer & Komunikasi Data",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs302_02"
+            },
+            {
+              "id": "t_cs302_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Jaringan Komputer & Komunikasi Data",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs302_03"
+            },
+            {
+              "id": "t_cs302_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Jaringan Komputer & Komunikasi Data",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs302_04"
+            },
+            {
+              "id": "t_cs302_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Jaringan Komputer & Komunikasi Data",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs302_05"
+            },
+            {
+              "id": "t_cs302_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Jaringan Komputer & Komunikasi Data",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs302_06"
+            },
+            {
+              "id": "t_cs302_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Jaringan Komputer & Komunikasi Data",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs302_07"
+            },
+            {
+              "id": "t_cs302_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Jaringan Komputer & Komunikasi Data",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs302_08"
+            },
+            {
+              "id": "t_cs302_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Jaringan Komputer & Komunikasi Data",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs302_09"
+            },
+            {
+              "id": "t_cs302_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Jaringan Komputer & Komunikasi Data",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs302_10"
+            },
+            {
+              "id": "t_cs302_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Jaringan Komputer & Komunikasi Data",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs302_11"
+            },
+            {
+              "id": "t_cs302_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Jaringan Komputer & Komunikasi Data",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs302_12"
+            },
+            {
+              "id": "t_cs302_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Jaringan Komputer & Komunikasi Data",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs302_13"
+            },
+            {
+              "id": "t_cs302_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Jaringan Komputer & Komunikasi Data",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs302_14"
+            },
+            {
+              "id": "t_cs302_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Jaringan Komputer & Komunikasi Data",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs302_15"
+            },
+            {
+              "id": "t_cs302_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Jaringan Komputer & Komunikasi Data",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs302_16"
+            }
+          ]
+        },
+        {
+          "id": "cs303",
+          "title": "Pemrograman Web Dasar",
+          "iconType": "course3",
+          "meetingsCount": 16,
+          "estHours": "7.0 Jam",
+          "topics": [
+            {
+              "id": "t_cs303_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Pemrograman Web Dasar",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs303_01"
+            },
+            {
+              "id": "t_cs303_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Pemrograman Web Dasar",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs303_02"
+            },
+            {
+              "id": "t_cs303_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Pemrograman Web Dasar",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs303_03"
+            },
+            {
+              "id": "t_cs303_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Pemrograman Web Dasar",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs303_04"
+            },
+            {
+              "id": "t_cs303_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Pemrograman Web Dasar",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs303_05"
+            },
+            {
+              "id": "t_cs303_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Pemrograman Web Dasar",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs303_06"
+            },
+            {
+              "id": "t_cs303_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Pemrograman Web Dasar",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs303_07"
+            },
+            {
+              "id": "t_cs303_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Pemrograman Web Dasar",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs303_08"
+            },
+            {
+              "id": "t_cs303_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Pemrograman Web Dasar",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs303_09"
+            },
+            {
+              "id": "t_cs303_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Pemrograman Web Dasar",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs303_10"
+            },
+            {
+              "id": "t_cs303_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Pemrograman Web Dasar",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs303_11"
+            },
+            {
+              "id": "t_cs303_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Pemrograman Web Dasar",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs303_12"
+            },
+            {
+              "id": "t_cs303_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Pemrograman Web Dasar",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs303_13"
+            },
+            {
+              "id": "t_cs303_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Pemrograman Web Dasar",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs303_14"
+            },
+            {
+              "id": "t_cs303_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Pemrograman Web Dasar",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs303_15"
+            },
+            {
+              "id": "t_cs303_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Pemrograman Web Dasar",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs303_16"
+            }
+          ]
+        },
+        {
+          "id": "cs304",
+          "title": "Rekayasa Perangkat Lunak",
+          "iconType": "course1",
+          "meetingsCount": 16,
+          "estHours": "5.5 Jam",
+          "topics": [
+            {
+              "id": "t_cs304_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Rekayasa Perangkat Lunak",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs304_01"
+            },
+            {
+              "id": "t_cs304_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Rekayasa Perangkat Lunak",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs304_02"
+            },
+            {
+              "id": "t_cs304_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Rekayasa Perangkat Lunak",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs304_03"
+            },
+            {
+              "id": "t_cs304_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Rekayasa Perangkat Lunak",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs304_04"
+            },
+            {
+              "id": "t_cs304_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Rekayasa Perangkat Lunak",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs304_05"
+            },
+            {
+              "id": "t_cs304_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Rekayasa Perangkat Lunak",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs304_06"
+            },
+            {
+              "id": "t_cs304_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Rekayasa Perangkat Lunak",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs304_07"
+            },
+            {
+              "id": "t_cs304_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Rekayasa Perangkat Lunak",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs304_08"
+            },
+            {
+              "id": "t_cs304_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Rekayasa Perangkat Lunak",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs304_09"
+            },
+            {
+              "id": "t_cs304_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Rekayasa Perangkat Lunak",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs304_10"
+            },
+            {
+              "id": "t_cs304_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Rekayasa Perangkat Lunak",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs304_11"
+            },
+            {
+              "id": "t_cs304_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Rekayasa Perangkat Lunak",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs304_12"
+            },
+            {
+              "id": "t_cs304_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Rekayasa Perangkat Lunak",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs304_13"
+            },
+            {
+              "id": "t_cs304_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Rekayasa Perangkat Lunak",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs304_14"
+            },
+            {
+              "id": "t_cs304_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Rekayasa Perangkat Lunak",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs304_15"
+            },
+            {
+              "id": "t_cs304_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Rekayasa Perangkat Lunak",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs304_16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "semesterNumber": 4,
+      "title": "Semester 4",
+      "courses": [
+        {
+          "id": "cs401",
+          "title": "Desain & Analisis Algoritma",
+          "iconType": "course2",
+          "meetingsCount": 16,
+          "estHours": "6.0 Jam",
+          "topics": [
+            {
+              "id": "t_cs401_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Desain & Analisis Algoritma",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs401_01"
+            },
+            {
+              "id": "t_cs401_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Desain & Analisis Algoritma",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs401_02"
+            },
+            {
+              "id": "t_cs401_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Desain & Analisis Algoritma",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs401_03"
+            },
+            {
+              "id": "t_cs401_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Desain & Analisis Algoritma",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs401_04"
+            },
+            {
+              "id": "t_cs401_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Desain & Analisis Algoritma",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs401_05"
+            },
+            {
+              "id": "t_cs401_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Desain & Analisis Algoritma",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs401_06"
+            },
+            {
+              "id": "t_cs401_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Desain & Analisis Algoritma",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs401_07"
+            },
+            {
+              "id": "t_cs401_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Desain & Analisis Algoritma",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs401_08"
+            },
+            {
+              "id": "t_cs401_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Desain & Analisis Algoritma",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs401_09"
+            },
+            {
+              "id": "t_cs401_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Desain & Analisis Algoritma",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs401_10"
+            },
+            {
+              "id": "t_cs401_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Desain & Analisis Algoritma",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs401_11"
+            },
+            {
+              "id": "t_cs401_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Desain & Analisis Algoritma",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs401_12"
+            },
+            {
+              "id": "t_cs401_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Desain & Analisis Algoritma",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs401_13"
+            },
+            {
+              "id": "t_cs401_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Desain & Analisis Algoritma",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs401_14"
+            },
+            {
+              "id": "t_cs401_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Desain & Analisis Algoritma",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs401_15"
+            },
+            {
+              "id": "t_cs401_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Desain & Analisis Algoritma",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs401_16"
+            }
+          ]
+        },
+        {
+          "id": "cs402",
+          "title": "Pemrograman Mobile (Android/iOS)",
+          "iconType": "course1",
+          "meetingsCount": 16,
+          "estHours": "7.5 Jam",
+          "topics": [
+            {
+              "id": "t_cs402_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Pemrograman Mobile (Android/iOS)",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs402_01"
+            },
+            {
+              "id": "t_cs402_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Pemrograman Mobile (Android/iOS)",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs402_02"
+            },
+            {
+              "id": "t_cs402_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Pemrograman Mobile (Android/iOS)",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs402_03"
+            },
+            {
+              "id": "t_cs402_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Pemrograman Mobile (Android/iOS)",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs402_04"
+            },
+            {
+              "id": "t_cs402_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Pemrograman Mobile (Android/iOS)",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs402_05"
+            },
+            {
+              "id": "t_cs402_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Pemrograman Mobile (Android/iOS)",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs402_06"
+            },
+            {
+              "id": "t_cs402_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Pemrograman Mobile (Android/iOS)",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs402_07"
+            },
+            {
+              "id": "t_cs402_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Pemrograman Mobile (Android/iOS)",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs402_08"
+            },
+            {
+              "id": "t_cs402_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Pemrograman Mobile (Android/iOS)",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs402_09"
+            },
+            {
+              "id": "t_cs402_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Pemrograman Mobile (Android/iOS)",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs402_10"
+            },
+            {
+              "id": "t_cs402_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Pemrograman Mobile (Android/iOS)",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs402_11"
+            },
+            {
+              "id": "t_cs402_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Pemrograman Mobile (Android/iOS)",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs402_12"
+            },
+            {
+              "id": "t_cs402_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Pemrograman Mobile (Android/iOS)",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs402_13"
+            },
+            {
+              "id": "t_cs402_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Pemrograman Mobile (Android/iOS)",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs402_14"
+            },
+            {
+              "id": "t_cs402_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Pemrograman Mobile (Android/iOS)",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs402_15"
+            },
+            {
+              "id": "t_cs402_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Pemrograman Mobile (Android/iOS)",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs402_16"
+            }
+          ]
+        },
+        {
+          "id": "cs403",
+          "title": "Interaksi Manusia & Komputer (UI/UX)",
+          "iconType": "course3",
+          "meetingsCount": 16,
+          "estHours": "5.0 Jam",
+          "topics": [
+            {
+              "id": "t_cs403_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Interaksi Manusia & Komputer (UI/UX)",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs403_01"
+            },
+            {
+              "id": "t_cs403_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Interaksi Manusia & Komputer (UI/UX)",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs403_02"
+            },
+            {
+              "id": "t_cs403_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Interaksi Manusia & Komputer (UI/UX)",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs403_03"
+            },
+            {
+              "id": "t_cs403_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Interaksi Manusia & Komputer (UI/UX)",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs403_04"
+            },
+            {
+              "id": "t_cs403_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Interaksi Manusia & Komputer (UI/UX)",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs403_05"
+            },
+            {
+              "id": "t_cs403_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Interaksi Manusia & Komputer (UI/UX)",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs403_06"
+            },
+            {
+              "id": "t_cs403_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Interaksi Manusia & Komputer (UI/UX)",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs403_07"
+            },
+            {
+              "id": "t_cs403_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Interaksi Manusia & Komputer (UI/UX)",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs403_08"
+            },
+            {
+              "id": "t_cs403_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Interaksi Manusia & Komputer (UI/UX)",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs403_09"
+            },
+            {
+              "id": "t_cs403_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Interaksi Manusia & Komputer (UI/UX)",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs403_10"
+            },
+            {
+              "id": "t_cs403_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Interaksi Manusia & Komputer (UI/UX)",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs403_11"
+            },
+            {
+              "id": "t_cs403_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Interaksi Manusia & Komputer (UI/UX)",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs403_12"
+            },
+            {
+              "id": "t_cs403_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Interaksi Manusia & Komputer (UI/UX)",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs403_13"
+            },
+            {
+              "id": "t_cs403_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Interaksi Manusia & Komputer (UI/UX)",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs403_14"
+            },
+            {
+              "id": "t_cs403_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Interaksi Manusia & Komputer (UI/UX)",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs403_15"
+            },
+            {
+              "id": "t_cs403_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Interaksi Manusia & Komputer (UI/UX)",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs403_16"
+            }
+          ]
+        },
+        {
+          "id": "cs404",
+          "title": "Probabilitas & Statistika Informatika",
+          "iconType": "course2",
+          "meetingsCount": 16,
+          "estHours": "5.5 Jam",
+          "topics": [
+            {
+              "id": "t_cs404_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Probabilitas & Statistika Informatika",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs404_01"
+            },
+            {
+              "id": "t_cs404_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Probabilitas & Statistika Informatika",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs404_02"
+            },
+            {
+              "id": "t_cs404_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Probabilitas & Statistika Informatika",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs404_03"
+            },
+            {
+              "id": "t_cs404_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Probabilitas & Statistika Informatika",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs404_04"
+            },
+            {
+              "id": "t_cs404_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Probabilitas & Statistika Informatika",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs404_05"
+            },
+            {
+              "id": "t_cs404_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Probabilitas & Statistika Informatika",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs404_06"
+            },
+            {
+              "id": "t_cs404_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Probabilitas & Statistika Informatika",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs404_07"
+            },
+            {
+              "id": "t_cs404_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Probabilitas & Statistika Informatika",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs404_08"
+            },
+            {
+              "id": "t_cs404_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Probabilitas & Statistika Informatika",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs404_09"
+            },
+            {
+              "id": "t_cs404_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Probabilitas & Statistika Informatika",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs404_10"
+            },
+            {
+              "id": "t_cs404_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Probabilitas & Statistika Informatika",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs404_11"
+            },
+            {
+              "id": "t_cs404_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Probabilitas & Statistika Informatika",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs404_12"
+            },
+            {
+              "id": "t_cs404_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Probabilitas & Statistika Informatika",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs404_13"
+            },
+            {
+              "id": "t_cs404_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Probabilitas & Statistika Informatika",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs404_14"
+            },
+            {
+              "id": "t_cs404_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Probabilitas & Statistika Informatika",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs404_15"
+            },
+            {
+              "id": "t_cs404_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Probabilitas & Statistika Informatika",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs404_16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "semesterNumber": 5,
+      "title": "Semester 5",
+      "courses": [
+        {
+          "id": "cs501",
+          "title": "Kecerdasan Buatan (AI)",
+          "iconType": "course3",
+          "meetingsCount": 16,
+          "estHours": "7.0 Jam",
+          "topics": [
+            {
+              "id": "t_cs501_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Kecerdasan Buatan (AI)",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs501_01"
+            },
+            {
+              "id": "t_cs501_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Kecerdasan Buatan (AI)",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs501_02"
+            },
+            {
+              "id": "t_cs501_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Kecerdasan Buatan (AI)",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs501_03"
+            },
+            {
+              "id": "t_cs501_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Kecerdasan Buatan (AI)",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs501_04"
+            },
+            {
+              "id": "t_cs501_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Kecerdasan Buatan (AI)",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs501_05"
+            },
+            {
+              "id": "t_cs501_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Kecerdasan Buatan (AI)",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs501_06"
+            },
+            {
+              "id": "t_cs501_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Kecerdasan Buatan (AI)",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs501_07"
+            },
+            {
+              "id": "t_cs501_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Kecerdasan Buatan (AI)",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs501_08"
+            },
+            {
+              "id": "t_cs501_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Kecerdasan Buatan (AI)",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs501_09"
+            },
+            {
+              "id": "t_cs501_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Kecerdasan Buatan (AI)",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs501_10"
+            },
+            {
+              "id": "t_cs501_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Kecerdasan Buatan (AI)",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs501_11"
+            },
+            {
+              "id": "t_cs501_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Kecerdasan Buatan (AI)",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs501_12"
+            },
+            {
+              "id": "t_cs501_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Kecerdasan Buatan (AI)",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs501_13"
+            },
+            {
+              "id": "t_cs501_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Kecerdasan Buatan (AI)",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs501_14"
+            },
+            {
+              "id": "t_cs501_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Kecerdasan Buatan (AI)",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs501_15"
+            },
+            {
+              "id": "t_cs501_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Kecerdasan Buatan (AI)",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs501_16"
+            }
+          ]
+        },
+        {
+          "id": "cs502",
+          "title": "Pemrograman Web Lanjut (Fullstack)",
+          "iconType": "course1",
+          "meetingsCount": 16,
+          "estHours": "8.0 Jam",
+          "topics": [
+            {
+              "id": "t_cs502_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Pemrograman Web Lanjut (Fullstack)",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs502_01"
+            },
+            {
+              "id": "t_cs502_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Pemrograman Web Lanjut (Fullstack)",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs502_02"
+            },
+            {
+              "id": "t_cs502_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Pemrograman Web Lanjut (Fullstack)",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs502_03"
+            },
+            {
+              "id": "t_cs502_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Pemrograman Web Lanjut (Fullstack)",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs502_04"
+            },
+            {
+              "id": "t_cs502_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Pemrograman Web Lanjut (Fullstack)",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs502_05"
+            },
+            {
+              "id": "t_cs502_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Pemrograman Web Lanjut (Fullstack)",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs502_06"
+            },
+            {
+              "id": "t_cs502_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Pemrograman Web Lanjut (Fullstack)",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs502_07"
+            },
+            {
+              "id": "t_cs502_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Pemrograman Web Lanjut (Fullstack)",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs502_08"
+            },
+            {
+              "id": "t_cs502_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Pemrograman Web Lanjut (Fullstack)",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs502_09"
+            },
+            {
+              "id": "t_cs502_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Pemrograman Web Lanjut (Fullstack)",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs502_10"
+            },
+            {
+              "id": "t_cs502_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Pemrograman Web Lanjut (Fullstack)",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs502_11"
+            },
+            {
+              "id": "t_cs502_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Pemrograman Web Lanjut (Fullstack)",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs502_12"
+            },
+            {
+              "id": "t_cs502_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Pemrograman Web Lanjut (Fullstack)",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs502_13"
+            },
+            {
+              "id": "t_cs502_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Pemrograman Web Lanjut (Fullstack)",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs502_14"
+            },
+            {
+              "id": "t_cs502_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Pemrograman Web Lanjut (Fullstack)",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs502_15"
+            },
+            {
+              "id": "t_cs502_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Pemrograman Web Lanjut (Fullstack)",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs502_16"
+            }
+          ]
+        },
+        {
+          "id": "cs503",
+          "title": "Manajemen Proyek Perangkat Lunak",
+          "iconType": "course2",
+          "meetingsCount": 16,
+          "estHours": "5.5 Jam",
+          "topics": [
+            {
+              "id": "t_cs503_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Manajemen Proyek Perangkat Lunak",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs503_01"
+            },
+            {
+              "id": "t_cs503_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Manajemen Proyek Perangkat Lunak",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs503_02"
+            },
+            {
+              "id": "t_cs503_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Manajemen Proyek Perangkat Lunak",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs503_03"
+            },
+            {
+              "id": "t_cs503_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Manajemen Proyek Perangkat Lunak",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs503_04"
+            },
+            {
+              "id": "t_cs503_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Manajemen Proyek Perangkat Lunak",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs503_05"
+            },
+            {
+              "id": "t_cs503_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Manajemen Proyek Perangkat Lunak",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs503_06"
+            },
+            {
+              "id": "t_cs503_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Manajemen Proyek Perangkat Lunak",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs503_07"
+            },
+            {
+              "id": "t_cs503_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Manajemen Proyek Perangkat Lunak",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs503_08"
+            },
+            {
+              "id": "t_cs503_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Manajemen Proyek Perangkat Lunak",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs503_09"
+            },
+            {
+              "id": "t_cs503_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Manajemen Proyek Perangkat Lunak",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs503_10"
+            },
+            {
+              "id": "t_cs503_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Manajemen Proyek Perangkat Lunak",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs503_11"
+            },
+            {
+              "id": "t_cs503_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Manajemen Proyek Perangkat Lunak",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs503_12"
+            },
+            {
+              "id": "t_cs503_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Manajemen Proyek Perangkat Lunak",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs503_13"
+            },
+            {
+              "id": "t_cs503_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Manajemen Proyek Perangkat Lunak",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs503_14"
+            },
+            {
+              "id": "t_cs503_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Manajemen Proyek Perangkat Lunak",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs503_15"
+            },
+            {
+              "id": "t_cs503_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Manajemen Proyek Perangkat Lunak",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs503_16"
+            }
+          ]
+        },
+        {
+          "id": "cs504",
+          "title": "Sistem Terdistribusi & Cloud Computing",
+          "iconType": "course1",
+          "meetingsCount": 16,
+          "estHours": "6.5 Jam",
+          "topics": [
+            {
+              "id": "t_cs504_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Sistem Terdistribusi & Cloud Computing",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs504_01"
+            },
+            {
+              "id": "t_cs504_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Sistem Terdistribusi & Cloud Computing",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs504_02"
+            },
+            {
+              "id": "t_cs504_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Sistem Terdistribusi & Cloud Computing",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs504_03"
+            },
+            {
+              "id": "t_cs504_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Sistem Terdistribusi & Cloud Computing",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs504_04"
+            },
+            {
+              "id": "t_cs504_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Sistem Terdistribusi & Cloud Computing",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs504_05"
+            },
+            {
+              "id": "t_cs504_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Sistem Terdistribusi & Cloud Computing",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs504_06"
+            },
+            {
+              "id": "t_cs504_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Sistem Terdistribusi & Cloud Computing",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs504_07"
+            },
+            {
+              "id": "t_cs504_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Sistem Terdistribusi & Cloud Computing",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs504_08"
+            },
+            {
+              "id": "t_cs504_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Sistem Terdistribusi & Cloud Computing",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs504_09"
+            },
+            {
+              "id": "t_cs504_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Sistem Terdistribusi & Cloud Computing",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs504_10"
+            },
+            {
+              "id": "t_cs504_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Sistem Terdistribusi & Cloud Computing",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs504_11"
+            },
+            {
+              "id": "t_cs504_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Sistem Terdistribusi & Cloud Computing",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs504_12"
+            },
+            {
+              "id": "t_cs504_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Sistem Terdistribusi & Cloud Computing",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs504_13"
+            },
+            {
+              "id": "t_cs504_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Sistem Terdistribusi & Cloud Computing",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs504_14"
+            },
+            {
+              "id": "t_cs504_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Sistem Terdistribusi & Cloud Computing",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs504_15"
+            },
+            {
+              "id": "t_cs504_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Sistem Terdistribusi & Cloud Computing",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs504_16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "semesterNumber": 6,
+      "title": "Semester 6",
+      "courses": [
+        {
+          "id": "cs601",
+          "title": "Keamanan Siber & Kriptografi",
+          "iconType": "course1",
+          "meetingsCount": 16,
+          "estHours": "6.0 Jam",
+          "topics": [
+            {
+              "id": "t_cs601_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Keamanan Siber & Kriptografi",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs601_01"
+            },
+            {
+              "id": "t_cs601_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Keamanan Siber & Kriptografi",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs601_02"
+            },
+            {
+              "id": "t_cs601_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Keamanan Siber & Kriptografi",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs601_03"
+            },
+            {
+              "id": "t_cs601_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Keamanan Siber & Kriptografi",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs601_04"
+            },
+            {
+              "id": "t_cs601_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Keamanan Siber & Kriptografi",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs601_05"
+            },
+            {
+              "id": "t_cs601_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Keamanan Siber & Kriptografi",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs601_06"
+            },
+            {
+              "id": "t_cs601_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Keamanan Siber & Kriptografi",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs601_07"
+            },
+            {
+              "id": "t_cs601_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Keamanan Siber & Kriptografi",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs601_08"
+            },
+            {
+              "id": "t_cs601_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Keamanan Siber & Kriptografi",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs601_09"
+            },
+            {
+              "id": "t_cs601_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Keamanan Siber & Kriptografi",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs601_10"
+            },
+            {
+              "id": "t_cs601_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Keamanan Siber & Kriptografi",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs601_11"
+            },
+            {
+              "id": "t_cs601_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Keamanan Siber & Kriptografi",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs601_12"
+            },
+            {
+              "id": "t_cs601_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Keamanan Siber & Kriptografi",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs601_13"
+            },
+            {
+              "id": "t_cs601_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Keamanan Siber & Kriptografi",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs601_14"
+            },
+            {
+              "id": "t_cs601_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Keamanan Siber & Kriptografi",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs601_15"
+            },
+            {
+              "id": "t_cs601_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Keamanan Siber & Kriptografi",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs601_16"
+            }
+          ]
+        },
+        {
+          "id": "cs602",
+          "title": "Machine Learning & Sains Data",
+          "iconType": "course3",
+          "meetingsCount": 16,
+          "estHours": "7.5 Jam",
+          "topics": [
+            {
+              "id": "t_cs602_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Machine Learning & Sains Data",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs602_01"
+            },
+            {
+              "id": "t_cs602_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Machine Learning & Sains Data",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs602_02"
+            },
+            {
+              "id": "t_cs602_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Machine Learning & Sains Data",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs602_03"
+            },
+            {
+              "id": "t_cs602_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Machine Learning & Sains Data",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs602_04"
+            },
+            {
+              "id": "t_cs602_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Machine Learning & Sains Data",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs602_05"
+            },
+            {
+              "id": "t_cs602_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Machine Learning & Sains Data",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs602_06"
+            },
+            {
+              "id": "t_cs602_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Machine Learning & Sains Data",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs602_07"
+            },
+            {
+              "id": "t_cs602_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Machine Learning & Sains Data",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs602_08"
+            },
+            {
+              "id": "t_cs602_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Machine Learning & Sains Data",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs602_09"
+            },
+            {
+              "id": "t_cs602_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Machine Learning & Sains Data",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs602_10"
+            },
+            {
+              "id": "t_cs602_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Machine Learning & Sains Data",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs602_11"
+            },
+            {
+              "id": "t_cs602_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Machine Learning & Sains Data",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs602_12"
+            },
+            {
+              "id": "t_cs602_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Machine Learning & Sains Data",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs602_13"
+            },
+            {
+              "id": "t_cs602_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Machine Learning & Sains Data",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs602_14"
+            },
+            {
+              "id": "t_cs602_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Machine Learning & Sains Data",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs602_15"
+            },
+            {
+              "id": "t_cs602_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Machine Learning & Sains Data",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs602_16"
+            }
+          ]
+        },
+        {
+          "id": "cs603",
+          "title": "Pengujian Perangkat Lunak (QA/Testing)",
+          "iconType": "course2",
+          "meetingsCount": 16,
+          "estHours": "5.0 Jam",
+          "topics": [
+            {
+              "id": "t_cs603_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Pengujian Perangkat Lunak (QA/Testing)",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs603_01"
+            },
+            {
+              "id": "t_cs603_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Pengujian Perangkat Lunak (QA/Testing)",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs603_02"
+            },
+            {
+              "id": "t_cs603_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Pengujian Perangkat Lunak (QA/Testing)",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs603_03"
+            },
+            {
+              "id": "t_cs603_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Pengujian Perangkat Lunak (QA/Testing)",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs603_04"
+            },
+            {
+              "id": "t_cs603_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Pengujian Perangkat Lunak (QA/Testing)",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs603_05"
+            },
+            {
+              "id": "t_cs603_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Pengujian Perangkat Lunak (QA/Testing)",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs603_06"
+            },
+            {
+              "id": "t_cs603_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Pengujian Perangkat Lunak (QA/Testing)",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs603_07"
+            },
+            {
+              "id": "t_cs603_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Pengujian Perangkat Lunak (QA/Testing)",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs603_08"
+            },
+            {
+              "id": "t_cs603_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Pengujian Perangkat Lunak (QA/Testing)",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs603_09"
+            },
+            {
+              "id": "t_cs603_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Pengujian Perangkat Lunak (QA/Testing)",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs603_10"
+            },
+            {
+              "id": "t_cs603_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Pengujian Perangkat Lunak (QA/Testing)",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs603_11"
+            },
+            {
+              "id": "t_cs603_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Pengujian Perangkat Lunak (QA/Testing)",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs603_12"
+            },
+            {
+              "id": "t_cs603_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Pengujian Perangkat Lunak (QA/Testing)",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs603_13"
+            },
+            {
+              "id": "t_cs603_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Pengujian Perangkat Lunak (QA/Testing)",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs603_14"
+            },
+            {
+              "id": "t_cs603_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Pengujian Perangkat Lunak (QA/Testing)",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs603_15"
+            },
+            {
+              "id": "t_cs603_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Pengujian Perangkat Lunak (QA/Testing)",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs603_16"
+            }
+          ]
+        },
+        {
+          "id": "cs604",
+          "title": "Metodologi Penelitian Informatika",
+          "iconType": "course1",
+          "meetingsCount": 16,
+          "estHours": "4.5 Jam",
+          "topics": [
+            {
+              "id": "t_cs604_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Metodologi Penelitian Informatika",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs604_01"
+            },
+            {
+              "id": "t_cs604_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Metodologi Penelitian Informatika",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs604_02"
+            },
+            {
+              "id": "t_cs604_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Metodologi Penelitian Informatika",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs604_03"
+            },
+            {
+              "id": "t_cs604_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Metodologi Penelitian Informatika",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs604_04"
+            },
+            {
+              "id": "t_cs604_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Metodologi Penelitian Informatika",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs604_05"
+            },
+            {
+              "id": "t_cs604_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Metodologi Penelitian Informatika",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs604_06"
+            },
+            {
+              "id": "t_cs604_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Metodologi Penelitian Informatika",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs604_07"
+            },
+            {
+              "id": "t_cs604_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Metodologi Penelitian Informatika",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs604_08"
+            },
+            {
+              "id": "t_cs604_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Metodologi Penelitian Informatika",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs604_09"
+            },
+            {
+              "id": "t_cs604_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Metodologi Penelitian Informatika",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs604_10"
+            },
+            {
+              "id": "t_cs604_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Metodologi Penelitian Informatika",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs604_11"
+            },
+            {
+              "id": "t_cs604_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Metodologi Penelitian Informatika",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs604_12"
+            },
+            {
+              "id": "t_cs604_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Metodologi Penelitian Informatika",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs604_13"
+            },
+            {
+              "id": "t_cs604_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Metodologi Penelitian Informatika",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs604_14"
+            },
+            {
+              "id": "t_cs604_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Metodologi Penelitian Informatika",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs604_15"
+            },
+            {
+              "id": "t_cs604_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Metodologi Penelitian Informatika",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs604_16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "semesterNumber": 7,
+      "title": "Semester 7",
+      "courses": [
+        {
+          "id": "cs701",
+          "title": "Kerja Praktik / Magang Industri",
+          "iconType": "course2",
+          "meetingsCount": 16,
+          "estHours": "8.0 Jam",
+          "topics": [
+            {
+              "id": "t_cs701_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Kerja Praktik / Magang Industri",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs701_01"
+            },
+            {
+              "id": "t_cs701_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Kerja Praktik / Magang Industri",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs701_02"
+            },
+            {
+              "id": "t_cs701_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Kerja Praktik / Magang Industri",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs701_03"
+            },
+            {
+              "id": "t_cs701_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Kerja Praktik / Magang Industri",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs701_04"
+            },
+            {
+              "id": "t_cs701_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Kerja Praktik / Magang Industri",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs701_05"
+            },
+            {
+              "id": "t_cs701_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Kerja Praktik / Magang Industri",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs701_06"
+            },
+            {
+              "id": "t_cs701_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Kerja Praktik / Magang Industri",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs701_07"
+            },
+            {
+              "id": "t_cs701_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Kerja Praktik / Magang Industri",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs701_08"
+            },
+            {
+              "id": "t_cs701_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Kerja Praktik / Magang Industri",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs701_09"
+            },
+            {
+              "id": "t_cs701_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Kerja Praktik / Magang Industri",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs701_10"
+            },
+            {
+              "id": "t_cs701_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Kerja Praktik / Magang Industri",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs701_11"
+            },
+            {
+              "id": "t_cs701_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Kerja Praktik / Magang Industri",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs701_12"
+            },
+            {
+              "id": "t_cs701_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Kerja Praktik / Magang Industri",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs701_13"
+            },
+            {
+              "id": "t_cs701_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Kerja Praktik / Magang Industri",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs701_14"
+            },
+            {
+              "id": "t_cs701_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Kerja Praktik / Magang Industri",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs701_15"
+            },
+            {
+              "id": "t_cs701_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Kerja Praktik / Magang Industri",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs701_16"
+            }
+          ]
+        },
+        {
+          "id": "cs702",
+          "title": "Etika Profesi & Hukum Siber",
+          "iconType": "course1",
+          "meetingsCount": 16,
+          "estHours": "4.0 Jam",
+          "topics": [
+            {
+              "id": "t_cs702_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Etika Profesi & Hukum Siber",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs702_01"
+            },
+            {
+              "id": "t_cs702_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Etika Profesi & Hukum Siber",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs702_02"
+            },
+            {
+              "id": "t_cs702_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Etika Profesi & Hukum Siber",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs702_03"
+            },
+            {
+              "id": "t_cs702_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Etika Profesi & Hukum Siber",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs702_04"
+            },
+            {
+              "id": "t_cs702_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Etika Profesi & Hukum Siber",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs702_05"
+            },
+            {
+              "id": "t_cs702_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Etika Profesi & Hukum Siber",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs702_06"
+            },
+            {
+              "id": "t_cs702_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Etika Profesi & Hukum Siber",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs702_07"
+            },
+            {
+              "id": "t_cs702_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Etika Profesi & Hukum Siber",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs702_08"
+            },
+            {
+              "id": "t_cs702_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Etika Profesi & Hukum Siber",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs702_09"
+            },
+            {
+              "id": "t_cs702_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Etika Profesi & Hukum Siber",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs702_10"
+            },
+            {
+              "id": "t_cs702_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Etika Profesi & Hukum Siber",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs702_11"
+            },
+            {
+              "id": "t_cs702_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Etika Profesi & Hukum Siber",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs702_12"
+            },
+            {
+              "id": "t_cs702_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Etika Profesi & Hukum Siber",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs702_13"
+            },
+            {
+              "id": "t_cs702_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Etika Profesi & Hukum Siber",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs702_14"
+            },
+            {
+              "id": "t_cs702_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Etika Profesi & Hukum Siber",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs702_15"
+            },
+            {
+              "id": "t_cs702_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Etika Profesi & Hukum Siber",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs702_16"
+            }
+          ]
+        },
+        {
+          "id": "cs703",
+          "title": "Kewirausahaan Teknologi (Technopreneurship)",
+          "iconType": "course3",
+          "meetingsCount": 16,
+          "estHours": "5.0 Jam",
+          "topics": [
+            {
+              "id": "t_cs703_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Kewirausahaan Teknologi (Technopreneurship)",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs703_01"
+            },
+            {
+              "id": "t_cs703_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Kewirausahaan Teknologi (Technopreneurship)",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs703_02"
+            },
+            {
+              "id": "t_cs703_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Kewirausahaan Teknologi (Technopreneurship)",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs703_03"
+            },
+            {
+              "id": "t_cs703_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Kewirausahaan Teknologi (Technopreneurship)",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs703_04"
+            },
+            {
+              "id": "t_cs703_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Kewirausahaan Teknologi (Technopreneurship)",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs703_05"
+            },
+            {
+              "id": "t_cs703_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Kewirausahaan Teknologi (Technopreneurship)",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs703_06"
+            },
+            {
+              "id": "t_cs703_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Kewirausahaan Teknologi (Technopreneurship)",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs703_07"
+            },
+            {
+              "id": "t_cs703_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Kewirausahaan Teknologi (Technopreneurship)",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs703_08"
+            },
+            {
+              "id": "t_cs703_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Kewirausahaan Teknologi (Technopreneurship)",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs703_09"
+            },
+            {
+              "id": "t_cs703_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Kewirausahaan Teknologi (Technopreneurship)",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs703_10"
+            },
+            {
+              "id": "t_cs703_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Kewirausahaan Teknologi (Technopreneurship)",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs703_11"
+            },
+            {
+              "id": "t_cs703_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Kewirausahaan Teknologi (Technopreneurship)",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs703_12"
+            },
+            {
+              "id": "t_cs703_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Kewirausahaan Teknologi (Technopreneurship)",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs703_13"
+            },
+            {
+              "id": "t_cs703_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Kewirausahaan Teknologi (Technopreneurship)",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs703_14"
+            },
+            {
+              "id": "t_cs703_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Kewirausahaan Teknologi (Technopreneurship)",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs703_15"
+            },
+            {
+              "id": "t_cs703_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Kewirausahaan Teknologi (Technopreneurship)",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs703_16"
+            }
+          ]
+        },
+        {
+          "id": "cs704",
+          "title": "Kapita Selekta Informatika",
+          "iconType": "course2",
+          "meetingsCount": 16,
+          "estHours": "6.0 Jam",
+          "topics": [
+            {
+              "id": "t_cs704_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Kapita Selekta Informatika",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs704_01"
+            },
+            {
+              "id": "t_cs704_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Kapita Selekta Informatika",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs704_02"
+            },
+            {
+              "id": "t_cs704_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Kapita Selekta Informatika",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs704_03"
+            },
+            {
+              "id": "t_cs704_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Kapita Selekta Informatika",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs704_04"
+            },
+            {
+              "id": "t_cs704_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Kapita Selekta Informatika",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs704_05"
+            },
+            {
+              "id": "t_cs704_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Kapita Selekta Informatika",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs704_06"
+            },
+            {
+              "id": "t_cs704_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Kapita Selekta Informatika",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs704_07"
+            },
+            {
+              "id": "t_cs704_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Kapita Selekta Informatika",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs704_08"
+            },
+            {
+              "id": "t_cs704_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Kapita Selekta Informatika",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs704_09"
+            },
+            {
+              "id": "t_cs704_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Kapita Selekta Informatika",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs704_10"
+            },
+            {
+              "id": "t_cs704_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Kapita Selekta Informatika",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs704_11"
+            },
+            {
+              "id": "t_cs704_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Kapita Selekta Informatika",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs704_12"
+            },
+            {
+              "id": "t_cs704_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Kapita Selekta Informatika",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs704_13"
+            },
+            {
+              "id": "t_cs704_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Kapita Selekta Informatika",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs704_14"
+            },
+            {
+              "id": "t_cs704_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Kapita Selekta Informatika",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs704_15"
+            },
+            {
+              "id": "t_cs704_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Kapita Selekta Informatika",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs704_16"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "semesterNumber": 8,
+      "title": "Semester 8",
+      "courses": [
+        {
+          "id": "cs801",
+          "title": "Tugas Akhir / Skripsi",
+          "iconType": "course3",
+          "meetingsCount": 16,
+          "estHours": "10.0 Jam",
+          "topics": [
+            {
+              "id": "t_cs801_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Tugas Akhir / Skripsi",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs801_01"
+            },
+            {
+              "id": "t_cs801_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Tugas Akhir / Skripsi",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs801_02"
+            },
+            {
+              "id": "t_cs801_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Tugas Akhir / Skripsi",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs801_03"
+            },
+            {
+              "id": "t_cs801_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Tugas Akhir / Skripsi",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs801_04"
+            },
+            {
+              "id": "t_cs801_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Tugas Akhir / Skripsi",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs801_05"
+            },
+            {
+              "id": "t_cs801_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Tugas Akhir / Skripsi",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs801_06"
+            },
+            {
+              "id": "t_cs801_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Tugas Akhir / Skripsi",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs801_07"
+            },
+            {
+              "id": "t_cs801_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Tugas Akhir / Skripsi",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs801_08"
+            },
+            {
+              "id": "t_cs801_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Tugas Akhir / Skripsi",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs801_09"
+            },
+            {
+              "id": "t_cs801_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Tugas Akhir / Skripsi",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs801_10"
+            },
+            {
+              "id": "t_cs801_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Tugas Akhir / Skripsi",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs801_11"
+            },
+            {
+              "id": "t_cs801_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Tugas Akhir / Skripsi",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs801_12"
+            },
+            {
+              "id": "t_cs801_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Tugas Akhir / Skripsi",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs801_13"
+            },
+            {
+              "id": "t_cs801_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Tugas Akhir / Skripsi",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs801_14"
+            },
+            {
+              "id": "t_cs801_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Tugas Akhir / Skripsi",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs801_15"
+            },
+            {
+              "id": "t_cs801_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Tugas Akhir / Skripsi",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs801_16"
+            }
+          ]
+        },
+        {
+          "id": "cs802",
+          "title": "Seminar Proposal & Sidang",
+          "iconType": "course1",
+          "meetingsCount": 16,
+          "estHours": "4.0 Jam",
+          "topics": [
+            {
+              "id": "t_cs802_01",
+              "no": 1,
+              "title": "Pertemuan 01: Pembahasan Modul 1 Seminar Proposal & Sidang",
+              "duration": "20m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs802_01"
+            },
+            {
+              "id": "t_cs802_02",
+              "no": 2,
+              "title": "Pertemuan 02: Pembahasan Modul 2 Seminar Proposal & Sidang",
+              "duration": "22m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs802_02"
+            },
+            {
+              "id": "t_cs802_03",
+              "no": 3,
+              "title": "Pertemuan 03: Pembahasan Modul 3 Seminar Proposal & Sidang",
+              "duration": "24m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs802_03"
+            },
+            {
+              "id": "t_cs802_04",
+              "no": 4,
+              "title": "Pertemuan 04: Pembahasan Modul 4 Seminar Proposal & Sidang",
+              "duration": "26m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs802_04"
+            },
+            {
+              "id": "t_cs802_05",
+              "no": 5,
+              "title": "Pertemuan 05: Pembahasan Modul 5 Seminar Proposal & Sidang",
+              "duration": "28m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs802_05"
+            },
+            {
+              "id": "t_cs802_06",
+              "no": 6,
+              "title": "Pertemuan 06: Pembahasan Modul 6 Seminar Proposal & Sidang",
+              "duration": "30m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs802_06"
+            },
+            {
+              "id": "t_cs802_07",
+              "no": 7,
+              "title": "Pertemuan 07: Pembahasan Modul 7 Seminar Proposal & Sidang",
+              "duration": "32m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs802_07"
+            },
+            {
+              "id": "t_cs802_08",
+              "no": 8,
+              "title": "Pertemuan 08: Pembahasan Modul 8 Seminar Proposal & Sidang",
+              "duration": "34m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs802_08"
+            },
+            {
+              "id": "t_cs802_09",
+              "no": 9,
+              "title": "Pertemuan 09: Pembahasan Modul 9 Seminar Proposal & Sidang",
+              "duration": "36m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs802_09"
+            },
+            {
+              "id": "t_cs802_10",
+              "no": 10,
+              "title": "Pertemuan 10: Pembahasan Modul 10 Seminar Proposal & Sidang",
+              "duration": "38m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs802_10"
+            },
+            {
+              "id": "t_cs802_11",
+              "no": 11,
+              "title": "Pertemuan 11: Pembahasan Modul 11 Seminar Proposal & Sidang",
+              "duration": "40m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs802_11"
+            },
+            {
+              "id": "t_cs802_12",
+              "no": 12,
+              "title": "Pertemuan 12: Pembahasan Modul 12 Seminar Proposal & Sidang",
+              "duration": "42m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs802_12"
+            },
+            {
+              "id": "t_cs802_13",
+              "no": 13,
+              "title": "Pertemuan 13: Pembahasan Modul 13 Seminar Proposal & Sidang",
+              "duration": "19m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs802_13"
+            },
+            {
+              "id": "t_cs802_14",
+              "no": 14,
+              "title": "Pertemuan 14: Pembahasan Modul 14 Seminar Proposal & Sidang",
+              "duration": "21m",
+              "channel": "Programmer Zaman Now",
+              "videoId": "vid_cs802_14"
+            },
+            {
+              "id": "t_cs802_15",
+              "no": 15,
+              "title": "Pertemuan 15: Pembahasan Modul 15 Seminar Proposal & Sidang",
+              "duration": "23m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "vid_cs802_15"
+            },
+            {
+              "id": "t_cs802_16",
+              "no": 16,
+              "title": "Pertemuan 16: Pembahasan Modul 16 Seminar Proposal & Sidang",
+              "duration": "25m",
+              "channel": "Kelas Terbuka",
+              "videoId": "vid_cs802_16"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
