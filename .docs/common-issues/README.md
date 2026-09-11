@@ -25,4 +25,5 @@ Before investigating an issue or adding a new gotcha, **scan this catalog** firs
 | **3** | `figma-assets` | File Figma cloud tidak dapat diakses tanpa token | Gunakan skill `fig-decode` untuk membaca berkas lokal `.fig` (`design_system/assets/...`) via node CLI `kiwi-schema`. | [offline-fig-decode.md](./offline-fig-decode.md) |
 | **4** | `youtube-embed` | Player error / video private / YouTube TOS compliance | Pastikan URL fallback "Video sedang diperbarui" dan tombol "Tonton di YouTube" untuk memenuhi atribusi TOS. | [youtube-player-fallback.md](./youtube-player-fallback.md) |
 | **5** | `viewport-layout`| Overflow pada layar mobile 375x812 dp | Standar layout mengikuti rasio 9:19.5 (375x812 dp) dengan safe area insets untuk dynamic notch dan home indicator. | [mobile-viewport-standard.md](./mobile-viewport-standard.md) |
+| **6** | `kmp-gradle` | JVM 64KB UTF-8 string limit & Gradle 9 incompatible with KMP | Chunk string literal JSON > 64KB dan standarisasi Gradle 8.11.1 + Google Maven mirror. | [kmp-gradle-string-constant-limit.md](./kmp-gradle-string-constant-limit.md) |
 

@@ -49,3 +49,13 @@ Thumbs.db
 .agents/*
 !.agents/workflows/
 
+# Gradle & Android
+.gradle/
+build/
+composeApp/build/
+local.properties
+.kotlin/
+*.hprof
+*.log
+
+
