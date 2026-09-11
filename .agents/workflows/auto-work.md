@@ -176,9 +176,35 @@ Berhenti dan perbaiki di gerbang pertama yang merah sebelum melanjutkan.
 | **2** | **Data & API Contracts** | Validasi skema kurikulum JSON & serialisasi `@Serializable`, kontrak Trace ID W3C `traceparent` / `trc_<action>_<timestamp>_<hex>`: `./gradlew test --tests "*Curriculum*" --tests "*TraceId*"`. | Perubahan data/API |
 | **3a** | **Unit Tests** | Jalankan automated test suite di `commonTest` (Android + Native/JVM): `./gradlew test` (atau `./gradlew composeApp:allTests`). Buktikan semua test hijau. | Selalu |
 | **3b** | **Negative Control** | Rusakkan 1 logika yang diuji → buktikan **MERAH** (test gagal) → kembalikan → buktikan **HIJAU**. | **Tiap unit test baru** |
-| **4** | **Component & UI Viewport** | Uji rendering Compose Multiplatform pada standar viewport 375x812 dp (9:19.5), verifikasi Light/Dark mode, token desain UI Kit. **Wajib ambil screenshot resolusi tinggi dan rekaman video (.mp4)** untuk setiap interaksi/layar baru. | Perubahan UI/Layout |
-| **5** | **Performance & Build Artifacts** | Build binary release/debug untuk memverifikasi packaging: `./gradlew assembleDebug` (audit ukuran bundle APK di `composeApp/build/outputs/apk/debug/` dan beban memori/resource). | Fitur baru / optimasi |
+| **4a** | **Headless UI & Snapshots (Roborazzi / Robolectric)** | **SEBELUM KE DEVICE/EMULATOR NYATA**: Uji rendering Composable, layout state, dan visual regression secara headless di JVM menggunakan Roborazzi / Robolectric Compose UI Test (`./gradlew testDebugUnitTest --tests "*Screenshot*"`, `./gradlew recordRoborazziDebug`). Menjamin tidak ada crash layout/state secara cepat dan deterministik. | Tiap perubahan UI |
+| **4b** | **Real Device / Emulator Verification (Android & iOS)** | Jalankan aplikasi pada lingkungan nyata untuk mengambil screenshot resolusi tinggi dan rekaman video (.mp4) interaksi nyata (lihat panduan CLI di bawah). | Tiap fitur/layar baru |
+| **5** | **Performance & Build Artifacts** | Build binary untuk memverifikasi packaging: Android `./gradlew assembleDebug` (audit APK) dan iOS `./gradlew composeApp:linkDebugFrameworkIosSimulatorArm64`. | Fitur baru / optimasi |
 | **6** | **Security & Secret Hygiene** | `git diff origin/main` — pastikan tidak ada API Key YouTube tanpa proteksi, kredensial rahasia, atau hardcoded auth token yang ter-commit. | Selalu |
+
+### Panduan Eksekusi Gerbang 4b (Android CLI & iOS simctl)
+
+#### 1. Android Verification via `android` CLI
+Gunakan tool resmi `android` CLI (`/Users/tommy-amarbank/.local/bin/android`):
+- **Jalankan emulator**: `android emulator start Pixel_9_Pro` (perintah ini mem-block sampai emulator siap dipakai).
+- **Build & deploy**: `android run --apks=composeApp/build/outputs/apk/debug/composeApp-debug.apk` atau `android install --apks=composeApp/build/outputs/apk/debug/composeApp-debug.apk`.
+- **Ambil Screenshot**: `android screen capture -o .docs/evidence/{task-id}/android/screenshots/{screen_name}.png`.
+- **Inspeksi Hirarki Layout UI**: `android layout -p -o .docs/evidence/{task-id}/android/layout.json` (sangat cepat untuk mendiagnosis tata letak/overflow).
+- **Hentikan emulator**: `android emulator stop`.
+
+#### 2. iOS Verification via `xcrun simctl`
+Gunakan tool simulator bawaan macOS (`xcrun simctl`):
+- **Boot Simulator**: `xcrun simctl boot "iPhone 16 Pro"`.
+- **Ambil Screenshot**: `xcrun simctl io booted screenshot .docs/evidence/{task-id}/ios/screenshots/{screen_name}.png`.
+- **Rekam Video Walkthrough**:
+  ```bash
+  xcrun simctl io booted recordVideo .docs/evidence/{task-id}/ios/demo.mp4 &
+  RECORD_PID=$!
+  # lakukan interaksi navigasi/silabus...
+  kill -SIGINT $RECORD_PID
+  ```
+- **Shutdown Simulator**: `xcrun simctl shutdown booted`.
+
+---
 
 ### Aturan Khusus Gerbang 3b — Negative Control (Anti-Ilusi Test)
 Test yang hijau sebelum dan sesudah kode diubah bukan bukti test bekerja.
@@ -199,17 +225,25 @@ Jika suatu gerbang tidak dapat dijalankan (misal gerbang 5 belum memiliki benchm
 1. **Dokumentasikan Gotchas**:
    - Jika menemukan kendala non-obvious atau keputusan arsitektural penting selama pengerjaan,
      catat ke dalam [`.docs/common-issues/`](../../.docs/common-issues/README.md).
-2. **Arsipkan Bukti Verifikasi Lengkap**:
+2. **Arsipkan Bukti Verifikasi Lengkap (Multiplatform Android + iOS)**:
    Setiap task yang mengubah kode/UI membuat folder arsip bukti di `.docs/evidence/{task-id-or-slug}/` (atau `.docs/evidence/YYYY/MM/DD/NN-{task-id}-{slug}/`):
    ```
    .docs/evidence/{task-id-or-number}/
    ├── README.md               # Ringkasan bukti, tabel lingkungan, rasio negative control
    ├── console-evidence.txt    # Log eksekusi test & linter
-   ├── demo.mp4                # Video walkthrough eksekusi/interaksi UI nyata (WAJIB jika ada perubahan UI)
-   └── screenshots/            # Tangkapan layar PNG viewport 375x812 dp (WAJIB jika ada perubahan UI)
-       ├── 01_screen_initial.png
-       ├── 02_screen_interaction.png
-       └── ...
+   ├── roborazzi/              # Snapshot headless UI (Roborazzi / Robolectric)
+   │   ├── HomeScreen_light.png
+   │   └── SyllabusScreen.png
+   ├── android/
+   │   ├── demo.mp4            # Video walkthrough Android (Pixel_9_Pro via android CLI)
+   │   └── screenshots/        # Tangkapan layar Android via `android screen capture`
+   │       ├── 01_screen_initial.png
+   │       └── ...
+   └── ios/
+       ├── demo.mp4            # Video walkthrough iOS (iPhone 16 Pro via xcrun simctl)
+       └── screenshots/        # Tangkapan layar iOS via `xcrun simctl io booted screenshot`
+           ├── 01_screen_initial.png
+           └── ...
    ```
 
 ---
@@ -247,17 +281,20 @@ gh pr create --base main --head feature/{task-id}-{slug} \
 1. **Tautan issue** yang dikerjakan (`Refs #...`).
 2. **Ringkasan perubahan teknis**.
 3. **Tabel 7 Gerbang Verifikasi** lengkap dengan hasil eksekusi perintah nyata (`./gradlew ...`).
-4. **Rasio Negative Control** (`N/N → (N-1)/N → N/N`) dan nama unit test yang diuji.
-5. **Bukti Visual Tangkapan Layar (Screenshots) Tersemat Langsung**:
+4. **Status Headless Screenshot Testing** (Roborazzi / Robolectric).
+5. **Rasio Negative Control** (`N/N → (N-1)/N → N/N`) dan nama unit test yang diuji.
+6. **Bukti Visual Tangkapan Layar (Screenshots) Android & iOS Tersemat Langsung**:
    - Gambar WAJIB tampil langsung (*inline rendering*) di web GitHub PR tanpa harus download:
      - Gunakan URL GitHub mentah atau format Markdown gambar:
-       `![Nama Layar](https://raw.githubusercontent.com/tomdwipo/oss-elearning/main/.docs/evidence/.../screenshots/nama.png)`
-     - Tampilkan tabel galeri screenshot (misal: State Awal, Interaksi/Checklist, Pencarian, Mode Gelap/Terang).
-6. **Video Walkthrough Tersemat (Video Recording)**:
-   - Sediakan link langsung ke video rekaman alur nyata (`demo.mp4`):
-     - `🎬 Video Demo: [Tonton demo.mp4](https://github.com/tomdwipo/oss-elearning/raw/main/.docs/evidence/.../demo.mp4)`
-     - Dan/atau sematkan video player tag `<video src="https://github.com/tomdwipo/oss-elearning/raw/main/.docs/evidence/.../demo.mp4" controls width="360"></video>`.
-7. **Tautan ke folder arsip bukti** di [`.docs/evidence/`](../../.docs/evidence/).
+       `![Android Layar 01](https://raw.githubusercontent.com/tomdwipo/oss-elearning/main/.docs/evidence/.../android/screenshots/01_initial.png)`
+       `![iOS Layar 01](https://raw.githubusercontent.com/tomdwipo/oss-elearning/main/.docs/evidence/.../ios/screenshots/01_initial.png)`
+     - Tampilkan tabel galeri / perbandingan paritas Android vs iOS (State Awal, Interaksi/Checklist, Pencarian, Mode Gelap/Terang).
+7. **Video Walkthrough Tersemat (Android & iOS)**:
+   - Sediakan tautan file video `.mp4` mentah untuk Android dan iOS:
+     - `🎬 Video Demo Android: [Tonton demo.mp4](https://raw.githubusercontent.com/tomdwipo/oss-elearning/main/.docs/evidence/.../android/demo.mp4)`
+     - `🎬 Video Demo iOS: [Tonton demo.mp4](https://raw.githubusercontent.com/tomdwipo/oss-elearning/main/.docs/evidence/.../ios/demo.mp4)`
+     - Dan/atau sematkan video player tag `<video src="..." controls width="360"></video>`.
+8. **Tautan ke folder arsip bukti** di [`.docs/evidence/`](../../.docs/evidence/).
 
 Update label issue menjadi `in-review`:
 ```bash
