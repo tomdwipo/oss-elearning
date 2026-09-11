@@ -43,13 +43,13 @@ Tujuan utama versi MVP (v0.1) adalah memvalidasi konsistensi belajar mahasiswa/p
 
 ## 🏗️ Roadmap Pengembangan
 
-- [x] Perumusan Product Requirement Document ([.docs/00_fase/01_PRD.md](.docs/00_fase/01_PRD.md))
-- [ ] Inisialisasi Mobile App Framework (Kotlin Multiplatform / Compose Multiplatform — KMP/CMP)
-- [ ] Implementasi Skema & Data Kurikulum Semester 1–8 (JSON / Local Storage)
-- [ ] Pembuatan UI Navigasi (Semester Tab, Course List, Topic Syllabus)
-- [ ] Integrasi YouTube Embedded Player & Controller
-- [ ] Implementasi Local Progress Tracking & Analytics Events
-- [ ] Penanganan Fallback Video Error & Pelaporan Link
+- [x] [CODE] Perumusan Product Requirement Document ([.docs/00_fase/01_PRD.md](.docs/00_fase/01_PRD.md))
+- [x] [CODE] Inisialisasi Mobile App Framework (Kotlin Multiplatform / Compose Multiplatform — KMP/CMP) ([#1](https://github.com/tomdwipo/oss-elearning/issues/1))
+- [x] [CODE] Implementasi Skema & Data Kurikulum Semester 1–8 (JSON / Local Storage) ([#2](https://github.com/tomdwipo/oss-elearning/issues/2))
+- [x] [CODE] Pembuatan UI Navigasi (Semester Tab, Course List, Topic Syllabus) ([#3](https://github.com/tomdwipo/oss-elearning/issues/3), [#4](https://github.com/tomdwipo/oss-elearning/issues/4), [#5](https://github.com/tomdwipo/oss-elearning/issues/5))
+- [x] [CODE] Implementasi Local Progress Tracking & Analytics Events ([#2](https://github.com/tomdwipo/oss-elearning/issues/2), [#4](https://github.com/tomdwipo/oss-elearning/issues/4), [#5](https://github.com/tomdwipo/oss-elearning/issues/5), [#6](https://github.com/tomdwipo/oss-elearning/issues/6))
+- [ ] Integrasi YouTube Embedded Player & Controller (Modul 2)
+- [ ] Penanganan Fallback Video Error & Pelaporan Link (Modul 2)
 
 ---
 
