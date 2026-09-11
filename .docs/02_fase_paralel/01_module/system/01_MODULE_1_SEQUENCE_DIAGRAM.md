@@ -261,3 +261,50 @@ Berikut adalah kamus payload client events yang dihasilkan pada alur Modul 1:
   }
 }
 ```
+
+---
+
+## 5. Skenario Non-Happy Path (E1..E5 Wajib)
+
+```text
+========================================================================================================
+                          5 SKENARIO NON-HAPPY PATH: MODUL 1 (NAVIGASI)
+========================================================================================================
+
+1. E1: Network Stall / Offline Kurikulum
+   [User Tap MK] --> [Repo Timeout (5s)] --> [UI Tampilkan Inline Error Banner (Retry CTA)]
+   (State UI form/tab tetap dipertahankan, tidak me-reset posisi scroll)
+
+2. E2: YouTube Video Takedown / Private Error (Code 100/101/150)
+   [User Tap Topik] --> [Player Mengembalikan Error 150]
+   --> [UI Tampilkan State: "Video materi sedang diperbarui"]
+   --> [Tombol CTA: "Laporkan Link Rusak" (UC-10)]
+
+3. E3: OS Process Death / Low Memory Killer (LMK)
+   [User Membuka Silabus MK] --> [App di-minimize & OS Kill Process]
+   --> [User Buka Kembali App] --> [ViewModel Restore State dari SavedState/Storage]
+   --> [Kembali Langsung ke Silabus MK yang Terakhir Dibuka]
+
+4. E4: User Cancellation / Back Press saat Transisi Loading
+   [User Tap Topik] --> [Loading State Aktif] --> [User Menekan Tombol Back]
+   --> [Controller Membatalkan Coroutine Job Pemutaran]
+   --> [UI Tetap Aman di Halaman Silabus tanpa Glitch]
+
+5. E5: Corrupted Local Progress Storage / SQLite Disk Error
+   [Baca Progress Lokal] --> [Exception: Database Corrupt]
+   --> [Fallback: Inisialisasi Ulang State Guest Kosong]
+   --> [Kirim Event Telemetri: `storage_read_error` { trace_id }]
+```
+
+---
+
+## 6. Tabel Sitasi & Dasar Rujukan
+
+| Ref | Dokumen Sumber | Bab / Bagian Spesifik | Alur Logis / Kontrak yang Diverifikasi |
+| :--- | :--- | :--- | :--- |
+| **[1]** | [01_PRD.md](../../../00_fase/01_PRD.md) | §4 Modul 1 (FR-1.1 s.d. FR-1.3) | Alur inisialisasi tab semester, kartu mata kuliah, dan silabus 16 pertemuan. |
+| **[2]** | [01_PRD.md](../../../00_fase/01_PRD.md) | §5.1 Analytics Sederhana | Spesifikasi 4 event analitik: `app_opened`, `semester_switched`, `course_opened`, `topic_selected`. |
+| **[3]** | [01_PRD.md](../../../00_fase/01_PRD.md) | §5.2 Penanganan Error Utama | Alur penanganan E2 (Video error code / private fallback banner & pelaporan). |
+| **[4]** | [01_USE_CASE.md](../../../01_fase/01_USE_CASE.md) | UC-01, UC-02, UC-03 | Interaksi aktor terhadap Presentation Layer dan state controller. |
+| **[5]** | [DESIGN_SYSTEM_UIKIT_FREE_COMPONENTS.md](../../../design_system/DESIGN_SYSTEM_UIKIT_FREE_COMPONENTS.md) | Token Komponen | Figma Node `1842:24850` (Pill Tabs), Node `1842:24900` (Course Cards), Node `1842:25160` (Mascot). |
+
