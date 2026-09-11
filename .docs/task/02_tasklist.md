@@ -15,18 +15,18 @@ Dokumen ini memetakan seluruh kebutuhan teknis dari **TRD 02** ke dalam rencana 
 
 | Task ID | Issue GitHub | Judul Task | Layer / Source Set | Kompleksitas | Dependensi |
 |---|---|---|---|---|---|
-| **TASK-06** | *TBD* | Data Models Video Player, Report Reason, dan Kontrak Navigasi `ScreenDestination.VideoPlayer` | `commonMain` (Domain/Model) | Low | Modul 1 (`#7`) |
-| **TASK-07** | *TBD* | Platform Bridge `expect/actual` `PlatformVideoPlayer` (Android WebView & iOS WKWebView Iframe) | `commonMain`, `androidMain`, `iosMain` | High | TASK-06 |
-| **TASK-08** | *TBD* | Implementasi `VideoPlayerScreen` dengan Player Controls, Speed Bar, dan Atribusi YouTube | `commonMain` (Presentation/CMP) | Medium | TASK-07 |
-| **TASK-09** | *TBD* | Logika Auto-Centang Progres ($\ge 85\%$) & Sinkronisasi Manual Checkbox ke `ProgressRepository` | `commonMain` (Domain/Data) | Medium | TASK-08 |
-| **TASK-10** | *TBD* | Fallback UI untuk Video Rusak & `ReportBrokenVideoDialog` (Pelaporan Link Rusak) | `commonMain` (Presentation/Data) | Medium | TASK-08 |
-| **TASK-11** | *TBD* | Unit Tests di `commonTest`, Negative Control (Gate 3b), dan Verifikasi APK Debug | `commonTest` (Quality/Testing) | Medium | TASK-06..10 |
+| **TASK-06** | [#8](https://github.com/tomdwipo/oss-elearning/issues/8) | Data Models Video Player, Report Reason, dan Kontrak Navigasi `ScreenDestination.VideoPlayer` | `commonMain` (Domain/Model) | Low | Modul 1 (`#7`) |
+| **TASK-07** | [#9](https://github.com/tomdwipo/oss-elearning/issues/9) | Platform Bridge `expect/actual` `PlatformVideoPlayer` (Android WebView & iOS WKWebView Iframe) | `commonMain`, `androidMain`, `iosMain` | High | TASK-06 |
+| **TASK-08** | [#10](https://github.com/tomdwipo/oss-elearning/issues/10) | Implementasi `VideoPlayerScreen` dengan Player Controls, Speed Bar, dan Atribusi YouTube | `commonMain` (Presentation/CMP) | Medium | TASK-07 |
+| **TASK-09** | [#11](https://github.com/tomdwipo/oss-elearning/issues/11) | Logika Auto-Centang Progres ($\ge 85\%$) & Sinkronisasi Manual Checkbox ke `ProgressRepository` | `commonMain` (Domain/Data) | Medium | TASK-08 |
+| **TASK-10** | [#12](https://github.com/tomdwipo/oss-elearning/issues/12) | Fallback UI untuk Video Rusak & `ReportBrokenVideoDialog` (Pelaporan Link Rusak) | `commonMain` (Presentation/Data) | Medium | TASK-08 |
+| **TASK-11** | [#13](https://github.com/tomdwipo/oss-elearning/issues/13) | Unit Tests di `commonTest`, Negative Control (Gate 3b), dan Verifikasi APK Debug | `commonTest` (Quality/Testing) | Medium | TASK-06..10 |
 
 ---
 
 ## 2. Rincian Task & Acceptance Criteria (4-Pilar Wajib)
 
-### TASK-06: Data Models Video Player, Report Reason, dan Kontrak Navigasi `ScreenDestination.VideoPlayer`
+### TASK-06: Data Models Video Player, Report Reason, dan Kontrak Navigasi `ScreenDestination.VideoPlayer` — [#8](https://github.com/tomdwipo/oss-elearning/issues/8)
 - **Layer:** Domain & Presentation Layer (`commonMain`)
 - **Kompleksitas:** Low
 - **Problem Statement:** Diperlukan representasi model strongly-typed untuk state pemutaran video, konfigurasi kecepatan (*speed multiplier*), alasan pelaporan link rusak, data payload pelaporan, serta penambahan destinasi layar `ScreenDestination.VideoPlayer` pada state navigasi `SemesterViewModel` dan `App.kt`.
@@ -51,7 +51,7 @@ Dokumen ini memetakan seluruh kebutuhan teknis dari **TRD 02** ke dalam rencana 
 
 ---
 
-### TASK-07: Platform Bridge `expect/actual` `PlatformVideoPlayer` (Android WebView & iOS WKWebView Iframe)
+### TASK-07: Platform Bridge `expect/actual` `PlatformVideoPlayer` (Android WebView & iOS WKWebView Iframe) — [#9](https://github.com/tomdwipo/oss-elearning/issues/9)
 - **Layer:** Platform Bridge Layer (`commonMain`, `androidMain`, `iosMain`)
 - **Kompleksitas:** High
 - **Problem Statement:** Diperlukan komponen pemutar video YouTube tersemat (*embedded*) lintas platform di Compose Multiplatform yang bebas dari elemen distraksi eksternal (rekomendasi video lain, kolom komentar, shorts) serta memiliki jembatan komunikasi dua arah (*bidirectional bridge*) untuk progress tracking dan error handling.
@@ -76,7 +76,7 @@ Dokumen ini memetakan seluruh kebutuhan teknis dari **TRD 02** ke dalam rencana 
 
 ---
 
-### TASK-08: Implementasi `VideoPlayerScreen` dengan Player Controls, Speed Bar, dan Atribusi YouTube
+### TASK-08: Implementasi `VideoPlayerScreen` dengan Player Controls, Speed Bar, dan Atribusi YouTube — [#10](https://github.com/tomdwipo/oss-elearning/issues/10)
 - **Layer:** Presentation Layer (`commonMain`)
 - **Kompleksitas:** Medium
 - **Problem Statement:** Pengguna memerlukan antarmuka layar pemutar materi belajar yang menyajikan kontrol minimalis (Speed controller bar), header navigasi kembali, metadata materi (nomor pertemuan, judul topik, channel kreator, durasi estimasi), tombol atribusi resmi *"Tonton di YouTube"*, dan tombol aksi pelaporan link.
@@ -103,7 +103,7 @@ Dokumen ini memetakan seluruh kebutuhan teknis dari **TRD 02** ke dalam rencana 
 
 ---
 
-### TASK-09: Logika Auto-Centang Progres ($\ge 85\%$) & Sinkronisasi Manual Checkbox ke `ProgressRepository`
+### TASK-09: Logika Auto-Centang Progres ($\ge 85\%$) & Sinkronisasi Manual Checkbox ke `ProgressRepository` — [#11](https://github.com/tomdwipo/oss-elearning/issues/11)
 - **Layer:** Domain & Data Integration Layer (`commonMain`)
 - **Kompleksitas:** Medium
 - **Problem Statement:** Diperlukan logika bisnis untuk secara otomatis mencentang topik sebagai "Selesai" saat durasi video yang ditonton mencapai ambang batas $\ge 85\%$, sekaligus memberikan fleksibilitas bagi pengguna untuk mencentang atau membatalkan centang secara manual di bawah player.
@@ -132,7 +132,7 @@ Dokumen ini memetakan seluruh kebutuhan teknis dari **TRD 02** ke dalam rencana 
 
 ---
 
-### TASK-10: Fallback UI untuk Video Rusak & `ReportBrokenVideoDialog` (Pelaporan Link Rusak)
+### TASK-10: Fallback UI untuk Video Rusak & `ReportBrokenVideoDialog` (Pelaporan Link Rusak) — [#12](https://github.com/tomdwipo/oss-elearning/issues/12)
 - **Layer:** Presentation & Data Layer (`commonMain`)
 - **Kompleksitas:** Medium
 - **Problem Statement:** Jika video materi mengalami kerusakan teknis, dihapus oleh pembuat konten di YouTube, atau disetel ke private, sistem harus menyediakan fallback informatif *"Video materi sedang diperbarui"* serta dialog modal pelaporan link rusak agar kurator dapat segera memperbarui tautan materi.
@@ -163,7 +163,7 @@ Dokumen ini memetakan seluruh kebutuhan teknis dari **TRD 02** ke dalam rencana 
 
 ---
 
-### TASK-11: Unit Tests di `commonTest`, Negative Control (Gate 3b), dan Verifikasi APK Debug
+### TASK-11: Unit Tests di `commonTest`, Negative Control (Gate 3b), dan Verifikasi APK Debug — [#13](https://github.com/tomdwipo/oss-elearning/issues/13)
 - **Layer:** Quality Assurance & Testing Layer (`commonTest` & Build Script)
 - **Kompleksitas:** Medium
 - **Problem Statement:** Seluruh fungsionalitas baru Modul 2 harus divalidasi oleh unit test otomatis di `commonTest`, memenuhi bukti kontrol negatif (Negative Control Gate 3b), dan terverifikasi bersih saat kompilasi APK Android Debug.
