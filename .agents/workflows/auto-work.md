@@ -163,27 +163,28 @@ Jalankan secara sekuensial tanpa berhenti meminta konfirmasi:
 
 ---
 
-## Step 6 — Verifikasi: 7 Gerbang Loop Lokal (Mandatori)
+## Step 6 — Verifikasi: 7 Gerbang Loop Lokal (Mandatori KMP/CMP)
 
+Repository ini berbasis **Kotlin Multiplatform (KMP)** dan **Compose Multiplatform (CMP)** (Android & iOS).
 Urutan gerbang dari yang paling cepat/murah ke yang paling mahal.
 Berhenti dan perbaiki di gerbang pertama yang merah sebelum melanjutkan.
 **Keluaran tiap gerbang yang dijalankan WAJIB ditempel ke laporan.**
 
-| # | Gerbang | Deskripsi & Perintah | Kapan Wajib |
+| # | Gerbang | Deskripsi & Perintah (KMP / CMP) | Kapan Wajib |
 |---|---|---|---|
-| **1** | **Linters & Formatters** | Cek linter & formatting tanpa error/warning baru (`flutter analyze` / `npm run lint` / `npx eslint .`). | Tiap perubahan kode |
-| **2** | **Data & API Contracts** | Validasi skema kurikulum JSON, kontrak YouTube Player embed, Trace ID W3C `traceparent` / `trc_<action>_<timestamp>_<hex>`. | Perubahan data/API |
-| **3a** | **Unit Tests** | Jalankan automated unit tests (`flutter test` / `npm test`). Buktikan semua test hijau. | Selalu |
-| **3b** | **Negative Control** | Rusakkan 1 logika yang diuji → buktikan **MERAH** → kembalikan → buktikan **HIJAU**. | **Tiap unit test baru** |
-| **4** | **Component & UI Viewport** | Uji rendering UI pada standar viewport 375x812 dp (9:19.5), verifikasi Light/Dark mode, cek kesesuaian token desain. | Perubahan UI/Layout |
-| **5** | **Performance & Assets** | Audit ukuran bundle, beban memori, dan kompresi asset gambar/vektor. | Optimasi/fitur berat |
-| **6** | **Security & Secret Hygiene** | Pastikan tidak ada API Key YouTube tanpa proteksi atau kredensial rahasia yang ter-commit. | Selalu |
+| **1** | **Linters & Static Analysis** | Cek linter Gradle & KMP configuration tanpa error/warning baru: `./gradlew check -x test` atau `./gradlew composeApp:lintDebug`. | Tiap perubahan kode |
+| **2** | **Data & API Contracts** | Validasi skema kurikulum JSON & serialisasi `@Serializable`, kontrak Trace ID W3C `traceparent` / `trc_<action>_<timestamp>_<hex>`: `./gradlew test --tests "*Curriculum*" --tests "*TraceId*"`. | Perubahan data/API |
+| **3a** | **Unit Tests** | Jalankan automated test suite di `commonTest` (Android + Native/JVM): `./gradlew test` (atau `./gradlew composeApp:allTests`). Buktikan semua test hijau. | Selalu |
+| **3b** | **Negative Control** | Rusakkan 1 logika yang diuji → buktikan **MERAH** (test gagal) → kembalikan → buktikan **HIJAU**. | **Tiap unit test baru** |
+| **4** | **Component & UI Viewport** | Uji rendering Compose Multiplatform pada standar viewport 375x812 dp (9:19.5), verifikasi Light/Dark mode, token desain UI Kit. **Wajib ambil screenshot resolusi tinggi dan rekaman video (.mp4)** untuk setiap interaksi/layar baru. | Perubahan UI/Layout |
+| **5** | **Performance & Build Artifacts** | Build binary release/debug untuk memverifikasi packaging: `./gradlew assembleDebug` (audit ukuran bundle APK di `composeApp/build/outputs/apk/debug/` dan beban memori/resource). | Fitur baru / optimasi |
+| **6** | **Security & Secret Hygiene** | `git diff origin/main` — pastikan tidak ada API Key YouTube tanpa proteksi, kredensial rahasia, atau hardcoded auth token yang ter-commit. | Selalu |
 
 ### Aturan Khusus Gerbang 3b — Negative Control (Anti-Ilusi Test)
 Test yang hijau sebelum dan sesudah kode diubah bukan bukti test bekerja.
-- Rusakkan 1 kondisi (misal threshold video complete diubah dari `85` ke `101`).
+- Rusakkan 1 kondisi (misal threshold video complete diubah dari `85` ke `101`, atau mutasi formula progress `+ 1`).
 - Jalankan test dan tangkap kegagalan (**MERAH**).
-- Pulihkan kondisi ke `85` dan pastikan kembali (**HIJAU**).
+- Pulihkan kondisi dan pastikan kembali (**HIJAU**).
 - Laporkan rasio: `N/N → (N-1)/N → N/N` beserta **nama test method yang merah**.
 
 ### Aturan Khusus Gerbang yang Tidak Dijalankan
@@ -198,13 +199,17 @@ Jika suatu gerbang tidak dapat dijalankan (misal gerbang 5 belum memiliki benchm
 1. **Dokumentasikan Gotchas**:
    - Jika menemukan kendala non-obvious atau keputusan arsitektural penting selama pengerjaan,
      catat ke dalam [`.docs/common-issues/`](../../.docs/common-issues/README.md).
-2. **Arsipkan Bukti Verifikasi**:
-   Setiap task yang mengubah kode/UI membuat folder arsip bukti di:
+2. **Arsipkan Bukti Verifikasi Lengkap**:
+   Setiap task yang mengubah kode/UI membuat folder arsip bukti di `.docs/evidence/{task-id-or-slug}/` (atau `.docs/evidence/YYYY/MM/DD/NN-{task-id}-{slug}/`):
    ```
-   .docs/evidence/YYYY/MM/DD/NN-{task-id}-{slug}/
+   .docs/evidence/{task-id-or-number}/
    ├── README.md               # Ringkasan bukti, tabel lingkungan, rasio negative control
    ├── console-evidence.txt    # Log eksekusi test & linter
-   └── screenshots/            # Screenshot UI / diff hasil render jika ada
+   ├── demo.mp4                # Video walkthrough eksekusi/interaksi UI nyata (WAJIB jika ada perubahan UI)
+   └── screenshots/            # Tangkapan layar PNG viewport 375x812 dp (WAJIB jika ada perubahan UI)
+       ├── 01_screen_initial.png
+       ├── 02_screen_interaction.png
+       └── ...
    ```
 
 ---
@@ -239,11 +244,20 @@ gh pr create --base main --head feature/{task-id}-{slug} \
 ```
 
 **Deskripsi PR WAJIB memuat bukti nyata (Reviewer tidak boleh disuruh menebak):**
-1. Tautan issue yang dikerjakan.
-2. Ringkasan perubahan teknis.
-3. Tabel 7 Gerbang Verifikasi lengkap dengan hasil eksekusi perintah nyata.
-4. Rasio Negative Control (`N/N → (N-1)/N → N/N`) dan nama unit test yang diuji.
-5. Tautan ke folder arsip bukti di `.docs/evidence/`.
+1. **Tautan issue** yang dikerjakan (`Refs #...`).
+2. **Ringkasan perubahan teknis**.
+3. **Tabel 7 Gerbang Verifikasi** lengkap dengan hasil eksekusi perintah nyata (`./gradlew ...`).
+4. **Rasio Negative Control** (`N/N → (N-1)/N → N/N`) dan nama unit test yang diuji.
+5. **Bukti Visual Tangkapan Layar (Screenshots) Tersemat Langsung**:
+   - Gambar WAJIB tampil langsung (*inline rendering*) di web GitHub PR tanpa harus download:
+     - Gunakan URL GitHub mentah atau format Markdown gambar:
+       `![Nama Layar](https://raw.githubusercontent.com/tomdwipo/oss-elearning/main/.docs/evidence/.../screenshots/nama.png)`
+     - Tampilkan tabel galeri screenshot (misal: State Awal, Interaksi/Checklist, Pencarian, Mode Gelap/Terang).
+6. **Video Walkthrough Tersemat (Video Recording)**:
+   - Sediakan link langsung ke video rekaman alur nyata (`demo.mp4`):
+     - `🎬 Video Demo: [Tonton demo.mp4](https://github.com/tomdwipo/oss-elearning/raw/main/.docs/evidence/.../demo.mp4)`
+     - Dan/atau sematkan video player tag `<video src="https://github.com/tomdwipo/oss-elearning/raw/main/.docs/evidence/.../demo.mp4" controls width="360"></video>`.
+7. **Tautan ke folder arsip bukti** di [`.docs/evidence/`](../../.docs/evidence/).
 
 Update label issue menjadi `in-review`:
 ```bash
