@@ -1,0 +1,77 @@
+================================================================================
+EVIDENCE LOG: MODULE 1 IMPLEMENTATION (KMP / CMP)
+Issues: #1, #2, #3, #4, #5, #6
+Date: 2026-09-11
+================================================================================
+
+--- 1. GRADLE BUILD & RUNNER VERSION ---
+Command: ./gradlew --version
+--------------------------------------------------------------------------------
+------------------------------------------------------------
+Gradle 8.11.1
+------------------------------------------------------------
+
+Build time:    2024-11-20 16:56:46 UTC
+Revision:      481ecab8066005c811e701a0f3a16ff974756584
+
+Kotlin:        2.0.20
+Groovy:        3.0.22
+Ant:           Apache Ant(TM) version 1.10.15 compiled on August 25 2024
+Launcher JVM:  17.0.12 (Homebrew 17.0.12+0)
+Daemon JVM:    /opt/homebrew/Cellar/openjdk@17/17.0.12/libexec/openjdk.jdk/Contents/Home (no JDK specified, using current Java home)
+OS:            Mac OS X 15.6 aarch64
+
+--- 2. COMMONTEST SUITE INITIAL RUN (14/14 PASSED) ---
+Command: ./gradlew test
+Exit code: 0
+--------------------------------------------------------------------------------
+BUILD SUCCESSFUL in 10s
+7 actionable tasks: 7 executed
+All tests passed:
+- CurriculumRepositoryTest:
+  * testParseCurriculumFromJson - PASSED
+  * testCurriculumSemesterCount - PASSED
+  * testCalculateSemesterAndCourseProgress - PASSED
+  * testCorruptedJsonFallbackGraceful - PASSED
+- ProgressRepositoryTest:
+  * testMarkTopicCompletedAndRetrieve - PASSED
+  * testToggleTopicCompletion - PASSED
+  * testProgressSummaryCalculation - PASSED
+- SemesterViewModelTest:
+  * testInitialStateLoadsSemester1 - PASSED
+  * testSelectSemesterUpdatesCourses - PASSED
+  * testSelectCourseAndBackNavigation - PASSED
+  * testToggleTopicCompletionUpdatesProgress - PASSED
+  * testSearchQueryFiltersCourses - PASSED
+- TraceIdAndTelemetryTest:
+  * testTraceIdGenerationFormat - PASSED
+  * testAnalyticsLogEvent - PASSED
+
+--- 3. GATE 3b NEGATIVE CONTROL RUN (RED: 12/14 PASSED, 2 FAILED) ---
+Mutation: Injected + 1 to ProgressSummary calculation formula
+Exit code: 1
+--------------------------------------------------------------------------------
+FAILURE: Build failed with an exception.
+* What went wrong:
+Execution failed for task ':composeApp:jvmTest'.
+> There were failing tests.
+Failures:
+- ProgressRepositoryTest.testProgressSummaryCalculation: expected:<50> but was:<51>
+- CurriculumRepositoryTest.testCalculateSemesterAndCourseProgress: expected:<50> but was:<51>
+BUILD FAILED in 6s
+
+--- 4. GATE 3b RESTORED RUN (GREEN: 14/14 PASSED) ---
+Restored formula: (completedCount.toFloat() / totalCount * 100).toInt()
+Exit code: 0
+--------------------------------------------------------------------------------
+BUILD SUCCESSFUL in 7s
+7 actionable tasks: 7 executed
+14/14 tests passed. Ratio: 14/14 -> 12/14 -> 14/14.
+
+--- 5. ASSEMBLE DEBUG APK ---
+Command: ./gradlew assembleDebug
+Exit code: 0
+--------------------------------------------------------------------------------
+BUILD SUCCESSFUL in 56s
+41 actionable tasks: 19 executed, 22 up-to-date
+Output: composeApp/build/outputs/apk/debug/composeApp-debug.apk (10,814,547 bytes)
