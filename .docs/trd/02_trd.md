@@ -288,14 +288,14 @@ expect fun PlatformVideoPlayer(
 
 Mengikuti penomoran sekuensial setelah Modul 1 (TASK-00 s.d. TASK-05):
 
-| Task ID | Judul Task | Source Set / Layer | Milestone | Dependensi |
-|---|---|---|---|---|
-| **TASK-06** | Data models Video Player, Report Reason, dan kontrak navigasi `ScreenDestination.VideoPlayer` | `commonMain` (Domain/Model) | MVP v0.1 | Modul 1 (`#7`) |
-| **TASK-07** | Abstraksi `expect/actual` `PlatformVideoPlayer` (Android WebView & iOS WKWebView iframe bridge) | `commonMain`, `androidMain`, `iosMain` | MVP v0.1 | TASK-06 |
-| **TASK-08** | Implementasi `VideoPlayerScreen` lengkap dengan Player Controls, Speed Bar, dan Atribusi YouTube | `commonMain` (UI/CMP) | MVP v0.1 | TASK-07 |
-| **TASK-09** | Logika Auto-Centang Progres ($\ge 85\%$) & Sinkronisasi Manual Checkbox ke `ProgressRepository` | `commonMain` (ViewModel/Data) | MVP v0.1 | TASK-08 |
-| **TASK-10** | Fallback UI untuk Video Rusak & `ReportBrokenVideoDialog` (Pelaporan Link Rusak) | `commonMain` (UI/Data) | MVP v0.1 | TASK-08 |
-| **TASK-11** | Test Suite `VideoPlayerTest` di `commonTest`, Negative Control (Gate 3b), dan Verifikasi APK | `commonTest` (Testing) | MVP v0.1 | TASK-06..10 |
+| Task ID | Issue GitHub | Judul Task | Source Set / Layer | Milestone | Dependensi |
+|---|---|---|---|---|---|
+| **TASK-06** | [#8](https://github.com/tomdwipo/oss-elearning/issues/8) | Data models Video Player, Report Reason, dan kontrak navigasi `ScreenDestination.VideoPlayer` | `commonMain` (Domain/Model) | MVP v0.1 | Modul 1 (`#7`) |
+| **TASK-07** | [#9](https://github.com/tomdwipo/oss-elearning/issues/9) | Abstraksi `expect/actual` `PlatformVideoPlayer` (Android WebView & iOS WKWebView iframe bridge) | `commonMain`, `androidMain`, `iosMain` | MVP v0.1 | TASK-06 |
+| **TASK-08** | [#10](https://github.com/tomdwipo/oss-elearning/issues/10) | Implementasi `VideoPlayerScreen` lengkap dengan Player Controls, Speed Bar, dan Atribusi YouTube | `commonMain` (UI/CMP) | MVP v0.1 | TASK-07 |
+| **TASK-09** | [#11](https://github.com/tomdwipo/oss-elearning/issues/11) | Logika Auto-Centang Progres ($\ge 85\%$) & Sinkronisasi Manual Checkbox ke `ProgressRepository` | `commonMain` (ViewModel/Data) | MVP v0.1 | TASK-08 |
+| **TASK-10** | [#12](https://github.com/tomdwipo/oss-elearning/issues/12) | Fallback UI untuk Video Rusak & `ReportBrokenVideoDialog` (Pelaporan Link Rusak) | `commonMain` (UI/Data) | MVP v0.1 | TASK-08 |
+| **TASK-11** | [#13](https://github.com/tomdwipo/oss-elearning/issues/13) | Test Suite `VideoPlayerTest` di `commonTest`, Negative Control (Gate 3b), dan Verifikasi APK | `commonTest` (Testing) | MVP v0.1 | TASK-06..10 |
 
 ---
 
