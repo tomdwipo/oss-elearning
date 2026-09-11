@@ -4,7 +4,7 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Android%20%7C%20iOS-green.svg)](#)
-[![Status: MVP v0.1](https://img.shields.io/badge/Status-MVP%20v0.1-orange.svg)](.docs/00_fase/01_PRD.md)
+[![Status: MVP v0.1](https://img.shields.io/badge/Status-MVP%20v0.1-orange.svg)](.docs/prd/00_prd.md)
 
 ---
 
@@ -12,7 +12,7 @@
 
 **OpenCampus Mobile** dirancang untuk mengatasi fenomena *curation fatigue* dan distraksi algoritma yang kerap dialami oleh pembelajar mandiri (autodidak). Aplikasi ini mengemas video-video perkuliahan berkualitas dari YouTube ke dalam kurikulum semester yang terstruktur dan terurut (Semester 1–8), dilengkapi dengan pemutar video bebas distraksi dan pelacak progres belajar sederhana.
 
-Dokumen kebutuhan produk lengkap dapat dilihat di 📄 **[.docs/00_fase/01_PRD.md](.docs/00_fase/01_PRD.md)**.
+Dokumen kebutuhan produk lengkap dapat dilihat di 📄 **[.docs/prd/00_prd.md](.docs/prd/00_prd.md)**.
 
 ---
 
@@ -43,7 +43,7 @@ Tujuan utama versi MVP (v0.1) adalah memvalidasi konsistensi belajar mahasiswa/p
 
 ## 🏗️ Roadmap Pengembangan
 
-- [x] [CODE] Perumusan Product Requirement Document ([.docs/00_fase/01_PRD.md](.docs/00_fase/01_PRD.md))
+- [x] [CODE] Perumusan Product Requirement Document ([.docs/prd/00_prd.md](.docs/prd/00_prd.md))
 - [x] [CODE] Inisialisasi Mobile App Framework (Kotlin Multiplatform / Compose Multiplatform — KMP/CMP) ([#1](https://github.com/tomdwipo/oss-elearning/issues/1))
 - [x] [CODE] Implementasi Skema & Data Kurikulum Semester 1–8 (JSON / Local Storage) ([#2](https://github.com/tomdwipo/oss-elearning/issues/2))
 - [x] [CODE] Pembuatan UI Navigasi (Semester Tab, Course List, Topic Syllabus) ([#3](https://github.com/tomdwipo/oss-elearning/issues/3), [#4](https://github.com/tomdwipo/oss-elearning/issues/4), [#5](https://github.com/tomdwipo/oss-elearning/issues/5))
