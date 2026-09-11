@@ -53,3 +53,31 @@
 
 ## 4. Log Konsol
 Dapat dilihat secara lengkap di [console-evidence.txt](./console-evidence.txt).
+
+---
+
+## 5. Tangkapan Layar (Screenshots Eksekusi Nyata)
+
+| # | Layar / Skenario | Screenshot File | Deskripsi Bukti |
+|---|---|---|---|
+| **1** | **SemesterHomeScreen (Initial)** | [01_home_screen_initial.png](./screenshots/01_home_screen_initial.png) | Tab Semester 1 aktif, HeroProgressCard 0%, daftar kartu mata kuliah Semester 1. |
+| **2** | **SemesterHomeScreen (Sem 2 Tab)** | [02_home_screen_sem2_selected.png](./screenshots/02_home_screen_sem2_selected.png) | Navigasi instan ke tab Semester 2, memperbarui daftar mata kuliah tanpa glitch. |
+| **3** | **CourseSyllabusScreen (Initial)** | [03_syllabus_screen_initial.png](./screenshots/03_syllabus_screen_initial.png) | Daftar 16 pertemuan, durasi, channel YouTube, highlight Next Up pada Topik 01. |
+| **4** | **CourseSyllabusScreen (Checked)** | [04_syllabus_meeting01_checked.png](./screenshots/04_syllabus_meeting01_checked.png) | Checklist manual Topik 01 aktif (`[x]`), progres naik ke 6%, Next Up bergeser ke Topik 02. |
+| **5** | **SemesterHomeScreen (Updated)** | [05_home_screen_progress_updated.png](./screenshots/05_home_screen_progress_updated.png) | Hero card reaktif: "2 dari 64 Topik (3%)", status "Sedang Berjalan", kartu MK "12%". |
+| **6** | **SemesterHomeScreen (Search)** | [06_home_screen_search_filtered.png](./screenshots/06_home_screen_search_filtered.png) | Filter instan query "Matematika" menyaring daftar ke mata kuliah yang cocok. |
+
+---
+
+## 6. Video Walkthrough Aplikasi (Video Evidence)
+
+Rekaman walkthrough end-to-end eksekusi aplikasi Android di emulator:
+- **File Video:** [`demo.mp4`](./demo.mp4) (H.264 / AAC MP4, 720x1600, ~25 detik)
+- **Alur yang Terbukti:**
+  1. Peluncuran aplikasi OpenCampus (`MainActivity`).
+  2. Pergantian tab Semester 1 $\to$ Semester 2 $\to$ Semester 3 $\to$ Semester 1.
+  3. Membuka Silabus mata kuliah "Algoritma & Pemrograman Dasar".
+  4. Menandai checkbox Topik 01 dan Topik 02 (perubahan progres reaktif dan pergeseran *Next Up*).
+  5. Kembali ke Beranda Semester (Hero Progress Card & Course Card ter-update otomatis).
+  6. Pencarian instan mata kuliah pada search bar.
+
