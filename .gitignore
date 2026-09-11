@@ -45,4 +45,7 @@ Thumbs.db
 *.njsproj
 *.sln
 *.sw?
-.agents/
+# Agents configuration
+.agents/*
+!.agents/workflows/
+
