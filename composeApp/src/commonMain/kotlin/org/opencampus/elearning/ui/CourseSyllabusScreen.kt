@@ -42,7 +42,7 @@ fun CourseSyllabusScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val course = viewModel.getActiveCourse()
-    val progress = if (course != null) viewModel.getCourseProgress(course.id) else null
+    val progress = if (course != null) viewModel.getCourseProgress(course.id, uiState.completedTopicIds) else null
 
     Scaffold(
         modifier = modifier.fillMaxSize(),

@@ -74,12 +74,18 @@ class SemesterViewModel(
         }
     }
 
-    fun getSemesterProgress(semesterNumber: Int): ProgressSummary {
-        return curriculumRepository.calculateSemesterProgress(semesterNumber, _uiState.value.completedTopicIds)
+    fun getSemesterProgress(
+        semesterNumber: Int,
+        completedTopicIds: Set<String> = _uiState.value.completedTopicIds
+    ): ProgressSummary {
+        return curriculumRepository.calculateSemesterProgress(semesterNumber, completedTopicIds)
     }
 
-    fun getCourseProgress(courseId: String): ProgressSummary {
-        return curriculumRepository.calculateCourseProgress(courseId, _uiState.value.completedTopicIds)
+    fun getCourseProgress(
+        courseId: String,
+        completedTopicIds: Set<String> = _uiState.value.completedTopicIds
+    ): ProgressSummary {
+        return curriculumRepository.calculateCourseProgress(courseId, completedTopicIds)
     }
 
     fun onSemesterTabSelected(newSemester: Int) {
