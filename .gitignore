@@ -48,7 +48,6 @@ Thumbs.db
 # Agents configuration
 .agents/*
 !.agents/workflows/
-!.agents/skills/
 
 # Gradle & Android
 .gradle/
