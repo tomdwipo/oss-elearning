@@ -44,7 +44,7 @@ Tujuan utama versi MVP (v0.1) adalah memvalidasi konsistensi belajar mahasiswa/p
 ## 🏗️ Roadmap Pengembangan
 
 - [x] Perumusan Product Requirement Document ([.docs/00_fase/01_PRD.md](.docs/00_fase/01_PRD.md))
-- [ ] Inisialisasi Mobile App Framework (Flutter / React Native)
+- [ ] Inisialisasi Mobile App Framework (Kotlin Multiplatform / Compose Multiplatform — KMP/CMP)
 - [ ] Implementasi Skema & Data Kurikulum Semester 1–8 (JSON / Local Storage)
 - [ ] Pembuatan UI Navigasi (Semester Tab, Course List, Topic Syllabus)
 - [ ] Integrasi YouTube Embedded Player & Controller
