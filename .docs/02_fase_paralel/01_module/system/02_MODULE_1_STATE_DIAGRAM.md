@@ -143,3 +143,14 @@ Berdasarkan sasaran pada [PRD.md](../../../00_fase/01_PRD.md), metrik performans
 * **Solusi Mitigasi Teknis:**
   * Gunakan data kurikulum lokal yang di-bundle bersama aplikasi (*zero network latency* untuk MVP).
   * Lakukan *asynchronous reading* dengan fallback state yang aman.
+
+---
+
+## 5. Tabel Sitasi & Dasar Rujukan
+
+| Ref | Dokumen Sumber | Bab / Bagian Spesifik | Metrik / Alur Transisi yang Diverifikasi |
+| :--- | :--- | :--- | :--- |
+| **[1]** | [01_PRD.md](../../../00_fase/01_PRD.md) | §2 Metrik Validasi MVP | Target Aktivasi $\ge 60\%$ (Drop-off D1 $\le 25\%$, D2 $\le 20\%$). |
+| **[2]** | [01_PRD.md](../../../00_fase/01_PRD.md) | §4 Modul 1 (FR-1.1 s.d. FR-1.3) | Transisi `LOADING_SEMESTER` $\to$ `HOME_SEMESTER_VIEW` $\to$ `COURSE_SYLLABUS_VIEW`. |
+| **[3]** | [01_MODULE_1_SEQUENCE_DIAGRAM.md](./01_MODULE_1_SEQUENCE_DIAGRAM.md) | §3 Sequence Diagram & §5 E1..E5 | Korelasi event transisi state dengan propagasi Trace ID dan mitigasi kegagalan. |
+
