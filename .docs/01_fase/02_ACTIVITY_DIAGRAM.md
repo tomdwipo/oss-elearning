@@ -103,3 +103,16 @@ Dokumen ini memetakan alur aktivitas (*Activity Diagram*) fungsional sederhana u
                       v
                    ( End )
 ```
+
+---
+
+## 4. Tabel Sitasi & Dasar Rujukan
+
+| Ref | Dokumen Sumber | Bab / Bagian Spesifik | Alur Logis yang Diverifikasi |
+| :--- | :--- | :--- | :--- |
+| **[1]** | [01_PRD.md](../00_fase/01_PRD.md) | §4 Modul 1 (FR-1.1 s.d. FR-1.3) | Alur navigasi 3-level: Semester (1-8) $\to$ Course List $\to$ Syllabus 1-16. |
+| **[2]** | [01_PRD.md](../00_fase/01_PRD.md) | §4 Modul 2 (FR-2.1 & FR-2.2) | Alur video playback tertanam dengan kontrol playback mandiri. |
+| **[3]** | [01_PRD.md](../00_fase/01_PRD.md) | §4 Modul 3 (FR-3.1 & FR-3.2) | Logika percabangan auto-complete $\ge 85\%$ vs centang manual pengguna. |
+| **[4]** | [01_PRD.md](../00_fase/01_PRD.md) | §4 Modul 3 (FR-3.3) | Kalkulasi agregasi progres lokal per semester dan pembaruan UI. |
+| **[5]** | [01_PRD.md](../00_fase/01_PRD.md) | §5.2 Penanganan Error Utama | Alur mitigasi video rusak: fallback state + trigger pelaporan link rusak. |
+
