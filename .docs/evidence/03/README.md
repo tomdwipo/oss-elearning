@@ -68,12 +68,15 @@ Dapat dilihat secara lengkap di [console-evidence.txt](./console-evidence.txt).
 | # | Layar / Skenario | Screenshot File | Deskripsi Bukti |
 |---|---|---|---|
 | **1** | **iOS Simulator Booted** | [01_ios_simulator.png](./ios/screenshots/01_ios_simulator.png) | Simulator iPhone 16 Pro (iOS 18.5) booted dan siap eksekusi. |
-| **2** | **Live YouTube Video Playback** | [02_ios_safari_yt.png](./ios/screenshots/02_ios_safari_yt.png) | Pemutaran live stream video terkurasi CS101 `jGyYuQf-GeE` (Web Programming UNPAS) aktif di iOS simulator. |
+| **2** | **SemesterHomeScreen** | [01_home_screen.png](./ios/screenshots/01_home_screen.png) | Beranda semester OpenCampus berjalan native di iPhone 16 Pro. |
+| **3** | **CourseSyllabusScreen** | [02_course_syllabus.png](./ios/screenshots/02_course_syllabus.png) | Daftar 16 topik silabus dengan durasi dan channel terkurasi di iOS. |
+| **4** | **VideoPlayerScreen Active** | [03_video_player_active.png](./ios/screenshots/03_video_player_active.png) | Pemutaran live stream video terkurasi CS101 (Web Programming UNPAS) aktif di dalam aplikasi OpenCampus via WKWebView. |
+| **5** | **Modal Dialog Pelaporan** | [04_report_dialog.png](./ios/screenshots/04_report_dialog.png) | Dialog pelaporan link rusak dengan 4 opsi radio button di iOS. |
 
 ---
 
 ## 6. Video Walkthrough Aplikasi (Dual-Platform Evidence)
 
-- **Android Walkthrough:** [`./android/demo.mp4`](./android/demo.mp4) (H.264 / AAC MP4, 720x1280, interaksi lengkap: pemutar, speed control, checkbox manual, dialog pelaporan).
-- **iOS Walkthrough:** [`./ios/demo.mp4`](./ios/demo.mp4) (Apple QuickTime / H.264, 1206x2622, pemutaran live video kurikulum aktif).
+- **Android Walkthrough:** [`./android/demo.mp4`](./android/demo.mp4) (H.264 / AAC MP4, 720x1280, interaksi lengkap: live player streaming tanpa layar hitam, speed control, checkbox manual, dialog pelaporan).
+- **iOS Walkthrough:** [`./ios/demo.mp4`](./ios/demo.mp4) (Apple QuickTime / HEVC, 1206x2622, pemutaran live video kurikulum aktif di dalam aplikasi OpenCampus di iPhone 16 Pro simulator).
 - **Root Evidence Sync:** [`../02/demo.mp4`](../02/demo.mp4) disinkronkan dengan video rekaman playback nyata tanpa layar hitam.
