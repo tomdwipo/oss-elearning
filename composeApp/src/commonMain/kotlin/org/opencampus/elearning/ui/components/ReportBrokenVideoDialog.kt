@@ -14,6 +14,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -65,7 +67,11 @@ fun ReportBrokenVideoDialog(
             }
         },
         text = {
-            Column(modifier = Modifier.fillMaxWidth()) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .verticalScroll(rememberScrollState())
+            ) {
                 Text(
                     text = "Pilih Alasan Masalah:",
                     fontSize = 13.sp,
@@ -127,7 +133,10 @@ fun ReportBrokenVideoDialog(
         },
         confirmButton = {
             Button(
-                onClick = { onSubmitReport(selectedReason, notes.trim()) },
+                onClick = {
+                    println("[ReportBrokenVideoDialog] Submitting report reason: ${selectedReason.name}, notes_length: ${notes.trim().length}")
+                    onSubmitReport(selectedReason, notes.trim())
+                },
                 colors = ButtonDefaults.buttonColors(
                     containerColor = OpenCampusColors.CorporatePurple
                 ),
