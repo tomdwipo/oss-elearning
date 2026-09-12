@@ -1,30 +1,28 @@
 ---
-description: Jalankan satu tiket atau task open-source end-to-end sampai 'merged' & closed tanpa berhenti minta konfirmasi: putuskan apakah task butuh kerja kode/dokumen di repo ini, rencanakan, kerjakan, verifikasi via 7 gerbang lokal, PR via GitHub CLI, dan transisi status. Pakai saat user memberikan link/nomor issue GitHub, link Jira, atau ID task PRD dan minta dikerjakan otomatis.
+description: Jalankan satu tiket atau task open-source end-to-end: putuskan kebutuhan task, rencanakan, kerjakan, verifikasi via 7 gerbang lokal, dan buat Pull Request. Secara default WAJIB berhenti di Human Review Gate untuk persetujuan merge dari user, KECUALI jika diinstruksikan di awal untuk langsung auto-merge (--auto-merge atau instruksi eksplisit).
 ---
 
 # auto-work Command (OpenCampus Mobile Edition)
 
-Fully autonomous single-ticket/task pipeline: decide whether a task needs code or documentation work in **this**
-repository (`tomdwipo/oss-elearning`), and if it does, carry it end-to-end to "merged & closed" without stopping for confirmation.
+Autonomous single-ticket/task pipeline: decide whether a task needs code or documentation work in **this**
+repository (`tomdwipo/oss-elearning`), implement, verify via 7 local gates, create PR with complete Android & iOS evidence, and await user approval before merge (unless auto-merge is instructed upfront).
 
 ## Usage
 
-```
-/auto-work {github-issue-number-or-url}
-/auto-work {prd-task-id-or-usecase}
-/auto-work {jira-link-or-key}
+```bash
+/auto-work {github-issue-number-or-url} [--auto-merge]
+/auto-work {prd-task-id-or-usecase} [--auto-merge]
+/auto-work {jira-link-or-key} [--auto-merge]
 ```
 
-`$ARGUMENTS` accepts:
-1. **GitHub Issue reference**: `#12`, `12`, or full URL (`https://github.com/tomdwipo/oss-elearning/issues/12`).
-   - Parse issue number with `(?:issues/|#)?(\d+)`.
-   - Fetch context via GitHub CLI: `gh issue view <number> --json title,body,comments,labels,assignees,milestone`.
-2. **PRD / Roadmap Task ID**: `FR-1.1`, `UC-01`, `Modul-1-Navigasi`, or path to task spec in `.docs/00_fase/01_PRD.md`.
-   - Parse section and acceptance criteria directly from `.docs/00_fase/01_PRD.md` and related module specs.
-3. **Jira reference**: e.g. `OCM-12` or browse URL (`https://.../browse/OCM-12`) if working with Jira issues.
-   - Fetch issue via `mcp__atlassian__getJiraIssue` with `fields: ["*all", "comment"]` if Jira MCP is available.
-
-Reject and ask only if neither a GitHub issue, Jira key, nor a PRD task reference is found in the input.
+### Parameter & Flag:
+1. **Target Task**:
+   - GitHub Issue reference: `#12`, `12`, or full URL (`https://github.com/tomdwipo/oss-elearning/issues/12`).
+   - PRD / Roadmap Task ID: `FR-1.1`, `UC-01`, `Modul-1-Navigasi`, or path in `.docs/00_fase/01_PRD.md`.
+   - Jira reference: e.g. `OCM-12` or browse URL.
+2. **`--auto-merge` (Flag / Instruksi Awal Opsional)**:
+   - Jika flag `--auto-merge` disertakan, atau user secara eksplisit meminta di awal ("langsung merge", "auto merge", "tanpa review"), agen akan mem-bypass Human Review Gate setelah Step 9 dan langsung menjalankan merge (Step 10) sampai close issue (Step 12).
+   - Tanpa flag/instruksi ini, agen **WAJIB berhenti** setelah Step 9 untuk menunggu review & konfirmasi user.
 
 ---
 
@@ -71,10 +69,11 @@ Command ini dirancang untuk berjalan sampai tuntas secara mandiri (*unattended*)
 Jangan berhenti meminta konfirmasi pilihan arsitektur, menyetujui plan, atau mengonfirmasi langkah kecil —
 setiap cabang keputusan memiliki **default eksplisit**.
 
-Pemberhentian yang sah hanya ada 3:
+Pemberhentian yang sah ada 4:
 1. **Ownership / Repo mismatch** — task ini sepenuhnya untuk repositori lain atau out-of-scope untuk mobile app.
 2. **Session usage guardrail** — penggunaan kuota/token mendekati ambang batas kritis. Commit + push apa yang aman, lalu checkpoint.
-3. **Delegated run awaiting review** — jika task ini didelegasikan oleh task-giver/reviewer, jeda setelah Step 9 sampai review lolos, lalu lanjutkan ke Step 10 sampai Step 12 tuntas.
+3. **🔴 MANDATORY HUMAN REVIEW GATE (Default setelah Step 9)** — PR telah dibuat, agen menyajikan URL PR di chat dan **BERHENTI TOTAL** menunggu review & persetujuan merge dari user. **Pengecualian**: Jika user di awal perintah secara eksplisit menginstruksikan untuk langsung merge (misal ada flag `--auto-merge` atau kata *"langsung merge"*), gate ini dilewati dan proses lanjut otomatis ke Step 10 sampai Step 12.
+4. **Delegated run awaiting review** — jika task ini didelegasikan oleh task-giver/reviewer, jeda setelah Step 9 sampai review lolos, lalu lanjutkan ke Step 10 sampai Step 12 tuntas.
 
 ---
 
@@ -301,15 +300,34 @@ gh issue edit <id> --remove-label "in-progress" --add-label "in-review"
 
 ---
 
+### 🔴 MANDATORY HUMAN REVIEW GATE (Stop & Await Approval)
+
+⚠️ **ATURAN MERGE REVIEW (WAJIB DIPATUHI):**
+
+1. **Kondisi Default (Wajib Berhenti & Minta Review)**:
+   - Setelah PR berhasil dibuat pada Step 9, agen **WAJIB BERHENTI TOTAL** dan menyajikan tautan PR ke chat:
+     > *"Pull Request telah berhasil dibuat:*  
+     > *[Lihat PR #{pr-number} di GitHub](https://github.com/tomdwipo/oss-elearning/pull/{pr-number})*  
+     >  
+     > *Silakan review ringkasan perubahan kode, hasil 7 gerbang verifikasi, serta bukti rekaman & tangkapan layar Android/iOS langsung di GitHub. Apakah PR ini disetujui untuk di-merge ke branch utama?"*
+   - Agen **DILARANG** menjalankan Step 10 (`gh pr merge`) sebelum user memberikan konfirmasi/persetujuan eksplisit di chat (misal: *"approved"*, *"merge"*, *"lanjutkan merge"*, dsb).
+
+2. **Kondisi Pengecualian (Instruksi Auto-Merge di Awal)**:
+   - Jika sejak awal prompt pemanggilan perintah user **secara eksplisit menginstruksikan untuk langsung merge tanpa review** (misalnya menggunakan flag `--auto-merge`, atau kata-kata *"langsung merge"*, *"merge otomatis"*, *"auto merge tanpa review"*):
+     - Agen **BOLEH melewati (bypass)** Human Review Gate ini.
+     - Agen langsung melanjutkan ke Step 10 (Merge), Step 11, dan Step 12 secara otonom sampai tuntas.
+
+---
+
 ## Step 10 — Aturan Merge (Merge Policy)
 
 ### Kapan Boleh Merge?
-1. **Delegated Run** (dijalankan di bawah delegasi/reviewer):
-   - Jeda setelah Step 9. Tunggu verdict review (**passed**).
-   - Setelah approved, agen langsung menjalankan merge.
-2. **Self-Directed Run** (dijalankan langsung oleh pemilik repo):
-   - Jika perubahan adalah **docs-only** (`.docs/**` saja): boleh langsung di-merge mandiri.
-   - Jika perubahan kode: tunggu instruksi/persetujuan user atau jalankan merge jika user meminta eksekusi end-to-end sampai tuntas.
+1. **Mode Auto-Merge (Diinstruksikan di Awal)**:
+   - Jika flag `--auto-merge` atau instruksi eksplisit diberikan sejak awal, segera eksekusi merge setelah Step 9 selesai tanpa jeda.
+2. **Mode Default (Perlu Persetujuan User)**:
+   - HANYA boleh mengeksekusi merge SETELAH user memberikan persetujuan eksplisit pada Human Review Gate di atas.
+3. **Docs-Only Changes (`.docs/**` saja)**:
+   - Boleh langsung di-merge mandiri jika perubahan hanya berupa dokumentasi non-kode dan non-build script.
 
 ### Eksekusi Merge:
 ```bash
