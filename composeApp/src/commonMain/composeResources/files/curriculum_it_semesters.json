@@ -18,7 +18,7 @@
               "title": "Konsep Dasar Logika & Flowchart",
               "duration": "18m",
               "channel": "Web Programming UNPAS",
-              "videoId": "t101_01_v"
+              "videoId": "jGyYuQf-GeE"
             },
             {
               "id": "t101_02",
@@ -26,7 +26,7 @@
               "title": "Variabel, Tipe Data & Input Output",
               "duration": "25m",
               "channel": "Web Programming UNPAS",
-              "videoId": "t101_02_v"
+              "videoId": "1FAnrYu7LCM"
             },
             {
               "id": "t101_03",
@@ -34,7 +34,7 @@
               "title": "Percabangan: If, Else If, Nested If",
               "duration": "30m",
               "channel": "Kelas Terbuka",
-              "videoId": "t101_03_v"
+              "videoId": "-9IyBehKm4g"
             },
             {
               "id": "t101_04",
@@ -42,7 +42,7 @@
               "title": "Perulangan: For, While, Do-While",
               "duration": "22m",
               "channel": "Kelas Terbuka",
-              "videoId": "t101_04_v"
+              "videoId": "ZeqJewFm7zc"
             },
             {
               "id": "t101_05",
@@ -50,7 +50,7 @@
               "title": "Fungsi & Modularitas Kode",
               "duration": "28m",
               "channel": "Kelas Terbuka",
-              "videoId": "t101_05_v"
+              "videoId": "iTUO1DWVUv8"
             },
             {
               "id": "t101_06",
@@ -58,7 +58,7 @@
               "title": "Rekursi & Call Stack Visualizer",
               "duration": "35m",
               "channel": "Web Programming UNPAS",
-              "videoId": "t101_06_v"
+              "videoId": "-JV_YbJR1GY"
             },
             {
               "id": "t101_07",
@@ -66,31 +66,31 @@
               "title": "Array 1 Dimensi & Manipulasi Indeks",
               "duration": "24m",
               "channel": "Kelas Terbuka",
-              "videoId": "t101_07_v"
+              "videoId": "8WhUADLI4RQ"
             },
             {
               "id": "t101_08",
               "no": 8,
-              "title": "Review & Latihan Ujian Tengah Semester",
-              "duration": "40m",
-              "channel": "Programmer Zaman Now",
-              "videoId": "t101_08_v"
+              "title": "Review & Latihan Logika Pemrograman",
+              "duration": "19m",
+              "channel": "Web Programming UNPAS",
+              "videoId": "TanFwAcHBqE"
             },
             {
               "id": "t101_09",
               "no": 9,
-              "title": "String Manipulasi & Tokenizing",
+              "title": "String Manipulasi & Substring",
               "duration": "20m",
               "channel": "Kelas Terbuka",
-              "videoId": "t101_09_v"
+              "videoId": "OpodtuA0xyI"
             },
             {
               "id": "t101_10",
               "no": 10,
               "title": "Dasar Alokasi Memori & Pointer",
               "duration": "32m",
-              "channel": "Web Programming UNPAS",
-              "videoId": "t101_10_v"
+              "channel": "Kelas Terbuka",
+              "videoId": "O1kWNj5Ikro"
             },
             {
               "id": "t101_11",
@@ -98,47 +98,47 @@
               "title": "Struct & Record Data Bentukan",
               "duration": "26m",
               "channel": "Kelas Terbuka",
-              "videoId": "t101_11_v"
+              "videoId": "ELCI_U4OF5w"
             },
             {
               "id": "t101_12",
               "no": 12,
               "title": "Algoritma Searching: Linear & Binary",
               "duration": "25m",
-              "channel": "Web Programming UNPAS",
-              "videoId": "t101_12_v"
+              "channel": "Kelas Terbuka",
+              "videoId": "QFC4DXvRu8o"
             },
             {
               "id": "t101_13",
               "no": 13,
               "title": "Algoritma Sorting: Bubble & Selection",
               "duration": "35m",
-              "channel": "Web Programming UNPAS",
-              "videoId": "t101_13_v"
+              "channel": "Kelas Terbuka",
+              "videoId": "G0cml-wvaBc"
             },
             {
               "id": "t101_14",
               "no": 14,
               "title": "Analisis Kompleksitas Dasar (Big O)",
               "duration": "28m",
-              "channel": "Kelas Terbuka",
-              "videoId": "t101_14_v"
+              "channel": "Backend Magang",
+              "videoId": "XgKfcZctwA8"
             },
             {
               "id": "t101_15",
               "no": 15,
-              "title": "File Handling: Baca Tulis File .txt",
+              "title": "File Handling: Baca Tulis File Eksternal",
               "duration": "30m",
-              "channel": "Programmer Zaman Now",
-              "videoId": "t101_15_v"
+              "channel": "Kelas Terbuka",
+              "videoId": "rS-mnrY4Djw"
             },
             {
               "id": "t101_16",
               "no": 16,
-              "title": "Proyek Akhir: Mini Aplikasi CLI",
+              "title": "Proyek Akhir: Mini Aplikasi CLI / Game",
               "duration": "45m",
-              "channel": "Programmer Zaman Now",
-              "videoId": "t101_16_v"
+              "channel": "Web Programming UNPAS",
+              "videoId": "Mmf3SXHifBw"
             }
           ]
         },
@@ -152,58 +152,58 @@
             {
               "id": "t_cs102_01",
               "no": 1,
-              "title": "Pertemuan 01: Pembahasan Modul 1 Matematika Diskrit",
+              "title": "Logika Proposisi & Tabel Kebenaran",
               "duration": "20m",
-              "channel": "Kelas Terbuka",
-              "videoId": "vid_cs102_01"
+              "channel": "Les Kak ir",
+              "videoId": "U5eWAywK1Mo"
             },
             {
               "id": "t_cs102_02",
               "no": 2,
-              "title": "Pertemuan 02: Pembahasan Modul 2 Matematika Diskrit",
+              "title": "Operasi Himpunan",
               "duration": "22m",
-              "channel": "Programmer Zaman Now",
-              "videoId": "vid_cs102_02"
+              "channel": "Raja MTK",
+              "videoId": "LrRRt3H4WdY"
             },
             {
               "id": "t_cs102_03",
               "no": 3,
-              "title": "Pertemuan 03: Pembahasan Modul 3 Matematika Diskrit",
+              "title": "Relasi dan Fungsi",
               "duration": "24m",
-              "channel": "Web Programming UNPAS",
-              "videoId": "vid_cs102_03"
+              "channel": "Ika Qutami (UNAIR)",
+              "videoId": "sTN31ZFHQ6M"
             },
             {
               "id": "t_cs102_04",
               "no": 4,
-              "title": "Pertemuan 04: Pembahasan Modul 4 Matematika Diskrit",
+              "title": "Induksi Matematika",
               "duration": "26m",
-              "channel": "Kelas Terbuka",
-              "videoId": "vid_cs102_04"
+              "channel": "Zero Tutorial",
+              "videoId": "R4zgcsAQSh0"
             },
             {
               "id": "t_cs102_05",
               "no": 5,
-              "title": "Pertemuan 05: Pembahasan Modul 5 Matematika Diskrit",
+              "title": "Kombinatorika (Permutasi & Kombinasi)",
               "duration": "28m",
-              "channel": "Programmer Zaman Now",
-              "videoId": "vid_cs102_05"
+              "channel": "Zero Tutorial",
+              "videoId": "rskbSgD2eXM"
             },
             {
               "id": "t_cs102_06",
               "no": 6,
-              "title": "Pertemuan 06: Pembahasan Modul 6 Matematika Diskrit",
+              "title": "Teori Graf (Dasar & Representasi)",
               "duration": "30m",
-              "channel": "Web Programming UNPAS",
-              "videoId": "vid_cs102_06"
+              "channel": "Informatika ITB",
+              "videoId": "7x6dc4G-mkY"
             },
             {
               "id": "t_cs102_07",
               "no": 7,
-              "title": "Pertemuan 07: Pembahasan Modul 7 Matematika Diskrit",
+              "title": "Pohon (Tree & Spanning Tree)",
               "duration": "32m",
-              "channel": "Kelas Terbuka",
-              "videoId": "vid_cs102_07"
+              "channel": "Informatika ITB",
+              "videoId": "OJ544wy2yVk"
             },
             {
               "id": "t_cs102_08",
@@ -289,58 +289,58 @@
             {
               "id": "t_cs103_01",
               "no": 1,
-              "title": "Pertemuan 01: Pembahasan Modul 1 Pengantar Teknologi Informasi",
+              "title": "Pengenalan Komponen Komputer",
               "duration": "20m",
-              "channel": "Kelas Terbuka",
-              "videoId": "vid_cs103_01"
+              "channel": "Dyah Puteria Wati",
+              "videoId": "rxmEFnky0_w"
             },
             {
               "id": "t_cs103_02",
               "no": 2,
-              "title": "Pertemuan 02: Pembahasan Modul 2 Pengantar Teknologi Informasi",
+              "title": "Perangkat Keras (Hardware)",
               "duration": "22m",
-              "channel": "Programmer Zaman Now",
-              "videoId": "vid_cs103_02"
+              "channel": "Yafa Asathin",
+              "videoId": "ytodE2dxvn8"
             },
             {
               "id": "t_cs103_03",
               "no": 3,
-              "title": "Pertemuan 03: Pembahasan Modul 3 Pengantar Teknologi Informasi",
+              "title": "Konsep Sistem Operasi",
               "duration": "24m",
-              "channel": "Web Programming UNPAS",
-              "videoId": "vid_cs103_03"
+              "channel": "Sekilat Info",
+              "videoId": "rRFZ5hExKI8"
             },
             {
               "id": "t_cs103_04",
               "no": 4,
-              "title": "Pertemuan 04: Pembahasan Modul 4 Pengantar Teknologi Informasi",
+              "title": "Jaringan Komputer & Internet",
               "duration": "26m",
-              "channel": "Kelas Terbuka",
-              "videoId": "vid_cs103_04"
+              "channel": "Kok Bisa?",
+              "videoId": "_fl7wWbV604"
             },
             {
               "id": "t_cs103_05",
               "no": 5,
-              "title": "Pertemuan 05: Pembahasan Modul 5 Pengantar Teknologi Informasi",
+              "title": "Konsep Basis Data (Database)",
               "duration": "28m",
-              "channel": "Programmer Zaman Now",
-              "videoId": "vid_cs103_05"
+              "channel": "Dyah Puteria Wati",
+              "videoId": "VxQRXBAJ58Q"
             },
             {
               "id": "t_cs103_06",
               "no": 6,
-              "title": "Pertemuan 06: Pembahasan Modul 6 Pengantar Teknologi Informasi",
+              "title": "Keamanan Siber (Cyber Security)",
               "duration": "30m",
-              "channel": "Web Programming UNPAS",
-              "videoId": "vid_cs103_06"
+              "channel": "Fajar Hendyanto",
+              "videoId": "lWvR3WEf5vQ"
             },
             {
               "id": "t_cs103_07",
               "no": 7,
-              "title": "Pertemuan 07: Pembahasan Modul 7 Pengantar Teknologi Informasi",
+              "title": "Pengenalan Kecerdasan Buatan (AI)",
               "duration": "32m",
-              "channel": "Kelas Terbuka",
-              "videoId": "vid_cs103_07"
+              "channel": "Kuliah Informatika",
+              "videoId": "UYp32dGr5X8"
             },
             {
               "id": "t_cs103_08",
@@ -426,50 +426,50 @@
             {
               "id": "t_cs104_01",
               "no": 1,
-              "title": "Pertemuan 01: Pembahasan Modul 1 Organisasi & Arsitektur Komputer",
+              "title": "Pengantar Organisasi Komputer",
               "duration": "20m",
-              "channel": "Kelas Terbuka",
-              "videoId": "vid_cs104_01"
+              "channel": "Istas Pratomo",
+              "videoId": "zB3pbkrKWtE"
             },
             {
               "id": "t_cs104_02",
               "no": 2,
-              "title": "Pertemuan 02: Pembahasan Modul 2 Organisasi & Arsitektur Komputer",
+              "title": "Struktur Internal CPU & ALU",
               "duration": "22m",
-              "channel": "Programmer Zaman Now",
-              "videoId": "vid_cs104_02"
+              "channel": "Adisty Ismi M.",
+              "videoId": "0jHp0VEz-B8"
             },
             {
               "id": "t_cs104_03",
               "no": 3,
-              "title": "Pertemuan 03: Pembahasan Modul 3 Organisasi & Arsitektur Komputer",
+              "title": "Gerbang Logika Digital",
               "duration": "24m",
-              "channel": "Web Programming UNPAS",
-              "videoId": "vid_cs104_03"
+              "channel": "Guru Digital",
+              "videoId": "LiqmFy0GRnw"
             },
             {
               "id": "t_cs104_04",
               "no": 4,
-              "title": "Pertemuan 04: Pembahasan Modul 4 Organisasi & Arsitektur Komputer",
+              "title": "Memori Utama & Cache Memory",
               "duration": "26m",
-              "channel": "Kelas Terbuka",
-              "videoId": "vid_cs104_04"
+              "channel": "Istas Pratomo",
+              "videoId": "hZWx1KmLSYc"
             },
             {
               "id": "t_cs104_05",
               "no": 5,
-              "title": "Pertemuan 05: Pembahasan Modul 5 Organisasi & Arsitektur Komputer",
+              "title": "Siklus Instruksi Mesin",
               "duration": "28m",
-              "channel": "Programmer Zaman Now",
-              "videoId": "vid_cs104_05"
+              "channel": "M. Hashfi",
+              "videoId": "ko5tV3hdgCw"
             },
             {
               "id": "t_cs104_06",
               "no": 6,
-              "title": "Pertemuan 06: Pembahasan Modul 6 Organisasi & Arsitektur Komputer",
+              "title": "Arsitektur RISC vs CISC",
               "duration": "30m",
-              "channel": "Web Programming UNPAS",
-              "videoId": "vid_cs104_06"
+              "channel": "Rayhan Dzulna",
+              "videoId": "BwHbWr7wTfk"
             },
             {
               "id": "t_cs104_07",

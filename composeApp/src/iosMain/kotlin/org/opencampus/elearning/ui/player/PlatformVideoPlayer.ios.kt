@@ -70,8 +70,8 @@ actual fun PlatformVideoPlayer(
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
             <style>
                 * { margin: 0; padding: 0; box-sizing: border-box; }
-                body { background-color: #1E1E2E; overflow: hidden; width: 100vw; height: 100vh; }
-                #player { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+                html, body { width: 100%; height: 100%; margin: 0; padding: 0; background-color: #1E1E2E; overflow: hidden; }
+                #player { position: fixed; top: 0; left: 0; width: 100%; height: 100%; }
             </style>
         </head>
         <body>
@@ -95,7 +95,8 @@ actual fun PlatformVideoPlayer(
                             'modestbranding': 1,
                             'controls': 1,
                             'enablejsapi': 1,
-                            'fs': 1
+                            'fs': 1,
+                            'origin': 'https://localhost'
                         },
                         events: {
                             'onReady': onPlayerReady,
@@ -174,7 +175,7 @@ actual fun PlatformVideoPlayer(
                     userContentController.addScriptMessageHandler(handler, "videoBridge")
                 }
                 val webView = WKWebView(frame = platform.CoreGraphics.CGRectMake(0.0, 0.0, 0.0, 0.0), configuration = config)
-                val baseUrl = NSURL.URLWithString("https://www.youtube.com")
+                val baseUrl = NSURL.URLWithString("https://localhost")
                 webView.loadHTMLString(htmlContent, baseUrl)
                 webView
             },

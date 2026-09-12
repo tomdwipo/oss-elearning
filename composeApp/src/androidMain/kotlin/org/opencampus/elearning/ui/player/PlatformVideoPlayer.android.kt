@@ -72,8 +72,8 @@ actual fun PlatformVideoPlayer(
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
             <style>
                 * { margin: 0; padding: 0; box-sizing: border-box; }
-                body { background-color: #1E1E2E; overflow: hidden; width: 100vw; height: 100vh; }
-                #player { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+                html, body { width: 100%; height: 100%; margin: 0; padding: 0; background-color: #1E1E2E; overflow: hidden; }
+                #player { position: fixed; top: 0; left: 0; width: 100%; height: 100%; }
             </style>
         </head>
         <body>
@@ -97,7 +97,8 @@ actual fun PlatformVideoPlayer(
                             'modestbranding': 1,
                             'controls': 1,
                             'enablejsapi': 1,
-                            'fs': 1
+                            'fs': 1,
+                            'origin': 'https://localhost'
                         },
                         events: {
                             'onReady': onPlayerReady,
@@ -179,11 +180,12 @@ actual fun PlatformVideoPlayer(
                         mediaPlaybackRequiresUserGesture = false
                         mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
                         cacheMode = WebSettings.LOAD_DEFAULT
+                        userAgentString = "Mozilla/5.0 (Linux; Android 14; Pixel 9 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36"
                     }
                     webChromeClient = WebChromeClient()
                     webViewClient = WebViewClient()
                     addJavascriptInterface(bridge, "AndroidBridge")
-                    loadDataWithBaseURL("https://www.youtube.com", htmlContent, "text/html", "UTF-8", null)
+                    loadDataWithBaseURL("https://localhost", htmlContent, "text/html", "UTF-8", null)
                 }
             },
             update = { webView ->
