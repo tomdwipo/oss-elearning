@@ -16,16 +16,16 @@ Dokumen ini memetakan seluruh kebutuhan teknis dari **TRD 03** ke dalam rencana 
 
 | Task ID | Issue GitHub | Judul Task | Layer / Source Set | Kompleksitas | Dependensi |
 |---|---|---|---|---|---|
-| **TASK-12** | (Pending Gate 2) | Patching Dataset Kurikulum Video Aktif (cs101 16 Pertemuan & Topik Kunci cs102-104) di KMP Data Layer | `commonMain` (Data / Resources) | Medium (3 SP) | - |
-| **TASK-13** | (Pending Gate 2) | Test Suite Validasi Format Video ID (`CurriculumVideoContractTest`), Negative Control (Gate 3b), & Integritas Kurikulum | `commonTest` (Quality / Testing) | Medium (3 SP) | TASK-12 |
-| **TASK-14** | (Pending Gate 2) | Platform Bridge Live Playback Verification, Handling Fallback Galat CDN, & Sinkronisasi Progress State (Android & iOS) | `commonMain`, `androidMain`, `iosMain` | High (5 SP) | TASK-12..13 |
-| **TASK-15** | (Pending Gate 2) | Verifikasi Packaging Dual Platform (`assembleDebug` APK & `linkDebugFrameworkIosSimulatorArm64`), Walkthrough Live Video Playback, dan Pengarsipan Evidence Dual-Platform | `androidMain`, `iosMain`, Evidence Archive | High (5 SP) | TASK-12..14 |
+| **TASK-12** | [#15](https://github.com/tomdwipo/oss-elearning/issues/15) | Patching Dataset Kurikulum Video Aktif (cs101 16 Pertemuan & Topik Kunci cs102-104) di KMP Data Layer | `commonMain` (Data / Resources) | Medium (3 SP) | - |
+| **TASK-13** | [#16](https://github.com/tomdwipo/oss-elearning/issues/16) | Test Suite Validasi Format Video ID (`CurriculumVideoContractTest`), Negative Control (Gate 3b), & Integritas Kurikulum | `commonTest` (Quality / Testing) | Medium (3 SP) | TASK-12 |
+| **TASK-14** | [#17](https://github.com/tomdwipo/oss-elearning/issues/17) | Platform Bridge Live Playback Verification, Handling Fallback Galat CDN, & Sinkronisasi Progress State (Android & iOS) | `commonMain`, `androidMain`, `iosMain` | High (5 SP) | TASK-12..13 |
+| **TASK-15** | [#18](https://github.com/tomdwipo/oss-elearning/issues/18) | Verifikasi Packaging Dual Platform (`assembleDebug` APK & `linkDebugFrameworkIosSimulatorArm64`), Walkthrough Live Video Playback, dan Pengarsipan Evidence Dual-Platform | `androidMain`, `iosMain`, Evidence Archive | High (5 SP) | TASK-12..14 |
 
 ---
 
 ## 2. Rincian Task & Acceptance Criteria (4-Pillar + Dual Platform Wajib)
 
-### TASK-12: Patching Dataset Kurikulum Video Aktif (cs101 16 Pertemuan & Topik Kunci cs102-104) di KMP Data Layer — (Pending Gate 2)
+### TASK-12: Patching Dataset Kurikulum Video Aktif (cs101 16 Pertemuan & Topik Kunci cs102-104) di KMP Data Layer — [#15](https://github.com/tomdwipo/oss-elearning/issues/15)
 - **Layer:** `commonMain` (Data / Resources)
 - **Kompleksitas:** Medium (3 SP)
 - **Problem Statement:** Seluruh 480 topik kurikulum pada `curriculum_it_semesters.json` dan `CurriculumDataSource.kt` saat ini masih menggunakan string mock placeholder (`t101_01_v` dsb.), menyebabkan pemutar video `PlatformVideoPlayer` gagal memuat media stream dan hanya merender kotak gelap `#1E1E2E`.
@@ -66,7 +66,7 @@ Dokumen ini memetakan seluruh kebutuhan teknis dari **TRD 03** ke dalam rencana 
 
 ---
 
-### TASK-13: Test Suite Validasi Format Video ID (`CurriculumVideoContractTest`), Negative Control (Gate 3b), & Integritas Kurikulum — (Pending Gate 2)
+### TASK-13: Test Suite Validasi Format Video ID (`CurriculumVideoContractTest`), Negative Control (Gate 3b), & Integritas Kurikulum — [#16](https://github.com/tomdwipo/oss-elearning/issues/16)
 - **Layer:** `commonTest` (Quality / Testing)
 - **Kompleksitas:** Medium (3 SP)
 - **Problem Statement:** Diperlukan unit test otomatis untuk menjamin bahwa seluruh video ID yang diinjeksi mematuhi pola regex YouTube 11-karakter (`^[a-zA-Z0-9_-]{11}$`) dan nama kanal tidak kosong, serta menyelenggarakan Gate 3b Negative Control untuk membuktikan ketatnya pengujian.
@@ -91,7 +91,7 @@ Dokumen ini memetakan seluruh kebutuhan teknis dari **TRD 03** ke dalam rencana 
 
 ---
 
-### TASK-14: Platform Bridge Live Playback Verification, Handling Fallback Galat CDN, & Sinkronisasi Progress State (Android & iOS) — (Pending Gate 2)
+### TASK-14: Platform Bridge Live Playback Verification, Handling Fallback Galat CDN, & Sinkronisasi Progress State (Android & iOS) — [#17](https://github.com/tomdwipo/oss-elearning/issues/17)
 - **Layer:** `commonMain`, `androidMain`, `iosMain` (Platform Bridge & Presentation)
 - **Kompleksitas:** High (5 SP)
 - **Problem Statement:** Diperlukan verifikasi bahwa injeksi video ID riil dapat di-render secara aktif oleh YouTube Iframe API di dalam Android `WebView` dan iOS `WKWebView`, serta sistem tetap memiliki ketahanan (*resilience*) dengan menampilkan fallback banner dan dialog pelaporan jika CDN mengembalikan galat (skenario E2).
@@ -119,7 +119,7 @@ Dokumen ini memetakan seluruh kebutuhan teknis dari **TRD 03** ke dalam rencana 
 
 ---
 
-### TASK-15: Verifikasi Packaging Dual Platform (`assembleDebug` APK & `linkDebugFrameworkIosSimulatorArm64`), Walkthrough Live Video Playback, dan Pengarsipan Evidence Dual-Platform — (Pending Gate 2)
+### TASK-15: Verifikasi Packaging Dual Platform (`assembleDebug` APK & `linkDebugFrameworkIosSimulatorArm64`), Walkthrough Live Video Playback, dan Pengarsipan Evidence Dual-Platform — [#18](https://github.com/tomdwipo/oss-elearning/issues/18)
 - **Layer:** `androidMain`, `iosMain`, Evidence Archive
 - **Kompleksitas:** High (5 SP)
 - **Problem Statement:** Diperlukan pembuktian empiris tanpa asumsi bahwa kedua platform (Android dan iOS) berhasil di-compile secara dual-platform, serta menghasilkan rekaman audio-visual live pemutaran video aktif di emulator Android Pixel 9 Pro dan simulator iOS iPhone 16 Pro untuk menghapus artefak video berlayar hitam sebelumnya.
