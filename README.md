@@ -48,8 +48,8 @@ Tujuan utama versi MVP (v0.1) adalah memvalidasi konsistensi belajar mahasiswa/p
 - [x] [CODE] Implementasi Skema & Data Kurikulum Semester 1–8 (JSON / Local Storage) ([#2](https://github.com/tomdwipo/oss-elearning/issues/2))
 - [x] [CODE] Pembuatan UI Navigasi (Semester Tab, Course List, Topic Syllabus) ([#3](https://github.com/tomdwipo/oss-elearning/issues/3), [#4](https://github.com/tomdwipo/oss-elearning/issues/4), [#5](https://github.com/tomdwipo/oss-elearning/issues/5))
 - [x] [CODE] Implementasi Local Progress Tracking & Analytics Events ([#2](https://github.com/tomdwipo/oss-elearning/issues/2), [#4](https://github.com/tomdwipo/oss-elearning/issues/4), [#5](https://github.com/tomdwipo/oss-elearning/issues/5), [#6](https://github.com/tomdwipo/oss-elearning/issues/6))
-- [ ] Integrasi YouTube Embedded Player & Controller (Modul 2)
-- [ ] Penanganan Fallback Video Error & Pelaporan Link (Modul 2)
+- [x] [CODE] Integrasi YouTube Embedded Player & Controller (Modul 2) ([#8](https://github.com/tomdwipo/oss-elearning/issues/8), [#9](https://github.com/tomdwipo/oss-elearning/issues/9), [#10](https://github.com/tomdwipo/oss-elearning/issues/10), [#11](https://github.com/tomdwipo/oss-elearning/issues/11))
+- [x] [CODE] Penanganan Fallback Video Error & Pelaporan Link (Modul 2) ([#12](https://github.com/tomdwipo/oss-elearning/issues/12), [#13](https://github.com/tomdwipo/oss-elearning/issues/13))
 
 ---
 
