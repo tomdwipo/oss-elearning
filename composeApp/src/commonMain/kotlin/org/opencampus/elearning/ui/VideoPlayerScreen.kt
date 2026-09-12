@@ -338,12 +338,20 @@ fun VideoPlayerScreen(
                                 .fillMaxWidth()
                                 .clip(RoundedCornerShape(8.dp))
                                 .background(OpenCampusColors.GrayscaleBgLightGrey)
-                                .clickable { viewModel.toggleManualCompletion() }
+                                .clickable {
+                                    println("[VideoPlayerScreen] Toggle manual completion for topic: $topicId")
+                                    viewModel.toggleManualCompletion()
+                                }
                                 .padding(12.dp),
                             verticalAlignment = Alignment.CenterVertically,
                             horizontalArrangement = Arrangement.SpaceBetween
                         ) {
-                            Row(verticalAlignment = Alignment.CenterVertically) {
+                            Row(
+                                modifier = Modifier
+                                    .weight(1f)
+                                    .padding(end = 8.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
                                 Box(
                                     modifier = Modifier
                                         .size(22.dp)
@@ -374,9 +382,11 @@ fun VideoPlayerScreen(
 
                                 Text(
                                     text = "Tandai Selesai (Manual)",
-                                    fontSize = 14.sp,
+                                    fontSize = 13.sp,
                                     fontWeight = FontWeight.SemiBold,
-                                    color = OpenCampusColors.GrayscaleBlack
+                                    color = OpenCampusColors.GrayscaleBlack,
+                                    maxLines = 1,
+                                    overflow = TextOverflow.Ellipsis
                                 )
                             }
 
@@ -387,14 +397,16 @@ fun VideoPlayerScreen(
                                         if (uiState.isCompleted) OpenCampusColors.InformingApproval.copy(alpha = 0.12f)
                                         else OpenCampusColors.GrayscaleSpacer
                                     )
-                                    .padding(horizontal = 10.dp, vertical = 4.dp)
+                                    .padding(horizontal = 8.dp, vertical = 4.dp)
                             ) {
                                 Text(
                                     text = if (uiState.isCompleted) "Selesai" else "Belum Selesai",
                                     fontSize = 11.sp,
                                     fontWeight = FontWeight.Bold,
                                     color = if (uiState.isCompleted) OpenCampusColors.InformingApproval
-                                    else OpenCampusColors.GrayscaleHintText
+                                    else OpenCampusColors.GrayscaleHintText,
+                                    maxLines = 1,
+                                    softWrap = false
                                 )
                             }
                         }

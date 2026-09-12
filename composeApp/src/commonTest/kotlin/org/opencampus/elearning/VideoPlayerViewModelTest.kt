@@ -111,6 +111,15 @@ class VideoPlayerViewModelTest {
             it.event_name == "video_completed" && it.payload["is_manual"].toString() == "true"
         }
         assertEquals(2, manualEvents.size)
+
+        val toggleEvents = analytics.getRecordedEvents().filter {
+            it.event_name == "topic_completion_toggled"
+        }
+        assertEquals(2, toggleEvents.size)
+        assertEquals(courseId, toggleEvents.first().payload["course_id"].toString().replace("\"", ""))
+        assertEquals(topicId, toggleEvents.first().payload["topic_id"].toString().replace("\"", ""))
+        assertEquals("true", toggleEvents.first().payload["is_completed"].toString())
+        assertEquals("manual", toggleEvents.first().payload["source"].toString().replace("\"", ""))
     }
 
     @Test
@@ -157,6 +166,13 @@ class VideoPlayerViewModelTest {
         val reportEvent = analytics.getRecordedEvents().find { it.event_name == "video_link_reported" }
         assertNotNull(reportEvent)
         assertTrue(reportEvent.trace_id.startsWith("trc_rep_send_"))
+
+        val brokenVideoEvent = analytics.getRecordedEvents().find { it.event_name == "broken_video_reported" }
+        assertNotNull(brokenVideoEvent)
+        assertTrue(brokenVideoEvent.trace_id.startsWith("trc_broken_rep_"))
+        assertEquals(topicId, brokenVideoEvent.payload["topic_id"].toString().replace("\"", ""))
+        assertEquals("DELETED_OR_PRIVATE", brokenVideoEvent.payload["reason"].toString().replace("\"", ""))
+        assertEquals("true", brokenVideoEvent.payload["has_notes"].toString())
 
         vm.dismissReportSuccessMessage()
         assertFalse(vm.uiState.value.isReportSubmittedSuccess)
