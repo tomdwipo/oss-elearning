@@ -16,16 +16,16 @@ Dokumen ini memetakan seluruh kebutuhan teknis dari **TRD 04** ke dalam rencana 
 
 | Task ID | Issue GitHub | Judul Task | Layer / Source Set | Kompleksitas | Dependensi |
 |---|---|---|---|---|---|
-| **TASK-16** | (Pending Gate 2) | Responsive Layout Refactoring & Non-Wrapping Badge Container on VideoPlayerScreen | `commonMain` (UI / Presentation) | Medium (3 SP) | - |
-| **TASK-17** | (Pending Gate 2) | Scrollable Adaptive Layout & Spacing Fix on ReportBrokenVideoDialog | `commonMain` (UI / Presentation) | Medium (3 SP) | - |
-| **TASK-18** | (Pending Gate 2) | Dual-Platform Unit Test Suite, Negative Control (Gate 3b), & Roborazzi Visual Parity Validation | `commonTest` (Quality / Testing) | Medium (3 SP) | TASK-16..17 |
-| **TASK-19** | (Pending Gate 2) | Verifikasi Packaging Dual Platform (`assembleDebug` & `linkDebugFrameworkIosSimulatorArm64`), Walkthrough Live Demo, & Evidence Archiving | `androidMain`, `iosMain`, Evidence Archive | High (5 SP) | TASK-16..18 |
+| **TASK-16** | [#20](https://github.com/tomdwipo/oss-elearning/issues/20) | Responsive Layout Refactoring & Non-Wrapping Badge Container on VideoPlayerScreen | `commonMain` (UI / Presentation) | Medium (3 SP) | - |
+| **TASK-17** | [#21](https://github.com/tomdwipo/oss-elearning/issues/21) | Scrollable Adaptive Layout & Spacing Fix on ReportBrokenVideoDialog | `commonMain` (UI / Presentation) | Medium (3 SP) | - |
+| **TASK-18** | [#22](https://github.com/tomdwipo/oss-elearning/issues/22) | Dual-Platform Unit Test Suite, Negative Control (Gate 3b), & Roborazzi Visual Parity Validation | `commonTest` (Quality / Testing) | Medium (3 SP) | TASK-16..17 |
+| **TASK-19** | [#23](https://github.com/tomdwipo/oss-elearning/issues/23) | Verifikasi Packaging Dual Platform (`assembleDebug` & `linkDebugFrameworkIosSimulatorArm64`), Walkthrough Live Demo, & Evidence Archiving | `androidMain`, `iosMain`, Evidence Archive | High (5 SP) | TASK-16..18 |
 
 ---
 
 ## 2. Rincian Task & Acceptance Criteria (4-Pillar + Dual Platform Wajib)
 
-### TASK-16: Responsive Layout Refactoring & Non-Wrapping Badge Container on VideoPlayerScreen — (Pending Gate 2)
+### TASK-16: Responsive Layout Refactoring & Non-Wrapping Badge Container on VideoPlayerScreen — [#20](https://github.com/tomdwipo/oss-elearning/issues/20)
 - **Layer:** `commonMain` (UI / Presentation)
 - **Kompleksitas:** Medium (3 SP)
 - **Problem Statement:** Pada layar iOS, teks badge status `"Belum Selesai"` tertekan oleh baris checklist di sebelah kiri akibat ketiadaan `weight(1f)` dan perbedaan lebar font SF Pro di iOS, sehingga terbungkus ke bawah per huruf secara vertikal (*letter-by-letter wrap*).
@@ -53,7 +53,7 @@ Dokumen ini memetakan seluruh kebutuhan teknis dari **TRD 04** ke dalam rencana 
 
 ---
 
-### TASK-17: Scrollable Adaptive Layout & Spacing Fix on ReportBrokenVideoDialog — (Pending Gate 2)
+### TASK-17: Scrollable Adaptive Layout & Spacing Fix on ReportBrokenVideoDialog — [#21](https://github.com/tomdwipo/oss-elearning/issues/21)
 - **Layer:** `commonMain` (UI / Presentation)
 - **Kompleksitas:** Medium (3 SP)
 - **Problem Statement:** Pada iOS target (Skiko `AlertDialog`), konten dialog yang melebihi batas kanvas vertikal memicu `OutlinedTextField` menabrak dan menindih baris radio button ke-4 (*"Lainnya"*), serta menyembunyikan label catatan opsional.
@@ -81,7 +81,7 @@ Dokumen ini memetakan seluruh kebutuhan teknis dari **TRD 04** ke dalam rencana 
 
 ---
 
-### TASK-18: Dual-Platform Unit Test Suite, Negative Control (Gate 3b), & Roborazzi Visual Parity Validation — (Pending Gate 2)
+### TASK-18: Dual-Platform Unit Test Suite, Negative Control (Gate 3b), & Roborazzi Visual Parity Validation — [#22](https://github.com/tomdwipo/oss-elearning/issues/22)
 - **Layer:** `commonTest` (Quality / Testing)
 - **Kompleksitas:** Medium (3 SP)
 - **Problem Statement:** Perluasan test suite untuk memvalidasi bahwa seluruh perbaikan UI state, penanganan non-happy path E1–E5, serta integrasi viewmodel tidak mengalami regresi pada platform JVM maupun Native iOS.
@@ -104,7 +104,7 @@ Dokumen ini memetakan seluruh kebutuhan teknis dari **TRD 04** ke dalam rencana 
 
 ---
 
-### TASK-19: Verifikasi Packaging Dual Platform (`assembleDebug` & `linkDebugFrameworkIosSimulatorArm64`), Walkthrough Live Demo, & Evidence Archiving — (Pending Gate 2)
+### TASK-19: Verifikasi Packaging Dual Platform (`assembleDebug` & `linkDebugFrameworkIosSimulatorArm64`), Walkthrough Live Demo, & Evidence Archiving — [#23](https://github.com/tomdwipo/oss-elearning/issues/23)
 - **Layer:** `androidMain`, `iosMain`, Evidence Archive
 - **Kompleksitas:** High (5 SP)
 - **Problem Statement:** Menjamin build packaging kedua target platform berhasil bersih tanpa warning/error, mendokumentasikan bukti eksekusi nyata pada Android Emulator Pixel 9 Pro dan iOS Simulator iPhone 16 Pro, serta memperbarui arsip evidence di `.docs/evidence/04/`.
