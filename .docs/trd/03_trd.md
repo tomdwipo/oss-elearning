@@ -9,7 +9,7 @@
 **Dokumen TRD Sebelumnya:** [TRD 02: Video Player & Pelacakan Progres](./02_trd.md)  
 **Target Arsip Evidence:** `.docs/evidence/03/README.md` (dan pembaruan video pemutaran nyata di `.docs/evidence/02/demo.mp4`)  
 **Penulis:** Technical Team (Mobile — Tommy Dwi Putranto)  
-**Status Dokumen:** Draft Awal (Tahap 1 — Menunggu Human Review Gate 1)  
+**Status Dokumen:** Lengkap (Tahap 2 — Menunggu Human Review Gate 2)  
 
 ---
 
@@ -193,3 +193,331 @@ Pembelajar (User)   VideoPlayerScreen (UI)   VideoPlayerViewModel   CurriculumRe
 | **REQ-VID-05** | [PRD 02: Video Player](../prd/02_prd.md) | §2 (FR-3.1) | Ambang batas auto-centang progres $\ge 85\%$ durasi pemutaran yang disinkronkan ke local persistence. | [`5002:2200`](file:///Users/tommy-amarbank/Documents/oss-elearning/.docs/design_system/DESIGN_SYSTEM_UIKIT_FREE_COMPONENTS.md) |
 | **REQ-VID-06** | [PRD 02: Video Player](../prd/02_prd.md) | §2 (FR-3.4) | Fallback UI informatif *"Video materi sedang diperbarui"* disertai dialog pelaporan link rusak jika video tidak tersedia. | [`5002:2300`](file:///Users/tommy-amarbank/Documents/oss-elearning/.docs/design_system/DESIGN_SYSTEM_UIKIT_FREE_COMPONENTS.md) |
 | **REQ-VID-07** | [PRD 00: Global MVP](../prd/00_prd.md) | §5 (Arsip Evidence) | Pengarsipan artefak verifikasi dual-platform (Android APK & iOS Framework) dan video walkthrough pemutaran live. | N/A |
+
+---
+
+## [PARALEL] FASE 2: DESAIN ANTARMUKA (UI/UX)
+
+### 2.1. User Flow & Wireflow
+```text
+[CourseSyllabusScreen]
+         │
+         │ (Tap Topik dengan Video ID Aktif)
+         ▼
+[VideoPlayerScreen] ─── (Loading Iframe) ───> [Live YouTube Media Stream]
+         │                                              │
+         ├──────────────────────────────────────────────┤
+         │                                              │
+         ▼                                              ▼
+[Scrubbing & Speed Bar]                    [Auto-Complete Checkbox]
+(0.75x, 1x, 1.25x, 1.5x, 2x)               (Otomatis saat >= 85%)
+         │                                              │
+         ├──────────────────────────────────────────────┤
+         │                                              │
+         ▼                                              ▼
+[↗ Tonton di YouTube]                      [Fallback Banner (E2)]
+(External YouTube App/Browser)             ("Materi Sedang Diperbarui")
+                                                        │
+                                                        ▼
+                                           [ReportBrokenVideoDialog]
+```
+
+- **Entry Point:** Dari `CourseSyllabusScreen` ketika pengguna memilih salah satu item pertemuan (misalnya Pertemuan 1: *Konsep Dasar Logika & Flowchart*).
+- **Back-Stack Policy:** Menekan ikon kembali (`ArrowBack`) membatalkan pemutaran dan mengembalikan user ke `CourseSyllabusScreen` tanpa me-reset state progres yang telah tersimpan.
+- **Percabangan:**
+  - Jika video aktif: YouTube Iframe merender video player penuh dengan poster thumbnail asli.
+  - Jika video terhapus/privat: Fallback banner muncul menggantikan kontainer gelap, dengan opsi membuka dialog pelaporan link.
+
+### 2.2. Wireframe Layout (375x812 dp, 9:19.5 Target Mobile)
+```text
+┌─────────────────────────────────────────┐ ◄── Top Bar (Back Arrow + Judul Topik)
+│ ◄  Pertemuan 01: Konsep Dasar Logika    │
+├─────────────────────────────────────────┤ ◄── Video Player Container (Aspect 16:9)
+│                                         │
+│      ▶ [ LIVE YOUTUBE VIDEO STREAM ]    │     - Background: #1E1E2E
+│         (Thumbnail / Active Player)     │     - Height: 211 dp (375 * 9/16)
+│                                         │     - Controls: Play/Pause, Fullscreen
+├─────────────────────────────────────────┤
+│ [●─────────────── 08:24 / 18:00 ───────]│ ◄── Scrubbing Bar & Waktu Tonton
+├─────────────────────────────────────────┤
+│ [0.75x]  [ 1x* ]  [1.25x]  [1.5x]  [2x] │ ◄── Playback Speed Horizontal Selector
+├─────────────────────────────────────────┤
+│ [☑] Tandai Selesai (Auto-complete 85%)  │ ◄── Status Checkbox Interaktif
+├─────────────────────────────────────────┤
+│ 👤 Web Programming UNPAS                │ ◄── Atribusi Resmi Kreator & Saluran
+│ ↗ Tonton di YouTube (Atribusi Resmi)    │ ◄── Tombol Link Eksternal
+├─────────────────────────────────────────┤
+│ 🚩 Laporkan Tautan Rusak               │ ◄── Aksi Pelaporan Tautan
+└─────────────────────────────────────────┘
+```
+
+### 2.3. UI Design System & Tokens
+Sesuai dengan `DESIGN_SYSTEM_UIKIT_FREE_COMPONENTS.md`, token visual yang digunakan adalah:
+- **Warna Utama (Brand Colors):**
+  - `Corporate/Purple`: `#9D3FE7` (Aksen kontrol, slider thumb, active speed pill)
+  - `Corporate/DarkPurple`: `#602093` (Border active, dark state)
+  - `Informing/Approval`: `#00B998` (Status topik selesai / checklist auto-complete)
+  - `Informing/Error`: `#D32F2F` (Status video rusak & tombol pelaporan link)
+  - `Grayscale/Surface`: `#1E1E2E` (Warna latar pemutar video)
+  - `Grayscale/TextPrimary`: `#1F1F1F` (Teks utama)
+  - `Grayscale/White`: `#FFFFFF` (Latar belakang screen dan kartu)
+- **Tipografi:** Font family `Poppins` (SemiBold 18sp untuk judul topik, Medium 14sp untuk speed controls, Regular 12sp untuk atribusi).
+- **Corner Radius:** 12dp untuk container video player, 8dp untuk speed pills, 16dp untuk bottom modal / alert dialog.
+
+### 2.4. Design Handoff & 6 Visual States Matrix
+
+| Komponen | Default | Focused | Loading | Error | Empty | Disabled |
+|---|---|---|---|---|---|---|
+| **Video Player** | Menampilkan thumbnail poster YouTube resmi | Outline ungu 2dp (`#9D3FE7`) | Spinner ungu berputar di atas latar `#1E1E2E` | Banner peringatan merah *"Video materi sedang diperbarui"* | N/A (VideoId valid selalu ada) | Kontainer redup dengan pesan offline |
+| **Speed Pill Bar** | Pill abu-abu, teks gelap 14sp | Pill ungu muda, border ungu | N/A | N/A | N/A | Alpha 0.5f saat player buffering |
+| **Progres Checkbox** | Kotak kosong border abu-abu | Border ungu 2dp | Animasi transisi centang | N/A | N/A | N/A |
+| **Tombol Tonton di YT** | Tombol sekunder border ungu | Background ungu muda 10% | Spinner kecil di tombol | Disable jika offline | N/A | Alpha 0.4f saat tidak ada intent handler |
+| **Tombol Laporkan** | Teks merah dengan ikon bendera | Teks merah bergaris bawah | Spinner pada dialog submit | Dialog galat pengiriman | N/A | Disabled jika input alasan belum dipilih |
+
+---
+
+## [PARALEL] FASE 3: PERILAKU SISTEM & TELEMETRI
+
+### 3.1. Sequence Diagram (+ Trace ID & Client Events)
+
+```text
+User            VideoPlayerScreen        VideoPlayerViewModel        PlatformVideoPlayer         CurriculumRepository      TelemetryService
+ │                     │                          │                           │                           │                        │
+ │ 1. Buka Layar       │                          │                           │                           │                        │
+ │────────────────────>│                          │                           │                           │                        │
+ │                     │ 2. init(courseId, topic) │                           │                           │                        │
+ │                     │─────────────────────────>│                           │                           │                        │
+ │                     │                          │ 3. Gen Trace ID           │                           │                        │
+ │                     │                          │    trc_vid_load_01_a9f2   │                           │                        │
+ │                     │                          │──┐                        │                           │                        │
+ │                     │                          │<─┘                        │                           │                        │
+ │                     │                          │ 4. getCourseTopic(...)    │                           │                        │
+ │                     │                          │──────────────────────────────────────────────────────>│                        │
+ │                     │                          │ 5. Return Topic (videoId) │                           │                        │
+ │                     │                          │<──────────────────────────────────────────────────────│                        │
+ │                     │                          │ 6. Emit UiState(videoId)  │                           │                        │
+ │                     │<─────────────────────────│                           │                           │                        │
+ │                     │                          │ 7. trackEvent("video_screen_opened", trace_id)        │                        │
+ │                     │                          │───────────────────────────────────────────────────────────────────────────────>│
+ │                     │ 8. Inisialisasi WebView  │                           │                           │                        │
+ │                     │    dengan videoId riil   │                           │                           │                        │
+ │                     │─────────────────────────────────────────────────────>│                           │                        │
+ │                     │                          │                           │ 9. Load YouTube Iframe API│                        │
+ │                     │                          │                           │    YT.Player(videoId)     │                        │
+ │                     │                          │                           │──┐                        │                        │
+ │                     │                          │                           │<─┘                        │                        │
+ │                     │                          │                           │ 10. onPlayerReady Callback│                        │
+ │                     │                          │                           │──────────────────────────>│                        │
+ │                     │                          │ 11. trackEvent("video_started", trace_id)                                      │
+ │                     │                          │───────────────────────────────────────────────────────────────────────────────>│
+ │                     │                          │                           │                                                    │
+ │                     │                          │                           │ 12. onTimeUpdate(sec=920, dur=1080) [85.1%]        │
+ │                     │                          │<──────────────────────────│                                                    │
+ │                     │                          │ 13. Evaluasi Ambang 85%   │                                                    │
+ │                     │                          │     isCompleted = true    │                                                    │
+ │                     │                          │──┐                        │                                                    │
+ │                     │                          │<─┘                        │                                                    │
+ │                     │                          │ 14. setTopicCompleted(...)│                                                    │
+ │                     │                          │──────────────────────────────────────────────────────>│                        │
+ │                     │                          │ 15. Emit State (isDone)   │                           │                        │
+ │                     │<─────────────────────────│                           │                           │                        │
+ │                     │ 16. Update Checkbox [X]  │                           │                           │                        │
+ │                     │                          │ 17. trackEvent("video_auto_completed", trace_id)                               │
+ │                     │                          │───────────────────────────────────────────────────────────────────────────────>│
+```
+
+#### 5 Non-Happy Path Scenarios Wajib (E1..E5)
+1. **E1 (Network Stall / Offline):**
+   - *Kondisi:* Sambungan internet terputus saat memutar video YouTube aktif.
+   - *Penanganan:* WebView menampilkan pesan kesalahan koneksi bawaan YouTube atau overlay lokal *"Koneksi terputus. Menunggu jaringan..."* tanpa me-reset state progres yang sudah tercatat.
+2. **E2 (YouTube Video Error / Private / Removed):**
+   - *Kondisi:* Video diubah statusnya menjadi privat atau dihapus oleh pemiliknya (menghasilkan kode galat JavaScript `100`, `101`, atau `150`).
+   - *Penanganan:* Bridge menangkap kode galat tersebut melalui callback `onError`, mengubah `isError = true`, merender banner informatif *"Video materi sedang diperbarui"*, dan menampilkan tombol CTA *"Laporkan Link"* ke `ReportBrokenVideoDialog`.
+3. **E3 (OS Process Death / Low Memory Killer):**
+   - *Kondisi:* Sistem operasi menghentikan proses aplikasi saat video sedang di-pause di latar belakang.
+   - *Penanganan:* Progres belajar disimpan secara atomik ke Multiplatform Settings KV Store saat `onPause` / `onTimeUpdate`, sehingga ketika user membuka kembali topik, status centang dan waktu tonton terakhir dapat dipulihkan secara instan.
+4. **E4 (User Cancellation saat Loading):**
+   - *Kondisi:* Pengguna menekan tombol kembali (*Back Gesture*) saat WebView masih mengunduh skrip YouTube Iframe API.
+   - *Penanganan:* Lifecycle Compose membatalkan coroutine scope `VideoPlayerViewModel` secara bersih, menghancurkan instance WebView (`destroy()`), serta melepaskan seluruh listener JavaScript tanpa kebocoran memori.
+5. **E5 (Corrupted Local Storage / Migration):**
+   - *Kondisi:* Data KV store corrupt atau versi skema JSON kurikulum berubah.
+   - *Penanganan:* Parser JSON menerapkan fallback `ignoreUnknownKeys = true` dan `isLenient = true`. Jika deserialisasi gagal total, aplikasi kembali ke state default dengan log telemetri error `storage_corrupted_fallback`.
+
+---
+
+### 3.2. State Diagram (+ Latency & Drop-offs)
+
+```text
+               ┌───────────────────────┐
+               │    INIT_SYLLABUS      │
+               └───────────┬───────────┘
+                           │ (Pilih Pertemuan: Latensi < 100ms)
+                           ▼
+               ┌───────────────────────┐
+               │   LOADING_METADATA    │
+               └───────────┬───────────┘
+                           │ (Parse JSON & Validasi 11-char ID)
+                           ▼
+               ┌───────────────────────┐
+               │   LOADING_IFRAME      │ ◄── [Titik Kritis Drop-off #1: Latensi Jaringan > 3s]
+               └─────┬───────────┬─────┘
+  (Error Code 100/150│           │ (onPlayerReady: Latensi ~1.2s)
+   atau ID Invalid)  │           ▼
+                     │ ┌───────────────────────┐
+                     │ │     VIDEO_PLAYING     │ ◄── [Titik Kritis Drop-off #2: Durasi Video Terlalu Panjang]
+                     │ └─────┬───────────▲─────┘
+                     │       │           │
+                     │ (Pause│           │ (Resume)
+                     │   Tap)▼           │
+                     │ ┌───────────────────────┐
+                     │ │     VIDEO_PAUSED      │
+                     │ └─────┬─────────────────┘
+                     │       │ (Waktu Tonton >= 85%)
+                     │       ▼
+                     │ ┌───────────────────────┐
+                     │ │    AUTO_COMPLETED     │ ──> Simpan ke Local Storage (Latensi < 15ms)
+                     │ └───────────────────────┘
+                     ▼
+       ┌───────────────────────────────┐
+       │       VIDEO_ERROR_STATE       │ ◄── Fallback Banner Tampil
+       └───────────────┬───────────────┘
+                       │ (Tap Laporkan Link)
+                       ▼
+       ┌───────────────────────────────┐
+       │      REPORT_DIALOG_OPEN       │
+       └───────────────────────────────┘
+```
+
+---
+
+## FASE 4: STRUKTUR DATA & KODE (Clean Architecture)
+
+### 4.1. Class Diagram (ASCII Art)
+
+```text
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ PRESENTATION LAYER (composeApp/commonMain/ui)                               │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ + VideoPlayerScreen(courseId: String, topicId: String)                     │
+│ + PlatformVideoPlayer(videoId: String, onTimeUpdate, onError, onReady)      │
+│ + ReportBrokenVideoDialog(onDismiss, onSubmit)                             │
+│ + VideoPlayerViewModel(curriculumRepo, progressRepo, reportRepo)            │
+│   - uiState: StateFlow<VideoPlayerUiState>                                  │
+│   + onPlayPauseToggle()                                                     │
+│   + onSpeedSelected(speed: PlaybackSpeed)                                   │
+│   + onProgressEvaluated(currentTime: Float, duration: Float)                │
+│   + submitBrokenReport(reason: ReportReason, desc: String)                  │
+└──────────────────────────────────────┬──────────────────────────────────────┘
+                                       │ depends on
+                                       ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ DOMAIN LAYER (composeApp/commonMain/domain)                                 │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ + interface CurriculumRepository                                            │
+│ + interface ProgressRepository                                              │
+│ + interface VideoReportRepository                                           │
+│ + data class VideoPlayerUiState(topic, videoId, isPlaying, isCompleted, ...)│
+│ + enum class PlaybackSpeed(val multiplier: Float)                           │
+│ + enum class ReportReason                                                   │
+│ + object VideoIdValidator { fun isValidYouTubeId(id: String): Boolean }     │
+└──────────────────────────────────────┬──────────────────────────────────────┘
+                                       │ implemented by
+                                       ▼
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ DATA LAYER (composeApp/commonMain/data)                                     │
+├─────────────────────────────────────────────────────────────────────────────┤
+│ + class LocalCurriculumRepository(jsonProvider: () -> String)               │
+│ + object CurriculumDataSource { val RAW_JSON: String }                      │
+│ + class SettingsProgressRepository(settings: Settings)                      │
+│ + class LocalVideoReportRepository(settings: Settings)                      │
+└─────────────────────────────────────────────────────────────────────────────┘
+```
+
+### 4.2. Data Storage, Schema & 85% Idempotency Rule
+- **Regex Validasi YouTube ID:** `^[a-zA-Z0-9_-]{11}$`
+- **Idempotency Rule Auto-Centang ($\ge 85\%$):**
+  - Perhitungan: `val progressRatio = currentTimeSeconds / totalDurationSeconds`
+  - Ambang batas: `progressRatio >= 0.85f`
+  - Aturan: Pemanggilan penyimpanan `progressRepository.setTopicCompleted(topicId, true)` hanya dilakukan sekali (*idempotent*). Apabila topic sudah berstatus `isCompleted == true` di memori atau persistent storage, callback `onTimeUpdate` tidak akan mengeksekusi operasi tulis berulang (*no-op*), menjaga performa disk I/O dan konsumsi daya baterai.
+
+---
+
+## FASE 5: ARSITEKTUR FISIK RUNTIME MOBILE
+
+### 5.1. Component Diagram (KMP Runtime Ecosystem: Android & iOS Bridge)
+
+```text
+┌─────────────────────────────────────────────────────────────────────────────┐
+│ Kotlin Multiplatform Shared Core (commonMain)                              │
+│                                                                             │
+│  ┌─────────────────────────┐          ┌──────────────────────────────────┐  │
+│  │ VideoPlayerViewModel    │─────────>│ CurriculumRepository             │  │
+│  │ (StateFlow & Business)  │          │ (curriculum_it_semesters.json)   │  │
+│  └────────────┬────────────┘          └──────────────────────────────────┘  │
+│               │                                                             │
+│               ▼                                                             │
+│  ┌─────────────────────────┐                                                │
+│  │ expect Composable       │                                                │
+│  │ PlatformVideoPlayer(...)│                                                │
+│  └────────────┬────────────┘                                                │
+└───────────────┼─────────────────────────────────────────────────────────────┘
+                │
+       ┌────────┴──────────────────────────┐
+       │ (Platform Actual Implementation)  │
+       ▼                                   ▼
+┌───────────────────────────────┐ ┌───────────────────────────────────────────┐
+│ androidMain                   │ │ iosMain                                   │
+│                               │ │                                           │
+│ ┌───────────────────────────┐ │ │ ┌───────────────────────────────────────┐ │
+│ │ actual Composable         │ │ │ │ actual Composable                     │ │
+│ │ PlatformVideoPlayer       │ │ │ │ PlatformVideoPlayer                   │ │
+│ │ ┌───────────────────────┐ │ │ │ ┌─────────────────────────────────────┐ │ │
+│ │ │ AndroidView           │ │ │ │ │ UIKitView                           │ │ │
+│ │ │  └── android.webkit.  │ │ │ │ │  └── WebKit.WKWebView               │ │ │
+│ │ │      WebView          │ │ │ │ │      (WKScriptMessageHandler Bridge)│ │ │
+│ │ └───────────────────────┘ │ │ │ └─────────────────────────────────────┘ │ │
+│ └───────────────────────────┘ │ │ └───────────────────────────────────────┘ │
+└───────────────────────────────┘ └───────────────────────────────────────────┘
+```
+
+---
+
+## 6. Testing Requirements & 7 Local Verification Gates
+
+- **Gate 1: Linter & Formatter:**
+  Perintah: `./gradlew composeApp:lintDebug`  
+  Target: Exit code 0, nol error lint baru.
+- **Gate 2: Data & API Contracts:**
+  Perintah: `./gradlew test --tests "*CurriculumVideoContractTest*"`  
+  Target: Seluruh 16 topik aktif `cs101` dan topik terpilih Semester 1 tervalidasi memenuhi pola regex 11-karakter YouTube ID.
+- **Gate 3a: Unit Tests (Coverage $\ge 80\%$):**
+  Perintah: `./gradlew test`  
+  Target: Seluruh unit test di `commonTest` (termasuk validasi parsing kurikulum, auto-complete, dan report repository) lolos 100%.
+- **Gate 3b: Negative Control Wajib:**
+  Prosedur: Sengaja ubah salah satu video ID di `CurriculumDataSource.kt` menjadi ID mock (`t101_01_v`) → Jalankan `./gradlew test` → Verifikasi kegagalan test (**RED**, exit code 1) pada `CurriculumVideoContractTest` → Kembalikan ke ID riil (`jGyYuQf-GeE`) → Jalankan kembali test → Verifikasi kelolosan (**GREEN**, exit code 0).  
+  Target: Dokumentasikan rasio pembuktian `N/N → (N-1)/N → N/N`.
+- **Gate 4: Component & Viewport Verification:**
+  Memvalidasi antarmuka pemutar video pada resolusi standar mobile 375x812 dp di kedua sistem operasi (Android Pixel 9 Pro dan iOS Simulator iPhone 16 Pro).
+- **Gate 5: Performance & Build Artifacts:**
+  - Android: `./gradlew assembleDebug` menghasilkan binary `composeApp-debug.apk`.
+  - iOS: `./gradlew composeApp:linkDebugFrameworkIosSimulatorArm64` menghasilkan bundle `ComposeApp.framework`.
+- **Gate 6: Security & Zero Secret Hygiene:**
+  Verifikasi `git diff` memastikan tidak ada secret API key YouTube, token auth rahasia, atau kredensial backend hardcoded.
+
+---
+
+## 7. Standar Pengarsipan Evidence (Dual-Platform: Android & iOS)
+
+Struktur direktori evidence di `.docs/evidence/03/`:
+```text
+.docs/evidence/03/
+├── README.md               # Ringkasan 7 gerbang, tabel verifikasi Android vs iOS, rasio Gate 3b
+├── console-evidence.txt    # Log eksekusi build & test (Android APK + iOS Framework)
+├── android/
+│   ├── demo.mp4            # Video walkthrough Android (Pixel_9_Pro via android CLI / screenrecord)
+│   └── screenshots/        # Tangkapan layar Android (01_player_active.png, 02_fullscreen.png, dst.)
+└── ios/
+    ├── demo.mp4            # Video walkthrough iOS (iPhone 16 Pro via xcrun simctl)
+    └── screenshots/        # Tangkapan layar iOS (01_player_active.png, 02_fullscreen.png, dst.)
+```
+Serta memperbarui berkas rekaman video lama di `.docs/evidence/02/demo.mp4` dengan video pemutaran nyata tanpa layar hitam.
