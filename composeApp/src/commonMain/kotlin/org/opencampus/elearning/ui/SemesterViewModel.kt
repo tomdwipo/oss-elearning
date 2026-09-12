@@ -21,6 +21,7 @@ import org.opencampus.elearning.telemetry.DefaultAnalyticsService
 sealed interface ScreenDestination {
     object Home : ScreenDestination
     data class Syllabus(val courseId: String) : ScreenDestination
+    data class VideoPlayer(val courseId: String, val topicId: String) : ScreenDestination
 }
 
 data class HomeUiState(
@@ -135,17 +136,37 @@ class SemesterViewModel(
     }
 
     fun onTopicSelected(topic: Topic) {
-        val traceId = analyticsService.generateTraceId("topic_sel")
+        val topicTraceId = analyticsService.generateTraceId("topic_sel")
+        val currentCourse = _uiState.value.currentCourseId
+
+        _uiState.update {
+            it.copy(
+                currentDestination = ScreenDestination.VideoPlayer(currentCourse, topic.id)
+            )
+        }
+
         analyticsService.logEvent(
             "topic_selected",
-            traceId,
+            topicTraceId,
             buildJsonObject {
                 put("topic_id", topic.id)
-                put("course_id", _uiState.value.currentCourseId)
+                put("course_id", currentCourse)
                 put("meeting_number", topic.no)
                 put("video_id", topic.videoId)
                 put("channel_name", topic.channel)
                 put("duration_minutes", topic.duration)
+            }
+        )
+
+        val vidTraceId = analyticsService.generateTraceId("vid_open")
+        analyticsService.logEvent(
+            "video_started",
+            vidTraceId,
+            buildJsonObject {
+                put("topic_id", topic.id)
+                put("course_id", currentCourse)
+                put("video_id", topic.videoId)
+                put("trace_id", vidTraceId)
             }
         )
     }
@@ -171,12 +192,36 @@ class SemesterViewModel(
         _uiState.update { it.copy(searchQuery = query) }
     }
 
+    fun refreshProgress() {
+        val updatedSet = progressRepository.getCompletedTopicIds()
+        _uiState.update { it.copy(completedTopicIds = updatedSet) }
+    }
+
     fun navigateBack(): Boolean {
-        return if (_uiState.value.currentDestination !is ScreenDestination.Home) {
-            _uiState.update { it.copy(currentDestination = ScreenDestination.Home) }
-            true
-        } else {
-            false
+        return when (val dest = _uiState.value.currentDestination) {
+            is ScreenDestination.VideoPlayer -> {
+                val updatedSet = progressRepository.getCompletedTopicIds()
+                _uiState.update {
+                    it.copy(
+                        completedTopicIds = updatedSet,
+                        currentDestination = ScreenDestination.Syllabus(dest.courseId)
+                    )
+                }
+                true
+            }
+            is ScreenDestination.Syllabus -> {
+                val updatedSet = progressRepository.getCompletedTopicIds()
+                _uiState.update {
+                    it.copy(
+                        completedTopicIds = updatedSet,
+                        currentDestination = ScreenDestination.Home
+                    )
+                }
+                true
+            }
+            is ScreenDestination.Home -> {
+                false
+            }
         }
     }
 }

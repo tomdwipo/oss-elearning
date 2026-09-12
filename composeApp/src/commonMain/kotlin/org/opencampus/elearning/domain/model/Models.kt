@@ -73,3 +73,46 @@ data class ProgressSummary(
         }
     }
 }
+
+enum class PlaybackSpeed(val speedMultiplier: Float, val label: String) {
+    SPEED_0_75X(0.75f, "0.75x"),
+    SPEED_1_0X(1.0f, "1x"),
+    SPEED_1_25X(1.25f, "1.25x"),
+    SPEED_1_5X(1.5f, "1.5x"),
+    SPEED_2_0X(2.0f, "2x")
+}
+
+enum class ReportReason(val id: String, val label: String) {
+    DELETED_OR_PRIVATE("deleted_private", "Video Dihapus / Private"),
+    NOT_RELEVANT("not_relevant", "Video Tidak Sesuai Topik"),
+    AUDIO_VISUAL_BROKEN("broken_media", "Audio / Visual Rusak"),
+    OTHER("other", "Lainnya")
+}
+
+@Serializable
+data class VideoReportPayload(
+    val reportId: String,
+    val topicId: String,
+    val courseId: String,
+    val videoId: String,
+    val reason: String,
+    val notes: String = "",
+    val timestampEpochMs: Long,
+    val traceId: String
+)
+
+data class VideoPlayerUiState(
+    val isLoading: Boolean = true,
+    val isError: Boolean = false,
+    val errorMessage: String? = null,
+    val courseId: String = "",
+    val topic: Topic? = null,
+    val isCompleted: Boolean = false,
+    val currentTimeSeconds: Float = 0f,
+    val totalDurationSeconds: Float = 0f,
+    val playbackSpeed: PlaybackSpeed = PlaybackSpeed.SPEED_1_0X,
+    val isPlaying: Boolean = false,
+    val isReportDialogOpen: Boolean = false,
+    val isReportSubmittedSuccess: Boolean = false
+)
+

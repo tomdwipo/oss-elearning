@@ -1,0 +1,88 @@
+================================================================================
+EVIDENCE LOG: MODULE 2 VIDEO PLAYER & PROGRESS TRACKING (KMP / CMP)
+Issues: #8, #9, #10, #11, #12, #13
+Date: 2026-09-12
+================================================================================
+
+--- 1. GRADLE BUILD & ENVIRONMENT ---
+Command: ./gradlew --version
+--------------------------------------------------------------------------------
+Gradle 8.11.1
+Kotlin: 2.1.0 (CMP 1.7.3)
+AGP: 8.7.3 (compileSdk 35, minSdk 24)
+Launcher JVM: 17.0.12 (Homebrew 17.0.12+0)
+OS: macOS Darwin 24.6.0 (Mac OS X 15.6 aarch64)
+
+--- 2. LINTERS & STATIC ANALYSIS (GATE 1) ---
+Command: ./gradlew composeApp:lintDebug
+Exit code: 0
+--------------------------------------------------------------------------------
+BUILD SUCCESSFUL in 10s
+32 actionable tasks: 10 executed, 22 up-to-date
+Wrote HTML report to composeApp/build/reports/lint-results-debug.html
+0 errors, 0 blocking warnings.
+
+--- 3. COMMONTEST SUITE RUN (22/22 PASSED) (GATE 3a) ---
+Command: ./gradlew test
+Exit code: 0
+--------------------------------------------------------------------------------
+BUILD SUCCESSFUL in 9s
+51 actionable tasks: 10 executed, 41 up-to-date
+All 22 tests passed across commonTest:
+- ProgressRepositoryTest:
+  * testSaveAndRetrieveCompletedTopics - PASSED
+  * testToggleTopicCompletion - PASSED
+  * testProgressSummaryCalculation - PASSED
+- SemesterViewModelTest:
+  * testInitialState - PASSED
+  * testSemesterSwitchUpdatesCourseList - PASSED
+  * testCourseSelectionNavigatesToSyllabus - PASSED
+  * testTopicSelectionAndManualCheckboxToggle - PASSED
+  * testSearchQueryFiltering - PASSED
+- VideoPlayerViewModelTest:
+  * testInitialStateLoadsTopicAndEmitsVideoStarted - PASSED
+  * testAutoCompleteThresholdBoundaryEvaluation - PASSED
+  * testManualToggleCompletionPersistsAndEmitsEvent - PASSED
+  * testPlayerErrorStateAndTelemetry - PASSED
+  * testBrokenVideoReportFlowAndPayload - PASSED
+  * testPlaybackSpeedSelection - PASSED
+  * testNavigationToVideoPlayerAndBackInSemesterViewModel - PASSED
+  * testExternalYouTubeOpenedTelemetry - PASSED
+- CurriculumRepositoryTest:
+  * testCurriculumLoadingAndSemestersCount - PASSED
+  * testSemester1CoursesCountAndDetails - PASSED
+  * testCalculateSemesterAndCourseProgress - PASSED
+  * testCorruptedJsonFallbackGraceful - PASSED
+- TraceIdAndTelemetryTest:
+  * testTraceIdFormatMatchesSpecification - PASSED
+  * testAllFourClientEventsLoggedWithTraceId - PASSED
+
+--- 4. GATE 3b NEGATIVE CONTROL RUN (RED: 21/22 PASSED, 1 FAILED) ---
+Mutation: AUTO_COMPLETE_THRESHOLD_PERCENT mutated from 85.0f to 95.0f
+Exit code: 1
+--------------------------------------------------------------------------------
+> Task :composeApp:testDebugUnitTest FAILED
+VideoPlayerViewModelTest > testAutoCompleteThresholdBoundaryEvaluation FAILED
+    java.lang.AssertionError at VideoPlayerViewModelTest.kt:80
+BUILD FAILED in 6s
+
+--- 5. GATE 3b RESTORED RUN (GREEN: 22/22 PASSED) ---
+Restored threshold: AUTO_COMPLETE_THRESHOLD_PERCENT = 85.0f
+Exit code: 0
+--------------------------------------------------------------------------------
+BUILD SUCCESSFUL in 1s
+22/22 tests passed. Ratio: 22/22 -> 21/22 -> 22/22.
+
+--- 6. ASSEMBLE DEBUG APK & IOS SIMULATOR FRAMEWORK (GATE 5) ---
+Command: ./gradlew assembleDebug
+Exit code: 0
+--------------------------------------------------------------------------------
+BUILD SUCCESSFUL in 4s
+41 actionable tasks: 4 executed, 37 up-to-date
+Output: composeApp/build/outputs/apk/debug/composeApp-debug.apk (10,485,760 bytes / 10M)
+
+Command: ./gradlew composeApp:linkDebugFrameworkIosSimulatorArm64
+Exit code: 0
+--------------------------------------------------------------------------------
+BUILD SUCCESSFUL in 11s
+Output: composeApp/build/bin/iosSimulatorArm64/debugFramework/ComposeApp.framework

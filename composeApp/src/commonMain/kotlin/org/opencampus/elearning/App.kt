@@ -9,6 +9,7 @@ import org.opencampus.elearning.ui.CourseSyllabusScreen
 import org.opencampus.elearning.ui.ScreenDestination
 import org.opencampus.elearning.ui.SemesterHomeScreen
 import org.opencampus.elearning.ui.SemesterViewModel
+import org.opencampus.elearning.ui.VideoPlayerScreen
 import org.opencampus.elearning.ui.theme.OpenCampusTheme
 
 @Composable
@@ -18,12 +19,19 @@ fun App(
     OpenCampusTheme {
         val uiState by viewModel.uiState.collectAsState()
 
-        when (uiState.currentDestination) {
+        when (val dest = uiState.currentDestination) {
             is ScreenDestination.Home -> {
                 SemesterHomeScreen(viewModel = viewModel)
             }
             is ScreenDestination.Syllabus -> {
                 CourseSyllabusScreen(viewModel = viewModel)
+            }
+            is ScreenDestination.VideoPlayer -> {
+                VideoPlayerScreen(
+                    courseId = dest.courseId,
+                    topicId = dest.topicId,
+                    onNavigateBack = { viewModel.navigateBack() }
+                )
             }
         }
     }
