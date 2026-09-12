@@ -110,12 +110,12 @@ Menerapkan arsitektur **Kotlin Multiplatform (KMP) & Compose Multiplatform (CMP)
 3. Kumpulkan data primer:
    - **PRD**: Baca `.docs/prd/` dan `.docs/00_fase/01_PRD.md`. Ekstrak tabel kebutuhan, aturan bisnis, copy teks, dan referensi desain.
    - **Figma Drilling**: Jalankan skill `fig-decode` pada `design_system/assets/Design System _ Ui Kit Free (Community).fig` (atau via MCP). Ekstrak Node ID, Frame, dan 6 visual states (*Default, Focused, Loading, Error, Empty, Disabled*).
-   - **Codebase Inspection**: Grep di `composeApp/src/commonMain` untuk memverifikasi simbol class, interface, viewmodel, dan repositori yang sudah ada. Jangan berasumsi; validasi fakta kode terlebih dahulu (*truth in code*).
+   - **Codebase Inspection**: Grep di `composeApp/src/commonMain`, `androidMain`, dan `iosMain` untuk memverifikasi simbol class, interface, viewmodel, platform bridge, dan repositori yang sudah ada. Jangan berasumsi; validasi fakta kode terlebih dahulu (*truth in code*).
    - **Kontrak Eksternal**: Kontrak JSON kurikulum, TOS & embed YouTube Player Iframe API, serta persistensi lokal (Multiplatform Settings / SQLite).
 
 #### Step 2: Tulis Draft Awal TRD (`.docs/trd/XX_trd.md`)
 Buat file baru di `.docs/trd/XX_trd.md` yang memuat:
-1. **Header Metadata**: Versi, Author (`Technical Team (Mobile — Tommy Dwi Putranto)`), Status, Rujukan PRD, Rujukan Figma, Target Platform (KMP & CMP).
+1. **Header Metadata**: Versi, Author (`Technical Team (Mobile — Tommy Dwi Putranto)`), Status, Rujukan PRD, Rujukan Figma, Target Platform (KMP & CMP: Android & iOS).
 2. **1. Executive Summary & Scope**:
    - 1.1 Overview & Arsitektur Ringkas.
    - 1.2 Current Implementation (grounded in code).
@@ -167,7 +167,7 @@ Buat file baru di `.docs/trd/XX_trd.md` yang memuat:
 Perbarui dan lengkapi file `.docs/trd/XX_trd.md` dengan bagian-bagian berikut:
 1. **[PARALEL] FASE 2: DESAIN ANTARMUKA (UI/UX)**:
    - 2.1 User Flow & Wireflow (Entry point, Back-stack policy, percabangan).
-   - 2.2 Wireframe (Lo-Fi) & Struktur Layout (375x812 dp, rasio 9:19.5, safe area insets).
+   - 2.2 Wireframe (Lo-Fi) & Struktur Layout (375x812 dp, rasio 9:19.5, safe area insets untuk Android & iOS).
    - 2.3 UI Design System & Tokens (Warna: `#9D3FE7`, `#602093`, `#00B998`, `#FFFFFF`, `#1F1F1F`; Font: Poppins; Radius; Shadow).
    - 2.4 Design Handoff: Tabel pemetaan komponen, Node ID Figma, dan 6 Visual States (*Default, Focused, Loading, Error, Empty, Disabled*).
 2. **[PARALEL] FASE 3: PERILAKU SISTEM & TELEMETRI**:
@@ -178,8 +178,8 @@ Perbarui dan lengkapi file `.docs/trd/XX_trd.md` dengan bagian-bagian berikut:
      - **5 Non-Happy Path Scenarios (Wajib E1–E5)**:
        - `E1 (Network Stall / Offline)`: Koneksi terputus saat memuat video $\to$ inline banner tanpa reset state.
        - `E2 (YouTube Video Error / Private / Removed)`: Player menangkap error code 100/101/150 $\to$ fallback banner *"Video materi sedang diperbarui"* + tombol *"Laporkan Link"*.
-       - `E3 (OS Process Death / Low Memory Killer)`: Pemulihan UiState dari local storage.
-       - `E4 (User Cancellation saat Loading)`: Back-press saat loading video dibatalkan secara bersih tanpa leak coroutine.
+       - `E3 (OS Process Death / Low Memory Killer)`: Pemulihan UiState dari local storage (didukung pada lifecycle Android & iOS).
+       - `E4 (User Cancellation saat Loading)`: Back-press / gesture kembali saat loading video dibatalkan secara bersih tanpa leak coroutine.
        - `E5 (Corrupted Local Storage / Migration)`: Recovery ke state default guest + log error telemetri.
    - **3.2 State Diagram (Wajib ASCII Art)**:
      - Pemetaan UiState lifecycle, latensi transisi, dan titik kritis potensi *user drop-off / churn*.
@@ -187,27 +187,41 @@ Perbarui dan lengkapi file `.docs/trd/XX_trd.md` dengan bagian-bagian berikut:
    - 4.1 Class Diagram (Wajib ASCII Art): Pemisahan layer `Presentation`, `Domain`, `Data`, dan `Telemetry`.
    - 4.2 Data Storage, Schema & Idempotency: Struktur model `@Serializable`, skema KV / SQLite, serta idempotency rule penyelesaian video $\ge 85\%$.
 4. **FASE 5: ARSITEKTUR FISIK RUNTIME MOBILE**:
-   - 5.1 Component Diagram (Wajib ASCII Art): Ekosistem runtime Compose Multiplatform (`composeApp`, platform bridge `expect/actual`).
+   - 5.1 Component Diagram (Wajib ASCII Art): Ekosistem runtime Compose Multiplatform (`composeApp`, platform bridge `expect/actual` untuk Android [`AndroidView`/`WebView`] dan iOS [`UIKitView`/`WKWebView`]).
 5. **6. Testing Requirements & 7 Local Verification Gates**:
-   - Gate 1: Linter & Formatter (`./gradlew check` / linter nol error).
+   - Gate 1: Linter & Formatter (`./gradlew check -x test` / linter nol error).
    - Gate 2: Data & API Contracts (validasi JSON kurikulum & YouTube contract).
    - Gate 3a: Unit Tests (Coverage logika domain $\ge 80\%$).
    - **Gate 3b: Negative Control Wajib**: Rusakkan 1 logika domain $\to$ verifikasi unit test RED $\to$ pulihkan $\to$ verifikasi GREEN. Laporkan rasio `N/N → (N-1)/N → N/N` beserta nama method yang dites.
-   - Gate 4: Component & Viewport (375x812 dp, Light/Dark theme).
-   - Gate 5: Performance (bundle size & rendering).
+   - Gate 4: Component & Viewport (375x812 dp, Light/Dark theme di Android & iOS).
+   - Gate 5: Performance & Build Artifacts: Verifikasi packaging dual platform — Android APK (`./gradlew assembleDebug`) dan iOS Framework (`./gradlew composeApp:linkDebugFrameworkIosSimulatorArm64`).
    - Gate 6: Security & Secret Hygiene (nol exposed private keys).
+6. **7. Standar Pengarsipan Evidence (Wajib Dual-Platform: Android & iOS)**:
+   Mewajibkan rancangan evidence di `.docs/evidence/{XX}/` memuat artefak verifikasi untuk **keduanya** (Android dan iOS):
+   ```text
+   .docs/evidence/{XX}/
+   ├── README.md               # Ringkasan 7 gerbang, tabel verifikasi Android vs iOS, rasio Gate 3b
+   ├── console-evidence.txt    # Log eksekusi build & test (Android APK + iOS Framework)
+   ├── android/
+   │   ├── demo.mp4            # Video walkthrough Android (Pixel_9_Pro via android CLI)
+   │   └── screenshots/        # Tangkapan layar Android (01_initial.png, 02_action.png, dst.)
+   └── ios/
+       ├── demo.mp4            # Video walkthrough iOS (iPhone 16 Pro via xcrun simctl)
+       └── screenshots/        # Tangkapan layar iOS (01_initial.png, 02_action.png, dst.)
+   ```
 
 #### Step 6: Tulis Task Implementation Plan (`.docs/task/XX_tasklist.md`)
 Buat file baru `.docs/task/XX_tasklist.md` mengikuti standar proyek:
-1. **Header Metadata**: Mengaitkan dokumen ke PRD, TRD, platform KMP, dan target evidence.
+1. **Header Metadata**: Mengaitkan dokumen ke PRD, TRD, arsitektur target KMP (Android & iOS), dan target evidence.
 2. **Bagian 1: Ringkasan Rencana Task (Summary Matrix)**:
    - Tabel kolom: `| Task ID | Issue GitHub | Judul Task | Layer / Source Set | Bobot / Est. | Dependensi |`
    - Kolom `Issue GitHub` diisi nilai sementara: `(Pending Gate 2)`.
-3. **Bagian 2: Rincian Task & 4-Pillar Acceptance Criteria (AC Wajib)**:
+   - ⚠️ **MANDATORI DUAL PLATFORM (Android & iOS):** Setiap fitur yang melibatkan platform bridge (`expect/actual`), interop UI native, deliverable build, atau pengarsipan evidence WAJIB menyertakan layer/source set Android (`androidMain`) dan iOS (`iosMain`) secara berimbang, serta mencakup verifikasi build dan visual evidence untuk kedua platform.
+3. **Bagian 2: Rincian Task & Acceptance Criteria (4-Pillar + Build & Evidence Verification Wajib)**:
    Setiap task diuraikan dengan format:
    ```markdown
    ### TASK-XX: {Judul Task} — (Pending Gate 2)
-   - **Layer:** {Source set / layer, misal: commonMain (Domain/Data)}
+   - **Layer:** {Source set / layer, misal: commonMain (Domain/Data) atau commonMain, androidMain, iosMain (Platform Bridge)}
    - **Kompleksitas:** {Low / Medium / High (atau Story Points)}
    - **Problem Statement:** {Masalah teknis konkret yang diselesaikan}
    - **Technical Context:**
@@ -216,10 +230,15 @@ Buat file baru `.docs/task/XX_tasklist.md` mengikuti standar proyek:
      - Figma Node ID: [`{NODE_ID}`](file://...)
      - File Codebase: [PathFile.kt](file:///...)
    - **Acceptance Criteria (AC):**
-     - • **Core Business Logic:** Aturan domain, validasi, navigasi, penanganan skenario E1..E5.
+     - • **Core Business Logic:** Aturan domain, validasi, navigasi, implementasi bridge Android & iOS, penanganan skenario E1..E5.
      - • **UI/UX States & Tokens:** Tokens warna (`#9D3FE7`, `#00B998`), font Poppins, 6 visual states.
      - • **Observability & Telemetry:** Format Trace ID, structured error logging.
      - • **Product Analytics:** Event tracking, nama event, payload.
+     - • **Build Artifact & Verification (Wajib Dual Platform jika ada perubahan native/bridge):**
+       - Android: `./gradlew assembleDebug` menghasilkan `composeApp-debug.apk`.
+       - iOS: `./gradlew composeApp:linkDebugFrameworkIosSimulatorArm64` menghasilkan `ComposeApp.framework`.
+     - • **Dual-Platform Evidence Archive (Wajib untuk task testing/verifikasi):**
+       - Menghasilkan tangkapan layar dan rekaman interaksi lengkap pada kedua platform di `.docs/evidence/{XX}/android/` dan `.docs/evidence/{XX}/ios/`.
    ```
 
 #### Step 7: Git Commit & Push Step 2 ke GitHub
@@ -348,18 +367,25 @@ Tampilkan laporan penutupan di chat:
 ---
 
 ## FASE 5: ARSITEKTUR FISIK RUNTIME MOBILE
-### 5.1 Component Diagram (KMP Runtime Ecosystem) - ASCII Art Wajib
+### 5.1 Component Diagram (KMP Runtime Ecosystem: Android & iOS Bridge) - ASCII Art Wajib
 
 ---
 
 ## 6. Testing Requirements & 7 Local Verification Gates
-- Gate 1: Linter & Formatters
-- Gate 2: Data & API Contracts
-- Gate 3a: Unit Tests (>= 80%)
+- Gate 1: Linter & Formatters (`./gradlew check -x test`)
+- Gate 2: Data & API Contracts (`./gradlew test --tests ...`)
+- Gate 3a: Unit Tests (>= 80% coverage di `commonTest`)
 - Gate 3b: Negative Control (Break logic -> RED -> GREEN, laporkan N/N -> (N-1)/N -> N/N)
-- Gate 4: Viewport 375x812 dp & Themes
-- Gate 5: Performance & Rendering
+- Gate 4: Viewport 375x812 dp, Themes, & Platform Adaptation (Android & iOS)
+- Gate 5: Performance & Build Artifacts (Android `./gradlew assembleDebug` & iOS `./gradlew composeApp:linkDebugFrameworkIosSimulatorArm64`)
 - Gate 6: Security & Zero Secret Hygiene
+
+---
+
+## 7. Standar Pengarsipan Evidence (Dual-Platform: Android & iOS)
+- **Konsol:** `.docs/evidence/{XX}/console-evidence.txt` (Log build & test Android + iOS)
+- **Android Visual:** `.docs/evidence/{XX}/android/screenshots/` dan `demo.mp4`
+- **iOS Visual:** `.docs/evidence/{XX}/ios/screenshots/` dan `demo.mp4`
 ```
 
 ---
@@ -382,19 +408,28 @@ Tampilkan laporan penutupan di chat:
 | Task ID | Issue GitHub | Judul Task | Layer / Source Set | Kompleksitas | Dependensi |
 |---|---|---|---|---|---|
 | **TASK-01** | (Pending Gate 2) | Data Models & Kontrak Serialisasi | `commonMain` (Domain/Model) | Low (2 SP) | - |
+| **TASK-02** | (Pending Gate 2) | Platform Bridge expect/actual (Android & iOS) | `commonMain`, `androidMain`, `iosMain` | High (5 SP) | TASK-01 |
+| **TASK-03** | (Pending Gate 2) | Unit Tests & Verifikasi Build Dual Platform (Android & iOS) | `commonTest`, `androidMain`, `iosMain` | Medium (3 SP) | TASK-01..02 |
 
 ---
 
-## 2. Rincian Task & Acceptance Criteria (4-Pillar Wajib)
+## 2. Rincian Task & Acceptance Criteria (4-Pillar + Build & Evidence Verification Wajib)
 
-### TASK-01: Data Models & Kontrak Serialisasi — (Pending Gate 2)
-- **Layer:** Domain Layer (`commonMain`)
-- **Kompleksitas:** Low (2 SP)
+### TASK-03: Unit Tests & Verifikasi Build Dual Platform (Android & iOS) — (Pending Gate 2)
+- **Layer:** `commonTest`, `androidMain`, `iosMain`
+- **Kompleksitas:** Medium (3 SP)
 - **Problem Statement:** ...
 - **Technical Context:** ...
 - **Acceptance Criteria (AC):**
-  - • **Core Business Logic:** ...
-  - • **UI/UX States & Tokens:** ...
-  - • **Observability & Telemetry:** ...
-  - • **Product Analytics:** ...
+  - • **Core Business Logic:** Seluruh test suite lolos di JVM/Native.
+  - • **UI/UX States & Tokens:** Tata letak teruji di resolusi target 375x812 dp.
+  - • **Observability & Telemetry:** Format Trace ID & logging valid.
+  - • **Product Analytics:** Payload schema events valid.
+  - • **Build Artifact & Verification (Dual Platform):**
+    - Android: `./gradlew assembleDebug` menghasilkan `composeApp-debug.apk`.
+    - iOS: `./gradlew composeApp:linkDebugFrameworkIosSimulatorArm64` menghasilkan `ComposeApp.framework`.
+  - • **Dual-Platform Evidence Archive:**
+    - Menyimpan log eksekusi build/test di `.docs/evidence/{XX}/console-evidence.txt`.
+    - Menyimpan rekaman dan tangkapan layar Android di `.docs/evidence/{XX}/android/`.
+    - Menyimpan rekaman dan tangkapan layar iOS di `.docs/evidence/{XX}/ios/`.
 ```

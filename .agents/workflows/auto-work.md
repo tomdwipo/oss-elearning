@@ -177,7 +177,7 @@ Berhenti dan perbaiki di gerbang pertama yang merah sebelum melanjutkan.
 | **3a** | **Unit Tests** | Jalankan automated test suite di `commonTest` (Android + Native/JVM): `./gradlew test` (atau `./gradlew composeApp:allTests`). Buktikan semua test hijau. | Selalu |
 | **3b** | **Negative Control** | Rusakkan 1 logika yang diuji → buktikan **MERAH** (test gagal) → kembalikan → buktikan **HIJAU**. | **Tiap unit test baru** |
 | **4a** | **Headless UI & Snapshots (Roborazzi / Robolectric)** | **SEBELUM KE DEVICE/EMULATOR NYATA**: Uji rendering Composable, layout state, dan visual regression secara headless di JVM menggunakan Roborazzi / Robolectric Compose UI Test (`./gradlew testDebugUnitTest --tests "*Screenshot*"`, `./gradlew recordRoborazziDebug`). Menjamin tidak ada crash layout/state secara cepat dan deterministik. | Tiap perubahan UI |
-| **4b** | **Real Device / Emulator Verification (Android & iOS)** | Jalankan aplikasi pada lingkungan nyata untuk mengambil screenshot resolusi tinggi dan rekaman video (.mp4) interaksi nyata (lihat panduan CLI di bawah). | Tiap fitur/layar baru |
+| **4b** | **Real Device / Emulator Verification (Dual-Platform Wajib: Android & iOS)** | Jalankan aplikasi pada lingkungan nyata untuk mengambil screenshot resolusi tinggi dan rekaman video (.mp4) interaksi nyata pada KEDUA platform: Android Emulator dan iOS Simulator (lihat panduan CLI di bawah). Dilarang hanya memverifikasi salah satu platform. | Tiap fitur/layar baru |
 | **5** | **Performance & Build Artifacts** | Build binary untuk memverifikasi packaging: Android `./gradlew assembleDebug` (audit APK) dan iOS `./gradlew composeApp:linkDebugFrameworkIosSimulatorArm64`. | Fitur baru / optimasi |
 | **6** | **Security & Secret Hygiene** | `git diff origin/main` — pastikan tidak ada API Key YouTube tanpa proteksi, kredensial rahasia, atau hardcoded auth token yang ter-commit. | Selalu |
 
@@ -225,15 +225,13 @@ Jika suatu gerbang tidak dapat dijalankan (misal gerbang 5 belum memiliki benchm
 1. **Dokumentasikan Gotchas**:
    - Jika menemukan kendala non-obvious atau keputusan arsitektural penting selama pengerjaan,
      catat ke dalam [`.docs/common-issues/`](../../.docs/common-issues/README.md).
-2. **Arsipkan Bukti Verifikasi Lengkap (Multiplatform Android + iOS)**:
-   Setiap task yang mengubah kode/UI membuat folder arsip bukti di `.docs/evidence/{task-id-or-slug}/` (atau `.docs/evidence/YYYY/MM/DD/NN-{task-id}-{slug}/`):
+2. **Arsipkan Bukti Verifikasi Lengkap (Wajib Dual-Platform: Android & iOS)**:
+   ⚠️ **MANDATORI DUAL-PLATFORM EVIDENCE:** Setiap task yang mengubah kode/UI **WAJIB** membuat folder arsip bukti di `.docs/evidence/{task-id-or-slug}/` (atau `.docs/evidence/YYYY/MM/DD/NN-{task-id}-{slug}/`) yang memuat artefak verifikasi untuk **KEDUA** platform (`android/` dan `ios/`). DILARANG hanya melampirkan bukti dari salah satu platform saja:
    ```
    .docs/evidence/{task-id-or-number}/
-   ├── README.md               # Ringkasan bukti, tabel lingkungan, rasio negative control
-   ├── console-evidence.txt    # Log eksekusi test & linter
+   ├── README.md               # Ringkasan bukti, tabel lingkungan (Android & iOS), rasio negative control
+   ├── console-evidence.txt    # Log eksekusi test & linter (Android APK + iOS Framework)
    ├── roborazzi/              # Snapshot headless UI (Roborazzi / Robolectric)
-   │   ├── HomeScreen_light.png
-   │   └── SyllabusScreen.png
    ├── android/
    │   ├── demo.mp4            # Video walkthrough Android (Pixel_9_Pro via android CLI)
    │   └── screenshots/        # Tangkapan layar Android via `android screen capture`
