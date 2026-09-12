@@ -97,7 +97,8 @@ actual fun PlatformVideoPlayer(
                             'modestbranding': 1,
                             'controls': 1,
                             'enablejsapi': 1,
-                            'fs': 1
+                            'fs': 1,
+                            'origin': 'https://localhost'
                         },
                         events: {
                             'onReady': onPlayerReady,
@@ -179,11 +180,12 @@ actual fun PlatformVideoPlayer(
                         mediaPlaybackRequiresUserGesture = false
                         mixedContentMode = WebSettings.MIXED_CONTENT_ALWAYS_ALLOW
                         cacheMode = WebSettings.LOAD_DEFAULT
+                        userAgentString = "Mozilla/5.0 (Linux; Android 14; Pixel 9 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Mobile Safari/537.36"
                     }
                     webChromeClient = WebChromeClient()
                     webViewClient = WebViewClient()
                     addJavascriptInterface(bridge, "AndroidBridge")
-                    loadDataWithBaseURL("https://www.youtube.com", htmlContent, "text/html", "UTF-8", null)
+                    loadDataWithBaseURL("https://localhost", htmlContent, "text/html", "UTF-8", null)
                 }
             },
             update = { webView ->
