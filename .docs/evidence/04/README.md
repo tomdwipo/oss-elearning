@@ -85,7 +85,6 @@ Dapat dilihat secara lengkap di [console-evidence.txt](.docs/evidence/04/console
 | **Video Player Detail Layout** | [.docs/evidence/04/visual_diff_roborazzi/01_player_roborazzi_diff.png](.docs/evidence/04/visual_diff_roborazzi/01_player_roborazzi_diff.png) | Komparasi 3-kolom (Android \| iOS \| Diff Mask) membuktikan badge status ter-render utuh horizontal pada kedua platform tanpa pemenggalan karakter vertikal. |
 | **Modal Dialog Pelaporan** | [.docs/evidence/04/visual_diff_roborazzi/02_dialog_roborazzi_diff.png](.docs/evidence/04/visual_diff_roborazzi/02_dialog_roborazzi_diff.png) | Komparasi 3-kolom membuktikan form pelaporan link rusak bebas tabrakan visual (*zero overlapping*) antara OutlinedTextField dan RadioButton ke-4. |
 | **Video Player Live Stream** | [.docs/evidence/04/visual_diff_roborazzi/03_video_player_active_roborazzi_diff.png](.docs/evidence/04/visual_diff_roborazzi/03_video_player_active_roborazzi_diff.png) | Komparasi 3-kolom pemutaran video aktif CS101 pada Android dan iOS. |
-| **Dialog Pelaporan Scrolled** | [.docs/evidence/04/visual_diff_roborazzi/04_report_dialog_roborazzi_diff.png](.docs/evidence/04/visual_diff_roborazzi/04_report_dialog_roborazzi_diff.png) | Komparasi 3-kolom dialog pelaporan scrolled state membuktikan integritas input field catatan tambahan. |
 
 ---
 
