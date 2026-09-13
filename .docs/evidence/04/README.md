@@ -72,9 +72,9 @@ Dapat dilihat secara lengkap di [console-evidence.txt](.docs/evidence/04/console
 | **1** | **SemesterHomeScreen** | [.docs/evidence/04/ios/screenshots/01_home_screen.png](.docs/evidence/04/ios/screenshots/01_home_screen.png) | Beranda semester OpenCampus berjalan native di iPhone 16 Pro. |
 | **2** | **CourseSyllabusScreen** | [.docs/evidence/04/ios/screenshots/02_course_syllabus.png](.docs/evidence/04/ios/screenshots/02_course_syllabus.png) | Daftar 16 topik silabus dengan durasi dan channel terkurasi di iOS. |
 | **3** | **VideoPlayerScreen Active** | [.docs/evidence/04/ios/screenshots/03_video_player_active.png](.docs/evidence/04/ios/screenshots/03_video_player_active.png) | Pemutaran live stream video terkurasi CS101 aktif via WKWebView di iPhone 16 Pro. |
-| **4** | **VideoPlayer Fixed Badge** | [.docs/evidence/04/ios/screenshots/01_player_fixed.png](.docs/evidence/04/ios/screenshots/01_player_fixed.png) | Layout responsif checklist bar dengan label ellipsis dan badge horizontal "Belum Selesai" tanpa text wrap vertikal. |
+| **4** | **VideoPlayer (Fullscreen, Completed)** | [.docs/evidence/04/ios/screenshots/01_player_fixed.png](.docs/evidence/04/ios/screenshots/01_player_fixed.png) | Host `iosApp` dengan `UILaunchScreen` (fullscreen 393pt). Layout identik Android. |
+| **4b** | **VideoPlayer (Fullscreen, Incomplete)** | [.docs/evidence/04/ios/screenshots/01_player_incomplete.png](.docs/evidence/04/ios/screenshots/01_player_incomplete.png) | Badge "Belum Selesai" dan label checklist utuh tanpa ellipsis. |
 | **5** | **Modal Dialog Initial Fixed** | [.docs/evidence/04/ios/screenshots/02_dialog_fixed.png](.docs/evidence/04/ios/screenshots/02_dialog_fixed.png) | Dialog pelaporan link rusak dengan container adaptif bebas tumpang tindih (*zero overlapping*). |
-| **6** | **Modal Dialog Scrolled** | [.docs/evidence/04/ios/screenshots/04_report_dialog.png](.docs/evidence/04/ios/screenshots/04_report_dialog.png) | Konten dialog dapat di-scroll secara mulus menampilkan opsi "Lainnya", label catatan tambahan, dan text field tanpa tabrakan visual. |
 
 ---
 
