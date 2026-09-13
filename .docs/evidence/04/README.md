@@ -34,6 +34,7 @@
 | **3b** | **Negative Control** | Mutasi video ID pada silabus CS101 dari `jGyYuQf-GeE` menjadi placeholder tidak valid `t101_01_v` | ✅ [RUN-cli] TERVERIFIKASI | **MERAH** (Exit 1, 1 failed: `testAllCurriculumVideoIdsFollowCanonicalFormat`) $\to$ dipulihkan $\to$ **HIJAU** (Exit 0, 26/26 passed). Rasio: `26/26 → 25/26 → 26/26`. |
 | **4** | **Component & UI Viewport** | Standar viewport Android (Pixel 9 Pro) & iOS (iPhone 16 Pro) | ✅ [RUN-cli] HIJAU | Resolusi 1280x2856 (Android) dan 1206x2622 (iOS) terverifikasi: badge status progres ter-render utuh horizontal (non-wrapping) dan form modal dialog bebas tabrakan (zero overlapping). |
 | **5** | **Performance & Packaging** | `./gradlew assembleDebug` & `./gradlew composeApp:linkDebugFrameworkIosSimulatorArm64` | ✅ [RUN-cli] HIJAU | Exit 0: `composeApp-debug.apk` (Android, 10 MB) dan `ComposeApp.framework` (iOS Simulator ARM64) terkompilasi sukses. |
+| **5b** | **iOS App Host Build (xcodebuild)** | `cd iosApp && xcodegen generate && xcodebuild -project iosApp.xcodeproj -scheme iosApp -sdk iphonesimulator build` | ✅ [RUN-cli] HIJAU | Exit 0, `** BUILD SUCCEEDED **`. `iosApp.app` terinstal & berjalan fullscreen di iPhone 16 Pro (iOS 26.5) dan iPhone SE 3 (iOS 18.5). |
 | **6** | **Security & Secret Hygiene** | `git diff origin/main` | ✅ [RUN-cli] HIJAU | Tidak ada secret API key YouTube, token auth rahasia, atau kredensial backend hardcoded. |
 
 ---
@@ -75,6 +76,7 @@ Dapat dilihat secara lengkap di [console-evidence.txt](.docs/evidence/04/console
 | **4** | **VideoPlayer (Fullscreen, Completed)** | [.docs/evidence/04/ios/screenshots/01_player_fixed.png](.docs/evidence/04/ios/screenshots/01_player_fixed.png) | Host `iosApp` dengan `UILaunchScreen` (fullscreen 393pt). Layout identik Android. |
 | **4b** | **VideoPlayer (Fullscreen, Incomplete)** | [.docs/evidence/04/ios/screenshots/01_player_incomplete.png](.docs/evidence/04/ios/screenshots/01_player_incomplete.png) | Badge "Belum Selesai" dan label checklist utuh tanpa ellipsis. |
 | **5** | **Modal Dialog Initial Fixed** | [.docs/evidence/04/ios/screenshots/02_dialog_fixed.png](.docs/evidence/04/ios/screenshots/02_dialog_fixed.png) | Dialog pelaporan link rusak dengan container adaptif bebas tumpang tindih (*zero overlapping*). |
+| **7** | **Small Screen 375pt (iPhone SE 3)** | [.docs/evidence/04/ios/screenshots/05_player_iphone_se3_375pt.png](.docs/evidence/04/ios/screenshots/05_player_iphone_se3_375pt.png) | Lebar terkecil: "Estimasi 18m" tetap 1 baris, label checklist wrap 2 baris (tidak terpotong), nama channel ter-ellipsis. |
 
 ---
 
