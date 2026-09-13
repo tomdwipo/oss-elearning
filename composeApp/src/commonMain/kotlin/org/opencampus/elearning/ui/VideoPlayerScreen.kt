@@ -312,9 +312,12 @@ fun VideoPlayerScreen(
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Text(
                                 text = "🎬 ${topic.channel}",
+                                modifier = Modifier.weight(1f, fill = false),
                                 fontSize = 13.sp,
                                 fontWeight = FontWeight.Medium,
-                                color = OpenCampusColors.CorporateDarkPurple
+                                color = OpenCampusColors.CorporateDarkPurple,
+                                maxLines = 1,
+                                overflow = TextOverflow.Ellipsis
                             )
                             Spacer(modifier = Modifier.width(8.dp))
                             Text(
@@ -326,7 +329,9 @@ fun VideoPlayerScreen(
                             Text(
                                 text = "⏱ Estimasi ${topic.duration}",
                                 fontSize = 13.sp,
-                                color = OpenCampusColors.GrayscaleHintText
+                                color = OpenCampusColors.GrayscaleHintText,
+                                maxLines = 1,
+                                softWrap = false
                             )
                         }
 
@@ -385,7 +390,7 @@ fun VideoPlayerScreen(
                                     fontSize = 13.sp,
                                     fontWeight = FontWeight.SemiBold,
                                     color = OpenCampusColors.GrayscaleBlack,
-                                    maxLines = 1,
+                                    maxLines = 2,
                                     overflow = TextOverflow.Ellipsis
                                 )
                             }
