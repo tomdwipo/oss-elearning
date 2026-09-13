@@ -80,6 +80,8 @@ Dapat dilihat secara lengkap di [console-evidence.txt](.docs/evidence/04/console
 
 ## 6. Roborazzi Visual Diff Matrix (Dual-Platform Parity)
 
+> Digenerate ulang dari build iOS fullscreen (commit 8a7cc4b): native px tanpa scaling (density ~3x di kedua device), di-align pada top header. Diff % (18-28%) didominasi frame video, status bar, dan posisi vertikal dialog karena tinggi layar berbeda (2856px vs 2622px). Bukan output Roborazzi asli, tapi 3-kolom Roborazzi-style via PIL.
+
 | Komparasi Visual | Artefak Roborazzi (3-Kolom) | Deskripsi Paritas Visual |
 |---|---|---|
 | **Video Player Detail Layout** | [.docs/evidence/04/visual_diff_roborazzi/01_player_roborazzi_diff.png](.docs/evidence/04/visual_diff_roborazzi/01_player_roborazzi_diff.png) | Komparasi 3-kolom (Android \| iOS \| Diff Mask) membuktikan badge status ter-render utuh horizontal pada kedua platform tanpa pemenggalan karakter vertikal. |
