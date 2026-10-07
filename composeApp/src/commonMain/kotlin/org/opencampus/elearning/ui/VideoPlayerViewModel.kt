@@ -135,6 +135,18 @@ class VideoPlayerViewModel(
                 put("percentage", percentage.toDouble())
             }
         )
+
+        val toggleTraceId = analyticsService.generateTraceId("topic_toggle")
+        analyticsService.logEvent(
+            "topic_completion_toggled",
+            toggleTraceId,
+            buildJsonObject {
+                put("course_id", courseId)
+                put("topic_id", topicId)
+                put("is_completed", newStatus)
+                put("source", "manual")
+            }
+        )
     }
 
     fun onPlayerError(errorCode: Int, message: String) {
@@ -211,6 +223,17 @@ class VideoPlayerViewModel(
                 put("reason", payload.reason)
                 put("notes", payload.notes)
                 put("trace_id", payload.traceId)
+            }
+        )
+
+        val reportTraceId = analyticsService.generateTraceId("broken_rep")
+        analyticsService.logEvent(
+            "broken_video_reported",
+            reportTraceId,
+            buildJsonObject {
+                put("topic_id", topicId)
+                put("reason", reason.name)
+                put("has_notes", notes.isNotEmpty())
             }
         )
     }
